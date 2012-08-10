@@ -25,6 +25,7 @@
 			(nextPic=function(){
 				pics.eq(indx).animate(fadeOut,options.duration,ease);
 				indx=indx<plen-1?indx+1:0;
+				$(".progress").css("display",!indx ? "block":"none");
 				pics.eq(indx).animate(fadeIn,options.duration,ease,function(){
 					setTimeout(nextPic,options.delay);
 				});
