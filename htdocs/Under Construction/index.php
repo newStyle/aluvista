@@ -22,8 +22,10 @@
 		</div>
 		<div class="noise"></div>
 		<section class="backimg">
-			<script type="text/javascript">
-for(var i=1;i<5;i++) document.write('<div style="background-image :url(images/gallery/pic'+i+'.jpg);"></div>'); if(i=1){ $("div.progress").css({ 'display':'block', });}else{ $("div.progress").css({ 'display':'none', });}   </script>
+			<div style="background-image :url(images/gallery/pic1.jpg);"></div>
+			<div style="background-image :url(images/gallery/pic2.jpg);"></div>
+			<div style="background-image :url(images/gallery/pic3.jpg);"></div>
+			<div style="background-image :url(images/gallery/pic4.jpg);"></div>
 		</section>
 	</section>
 	<footer>
