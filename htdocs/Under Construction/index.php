@@ -23,7 +23,7 @@
 		<div class="noise"></div>
 		<section class="backimg">
 			<script type="text/javascript">
-for(var i=1;i<2;i++) document.write('<div style="background-image :url(images/gallery/'+i+'.jpg);"></div>');			</script>
+for(var i=1;i<5;i++) document.write('<div style="background-image :url(images/gallery/pic'+i+'.jpg);"></div>'); if(i=1){ $("div.progress").css({ 'display':'block', });}else{ $("div.progress").css({ 'display':'none', });}   </script>
 		</section>
 	</section>
 	<footer>
@@ -31,3 +31,5 @@ for(var i=1;i<2;i++) document.write('<div style="background-image :url(images/ga
 	</footer>
 </body>
 </html>
+
+<!--   -->
