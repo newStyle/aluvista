@@ -14,18 +14,22 @@
 <body>
 	<header></header>
 	<section class='slideshow'>
-		<div class="progress">  <!-- Hide progress when slider is on -->
-			<p class="indent">7%</p>
-		</div>
 		<div class="logo">
 			<h1 class="indent">Aluvista</h1>
 		</div>
 		<div class="noise"></div>
 		<section class="backimg">
-			<div style="background-image :url(images/gallery/pic1.jpg);"></div>
-			<div style="background-image :url(images/gallery/pic2.jpg);"></div>
-			<div style="background-image :url(images/gallery/pic3.jpg);"></div>
-			<div style="background-image :url(images/gallery/pic4.jpg);"></div>
+			<?php
+			$dir = "./images/gallery";
+			$files= scandir('./images/gallery');
+			$allowed_type = array('jpg','jpeg','png');
+				foreach ($files as $file){
+					$ext = pathinfo($file);
+					if( !in_array(strtolower($ext['extension']),$allowed_type)) 
+						continue;
+					echo "<div style=\"background-image :url($dir/$file);\"></div>"."\n\t\t\t";
+				}
+			?>
 		</section>
 	</section>
 	<footer>
@@ -33,5 +37,3 @@
 	</footer>
 </body>
 </html>
-
-<!--   -->

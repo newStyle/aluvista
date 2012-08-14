@@ -1,4 +1,4 @@
-// Zepto/jQuery fadeLoop plugin for fade slide show effects by ali.md
+// Zepto/jQuery fadeLoop plugin for fade slide show effects by ali.md and Edited Bye newStyle team.
 
 (function($){
 	$.extend($.fn,{
@@ -18,14 +18,13 @@
 				fadeIn  ={opacity:1},
 				fadeOut ={opacity:0},
 				ease = !!window.Zepto ? 'ease-in-out' : 'swing';
-
 			pics.css(fadeOut);
 			options.fadeFirstImage || pics.eq(0).css(fadeIn);
-
 			(nextPic=function(){
 				pics.eq(indx).animate(fadeOut,options.duration,ease);
-				indx=indx<plen-1?indx+1:0;
-				$(".progress").css("display",!indx ? "block":"none");
+				indx=indx<plen-1?indx+1:0; 
+				//$(".progress").css("display",!indx ? "block":"none");
+				
 				pics.eq(indx).animate(fadeIn,options.duration,ease,function(){
 					setTimeout(nextPic,options.delay);
 				});
@@ -34,7 +33,7 @@
 	});
 })($)
 
-
 $(function(){
 	$('.backimg > div').fadeLoop();
+	$('.backimg > div').eq(0).html('<div class="progress"><p class="indent">7%</p></div>');
 });

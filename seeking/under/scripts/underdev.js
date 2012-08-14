@@ -1,4 +1,5 @@
-// Zepto/jQuery fadeLoop plugin for fade slide show effects by ali.md
+// Zepto/jQuery fadeLoop plugin for fade slide show effects by ali.md and Edited Bye newStyle team.
+
 (function($){
 	$.extend($.fn,{
 		fadeLoop :function(options){
