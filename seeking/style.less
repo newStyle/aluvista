@@ -1,23 +1,61 @@
+div, section {
+	outline: 1px dotted red;
+}
+
+li {
+	outline: 2px dashed#f0f;
+}
+
+body.left, body.right {
+	outline: 2px dotted cyan;
+}
+body > .container {
+	outline: 3px dashed magenta;
+}
+header {
+	outline: 3px dashed magenta;
+}
+
+footer {
+	outline: 3px dashed magenta;
+}
+
 body { > section {
 		min-height: 595px;
-		outline: 1px solid red;
 		margin-top: 15px;
 	}
 	background: url(images/bg.jpg) no-repeat fixed;
 	background-size: cover;
 	header {
 		height: 125px;
-		outline: 1px solid red;
 	}
-	footer {}
+	footer {} > div.gallary {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: -1;
+		background: url(images/gallary2.jpg) no-repeat center;
+		height: 1335px;
+		width: 950px;
+	} > div.index {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: -1;
+		background: url(images/index.jpg) no-repeat center;
+		height: 1000px;
+		width: 950px;
+	}
 }
 header { > .right {
-		height: inherit;
-		outline: 1px solid red;.top {
-			height: 50px;
-			outline: 1px solid red;.left {
+		height: inherit;.top {
+			height: 50px;.left {
 				height: inherit;
-				outline: 1px solid red;
+
 				nav {
 					ul {
 						list-style-type: none;
@@ -34,20 +72,17 @@ header { > .right {
 					}
 				}
 			}.right {
-				outline: 1px solid red;
 				height: inherit;
 				float: none;
 			}
 		}.down {
 			height: 70px;
-			outline: 1px solid red;
 			nav {
 				ul {
 					list-style-type: none;
 					height: inherit;
 					li {
 						float: left;
-						outline: 1px dashed red;
 						height: inherit;
 						a {
 							text-decoration: none;
@@ -64,23 +99,20 @@ header { > .right {
 		}
 	} > .left {
 		height: inherit;
-		outline: 1px solid red;
 	}
 }
-section.container {.top {
+section.container { > .top {
 		width: inherit;
-		height: 300px;
-		outline: 1px solid red; > section {
-			height: inherit;
-			outline: 1px solid red;.left {
+		height: 300px; > section {
+			height: inherit;.left {
 				height: inherit;
-				outline: 1px solid red;
+
 				nav {
 					ul {
 						list-style-type: none;
 						height: inherit;
 						li {
-							outline: 1px solid red;
+
 							background-color: white;
 							a {
 								text-decoration: none;
@@ -91,8 +123,7 @@ section.container {.top {
 					}
 				}
 			}.right {
-				height: inherit;
-				outline: 1px solid red;.top {
+				height: inherit;.top {
 					width: inherit;
 					height: 150px;
 				}.down {
@@ -101,56 +132,79 @@ section.container {.top {
 				}
 			}.middle {
 				height: inherit;
-				outline: 1px solid red;
 			}
 		}
-	}.down {
+	}.index { /*Or  is .down */
 		width: inherit;
-		outline: 1px solid red;
 		height: 190px; > .left {
 			height: inherit;
-			outline: 1px solid red;
 		} > .right {
 			height: inherit;
-			outline: 1px solid red;
 			float: none; > section {
-				height: inherit;
-				outline: 1px solid red;.left {
+				height: inherit;.left {
 					height: inherit;
-					width: 200px;
-					outline: 1px solid red;.top {
+					width: 200px;.top {
 						width: inherit;
 						height: 140px;
-						outline: 1px solid red;
 					}.down {
 						width: inherit;
 						height: 50px;
-						outline: 1px solid red;
 					}
 				}.right {
 					height: inherit;
-					width: 200px;
-					outline: 1px solid red;.top {
+					width: 200px;.top {
 						width: inherit;
 						height: 140px;
-						outline: 1px solid red;
 					}.down {
 						width: inherit;
 						height: 50px;
-						outline: 1px solid red;
 					}
 				}.middle {
 					height: inherit;
-					width: 200px;
-					outline: 1px solid red;.top {
+					width: 200px;.top {
 						width: inherit;
 						height: 140px;
-						outline: 1px solid red;
 					}.down {
 						width: inherit;
 						height: 50px;
-						outline: 1px solid red;
 					}
+				}
+			}
+		}
+	}.gallary {
+		height: 650px; > section {
+			height: 640px; > .left {
+				height: 485px;
+				p {
+					font-size: 30px;
+					padding-bottom: 20px;
+				} > section {
+					section {
+						height: 70px;.left {
+							height: inherit;
+							background-color: white;
+						}.right {
+							height: inherit;
+							background-color: white;
+							float: none;
+						}
+					}
+				} > div {
+					height: 20px;
+					margin-left: 5px;
+				}
+			} > .right {
+				float: none;
+				margin-left: 312px;
+				margin-top: 50px;
+				width: 462px;
+				height: 560px;
+				p {}.top {
+					height: 430px;
+					margin-left: 20px;
+				}.down {
+					height: 65px;
+					margin-left: 5px;
 				}
 			}
 		}
@@ -158,9 +212,7 @@ section.container {.top {
 }
 footer { > .top {
 		height: 50px;
-		outline: 1px solid red;
 	} > .down {
-		outline: 1px solid red;
 		height: 70px;
 		nav {
 			ul {
@@ -168,7 +220,6 @@ footer { > .top {
 				height: inherit;
 				margin-left: 40px;
 				li {
-					outline: 1px dashed red;
 					height: inherit;
 					float: left;
 					a {
@@ -178,7 +229,7 @@ footer { > .top {
 					}
 				}
 				li.right {
-					float:none;
+					float: none;
 					margin-left: 240px;
 					width: 60px;
 				}
@@ -186,14 +237,3 @@ footer { > .top {
 		}
 	}
 }
-div.bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	z-index: -1;
-	background: url(http://localhost/index/seeking/images/index.jpg) no-repeat center;
-	height: 1000px;
-	width: 950px;
-	}
