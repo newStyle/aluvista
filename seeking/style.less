@@ -49,6 +49,16 @@ body { > section {
 		background: url(images/index.jpg) no-repeat center;
 		height: 1000px;
 		width: 950px;
+	} > div.contact {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: -1;
+		background: url(images/contact-us.jpg) no-repeat center;
+		height: 1235px;
+		width: 950px;
 	}
 }
 header { > .right {
@@ -205,6 +215,53 @@ section.container { > .top {
 				}.down {
 					height: 65px;
 					margin-left: 5px;
+				}
+			}
+		}
+	}.contact {
+		height: 495px; > section {
+			width: 860px;
+			height: 470px;.left {
+				height: 365px;
+				margin-top: 75px;
+				table {
+					tr.h {
+						height: 15px;
+					}
+					tr {:first-child {
+							width: 90px;
+						}
+						td {
+							input[type = text] {
+								width: 250px;
+								height: 20px;
+								border: none;
+								background-color: #CCC;
+								outline: 1px dotted red;
+							}
+							input[type = submit] {
+								float: right;
+								width: 70px;
+							}
+							textarea {
+								width: 250px!important;
+								height: 150px;
+								background-color: #CCC;
+								border: none;
+							}
+							label {
+								color: #999;
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}.right {
+				float: none;
+				height: 200px;
+				margin-top: 120px;
+				div{
+					height: 65px;
 				}
 			}
 		}
