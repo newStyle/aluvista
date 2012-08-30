@@ -1,3 +1,4 @@
+/*
 div, section {
 	outline: 1px dotted red;
 }
@@ -9,14 +10,8 @@ li {
 body.left, body.right {
 	outline: 2px dotted cyan;
 }
-body > .container {
-	outline: 3px dashed magenta;
-}
-header {
-	outline: 3px dashed magenta;
-}
-
-footer {
+*/
+body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
 
@@ -39,7 +34,7 @@ body { > section {
 		background: url(images/gallary2.jpg) no-repeat center;
 		height: 1335px;
 		width: 950px;
-	} > div.index {
+	} /*> div.index {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -49,7 +44,7 @@ body { > section {
 		background: url(images/index.jpg) no-repeat center;
 		height: 1000px;
 		width: 950px;
-	} > div.contact {
+	} */> div.contact {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -126,6 +121,7 @@ section.container { > .top {
 				margin-left:10px;
 				nav {
 					background: url(images/slider_menu.png) no-repeat center center;
+					height: inherit;
 					ul {
 						list-style-type: none;
 						height: inherit;
