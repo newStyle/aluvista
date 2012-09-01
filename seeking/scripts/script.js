@@ -1,4 +1,4 @@
 $(function(){
-	// $("section.container > .down")
-	
+	 if($("section.container > .down").hasClass("index"))
+	 	alert("hi");
 });
