@@ -1,4 +1,4 @@
-
+/*
 div, section {
 	outline: 1px dotted red;
 }
@@ -11,7 +11,7 @@ body.left, body.right {
 body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
-
+*/
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -66,6 +66,17 @@ body { > section {
 		/*background: url(images/index.jpg) no-repeat center;*/
 		height: 1460px;
 		width: 950px;
+	}
+}
+
+div.header_bg{
+	min-height: 141px;
+	background:url(images/header_bg.png) top center;
+	margin: 0px auto;
+		div.dirt{
+		min-height: 133px;
+		background: url(images/dirt.png) no-repeat top center;
+		z-index: -99;
 	}
 }
 header { > .right {
@@ -127,6 +138,7 @@ header { > .right {
 			}
 		}
 	} > .left {
+		margin-top:20px; 
 		height: inherit;
 		background: url(images/logo.png) no-repeat center center;
 	}
@@ -375,3 +387,4 @@ footer { > .top {
 		}
 	}
 }
+

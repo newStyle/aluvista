@@ -12,33 +12,38 @@
 <script type="text/javascript" src="scripts/script.js" ></script>
 </head>
 <body>
-<header class="container mt11">
-	<div class="w10 right">
-		<div class="w10 top">
-			<div class="left w9">
-				<nav>
-					<ul>
-						<li><a href="#">Chat</a></li>
-						<li><a href="#">Call</a></li>
-					</ul>
-				</nav>
+
+<div class="header_bg">
+	<div class="dirt container mla mra">
+		<header class="container">
+			<div class="mt9 w10 right">
+				<div class="w10 top">
+					<div class="left w9">
+						<nav>
+							<ul>
+								<li><a href="#">Chat</a></li>
+								<li><a href="#">Call</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="right ml9"></div>
+				</div>
+				<div class="w10 mt2 down">
+					<nav>
+						<ul>
+							<li><a href="pages/index.php">home</a></li>
+							<li><a href="pages/about.php">process</a></li>
+							<li><a href="pages/gallery.php">gallery</a></li>
+							<li><a href="pages/color.php">color</a></li>
+							<li class="right active"><a href="pages/contact.php">contact</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-			<div class="right ml9"></div>
-		</div>
-		<div class="w10 mt2 down">
-			<nav>
-				<ul>
-					<li><a href="pages/index.php">home</a></li>
-					<li><a href="pages/about.php">process</a></li>
-					<li><a href="pages/gallery.php">gallery</a></li>
-					<li><a href="pages/color.php">color</a></li>
-					<li class="right active"><a href="pages/contact.php">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<div class="w4 ml3 left"></div>
-</header>
+			<div class="w4 ml3 left"></div>
+		</header>
+	</div> 
+</div><!-- End header -->
 <section class="container mla mra mt9">
 	<section class="slider top">
 		<section class=" w22 mla mra">
