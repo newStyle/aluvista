@@ -91,7 +91,7 @@
 </section><!-- End Container -->
 <footer>
 	<div class="top">
-		<div class="container mla mra ">
+		<div class="dirt container mla mra ">
 			<div class="right w1 rss"></div>
 			<div class="right w5">
 				<nav>
