@@ -40,7 +40,7 @@
 					</nav>
 				</div>
 			</div>
-			<div class="w4 ml3 left"></div>
+			<div class="mt7 w4 ml2 left"></div>
 		</header>
 	</div> 
 </div><!-- End header -->
@@ -66,8 +66,8 @@
 		</section> 
 	</section> <!-- End Slider -->
 	<section class="mt12 down index">
-		<div class="w6 left"></div>
-		<section class="ml6 right">
+		<div class="recent w6 left"></div>
+		<section class="ml7 right">
 			<section class="w16 mra ">
 				<div class="left">
 					<div class="top"></div>
