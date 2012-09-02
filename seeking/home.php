@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>..: Aluvista Web Site :..</title>
+<title>..: Aluvista :..</title>
 <link rel="stylesheet/less" type="text/css" href="reset.css" />
 <link rel="stylesheet/less" type="text/css" href="1styles.css" />
 <link rel="stylesheet/less" type="text/css" href="style.less" />
@@ -29,7 +29,7 @@
 			<nav>
 				<ul>
 					<li><a href="pages/index.php">home</a></li>
-					<li><a href="pages/about.php">about</a></li>
+					<li><a href="pages/about.php">process</a></li>
 					<li><a href="pages/gallery.php">gallery</a></li>
 					<li><a href="pages/color.php">color</a></li>
 					<li class="right active"><a href="pages/contact.php">contact</a></li>
