@@ -40,8 +40,8 @@
 	<div class="w4 ml3 left"></div>
 </header>
 <section class="container mla mra mt9">
-	<section class="top">
-		<section class="w22 mla mra">
+	<section class="slider top">
+		<section class=" w22 mla mra">
 			<section class="w6 left">
 				<nav>
 					<ul>
@@ -58,10 +58,10 @@
 				<div class="down"></div>
 			</section>
 			<section class="w11 middle mla mra"></section>
-		</section>
-	</section>
+		</section> 
+	</section> <!-- End Slider -->
 	<section class="mt12 down index">
-		<section class="w6 left"></section>
+		<div class="w6 left"></div>
 		<section class="ml6 right">
 			<section class="w16 mra ">
 				<div class="left">
@@ -87,8 +87,8 @@
 				</div>
 			</section>
 		</section>
-	</section>
-</section>
+	</section> <!-- End Content -->
+</section><!-- End Container -->
 <footer>
 	<div class="top">
 		<div class="container mla mra ">
@@ -102,7 +102,7 @@
 				</nav>
 			</div>
 		</div>
-	</div>
+	</div> <!-- End top-footer -->
 	<div class="container down">
 		<nav>
 			<ul>
@@ -114,7 +114,7 @@
 			</ul>
 		</nav>
 	</div>
-</footer>
+</footer> <!-- End footer -->
 <div class="index"></div>
 </body>
 </html>
