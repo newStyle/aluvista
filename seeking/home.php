@@ -111,11 +111,11 @@
 	<div class="container down">
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Works</a></li>
-				<li><a href="#">Order</a></li>
-				<li class="right"><a href="#">contact</a></li>
+				<li><a href="pages/index.php">home</a></li>
+				<li><a href="pages/about.php">process</a></li>
+				<li><a href="pages/gallery.php">gallery</a></li>
+				<li><a href="pages/color.php">color</a></li>
+				<li class="right active"><a href="pages/contact.php">contact</a></li>
 			</ul>
 		</nav>
 	</div>
