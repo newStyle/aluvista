@@ -21,19 +21,18 @@ body { > section {
 	header {
 		height: 125px;
 	}
-	footer {} > div.gallary {
+	footer {}/* > div.gallary {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
 		z-index: -1;
-		/*background: url(images/index.jpg) no-repeat center;*/
 		background: url(images/gallary2.jpg) no-repeat center;
 		height: 1335px;
 		width: 950px;
 	}
-/*> div.index {
+> div.index {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -43,8 +42,7 @@ body { > section {
 		background: url(images/index.jpg) no-repeat center;
 		height: 1000px;
 		width: 950px;
-	} */
-	> div.contact {
+	} > div.contact {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -52,7 +50,6 @@ body { > section {
 		margin: 0 auto;
 		z-index: -1;
 		background: url(images/contact-us.jpg) no-repeat center;
-		/*background: url(images/index.jpg) no-repeat center;*/
 		height: 1235px;
 		width: 950px;
 	} > div.color {
@@ -63,10 +60,9 @@ body { > section {
 		margin: 0 auto;
 		z-index: -1;
 		background: url(images/color-chart.png) no-repeat center;
-		/*background: url(images/index.jpg) no-repeat center;*/
 		height: 1460px;
 		width: 950px;
-	}
+	}*/
 }
 header { > .right {
 		height: inherit;.top {
@@ -79,6 +75,7 @@ header { > .right {
 						float: right;
 						li {
 							float: left;
+							height: inherit;
 							a {
 								text-decoration: none;
 								display: block;
@@ -111,8 +108,8 @@ header { > .right {
 							text-decoration: none;
 							display: block;
 							padding: 20px 18px;
-							color: white;
 							font-size: 16px;
+							color: white;
 							font-weight: bold;
 						}
 						a:hover,.active {
@@ -171,7 +168,7 @@ section.container { > .top {
 				background: url(images/sliderpic1.jpg) no-repeat center center;
 			}
 		}
-	}.index { /*O.down for index page  */
+	}.index { /* .down for index page  */
 		width: inherit;
 		height: 190px; > .left {
 			height: inherit;
@@ -211,7 +208,7 @@ section.container { > .top {
 				}
 			}
 		}
-	}.gallary { /*.down for gallary page */
+	}.gallary { /*.down for gallery page */
 		height: 650px; > section {
 			height: 640px; > .left {
 				height: 485px;
@@ -295,7 +292,7 @@ section.container { > .top {
 				}
 			}
 		}
-	}.color{
+	}.color{/*.down for color page */
 		height:750px;>section{
 			width:900px;
 			height:700px;> .left {
@@ -361,7 +358,7 @@ footer { > .top {
 						font-size: 16px;
 						font-weight: bold;
 					}
-					a:hover {
+					a:hover,a.active {
 						border-bottom: 2px solid #EAB410;
 					}
 				}
