@@ -22,4 +22,9 @@ $(function () {
 		$sibl = $(this).addClass("active");
 		$sibl.parent().siblings().children().removeClass("active");
 	});
+
+	$("section.container .top nav a").click(function(){
+		$sibl = $(this).addClass("active");
+		$sibl.parent().siblings().children().removeClass("active");
+	});
 });

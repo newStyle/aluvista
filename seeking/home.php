@@ -52,7 +52,7 @@
 					<ul>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
+						<li><a href="#" class="active">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 					</ul>
