@@ -59,8 +59,20 @@
 				</nav>
 			</section>
 			<section class="right last">
-				<div class="top"></div>
-				<div class="down"></div>
+				<div class="top">
+					<p>
+						Amet ac placerat platea dolor.
+						Et platea tincidunt scelerisque.
+						Egestas, et, ridiculus, purus <a href="#">more...</a>
+					</p>
+				</div>
+				<div class="down">
+					<p>
+						Turpis sed dignissim a sed.
+						Phasellus quis sed massa.
+						Porta! Sagittis a sagittis <a href="#">more...</a>
+					</p>
+				</div>
 			</section>
 			<section class="w11 middle mla mra"></section>
 		</section> 
