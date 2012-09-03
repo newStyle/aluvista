@@ -63,14 +63,14 @@
 					<p>
 						Amet ac placerat platea dolor.
 						Et platea tincidunt scelerisque.
-						Egestas, et, ridiculus, purus <a href="#">more...</a>
+						Egestas, et, ridiculus, purus <br /><a href="#">more...</a>
 					</p>
 				</div>
 				<div class="down">
 					<p>
 						Turpis sed dignissim a sed.
 						Phasellus quis sed massa.
-						Porta! Sagittis a sagittis <a href="#">more...</a>
+						Porta! Sagittis a sagittis <br /><a href="#">more...</a>
 					</p>
 				</div>
 			</section>
