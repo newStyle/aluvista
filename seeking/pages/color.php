@@ -36,19 +36,19 @@
 			</section>
 			<section class="mt5 down pt1">
 				<section class="w12 mla mra">
-					<section class="mt2">
+					<section class="mt6">
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
 						<div class="w3 mla last"></div>
 					</section>
-					<section class="mt2">
+					<section class="mt6">
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
 						<div class="w3 mla last"></div>
 					</section>
-					<section class="mt2">
+					<section class="mt6">
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
 						<div class="w3 left"></div>
