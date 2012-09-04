@@ -66,83 +66,78 @@ body { > section {
 	}*/
 }
 
-div.header_bg {
-    min-height: 141px;
-    background: url(images/header_bg.png) top center;
-    margin: 0px auto;
-    div.dirt {
-        min-height: 133px;
-        background: url(images/dirt.png) no-repeat top center;
-        z-index: -99;
-    }
-}
-header { > .right {
-        height: inherit;.top {
-            height: 50px;.left {
-                height: inherit;
+header {
+    background: url(images/header_bg.png) top center,
+    url(images/dirt.png) no-repeat top center;
+    section {/* for set width: 950; added section in header ;)*/
+        height: inherit; > .right {
+            height: inherit;.top {
+                height: 50px;.left {
+                    height: inherit;
+                    nav {
+                        ul {
+                            list-style-type: none;
+                            height: inherit;
+                            float: right;
+                            li {
+                                float: left;
+                                height: inherit;
+                                a {
+                                    text-decoration: none;
+                                    display: block;
+                                    padding: 10px 25px;
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                }
+                                a:hover,
+                                a.active {
+                                    color: #EAB410;
+                                }
+                            }
+                        }
+                    }
+                }.right {
+                    height: inherit;
+                    float: none;
+                    background: url(images/rss.png) no-repeat center center;
+                }
+            }.down {
+                height: 70px;
                 nav {
                     ul {
                         list-style-type: none;
                         height: inherit;
-                        float: right;
                         li {
                             float: left;
                             height: inherit;
                             a {
                                 text-decoration: none;
                                 display: block;
-                                padding: 10px 25px;
+                                padding: 20px 18px;
                                 font-size: 16px;
                                 color: white;
                                 font-weight: bold;
                             }
                             a:hover,
-                            a.active {
-                                color: #EAB410;
+                            .active {
+                                border-bottom: 2px solid #EAB410;
                             }
                         }
-                    }
-                }
-            }.right {
-                height: inherit;
-                float: none;
-                background: url(images/rss.png) no-repeat center center;
-            }
-        }.down {
-            height: 70px;
-            nav {
-                ul {
-                    list-style-type: none;
-                    height: inherit;
-                    li {
-                        float: left;
-                        height: inherit;
-                        a {
-                            text-decoration: none;
-                            display: block;
-                            padding: 20px 18px;
-                            font-size: 16px;
-                            color: white;
-                            font-weight: bold;
+                        li.right {
+                            float: none;
+                            margin-left: 305px;
                         }
-                        a:hover,
-                        .active {
-                            border-bottom: 2px solid#EAB410;
-                        }
-                    }
-                    li.right {
-                        float: none;
-                        margin-left: 305px;
                     }
                 }
             }
+        } > .left {
+            height: inherit;
+            background: url(images/logo.png) no-repeat center center;
         }
-    } > .left {
-        height: inherit;
-        background: url(images/logo.png) no-repeat center center;
+
     }
-}
-section.container { > .top {
+}section.container { > .top {
         width: inherit;
         height: 300px; > section {
             height: inherit;.left {
