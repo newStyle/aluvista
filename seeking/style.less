@@ -1,16 +1,16 @@
 /*
-div, section {
-	outline: 1px dotted red;
-}
-li {
-	outline: 2px dashed #f0f;
-}
-body.left, body.right {
-	outline: 2px dotted cyan;
-}
-body > .container, header, footer {
-	outline: 3px dashed magenta;
-}
+    div, section {
+    	outline: 1px dotted red;
+    }
+    li {
+    	outline: 2px dashed #f0f;
+    }
+    body.left, body.right {
+    	outline: 2px dotted cyan;
+    }
+    body > .container, header, footer {
+    	outline: 3px dashed magenta;
+    }
 */
 body { > section {
         min-height: 595px;
@@ -28,6 +28,7 @@ header {
     background: url(images/header_bg.png) top center,
     url(images/dirt.png) no-repeat top center;
     section {/* for set width: 950; added section in header ;)*/
+        width:950px;
         height: inherit; > .right {
             height: inherit;.top {
                 height: 50px;.left {
@@ -48,8 +49,7 @@ header {
                                     color: white;
                                     font-weight: bold;
                                 }
-                                a:hover,
-                                a.active {
+                                a:hover {
                                     color: #EAB410;
                                 }
                             }
