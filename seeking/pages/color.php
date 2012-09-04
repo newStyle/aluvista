@@ -23,7 +23,7 @@
 			</div>
 		</section>
 		<section class="right">
-			<div class="top">
+			<section class="top">
 				<article>
 					<h4>Ultricies purus! Arcu a.</h4>
 					<p>Massa aenean porttitor a turpis augue massa ut enim egestas platea et dis! Porta diam.
@@ -33,8 +33,29 @@
 						Platea porttitor risus magnis facilisis porttitor dictumst, elementum tempor? Amet, adipiscing! Montes! A. Enim
 					</p>
 				</article>
-			</div>
-			<div class="mt5 down"></div>
+			</section>
+			<section class="mt5 down pt1">
+				<section class="w12 mla mra">
+					<section class="mt2">
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 mla last"></div>
+					</section>
+					<section class="mt2">
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 mla last"></div>
+					</section>
+					<section class="mt2">
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 left"></div>
+						<div class="w3 mla last"></div>
+					</section>
+				</section>
+			</section>
 		</section>
 	</section>
 </section>
