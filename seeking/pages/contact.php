@@ -45,9 +45,26 @@
 			</form>
 		</div>
 		<section class="w6 ml14 pt1 right">
-			<div class="w6 mt1"></div>
-			<div class="w6 mt2 "></div>
-			<div class="w6 mt2 "></div>
+			<article>
+				<div class="w6 mt1">
+					<p>
+						address, auctor ridiculus risus velit.
+						Cum dapibus, sagittis turpis.
+					</p>
+				</div>
+				<div class="w6 mt2 ">
+					<p>
+						Tel : +98 222222 <br />
+						Fax	: +98222222
+					</p>
+				</div>
+				<div class="w6 mt2 ">
+					<p>
+						http://example.com
+						info@example.com
+					</p>
+				</div>
+			</article>
 		</section>
 	</section>
 </section>

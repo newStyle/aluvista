@@ -1,4 +1,4 @@
-
+/*
     div, section {
     	outline: 1px dotted red;
     }
@@ -11,7 +11,7 @@
     body > .container, header, footer {
     	outline: 3px dashed magenta;
     }
-
+*/
 body { > section {
         min-height: 595px;
         margin-top: 15px;
@@ -250,18 +250,27 @@ header {
                                 width: 250px;
                                 height: 20px;
                                 border: none;
+                                border-radius: 4px;
                                 background-color: #CCC;
-                                outline: 1px dotted red;
+                                box-shadow: 0 0 2px white;
                             }
                             input[type = submit] {
                                 float: right;
                                 width: 70px;
+                                color: gray;
+                                border: 1px solid #42411E;
+                                background: url(images/submit.jpg) no-repeat;
+                            }
+                            input[type = submit]:hover{
+                                background: url(images/submit-over.jpg) no-repeat;
                             }
                             textarea {
                                 width: 250px!important;
                                 height: 150px;
                                 background-color: #CCC;
                                 border: none;
+                                border-radius: 4px;
+                                box-shadow: 1px 1px 3px white;
                             }
                             label {
                                 color: #999;
@@ -274,9 +283,21 @@ header {
 				float: none;
 				height: 200px;
 				margin-top: 120px;
-				div{
-					height: 65px;
-				}
+                article{
+                    outline: 1px dashed #464B4B;
+                    div{
+                        border-bottom: 2px dashed #535353;
+                        height: 65px;
+                        p{
+                            color: white;
+                            padding:5px 10px;
+                        }
+                    }
+
+                    div:last-child{
+                        border-bottom:none;
+                    }
+                }
 			}
 		}
 	}.color {/*.down for color page */
