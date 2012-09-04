@@ -1,4 +1,4 @@
-
+/*
     div, section {
     	outline: 1px dotted red;
     }
@@ -11,7 +11,7 @@
     body > .container, header, footer {
     	outline: 3px dashed magenta;
     }
-
+*/
 body { > section {
         min-height: 595px;
         margin-top: 15px;
@@ -308,6 +308,25 @@ header {
 					height: 240px;
 				}.down {
 					height: 450px;
+                    section {
+                        width: 115px;
+                        height: 300px;
+                        margin: 66px 0 0 45px;
+                        div {
+                            width: inherit;
+                            height: 35px;
+                            margin-top: 2px;
+                            input {
+                                width: inherit;
+                                height: inherit;
+                                background: url(images/btn_off.jpg) top center;
+                                border: none;
+                            }
+                            input:hover{
+                                background: url(images/btn_on.jpg) top center;
+                            }
+                        }
+                    }
 				}
 			} > .right {
 				width: 590px;

@@ -9,8 +9,17 @@
 					</p>
 				</article>
 			</div>
-			<div class="mt5 down">
-				<div></div>
+			<div class="mt5 down pt1">
+				<section>
+					<div><input type="button" value="diam"/></div>
+					<div><input type="button" value="facilisis"/></div>
+					<div><input type="button" value="aenean"/></div>
+					<div><input type="button" value="integer"/></div>
+					<div><input type="button" value="adipiscing"/></div>
+					<div><input type="button" value="augue"/></div>
+					<div><input type="button" value="aenean"/></div>
+					<div><input type="button" value="Massa"/></div>
+				</section>
 			</div>
 		</section>
 		<section class="right">
