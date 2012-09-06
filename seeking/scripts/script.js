@@ -28,22 +28,18 @@ var codeStationJq = {
 				$sibl.parent().siblings().children().removeClass("active");
 			});
 		*/
-		$($pathMenu[0]).bind('mouseenter', function () {
-			$index = $($pathMenu[0]).index(this);
-			$($pathMenu[2]).removeClass("active").eq($index).addClass("active");
+		/* if mouse enter on links ;) */
+		for (i=0;i<=2;i+=2)
+		(function ($arg){
+			$($pathMenu[$arg]).bind('mouseenter', function () {
+				$index = $($pathMenu[$arg]).index(this);
+				$($pathMenu[$arg===2?0:2]).removeClass("active").eq($index).addClass("active");
+			});
+		})(i);
+		/* if mouse leave links ;) */
+		$($pathMenu[0]+", "+$pathMenu[2]).bind('mouseleave', function () {
+			$($pathMenu[0]+", "+$pathMenu[2]).removeClass("active");
 		});
-		$($pathMenu[0]).bind('mouseleave', function () {
-			$($pathMenu[2]).removeClass("active");
-		});
-
-		$($pathMenu[2]).bind('mouseenter', function () {
-			$index = $($pathMenu[2]).index(this);
-			$($pathMenu[0]).removeClass("active").eq($index).addClass("active");
-		});
-		$($pathMenu[2]).bind('mouseleave', function () {
-			$($pathMenu[0]).removeClass("active");
-		});
-
 }
 };
 
