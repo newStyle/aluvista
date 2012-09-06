@@ -23,7 +23,7 @@ var codeStationJq = {
 		(function ($arg) {
 			$($pathMenu[$arg]).bind('click', function () {
 				$index = $($pathMenu[$arg]).index(this);
-				$($pathMenu[$arg === 2 ? 0 : 2]).removeClass("active").eq($index).addClass("active");
+				$($pathMenu[$arg]).removeClass("active").eq($index).addClass("active");
 				$pos = $index;
 			});
 		})(i);
