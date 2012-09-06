@@ -21,12 +21,17 @@ var codeStationJq = {
 			"section.container .top nav a",
 			"footer .down nav a"
 		];
-		
-		for (i = 0; i < $pathMenu.length; i++)
-			$($pathMenu[i]).click(function () {
-				$sibl = $(this).addClass("active");
-				$sibl.parent().siblings().children().removeClass("active");
+		var $pos;
+		/* if click on links active its ! */
+		for (i=0;i<=2;i++)/* 0=>top menu header, 2=> down menu footer */
+		(function ($arg){
+			$($pathMenu[$arg]).bind('click', function () {
+				$index = $($pathMenu[$arg]).index(this);
+				$($pathMenu[$arg===2?0:2]).removeClass("active").eq($index).addClass("active");
+				$pos = $index;
+				//console.log($pos);
 			});
+		})(i);
 		
 
 		/* if mouse enter on links ;) */
@@ -34,14 +39,16 @@ var codeStationJq = {
 		(function ($arg){
 			$($pathMenu[$arg]).bind('mouseenter', function () {
 				$index = $($pathMenu[$arg]).index(this);
-				$($pathMenu[$arg===2?0:2]).eq($index).addClass("active");
+				$($pathMenu[0]).removeClass("active").eq($index).addClass("active");
+				$($pathMenu[2]).removeClass("active").eq($index).addClass("active");
 			});
 		})(i);
 		/* if mouse leave links ;) */
 		$($pathMenu[0]+", "+$pathMenu[2]).bind('mouseleave', function () {
 			$($pathMenu[0]+", "+$pathMenu[2]).removeClass("active");
+			$($pathMenu[0]).eq($pos).addClass("active");
+			$($pathMenu[2]).eq($pos).addClass("active");
 		});
-
 }
 };
 
