@@ -21,25 +21,27 @@ var codeStationJq = {
 			"section.container .top nav a",
 			"footer .down nav a"
 		];
-		/*
+		
 		for (i = 0; i < $pathMenu.length; i++)
 			$($pathMenu[i]).click(function () {
 				$sibl = $(this).addClass("active");
 				$sibl.parent().siblings().children().removeClass("active");
 			});
-		*/
+		
+
 		/* if mouse enter on links ;) */
-		for (i=0;i<=2;i+=2)
+		for (i=0;i<=2;i+=2)/* 0=>top menu header, 2=> down menu footer */
 		(function ($arg){
 			$($pathMenu[$arg]).bind('mouseenter', function () {
 				$index = $($pathMenu[$arg]).index(this);
-				$($pathMenu[$arg===2?0:2]).removeClass("active").eq($index).addClass("active");
+				$($pathMenu[$arg===2?0:2]).eq($index).addClass("active");
 			});
 		})(i);
 		/* if mouse leave links ;) */
 		$($pathMenu[0]+", "+$pathMenu[2]).bind('mouseleave', function () {
 			$($pathMenu[0]+", "+$pathMenu[2]).removeClass("active");
 		});
+
 }
 };
 
