@@ -15,17 +15,36 @@ var codeStationJq = {
 			});
 
 		/* active menu ! */
-		$pathMenu = [ /* this path can active menu in page ;)*/ 
+		
+		 $pathMenu = [ /* this path can active menu in page ;)*/ 
 			"header .right .down nav a",
 			"section.container .top nav a",
 			"footer .down nav a"
 		];
+		/*
 		for (i = 0; i < $pathMenu.length; i++)
 			$($pathMenu[i]).click(function () {
 				$sibl = $(this).addClass("active");
 				$sibl.parent().siblings().children().removeClass("active");
 			});
-	}
+		*/
+		$($pathMenu[0]).bind('mouseenter', function () {
+			$index = $($pathMenu[0]).index(this);
+			$($pathMenu[2]).removeClass("active").eq($index).addClass("active");
+		});
+		$($pathMenu[0]).bind('mouseleave', function () {
+			$($pathMenu[2]).removeClass("active");
+		});
+
+		$($pathMenu[2]).bind('mouseenter', function () {
+			$index = $($pathMenu[2]).index(this);
+			$($pathMenu[0]).removeClass("active").eq($index).addClass("active");
+		});
+		$($pathMenu[2]).bind('mouseleave', function () {
+			$($pathMenu[0]).removeClass("active");
+		});
+
+}
 };
 
 $(document).ready(codeStationJq.ready);
