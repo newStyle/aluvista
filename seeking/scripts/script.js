@@ -1,3 +1,4 @@
+// jquery my code
 var codeStationJq = {
 	ready: function () {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
@@ -41,6 +42,23 @@ var codeStationJq = {
 			$($pathMenu[0] + ", " + $pathMenu[2]).removeClass("active");
 			$($pathMenu[0]).eq($pos).addClass("active");
 			$($pathMenu[2]).eq($pos).addClass("active");
+		});
+		/*Slider basic work ;)*/
+		var aryImg = [
+			"images/sliderpic1.jpg",
+			"images/sliderpic2.jpg",
+			"images/sliderpic3.jpg",
+			"images/sliderpic4.jpg",
+			"images/sliderpic5.jpg"
+		];
+		inx_img = 0;
+		$(".container section > .middle").css('position', 'relative')
+			.addClass("view")
+				.html("<img width='430' height='300' src='images/sliderpic1.jpg' alt='image pic slider' >");
+		$(".view img").css({
+			'z-index': '-1',
+			'position': 'absolute',
+			'left': '0'
 		});
 	}
 };
