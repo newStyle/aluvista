@@ -27,8 +27,7 @@ var codeStationJq = {
 				$($pathMenu[$arg]).removeClass("active").eq($index).addClass("active");
 				$pos = $index;
 			});
-		})(i);
-		/* mouse hover ! */
+		})(i); /* mouse hover ! */
 		/* if mouse enter on links ;) */
 		for (i = 0; i <= 2; i += 2) /* 0=>top menu header, 2=> down menu footer */
 		(function ($arg) {
@@ -42,8 +41,7 @@ var codeStationJq = {
 			$($pathMenu[0] + ", " + $pathMenu[2]).removeClass("active");
 			$($pathMenu[0]).eq($pos).addClass("active");
 			$($pathMenu[2]).eq($pos).addClass("active");
-		});
-		/*Slider basic work ;)*/
+		}); /*Slider basic work ;)*/
 		var aryImg = [
 			"images/sliderpic1.jpg",
 			"images/sliderpic2.jpg",
@@ -60,8 +58,8 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
-		$("section.container .top nav a").bind('click', function (){
-			$(".view img").hide().attr("src",aryImg[$pos]).fadeIn();
+		$("section.container .top nav a").bind('click', function () {
+			$(".view img").hide().attr("src", aryImg[$pos]).fadeIn();
 		});
 	}
 };
