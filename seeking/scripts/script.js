@@ -1,3 +1,4 @@
+// jquery my code
 var codeStationJq = {
 	ready: function () {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
@@ -26,8 +27,7 @@ var codeStationJq = {
 				$($pathMenu[$arg]).removeClass("active").eq($index).addClass("active");
 				$pos = $index;
 			});
-		})(i);
-		/* mouse hover ! */
+		})(i); /* mouse hover ! */
 		/* if mouse enter on links ;) */
 		for (i = 0; i <= 2; i += 2) /* 0=>top menu header, 2=> down menu footer */
 		(function ($arg) {
@@ -41,6 +41,25 @@ var codeStationJq = {
 			$($pathMenu[0] + ", " + $pathMenu[2]).removeClass("active");
 			$($pathMenu[0]).eq($pos).addClass("active");
 			$($pathMenu[2]).eq($pos).addClass("active");
+		}); /*Slider basic work ;)*/
+		var aryImg = [
+			"images/sliderpic1.jpg",
+			"images/sliderpic2.jpg",
+			"images/sliderpic3.jpg",
+			"images/sliderpic4.jpg",
+			"images/sliderpic5.jpg"
+		];
+		inx_img = 0;
+		$(".container .slider section > .middle").css('position', 'relative')
+			.addClass("view")
+				.html("<img width='430' height='300' src='images/sliderpic3.jpg' alt='image pic slider' >");
+		$(".view img").css({
+			'z-index': '-1',
+			'position': 'absolute',
+			'left': '0'
+		});
+		$("section.container .top nav a").bind('click', function () {
+			$(".view img").hide().attr("src", aryImg[$pos]).fadeIn();
 		});
 	}
 };
