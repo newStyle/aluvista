@@ -124,7 +124,7 @@ input.w24, textarea.w24 { width: 938px; }
 .mb9  { margin-bottom: 1.5em;	/* 24px */	}
 .mb10 { margin-bottom: 1.75em;	/* 28px */	}
 .mb11 { margin-bottom: 2em;		/* 32px */	}
-.mb12 { margin-bottom: 2.5px;	/* 40px */	}
+.mb12 { margin-bottom: 2.5em;	/* 40px */	}
 
 /* Add these to a column to append empty cols. */
 

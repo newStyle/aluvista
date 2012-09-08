@@ -1,4 +1,4 @@
- /*
+/*  
     div, section {
     	outline: 1px dotted red;
     }
@@ -11,7 +11,7 @@
     body > .container, header, footer {
     	outline: 3px dashed magenta;
     }
-*/
+*/ 
 
 body { > section {
         min-height: 595px;
@@ -200,7 +200,7 @@ header {
         }
     }.gallery { /*.down for gallery page */
         height: 650px; > section {
-            background: url(images/gallery.png) no-repeat top center;
+            background: url(images/gallery_content.png) no-repeat top center;
             height: 640px; > .left {
                 height: 485px;
                 p {
@@ -265,7 +265,7 @@ header {
                             input[type = submit] {
                                 float: right;
                                 width: 70px;
-                                color: gray;
+                                color: white;
                                 border: 1px solid #42411E;
                                 background: url(images/submit.jpg) no-repeat;
                             }
@@ -291,10 +291,10 @@ header {
 				float: none;
 				height: 200px;
 				margin-top: 120px;
+                text-align: center;
                 article {
-                    outline: 1px dashed #464B4B;
                     div {
-                        border-bottom: 2px dashed #535353;
+                        border-bottom: 2px dashed gray;
                         height: 65px;
                         p {
                             color: white;
@@ -332,7 +332,8 @@ header {
                                 background: url(images/btn_off.jpg) top center;
                                 border: none;
                             }
-                            input:hover{
+                            input:hover,
+                            .active{
                                 background: url(images/btn_on.jpg) top center;
                             }
                         }
@@ -376,8 +377,41 @@ header {
                 }
             }
 		}
-	}
-}
+	}.process {/*.process page */
+        height:620px;>section{
+            background: url(images/content_process.png) no-repeat top center;
+            width: 830px;
+            height: 620px;.content {
+                    width: 30px;
+                    margin: 274px 0px 0px 403px;
+                    height: 30px;
+                    background: url(images/yellow-spinner.gif) no-repeat top center;
+                }
+            }
+    }
+}.process {/*.process page */
+        height:620px;>section{
+            background: url(images/content_process.png) no-repeat top center;
+            width: 830px;
+            height: 620px;.content {
+                    width: 30px;
+                    margin: 274px 0px 0px 403px;
+                    height: 30px;
+                    background: url(images/yellow-spinner.gif) no-repeat top center;
+                }
+            }
+    }.process_content {/*.process_content page */
+        height:620px;>section{
+            background: url(images/content_process2.png) no-repeat top center;
+            width: 830px;
+            height: 620px;.content {
+                    width: 30px;
+                    margin: 290px 0px 0px 0px;
+                    height: 30px;
+                    background: url(images/yellow-spinner.gif) no-repeat top center;
+                }
+            }
+    }
 footer { > .top {
 		height: 50px;
 		background-color: #eab410;
