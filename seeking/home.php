@@ -10,6 +10,7 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/html5.js"></script>
 <script type="text/javascript" src="scripts/script.js" ></script>
+<link type="text/css" rel="stylesheet" href="font/font.css" />
 </head>
 <body>
 <header>
