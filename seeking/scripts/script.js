@@ -54,14 +54,14 @@ var codeStationJq = {
 		inx_img = 0;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='430' height='300' src='images/sliderpic1.jpg' alt='image pic slider' >");
+				.html("<img width='430' height='300' src='images/sliderpic3.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
 			'left': '0'
 		});
 		$("section.container .top nav a").bind('click', function (){
-			$(".view img").attr("src",aryImg[$pos]);
+			$(".view img").hide().attr("src",aryImg[$pos]).fadeIn();
 		});
 	}
 };
