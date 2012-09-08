@@ -1,6 +1,6 @@
 	<section class="mt12 down index">
 		<div class="recent w6 left"></div>
-		<section class="ml7 right">
+		<section class="right">
 			<section class="w16 mra ">
 				<div class="left">
 					<div class="top"></div>
