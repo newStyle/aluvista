@@ -60,6 +60,9 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
+		$("section.container .top nav a").bind('click', function (){
+			console.log($pos);
+		});
 	}
 };
 
