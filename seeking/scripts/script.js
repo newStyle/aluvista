@@ -52,7 +52,7 @@ var codeStationJq = {
 			"images/sliderpic5.jpg"
 		];
 		inx_img = 0;
-		$(".container section > .middle").css('position', 'relative')
+		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
 				.html("<img width='430' height='300' src='images/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
@@ -61,7 +61,7 @@ var codeStationJq = {
 			'left': '0'
 		});
 		$("section.container .top nav a").bind('click', function (){
-			console.log($pos);
+			$(".view img").attr("src",aryImg[$pos]);
 		});
 	}
 };
