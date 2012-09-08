@@ -14,7 +14,7 @@
 <body>
 <header>
 	<section class="mla mra">
-		<div class="mt9 w10 right">
+		<div class="w10 right">
 			<div class="w10 top">
 				<div class="left w9">
 					<nav>
