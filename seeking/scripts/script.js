@@ -58,7 +58,8 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
-		$("section.container .top nav a").bind('click', function () {
+		$("section.container .top nav a").bind('click', function (event) {
+			event.preventDefault();
 			$(".view img").hide().attr("src", aryImg[$pos]).fadeIn();
 		});
 	}
