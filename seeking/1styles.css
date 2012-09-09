@@ -155,7 +155,7 @@ input.w24, textarea.w24 { width: 938px; }
 .pt9  { padding-top: 1.5em;		/* 24px */}
 .pt10 { padding-top: 1.75em;	/* 28px */}
 .pt11 { padding-top: 2em;		/* 32px */}
-.pt12 { padding-top: 2.5px;		/* 40px */}
+.pt12 { padding-top: 2.5em;		/* 40px */}
 
 .pb1  { padding-bottom: 0.125em;/* 2px */ }
 .pb2  { padding-bottom: 0.25em;	/* 4px */ }
@@ -168,7 +168,7 @@ input.w24, textarea.w24 { width: 938px; }
 .pb9  { padding-bottom: 1.5em;	/* 24px */}
 .pb10 { padding-bottom: 1.75em;	/* 28px */}
 .pb11 { padding-bottom: 2em;	/* 32px */}
-.pb12 { padding-bottom: 2.5px;	/* 40px */}
+.pb12 { padding-bottom: 2.5em;	/* 40px */}
 
 /* floating layout
 -------------------------------------------------------------- */
