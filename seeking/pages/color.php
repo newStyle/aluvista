@@ -1,4 +1,4 @@
-<section class="mt12 down pt1 color">
+<section class="mt2 mb11 b down pt1 color">
 	<section class="mla mra mt11">
 		<section class="w6 left">
 			<div class="top">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="mt5 down pt1">
 				<section>
-					<div><input type="button" value="diam"/></div>
+					<div><input class="active" type="button" value="diam"/></div>
 					<div><input type="button" value="facilisis"/></div>
 					<div><input type="button" value="aenean"/></div>
 					<div><input type="button" value="integer"/></div>

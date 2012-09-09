@@ -31,7 +31,7 @@
 				<nav>
 					<ul>
 						<li><a href="pages/index.php">home</a></li>
-						<li><a href="pages/about.php">process</a></li>
+						<li><a href="pages/process.php">process</a></li>
 						<li><a href="pages/gallery.php">gallery</a></li>
 						<li><a href="pages/color.php">color</a></li>
 						<li class="right active"><a href="pages/contact.php">contact</a></li>
@@ -125,7 +125,7 @@
 		<nav>
 			<ul>
 				<li><a href="pages/index.php">home</a></li>
-				<li><a href="pages/about.php">process</a></li>
+				<li><a href="pages/process_content.php">process</a></li>
 				<li><a href="pages/gallery.php">gallery</a></li>
 				<li><a href="pages/color.php">color</a></li>
 				<li class="right active"><a href="pages/contact.php">contact</a></li>
