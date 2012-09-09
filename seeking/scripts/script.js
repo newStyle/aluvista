@@ -58,12 +58,20 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
+		efct_banner = function($newpos){
+			$(".view img").hide().attr("src", aryImg[$newpos]).fadeIn();
+		}
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
-			$(".view img").hide().attr("src", aryImg[$pos]).fadeIn();
+			efct_banner($pos);
 		});
+		(change_image = function (){
+			efct_banner($pos++);
+			$pos = $pos > 4 || !$pos ? 0 : $pos;
+			$("section.container .top nav a").removeClass("active").eq($pos).addClass("active");
+			setTimeout(change_image,3000);
+		})();
 	}
 };
 
 $(document).ready(codeStationJq.ready);
-
