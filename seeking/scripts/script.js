@@ -4,7 +4,10 @@ var codeStationJq = {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
 
 		/* ajax load ! */
-		$ajaxPath = [ /* this path load in #con => section.container > .down > #con ;)*/ "header .down nav li a", "footer .down nav li a"];
+		$ajaxPath = [ /* this path load in #con => section.container > .down > #con ;)*/ 
+			"header .down nav li a",
+			"footer .down nav li a"
+		];
 		for (i = 0; i < $ajaxPath.length; i++)
 		$($ajaxPath[i]).click(function (e) {
 			e.preventDefault();
@@ -67,7 +70,7 @@ var codeStationJq = {
 		});
 		(change_image = function (){
 			efct_banner($pos++);
-			$pos = $pos > 4 || !$pos ? 0 : $pos;
+			$pos = $pos > aryImg.length-1 || !$pos ? 0 : $pos;/* note : 'the number NaN' value is false ;) */
 			$("section.container .top nav a").removeClass("active").eq($pos).addClass("active");
 			setTimeout(change_image,3000);
 		})();
