@@ -51,8 +51,7 @@ var codeStationJq = {
 			"images/sliderpic3.jpg",
 			"images/sliderpic4.jpg",
 			"images/sliderpic5.jpg"
-		];
-		inx_img = 0;
+		],inx_img = 0 , $dummy = 3;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
 				.html("<img width='430' height='300' src='images/sliderpic3.jpg' alt='image pic slider' >");
@@ -67,11 +66,12 @@ var codeStationJq = {
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
 			efct_banner($pos);
+			$dummy = $pos;
 		});
 		(change_image = function (){
-			efct_banner($pos++);
-			$pos = $pos > aryImg.length-1 || !$pos ? 0 : $pos;/* note : 'the number NaN' value is false ;) */
-			$("section.container .top nav a").removeClass("active").eq($pos).addClass("active");
+			efct_banner($dummy++);
+			$dummy = $dummy > aryImg.length-1 || !$dummy ? 0 : $dummy;/* note : 'the number NaN' value is false ;) */
+			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
 			setTimeout(change_image,3000);
 		})();
 	}
