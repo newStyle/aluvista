@@ -14,33 +14,33 @@
 </head>
 <body>
 <header>
-	<section class="mla mra">
-		<div class="w10 right">
-			<div class="w10 top">
-				<div class="left w9">
-					<nav>
-						<ul>
-							<li><a href="#">Chat</a></li>
-							<li><a href="#">Call</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="right ml9"></div>
-			</div>
-			<div class="w10 mt2 down">
-				<nav>
-					<ul>
-						<li><a href="pages/index.php">home</a></li>
-						<li><a href="pages/process.php">process</a></li>
-						<li><a href="pages/gallery.php">gallery</a></li>
-						<li><a href="pages/color.php">color</a></li>
-						<li class="right active"><a href="pages/contact.php">contact</a></li>
-					</ul>
-				</nav>
-			</div>
+<section class="mla mra">
+<div class="w10 right">
+	<div class="w10 top">
+		<div class="left w9">
+			<nav>
+				<ul>
+					<li><a href="#">Chat</a></li>
+					<li><a href="#">Call</a></li>
+				</ul>
+			</nav>
 		</div>
-		<div class="mt7 w4 ml1 left"></div>
-	<section>
+		<div class="right ml9"></div>
+	</div>
+	<div class="w10 mt2 down">
+		<nav>
+			<ul>
+				<li><a href="pages/index.php">home</a></li>
+				<li><a href="pages/process.php">process</a></li>
+				<li><a href="pages/gallery.php">gallery</a></li>
+				<li><a href="pages/color.php">color</a></li>
+				<li class="right active"><a href="pages/contact.php">contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="mt7 w4 ml1 left"></div>
+<section>
 </header>
 <!-- End header -->
 <section class="container mla mra mt9">
