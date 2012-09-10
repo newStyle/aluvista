@@ -51,18 +51,21 @@
 						address, auctor ridiculus risus velit.
 						Cum dapibus, sagittis turpis.
 					</p>
+					<div class="line"></div>
 				</div>
 				<div class="w6 mt2 ">
 					<p>
 						Tel : +98 222222 <br />
 						Fax	: +98222222
 					</p>
+					<div class="line"></div>
 				</div>
 				<div class="w6 mt2 ">
 					<p>
 						http://example.com
 						info@example.com
 					</p>
+					<div class="line"></div>
 				</div>
 			</article>
 		</section>
