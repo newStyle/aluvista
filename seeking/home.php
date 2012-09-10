@@ -49,9 +49,9 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
+						<li><a href="#"  class="active">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#" class="active">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 					</ul>

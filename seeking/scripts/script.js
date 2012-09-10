@@ -51,10 +51,10 @@ var codeStationJq = {
 			"images/sliderpic3.jpg",
 			"images/sliderpic4.jpg",
 			"images/sliderpic5.jpg"
-		],inx_img = 0 , $dummy = 3;
+		], inx_img = 0, $dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='430' height='300' src='images/sliderpic3.jpg' alt='image pic slider' >");
+				.html("<img width='430' height='300' src='images/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
@@ -69,10 +69,10 @@ var codeStationJq = {
 			$dummy = $pos;
 		});
 		(change_image = function (){
-			efct_banner($dummy++);
-			$dummy = $dummy > aryImg.length-1 || !$dummy ? 0 : $dummy;/* note : 'the number NaN' value is false ;) */
+			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
-			setTimeout(change_image,3000);
+			$dummy = $dummy >= aryImg.length-1 ? -1 : $dummy;
+			setTimeout(change_image, 3000);
 		})();
 	}
 };
