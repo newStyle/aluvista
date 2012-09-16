@@ -40,7 +40,7 @@
 	</div>
 </div>
 <div class="mt7 w4 ml1 left"></div>
-<section>
+</section>
 </header>
 <!-- End header -->
 <section class="container mla mra mt9">
