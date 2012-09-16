@@ -46,11 +46,11 @@ var codeStationJq = {
 			$($pathMenu[2]).eq($pos).addClass("active");
 		}); /*Slider basic work ;)*/
 		var aryImg = [
-			"images/sliderpic1.jpg",
-			"images/sliderpic2.jpg",
-			"images/sliderpic3.jpg",
-			"images/sliderpic4.jpg",
-			"images/sliderpic5.jpg"
+			"images/gallery/sliderpic1.jpg",
+			"images/gallery/sliderpic2.jpg",
+			"images/gallery/sliderpic3.jpg",
+			"images/gallery/sliderpic4.jpg",
+			"images/gallery/sliderpic5.jpg"
 		], inx_img = 0, $dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
