@@ -45,7 +45,7 @@
 <!-- End header -->
 <section class="container mla mra mt9">
 	<section class="slider top">
-		<section class=" w22 mla mra">
+		<section class=" w23 mla mra">
 			<section class="w6 left">
 				<nav>
 					<ul>
