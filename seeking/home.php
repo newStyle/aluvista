@@ -39,7 +39,7 @@
 		</nav>
 	</div>
 </div>
-<div class="mt7 w4 ml1 left"></div>
+<div class="w4 ml1 left"></div>
 </section>
 </header>
 <!-- End header -->
