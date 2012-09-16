@@ -85,13 +85,14 @@ header {
 						}
 						li.right {
 							float: none;
-							margin-left: 305px;
+							margin-left: 320px;
 						}
 					}
 				}
 			}
 		} > .left {
-			height: inherit;
+			height: 120px;
+			margin-top: 30px;
 			background: url(images/logo.png) no-repeat center center;
 		}
 
@@ -100,9 +101,12 @@ header {
 section.container { > .top {
 		width: inherit;
 		height: 300px; > section {
+			position: relative;
 			height: inherit;.left {
+				position: absolute;
+				z-index: 1;
+				left: 30px;
 				height: inherit;
-				margin-left: 30px;
 				nav {
 					background: url(images/slider_menu.jpg) no-repeat left center;
 					height: inherit;
@@ -151,6 +155,7 @@ section.container { > .top {
 				}
 			}.middle {
 				height: inherit;
+				margin-right: 240px;
 			}
 		}
 	}.index { /* .down for index page  */

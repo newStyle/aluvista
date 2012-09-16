@@ -39,8 +39,8 @@
 		</nav>
 	</div>
 </div>
-<div class="mt7 w4 ml1 left"></div>
-<section>
+<div class="w4 ml1 left"></div>
+</section>
 </header>
 <!-- End header -->
 <section class="container mla mra mt9">

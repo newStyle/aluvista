@@ -60,7 +60,7 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
-		efct_banner = function($newpos){
+		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", aryImg[$newpos]).fadeIn();
 		}
 		$("section.container .top nav a").bind('click', function (event) {
@@ -68,12 +68,17 @@ var codeStationJq = {
 			efct_banner($pos);
 			$dummy = $pos;
 		});
-		(change_image = function (){
+		(change_image = function () {
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
-			$dummy = $dummy >= aryImg.length-1 ? -1 : $dummy;
+			$dummy = $dummy >= aryImg.length - 1 ? -1 : $dummy;
 			setTimeout(change_image, 3000);
 		})();
+		for (var i = 0; i < document.links.length; i++) {
+		    document.links[i].onfocus = function () {
+		        this.blur();
+		    };
+		}
 	}
 };
 
