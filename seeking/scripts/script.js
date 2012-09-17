@@ -19,7 +19,7 @@ var codeStationJq = {
 			"header .right .down nav a",
 			"section.container .top nav a",
 			"footer .down nav a"
-		],$pos;
+		], $pos;
 
 		/* active menu ! */
 		/* if click on links active its ! */
@@ -44,14 +44,21 @@ var codeStationJq = {
 			$($pathMenu[0] + ", " + $pathMenu[2]).removeClass("active");
 			$($pathMenu[0]).eq($pos).addClass("active");
 			$($pathMenu[2]).eq($pos).addClass("active");
-		}); /*Slider basic work ;)*/
-		var aryImg = [
-			"images/gallery/sliderpic1.jpg",
-			"images/gallery/sliderpic2.jpg",
-			"images/gallery/sliderpic3.jpg",
-			"images/gallery/sliderpic4.jpg",
-			"images/gallery/sliderpic5.jpg"
-		], inx_img = 0, $dummy = -1;
+		}); 
+		/* my work on banner and relation it with menu ;) */
+		/*Slider basic work ;)*/
+		var imgsInBanner = {
+			"home"  : {/* for page Home ! */
+				pics : [
+					"images/gallery/sliderpic1.jpg",
+					"images/gallery/sliderpic2.jpg",
+					"images/gallery/sliderpic3.jpg",
+					"images/gallery/sliderpic4.jpg",
+					"images/gallery/sliderpic5.jpg"
+				]
+			}
+		};
+		var inx_img = 0, $dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
 				.html("<img width='430' height='300' src='images/gallery/sliderpic1.jpg' alt='image pic slider' >");
@@ -61,23 +68,24 @@ var codeStationJq = {
 			'left': '0'
 		});
 		efct_banner = function ($newpos) {
-			$(".view img").hide().attr("src", aryImg[$newpos]).fadeIn();
+			$(".view img").hide().attr("src", imgsInBanner["home"].pics[$newpos]).fadeIn();
+			console.log(imgsInBanner["home"].pics[$newpos]);
 		}
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
 			efct_banner($pos);
-			$dummy = $pos===aryImg.length-1 ? -1 : $pos;
+			$dummy = $pos === imgsInBanner["home"].pics.length - 1 ? -1 : $pos;
 		});
 		(change_image = function () {
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
-			$dummy = $dummy >= aryImg.length - 1 ? -1 : $dummy;
+			$dummy = $dummy >= imgsInBanner["home"].pics.length - 1 ? -1 : $dummy;
 			setTimeout(change_image, 3000);
 		})();
 		for (var i = 0; i < document.links.length; i++) {
-		    document.links[i].onfocus = function () {
-		        this.blur();
-		    };
+			document.links[i].onfocus = function () {
+				this.blur();
+			};
 		}
 	}
 };
