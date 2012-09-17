@@ -1,0 +1,5 @@
+Categories:
+1.Banks=b
+2.shopping centers=sh
+3.Home=res
+4.other=...
