@@ -2,56 +2,68 @@
 var codeStationJq = {
 	ready: function () {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
+		var $pos, menus = {
+			Links: [
+				"header .right .down nav a",
+				"section.container .top nav a",
+				"footer .down nav a"
+			],
+			HFLinks: [
+				"header .right .down nav a",
+				"footer .down nav a"
+			],
+			loadAjax: function (url, box, sw) {
+				$(box).hide().load(url).fadeIn("normal");
+				if (sw === true) {
+					window.history.pushState(url, "", url.substring(6));
+					window.onpopstate = function (e) {
+						e.state && $("#con").hide().load(e.state).fadeIn("normal");
+					};
+				}
+			},
+			active: function (which, i) {
+				$(which).removeClass("active").eq(i).addClass("active");
+				$pos = i;
+				//console.log($pos);
+			},
+			MouseEnter: function (which, i) {
+				if (which == this.Links[0] || which == this.Links[2]) {
+					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
+					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
+				}
+			},
+			MouseLeave: function (which, i) {
+				if (which == this.Links[0] || which == this.Links[2]) {
+					$(this.Links[0] + ", " + this.Links[2]).removeClass("active");
+					$(this.Links[0]).eq(i).addClass("active");
+					$(this.Links[2]).eq(i).addClass("active");
+				}
+			}
+		};
 
-		/* ajax load ! */
-		$ajaxPath = [ /* this path load in #con => section.container > .down > #con ;)*/ 
-			"header .down nav li a",
-			"footer .down nav li a"
-		];
-		for (i = 0; i < $ajaxPath.length; i++)
-		$($ajaxPath[i]).click(function (e) {
+		/* ajax load*/
+		for (var i = 0; i < menus.HFLinks.length; i++)
+		$(menus.HFLinks[i]).bind('click', function (e) {
 			e.preventDefault();
-			(function (response) {
-				$("#con").hide().load(response).fadeIn("normal");
-				//The pushState(data, title, url) method adds a state object entry to the history.
-				window.history.pushState(response, "", response.substring(6));
-			})($(this).attr("href"));
-			window.onpopstate = function (e) {
-				e.state && $("#con").hide().load(e.state).fadeIn("normal");
-			};
-		});
-
-		var $pathMenu = [ /* this path can active menu in page ;)*/
-			"header .right .down nav a",
-			"section.container .top nav a",
-			"footer .down nav a"
-		], $pos;
-
-		/* active menu ! */
-		/* if click on links active its ! */
-		for (i = 0; i <= 2; i++) /* 0=>top menu header, 2=> down menu footer */
-		(function ($arg) {
-			$($pathMenu[$arg]).bind('click', function () {
-				$index = $($pathMenu[$arg]).index(this);
-				$($pathMenu[$arg]).removeClass("active").eq($index).addClass("active");
-				$pos = $index;
+			menus.loadAjax($(this).attr("href"), "#con", true);
+		}); /* active links in page */
+		for (var i = 0; i <= menus.Links.length; i++)(function (i) {
+			$(menus.Links[i]).bind('click', function () {
+				menus.active(menus.Links[i], $(menus.Links[i]).index(this));
 			});
-		})(i); /* mouse hover ! */
-		/* if mouse enter on links ;) */
-		for (i = 0; i <= 2; i += 2) /* 0=>top menu header, 2=> down menu footer */
-		(function ($arg) {
-			$($pathMenu[$arg]).bind('mouseenter', function () {
-				$index = $($pathMenu[$arg]).index(this);
-				$($pathMenu[0]).removeClass("active").eq($index).addClass("active");
-				$($pathMenu[2]).removeClass("active").eq($index).addClass("active");
+		})(i); /* mouse enter on links */
+		for (i = 0; i <= menus.Links.length; i++)(function (i) {
+			$(menus.Links[i]).bind('mouseenter', function () {
+				menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));
 			});
-		})(i); /* if mouse leave links ;) */
-		$($pathMenu[0] + ", " + $pathMenu[2]).bind('mouseleave', function () {
-			$($pathMenu[0] + ", " + $pathMenu[2]).removeClass("active");
-			$($pathMenu[0]).eq($pos).addClass("active");
-			$($pathMenu[2]).eq($pos).addClass("active");
-		}); 
-		/* my work on banner and relation it with menu ;) */
+		})(i);
+
+		/* mouse leave on links */
+		for (i = 0; i <= menus.Links.length; i++)(function (i) {
+			$(menus.Links[i]).bind('mouseenter', function () {
+				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
+			});
+		})(i);
 		/*Slider basic work ;)*/
 		var imgsInBanner = {
 			"home"  : {/* for page Home ! */
