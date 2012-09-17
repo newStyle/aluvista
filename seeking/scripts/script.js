@@ -11,8 +11,14 @@ var codeStationJq = {
 		for (i = 0; i < $ajaxPath.length; i++)
 		$($ajaxPath[i]).click(function (e) {
 			e.preventDefault();
-			$href = $(this).attr("href");
-			$("#con").hide().load($href).fadeIn("normal");
+			(function (response) {
+				$("#con").hide().load(response).fadeIn("normal");
+				//The pushState(data, title, url) method adds a state object entry to the history.
+				window.history.pushState(response, "", response.substring(6));
+			})($(this).attr("href"));
+			window.onpopstate = function (e) {
+				e.state && $("#con").hide().load(e.state).fadeIn("normal");
+			};
 		});
 
 		var $pathMenu = [ /* this path can active menu in page ;)*/
@@ -69,7 +75,6 @@ var codeStationJq = {
 		});
 		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", imgsInBanner["home"].pics[$newpos]).fadeIn();
-			console.log(imgsInBanner["home"].pics[$newpos]);
 		}
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
