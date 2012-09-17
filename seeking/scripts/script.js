@@ -66,7 +66,7 @@ var codeStationJq = {
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
 			efct_banner($pos);
-			$dummy = $pos;
+			$dummy = $pos===aryImg.length-1 ? -1 : $pos;
 		});
 		(change_image = function () {
 			efct_banner(++$dummy);
