@@ -92,6 +92,24 @@ var codeStationJq = {
 				this.blur();
 			};
 		}
+
+		// Contact JS
+		var myform = document.forms.item(0);
+		$('section.contact').click(function(){
+			alert("hihihi");
+		});
+
+		for(var i=0; i<myform.elements.length;i++){
+
+			myform.elements.item(i).onblur=function(){
+				//alert("hihihi");
+				if(this.value==''){
+					this.style.backgroundColor='#F99';
+				}else{
+					this.style.backgroundColor='#FFF';
+				}
+			}
+		}
 	}
 };
 
