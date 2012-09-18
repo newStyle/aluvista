@@ -30,7 +30,7 @@ var codeStationJq = {
 					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
 					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
 				} else if (which == this.Links[1]) {
-					clearInterval(setImg);
+					clearTimeout(setImg);
 					setImg = false;
 				}
 			},
