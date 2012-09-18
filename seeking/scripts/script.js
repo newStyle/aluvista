@@ -110,6 +110,13 @@ var codeStationJq = {
 				this.blur();
 			};
 		}
+		$('#con').click(function(){
+			$(function(){
+				$('section.contact').click(function(){
+					alert("hello");
+				});
+			});
+		});
 	}
 };
 
