@@ -37,8 +37,8 @@ var codeStationJq = {
 			MouseLeave: function (which, i) {
 				if (which == this.Links[0] || which == this.Links[2]) {
 					$(this.Links[0] + ", " + this.Links[2]).removeClass("active");
-					$(this.Links[0]).eq(i).addClass("active");
-					$(this.Links[2]).eq(i).addClass("active");
+					$(this.Links[0]).eq(pos).addClass("active");
+					$(this.Links[2]).eq(pos).addClass("active");
 				} else if (which == this.Links[1]) {
 					$(which).closest('ul').bind('mouseleave', function () {
 						typeof setImg === 'boolean' && change_image();
@@ -66,7 +66,7 @@ var codeStationJq = {
 
 		/* mouse leave on links */
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).bind('mouseenter', function () {
+			$(menus.Links[i]).bind('mouseleave', function () {
 				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
 			});
 		})(i); /*Slider basic work ;)*/
