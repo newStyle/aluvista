@@ -51,7 +51,8 @@ var codeStationJq = {
 		for (i = 0; i < menus.HFLinks.length; i++)
 		$(menus.HFLinks[i]).bind('click', function (e) {
 			e.preventDefault();
-			menus.loadAjax($(this).attr("href"), "#con", true);
+			menus.loadAjax(url = $(this).attr("href"), "#con", true);
+			changer(url);
 		}); /* active links in page */
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
 			$(menus.Links[i]).bind('click', function () {
@@ -69,7 +70,30 @@ var codeStationJq = {
 			$(menus.Links[i]).bind('mouseleave', function () {
 				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
 			});
-		})(i); /*Slider basic work ;)*/
+		})(i); 
+		function changer(url){
+			switch (url.slice(6,-4)){
+				case 'index':
+					console.log('clicked index');
+				break;
+				case 'process':
+					console.log('clicked process');
+				break;
+				case 'gallery':
+					console.log('clicked gallery');
+				break;
+				case 'color':
+					console.log('clicked color');
+				break;
+				case 'contact':
+					console.log('clicked contact');
+				break;
+				default:
+					alert("omran age be in resid !:tr");
+				break;
+			}
+		}
+		/*Slider basic work ;)*/
 		var imgsInBanner = {
 			"home": { /* for page Home ! */
 				pics: [
