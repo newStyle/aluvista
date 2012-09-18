@@ -2,7 +2,7 @@
 var codeStationJq = {
 	ready: function () {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
-		var $pos, menus = {
+		var pos, setImg, menus = {
 			Links: [
 				"header .right .down nav a",
 				"section.container .top nav a",
@@ -23,13 +23,15 @@ var codeStationJq = {
 			},
 			active: function (which, i) {
 				$(which).removeClass("active").eq(i).addClass("active");
-				$pos = i;
-				//console.log($pos);
+				pos = i;
 			},
 			MouseEnter: function (which, i) {
 				if (which == this.Links[0] || which == this.Links[2]) {
 					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
 					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
+				} else if (which == this.Links[1]) {
+					clearInterval(setImg);
+					setImg = false;
 				}
 			},
 			MouseLeave: function (which, i) {
@@ -37,17 +39,21 @@ var codeStationJq = {
 					$(this.Links[0] + ", " + this.Links[2]).removeClass("active");
 					$(this.Links[0]).eq(i).addClass("active");
 					$(this.Links[2]).eq(i).addClass("active");
+				} else if (which == this.Links[1]) {
+					$(which).closest('ul').bind('mouseleave', function () {
+						typeof setImg === 'boolean' && change_image();
+					});
 				}
-			}
+			},
 		};
 
 		/* ajax load*/
-		for (var i = 0; i < menus.HFLinks.length; i++)
+		for (i = 0; i < menus.HFLinks.length; i++)
 		$(menus.HFLinks[i]).bind('click', function (e) {
 			e.preventDefault();
 			menus.loadAjax($(this).attr("href"), "#con", true);
 		}); /* active links in page */
-		for (var i = 0; i <= menus.Links.length; i++)(function (i) {
+		for (i = 0; i <= menus.Links.length; i++)(function (i) {
 			$(menus.Links[i]).bind('click', function () {
 				menus.active(menus.Links[i], $(menus.Links[i]).index(this));
 			});
@@ -63,11 +69,10 @@ var codeStationJq = {
 			$(menus.Links[i]).bind('mouseenter', function () {
 				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
 			});
-		})(i);
-		/*Slider basic work ;)*/
+		})(i); /*Slider basic work ;)*/
 		var imgsInBanner = {
-			"home"  : {/* for page Home ! */
-				pics : [
+			"home": { /* for page Home ! */
+				pics: [
 					"images/gallery/sliderpic1.jpg",
 					"images/gallery/sliderpic2.jpg",
 					"images/gallery/sliderpic3.jpg",
@@ -76,9 +81,10 @@ var codeStationJq = {
 				]
 			}
 		};
-		var inx_img = 0, $dummy = -1;
+		var inx_img = 0,
+			$dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
-			.addClass("view")
+				.addClass("view")
 				.html("<img width='430' height='300' src='images/gallery/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
@@ -90,14 +96,14 @@ var codeStationJq = {
 		}
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
-			efct_banner($pos);
-			$dummy = $pos === imgsInBanner["home"].pics.length - 1 ? -1 : $pos;
+			efct_banner(pos);
+			$dummy = pos === imgsInBanner["home"].pics.length - 1 ? -1 : pos;
 		});
 		(change_image = function () {
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
 			$dummy = $dummy >= imgsInBanner["home"].pics.length - 1 ? -1 : $dummy;
-			setTimeout(change_image, 3000);
+			setImg = setTimeout(change_image, 3000);
 		})();
 		for (var i = 0; i < document.links.length; i++) {
 			document.links[i].onfocus = function () {
