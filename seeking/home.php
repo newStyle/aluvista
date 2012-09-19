@@ -49,7 +49,7 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
-						<li><a href="#"  class="active">Learn Lpsum Dolar Sit</a></li>
+						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
 						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
@@ -128,7 +128,7 @@
 				<li><a href="pages/process_content.php">process</a></li>
 				<li><a href="pages/gallery.php">gallery</a></li>
 				<li><a href="pages/color.php">color</a></li>
-				<li class="right active"><a href="pages/contact.php">contact</a></li>
+				<li class="right"><a href="pages/contact.php">contact</a></li>
 			</ul>
 		</nav>
 	</div>
