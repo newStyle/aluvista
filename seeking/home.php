@@ -49,11 +49,11 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
-						<li><a href="#">Learn Lpsum Dolar Sit</a></li>
+						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">home - Lpsum Dolar</a></li>
 					</ul>
 				</nav>
 			</section>
