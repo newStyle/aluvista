@@ -2,7 +2,7 @@
 var codeStationJq = {
 	ready: function () {
 		$("section.container > .down").wrapAll("<section id='con'></section>");
-		var pos, setImg, menus = {
+		var pos, Int, menus = {
 			Links: [
 				"header .right .down nav a",
 				"section.container .top nav a",
@@ -30,8 +30,8 @@ var codeStationJq = {
 					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
 					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
 				} else if (which == this.Links[1]) {
-					clearTimeout(setImg);
-					setImg = false;
+					clearTimeout(Int);
+					Int = false;
 				}
 			},
 			MouseLeave: function (which, i) {
@@ -41,7 +41,7 @@ var codeStationJq = {
 					$(this.Links[2]).eq(pos).addClass("active");
 				} else if (which == this.Links[1]) {
 					$(which).closest('ul').bind('mouseleave', function () {
-						typeof setImg === 'boolean' && change_image();
+						typeof Int === 'boolean' && change_image();
 					});
 				}
 			},
@@ -70,77 +70,82 @@ var codeStationJq = {
 			$(menus.Links[i]).bind('mouseleave', function () {
 				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
 			});
-		})(i); 
-		function changer(url){
-			switch (url.slice(6,-4)){
-				case 'index':
-					console.log('clicked index');
+		})(i);
+
+		function changer(url) {
+			switch (url.slice(6, -4)) {
+			case 'index':
+				image = "home";
 				break;
-				case 'process':
-					console.log('clicked process');
+			case 'process':
+				image = "process";
 				break;
-				case 'gallery':
-					console.log('clicked gallery');
+			case 'gallery':
+				image = "gallery";
 				break;
-				case 'color':
-					console.log('clicked color');
+			case 'color':
+				image = "Color";
 				break;
-				case 'contact':
-					console.log('clicked contact');
+			case 'contact':
+				image = "contact";
 				break;
-				default:
-					alert("omran age be in resid !:tr");
+			default:
+				alert("omran age be in resid !:tr");
 				break;
 			}
-		}
-		/*Slider basic work ;)*/
-		var imgsInBanner = {
-			"home": { /* for Home page ! */
-				pics: [
-					"images/gallery/sliderpic1.jpg",
-					"images/gallery/sliderpic2.jpg",
-					"images/gallery/sliderpic3.jpg",
-					"images/gallery/sliderpic4.jpg",
-					"images/gallery/sliderpic5.jpg"
-				]
-			},"process": { /* for Process page! */
-				pics: [
-					"images/gallery/b1.jpg",
-					"images/gallery/b2.jpg",
-					"images/gallery/b3.jpg",
-					"images/gallery/b4.jpg",
-					"images/gallery/b5.jpg"
-				]
-			},"gallery": { /* for Gallery page! */
-				pics: [
-					"images/gallery/gov1.jpg",
-					"images/gallery/gov2.jpg",
-					"images/gallery/gov3.jpg",
-					"images/gallery/gov4.jpg",
-					"images/gallery/gov5.jpg"
-				]
-			},"color": { /* for Color page! */
-				pics: [
-					"images/gallery/res1.jpg",
-					"images/gallery/res2.jpg",
-					"images/gallery/res3.jpg",
-					"images/gallery/res4.jpg",
-					"images/gallery/res5.jpg"
-				]
-			},"contact": { /* for Contact page! */
-				pics: [
-					"images/gallery/sh1.jpg",
-					"images/gallery/sh2.jpg",
-					"images/gallery/sh3.jpg",
-					"images/gallery/sh4.jpg",
-					"images/gallery/sh5.jpg"
-				]
-			},
-		};
+		} /*Slider basic work ;)*/
+		var image = "home",
+			imgsInBanner = {
+				"home": { /* for home page ! */
+					pics: [
+						"images/gallery/sliderpic1.jpg",
+						"images/gallery/sliderpic2.jpg",
+						"images/gallery/sliderpic3.jpg",
+						"images/gallery/sliderpic4.jpg",
+						"images/gallery/sliderpic5.jpg"
+					]
+				},
+				"process": { /* for Process page! */
+					pics: [
+						"images/gallery/b1.jpg",
+						"images/gallery/b2.jpg",
+						"images/gallery/b3.jpg",
+						"images/gallery/b4.jpg",
+						"images/gallery/b5.jpg"
+					]
+				},
+				"gallery": { /* for Gallery page! */
+					pics: [
+						"images/gallery/gov1.jpg",
+						"images/gallery/gov2.jpg",
+						"images/gallery/gov3.jpg",
+						"images/gallery/gov4.jpg",
+						"images/gallery/gov5.jpg"
+					]
+				},
+				"Color": { /* for Color page! */
+					pics: [
+						"images/gallery/res1.jpg",
+						"images/gallery/res2.jpg",
+						"images/gallery/res3.jpg",
+						"images/gallery/res4.jpg",
+						"images/gallery/res5.jpg"
+					]
+				},
+				"contact": { /* for Contact page! */
+					pics: [
+						"images/gallery/sh1.jpg",
+						"images/gallery/sh2.jpg",
+						"images/gallery/sh3.jpg",
+						"images/gallery/sh4.jpg",
+						"images/gallery/sh5.jpg"
+					]
+				},
+			};
 		var inx_img = 0,
 			$dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
-				.addClass("view")
+			.addClass("view")
 				.html("<img width='430' height='300' src='images/gallery/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
@@ -148,27 +153,27 @@ var codeStationJq = {
 			'left': '0'
 		});
 		efct_banner = function ($newpos) {
-			$(".view img").hide().attr("src", imgsInBanner["home"].pics[$newpos]).fadeIn();
+			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 		}
 		$("section.container .top nav a").bind('click', function (event) {
 			event.preventDefault();
 			efct_banner(pos);
-			$dummy = pos === imgsInBanner["home"].pics.length - 1 ? -1 : pos;
+			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
 		});
 		(change_image = function () {
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
-			$dummy = $dummy >= imgsInBanner["home"].pics.length - 1 ? -1 : $dummy;
-			setImg = setTimeout(change_image, 3000);
+			$dummy = $dummy >= imgsInBanner[image].pics.length - 1 ? -1 : $dummy;
+			setImg = setTimeout(change_image, 1000);
 		})();
 		for (var i = 0; i < document.links.length; i++) {
 			document.links[i].onfocus = function () {
 				this.blur();
 			};
 		}
-		$('#con').click(function(){
-			$(function(){
-				$('section.contact').click(function(){
+		$('#con').click(function () {
+			$(function () {
+				$('section.contact').click(function () {
 					alert("hello");
 				});
 			});
