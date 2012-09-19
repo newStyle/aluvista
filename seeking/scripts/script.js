@@ -44,7 +44,7 @@ var codeStationJq = {
 						typeof Int === 'boolean' && change_image();
 					});
 				}
-			},
+			}
 		};
 
 		/* ajax load*/
@@ -146,7 +146,7 @@ var codeStationJq = {
 						"images/gallery/sh4.jpg",
 						"images/gallery/sh5.jpg"
 					]
-				},
+				}
 			};
 		var inx_img = 0,
 			$dummy = -1;
@@ -161,7 +161,7 @@ var codeStationJq = {
 		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 		}
-		$('section.container .top nav a').click(function () {
+		$('section.container .top nav a').click(function (event) {
 			event.preventDefault();
 			efct_banner(pos);
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;

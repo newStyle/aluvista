@@ -1,6 +1,6 @@
 <section class="mt10 mb12 down gallery">
-	<section class="w21 mt8 mla mra pt1">
-		<section class="w6 mt12 ml1 left"><!--
+	<section class="w21 mt8 mla mra pt1"><!--
+		<section class="w6 mt12 ml1 left">
 			<p> our factory Gallary </p>
 			<section>
 				<section class="mb5">
