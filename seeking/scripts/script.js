@@ -185,6 +185,20 @@ var codeStationJq = {
 				});
 			});
 		});
+
+		var myform = document.forms.item(0);
+
+		for(var i=0; i<myform.elements.length;i++){
+
+			$myform.elements.item(i).onblur=function(){
+				//alert("hihihi");
+				if(this.value==''){
+					this.style.backgroundColor='#F99';
+				}else{
+					this.style.backgroundColor='#FFF';
+				}
+			}
+		}
 	}
 };
 
