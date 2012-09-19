@@ -74,24 +74,24 @@ var codeStationJq = {
 
 		function changer(url) {
 			switch (url.slice(6, -4)) {
-			case 'index':
-				image = "home";
-				break;
-			case 'process':
-				image = "process";
-				break;
-			case 'gallery':
-				image = "gallery";
-				break;
-			case 'color':
-				image = "Color";
-				break;
-			case 'contact':
-				image = "contact";
-				break;
-			default:
-				alert("omran age be in resid !:tr");
-				break;
+				case 'index':
+					image = "home";
+					break;
+				case 'process':
+					image = "process";
+					break;
+				case 'gallery':
+					image = "gallery";
+					break;
+				case 'color':
+					image = "Color";
+					break;
+				case 'contact':
+					image = "contact";
+					break;
+				default:
+					alert("omran age be in resid !:tr");
+					break;
 			}
 		} /*Slider basic work ;)*/
 		var image = "home",
