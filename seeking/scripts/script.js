@@ -95,7 +95,7 @@ var codeStationJq = {
 		}
 		/*Slider basic work ;)*/
 		var imgsInBanner = {
-			"home": { /* for page Home ! */
+			"home": { /* for Home page ! */
 				pics: [
 					"images/gallery/sliderpic1.jpg",
 					"images/gallery/sliderpic2.jpg",
@@ -103,7 +103,39 @@ var codeStationJq = {
 					"images/gallery/sliderpic4.jpg",
 					"images/gallery/sliderpic5.jpg"
 				]
-			}
+			},"process": { /* for Process page! */
+				pics: [
+					"images/gallery/b1.jpg",
+					"images/gallery/b2.jpg",
+					"images/gallery/b3.jpg",
+					"images/gallery/b4.jpg",
+					"images/gallery/b5.jpg"
+				]
+			},"gallery": { /* for Gallery page! */
+				pics: [
+					"images/gallery/gov1.jpg",
+					"images/gallery/gov2.jpg",
+					"images/gallery/gov3.jpg",
+					"images/gallery/gov4.jpg",
+					"images/gallery/gov5.jpg"
+				]
+			},"color": { /* for Color page! */
+				pics: [
+					"images/gallery/res1.jpg",
+					"images/gallery/res2.jpg",
+					"images/gallery/res3.jpg",
+					"images/gallery/res4.jpg",
+					"images/gallery/res5.jpg"
+				]
+			},"contact": { /* for Contact page! */
+				pics: [
+					"images/gallery/sh1.jpg",
+					"images/gallery/sh2.jpg",
+					"images/gallery/sh3.jpg",
+					"images/gallery/sh4.jpg",
+					"images/gallery/sh5.jpg"
+				]
+			},
 		};
 		var inx_img = 0,
 			$dummy = -1;
