@@ -73,21 +73,27 @@ var codeStationJq = {
 		})(i);
 
 		function changer(url) {
+			path = $("section.container .slider nav ul");
 			switch (url.slice(6, -4)) {
 				case 'index':
 					image = "home";
+					menus.loadAjax ("pages/index-li.php",path,false);
 					break;
 				case 'process':
 					image = "process";
+					menus.loadAjax ("pages/process-li.php",path,false);
 					break;
 				case 'gallery':
 					image = "gallery";
+					menus.loadAjax ("pages/gallery-li.php",path,false);
 					break;
 				case 'color':
 					image = "Color";
+					menus.loadAjax ("pages/color-li.php",path,false);
 					break;
 				case 'contact':
 					image = "contact";
+					menus.loadAjax ("pages/contact-li.php",path,false);
 					break;
 				default:
 					alert("omran age be in resid !:tr");
@@ -155,7 +161,7 @@ var codeStationJq = {
 		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 		}
-		$("section.container .top nav a").bind('click', function (event) {
+		$('section.container .top nav a').click(function () {
 			event.preventDefault();
 			efct_banner(pos);
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
