@@ -30,7 +30,7 @@ var codeStationJq = {
 					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
 					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
 				} else if (which == this.Links[1]) {
-					clearTimeout(Int);
+					Int != false && clearTimeout(Int) && alert("ey baba ");
 					Int = false;
 				}
 			},
@@ -161,10 +161,11 @@ var codeStationJq = {
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
 		});
 		(change_image = function () {
+			autoPlayDelay = 3000;
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
 			$dummy = $dummy >= imgsInBanner[image].pics.length - 1 ? -1 : $dummy;
-			setImg = setTimeout(change_image, 1000);
+			Int = setTimeout(change_image, autoPlayDelay);
 		})();
 		for (var i = 0; i < document.links.length; i++) {
 			document.links[i].onfocus = function () {
