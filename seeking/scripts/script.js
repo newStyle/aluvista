@@ -96,7 +96,6 @@ var codeStationJq = {
 					menus.loadAjax ("pages/contact-li.php",path,false);
 					break;
 				default:
-					alert("omran age be in resid !:tr");
 					break;
 			}
 		} /*Slider basic work ;)*/
