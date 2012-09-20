@@ -1,4 +1,4 @@
-/*	
+
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-*/
+
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -388,10 +388,41 @@ section.container { > .top {
 			background: url(images/content_process.png) no-repeat top center;
 			width: 830px;
 			height: 620px;.content {
-				width: 30px;
-				margin: 274px 0px 0px 403px;
-				height: 30px;
-				background: url(images/yellow-spinner.gif) no-repeat top center;
+				width: 818px;
+				height: 560px;
+				overflow: hidden;.right{
+					width: 440px;
+					height: 440px;
+					margin:68px 185px 0px 0px;
+					-webkit-animation:mycircle 30s linear;
+				}
+					@-webkit-keyframes mycircle
+						{
+						from {-webkit-transform:rotate(0deg);}
+						to {-webkit-transform:rotate(360deg);}
+						}
+						
+						li{
+							width: 100px;
+							height: 100px;
+							list-style-type: none;
+						}.one{
+							margin: 30px 0px 0px 180px;
+						}.two{
+							margin: -60px 0px 0px 280px;
+						}.three{
+							margin: 10px 0px 0px 320px;
+						}.four{
+							margin: 10px 0px 0px 290px;
+						}.five{
+							margin: -70px 0px 0px 180px;
+						}.six{
+							margin: -140px 0px 0px 70px;
+						}.seven{
+							margin: -210px 0px 0px 30px;
+						}.eight{
+							margin: -210px 0px 0px 60px;
+						}
 			}
 		}
 	}.process_content {/*.process_content page */
