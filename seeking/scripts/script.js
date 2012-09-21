@@ -96,7 +96,6 @@ var codeStationJq = {
 					menus.loadAjax ("pages/contact-li.php",path,false);
 					break;
 				default:
-					alert("omran age be in resid !:tr");
 					break;
 			}
 		} /*Slider basic work ;)*/
@@ -185,6 +184,20 @@ var codeStationJq = {
 				});
 			});
 		});
+
+		var myform = document.forms.item(0);
+
+		for(var i=0; i<myform.elements.length;i++){
+
+			$myform.elements.item(i).onblur=function(){
+				//alert("hihihi");
+				if(this.value==''){
+					this.style.backgroundColor='#F99';
+				}else{
+					this.style.backgroundColor='#FFF';
+				}
+			}
+		}
 	}
 };
 
