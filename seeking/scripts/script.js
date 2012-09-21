@@ -103,47 +103,47 @@ var codeStationJq = {
 			imgsInBanner = {
 				"home": { /* for home page ! */
 					pics: [
-						"images/gallery/sliderpic1.jpg",
-						"images/gallery/sliderpic2.jpg",
-						"images/gallery/sliderpic3.jpg",
-						"images/gallery/sliderpic4.jpg",
-						"images/gallery/sliderpic5.jpg"
+						"images/banner/sliderpic1.jpg",
+						"images/banner/sliderpic2.jpg",
+						"images/banner/sliderpic3.jpg",
+						"images/banner/sliderpic4.jpg",
+						"images/banner/sliderpic5.jpg"
 					]
 				},
 				"process": { /* for Process page! */
 					pics: [
-						"images/gallery/b1.jpg",
-						"images/gallery/b2.jpg",
-						"images/gallery/b3.jpg",
-						"images/gallery/b4.jpg",
-						"images/gallery/b5.jpg"
+						"images/banner/b1.jpg",
+						"images/banner/b2.jpg",
+						"images/banner/b3.jpg",
+						"images/banner/b4.jpg",
+						"images/banner/b5.jpg"
 					]
 				},
 				"gallery": { /* for Gallery page! */
 					pics: [
-						"images/gallery/gov1.jpg",
-						"images/gallery/gov2.jpg",
-						"images/gallery/gov3.jpg",
-						"images/gallery/gov4.jpg",
-						"images/gallery/gov5.jpg"
+						"images/banner/gov1.jpg",
+						"images/banner/gov2.jpg",
+						"images/banner/gov3.jpg",
+						"images/banner/gov4.jpg",
+						"images/banner/gov5.jpg"
 					]
 				},
 				"Color": { /* for Color page! */
 					pics: [
-						"images/gallery/res1.jpg",
-						"images/gallery/res2.jpg",
-						"images/gallery/res3.jpg",
-						"images/gallery/res4.jpg",
-						"images/gallery/res5.jpg"
+						"images/banner/res1.jpg",
+						"images/banner/res2.jpg",
+						"images/banner/res3.jpg",
+						"images/banner/res4.jpg",
+						"images/banner/res5.jpg"
 					]
 				},
 				"contact": { /* for Contact page! */
 					pics: [
-						"images/gallery/sh1.jpg",
-						"images/gallery/sh2.jpg",
-						"images/gallery/sh3.jpg",
-						"images/gallery/sh4.jpg",
-						"images/gallery/sh5.jpg"
+						"images/banner/sh1.jpg",
+						"images/banner/sh2.jpg",
+						"images/banner/sh3.jpg",
+						"images/banner/sh4.jpg",
+						"images/banner/sh5.jpg"
 					]
 				}
 			};
@@ -151,7 +151,7 @@ var codeStationJq = {
 			$dummy = -1;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='430' height='300' src='images/gallery/sliderpic1.jpg' alt='image pic slider' >");
+				.html("<img width='430' height='300' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
