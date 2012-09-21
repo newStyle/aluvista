@@ -40,7 +40,7 @@ var codeStationJq = {
 					$(this.Links[0]).eq(pos).addClass("active");
 					$(this.Links[2]).eq(pos).addClass("active");
 				} else if (which == this.Links[1]) {
-					$(which).closest('ul').bind('mouseleave', function () {
+					$(which).closest('ul').mouseleave(function () {
 						typeof Int === 'boolean' && change_image();
 					});
 				}
@@ -49,25 +49,25 @@ var codeStationJq = {
 
 		/* ajax load*/
 		for (i = 0; i < menus.HFLinks.length; i++)
-		$(menus.HFLinks[i]).bind('click', function (e) {
+		$(menus.HFLinks[i]).click(function (e) {
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
 			changer(url);
 		}); /* active links in page */
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).bind('click', function () {
+			$(menus.Links[i]).live('click', function () {
 				menus.active(menus.Links[i], $(menus.Links[i]).index(this));
 			});
 		})(i); /* mouse enter on links */
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).bind('mouseenter', function () {
+			$(menus.Links[i]).live('mouseenter', function () {
 				menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));
 			});
 		})(i);
 
 		/* mouse leave on links */
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).bind('mouseleave', function () {
+			$(menus.Links[i]).live('mouseleave', function () {
 				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
 			});
 		})(i);
@@ -161,7 +161,7 @@ var codeStationJq = {
 		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 		}
-		$('section.container .top nav a').click(function (event) {
+		$('section.container .top nav a').live('click',function (event) {
 			event.preventDefault();
 			efct_banner(pos);
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
