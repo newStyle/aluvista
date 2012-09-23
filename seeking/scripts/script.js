@@ -184,7 +184,7 @@ var codeStationJq = {
 				});
 			});
 		});
-
+/*
 		var myform = document.forms.item(0);
 
 		for(var i=0; i<myform.elements.length;i++){
@@ -198,6 +198,7 @@ var codeStationJq = {
 				}
 			}
 		}
+*/
 	}
 };
 
