@@ -185,42 +185,56 @@ var codeStationJq = {
 			});
 		});
 		/* gallery page !*/
-		var gal = {
-			nOfImg: 200,
-			nOfPage: '',
-			boxImg: [
-				"<div class='w2 left'></div>",
-				"<div class='w2 left'></div>",
-				"<div class='w2 ml4 right last'></div>"
-			],
-			setBox: function(){
-
-			},
-			setImg: function(){
-
-			},
-			setPage: function(){
-				
-			},
-			mouseEvent: {
-				page: {
-					clicked: function(){
-
-					}
+		$(".gallery").live("mouseover",function(){
+			var gal = {
+				nOfImg: 20,
+				nOfPage: '',
+				boxImg: [
+					"<div class='w2 left'></div>",
+					"<div class='w2 left'></div>",
+					"<div class='w2 ml4 right last'></div>"
+				],
+				path : "section.container .gallery > section .left > section",
+				str: {
+					tmp: '',
+					mas: ''/*master change ;) */
 				},
-				pics: {
-					clicked: function(){
+				setBox: function (){
+					for (var i = 0;i < this.nOfImg;){
+						for (var j = 0; j < 3 && i < this.nOfImg;j++,i++)
+							this.str.tmp += this.boxImg[j];
+					this.str.mas += "<section class='mb5'>"+this.str.tmp+"</section>";
+					this.str.tmp = '';
+				}
+					$(this.path).html(this.str.mas);
+				},
+				setImg: function (){
 
+				},
+				setPage: function(){
+
+				},
+				mouseEvent: {
+					page: {
+						clicked: function(){
+
+						}
 					},
-					mouseEnter: function(){
+					pics: {
+						clicked: function(){
 
-					},
-					mouseLeave: function(){
+						},
+						mouseEnter: function(){
 
+						},
+						mouseLeave: function(){
+
+						}
 					}
 				}
 			}
-		}
+			gal.setBox();
+		});
 	}
 };
 

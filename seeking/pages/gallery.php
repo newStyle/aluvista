@@ -2,33 +2,7 @@
 	<section class="w22 mt8 mla mra pt1">
 		<section class="w6 mt12 ml1 left">
 			<p> our factory Gallary </p>
-			<section>
-				<section class="mb5">
-					<div class="w2 left"></div>
-					<div class="w2 left"></div>
-					<div class="w2 ml4 right last"></div>
-				</section>
-				<section class="mb5">
-					<div class="w2 left"></div>
-					<div class="w2 left"></div>
-					<div class="w2 ml4 right last"></div>
-				</section>
-				<section class="mb5">
-					<div class="w2 left"></div>
-					<div class="w2 left"></div>
-					<div class="w2 ml4 right last"></div>
-				</section>
-				<section class="mb5">
-					<div class="w2 left"></div>
-					<div class="w2 left"></div>
-					<div class="w2 ml4 right last"></div>
-				</section>
-				<section class="mb5">
-					<div class="w2 left"></div>
-					<div class="w2 left"></div>
-					<div class="w2 ml4 right last"></div>
-				</section>
-			</section>
+			<section id="khoda"></section><!-- small pic -->
 			<div class="w3"></div>
 		</section>
 		<section class="right pt1">
