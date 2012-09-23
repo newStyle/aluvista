@@ -185,7 +185,7 @@ var codeStationJq = {
 			});
 		});
 		/* gallery page !*/
-		$(".gallery").live("mouseover",function(){
+		$(".gallery").live("mouseover", function(){
 			var gal = {
 				nOfImg: 20,
 				nOfPage: '',
@@ -203,13 +203,16 @@ var codeStationJq = {
 					for (var i = 0;i < this.nOfImg;){
 						for (var j = 0; j < 3 && i < this.nOfImg;j++,i++)
 							this.str.tmp += this.boxImg[j];
-					this.str.mas += "<section class='mb5'>"+this.str.tmp+"</section>";
-					this.str.tmp = '';
-				}
+						this.str.mas += "<section class='mb5'>"+this.str.tmp+"</section>";
+						this.str.tmp = '';
+					}
 					$(this.path).html(this.str.mas);
 				},
 				setImg: function (){
-
+					for (i = 0; i <= $(this.path+" div").length;i++)
+						$(this.path+" div").eq(i).
+							html("<img src='images/75/" + (i+1) +".jpg' width='70' height='70'>");
+							//console.log($(path+" div").length);
 				},
 				setPage: function(){
 
@@ -234,6 +237,7 @@ var codeStationJq = {
 				}
 			}
 			gal.setBox();
+			gal.setImg();
 		});
 	}
 };
