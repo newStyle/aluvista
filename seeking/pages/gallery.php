@@ -3,7 +3,7 @@
 		<section class="w6 mt12 ml1 left">
 			<p> our factory Gallary </p>
 			<section id="khoda"></section><!-- small pic -->
-			<div class="w3"></div>
+			<div class="w3 paging"></div>
 		</section>
 		<section class="right pt1">
 			<p class="right mt5"><span><a href="#">play</a></span>/<span><a href="#">puase</a></span></p>

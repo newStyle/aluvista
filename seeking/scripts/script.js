@@ -187,7 +187,7 @@ var codeStationJq = {
 		/* gallery page !*/
 		$(".gallery").live("mouseover", function(){
 			var gal = {
-				nOfImg: 20,
+				nOfImg: 70,
 				nOfPage: '',
 				boxImg: [
 					"<div class='w2 left'></div>",
@@ -215,7 +215,11 @@ var codeStationJq = {
 							//console.log($(path+" div").length);
 				},
 				setPage: function(){
-
+					this.nOfPage = this.nOfImg/15;
+					this.str.tmp = '';
+					for(i=0;i<=this.nOfPage;i++)
+						this.str.tmp += "<a href='#"+i+"'>["+(i+1)+"]</a>";
+					$(".paging").html(this.str.tmp);
 				},
 				mouseEvent: {
 					page: {
@@ -238,6 +242,7 @@ var codeStationJq = {
 			}
 			gal.setBox();
 			gal.setImg();
+			gal.setPage();
 		});
 	}
 };
