@@ -184,21 +184,43 @@ var codeStationJq = {
 				});
 			});
 		});
-/*
-		var myform = document.forms.item(0);
+		/* gallery page !*/
+		var gal = {
+			nOfImg: 200,
+			nOfPage: '',
+			boxImg: [
+				"<div class='w2 left'></div>",
+				"<div class='w2 left'></div>",
+				"<div class='w2 ml4 right last'></div>"
+			],
+			setBox: function(){
 
-		for(var i=0; i<myform.elements.length;i++){
+			},
+			setImg: function(){
 
-			$myform.elements.item(i).onblur=function(){
-				//alert("hihihi");
-				if(this.value==''){
-					this.style.backgroundColor='#F99';
-				}else{
-					this.style.backgroundColor='#FFF';
+			},
+			setPage: function(){
+				
+			},
+			mouseEvent: {
+				page: {
+					clicked: function(){
+
+					}
+				},
+				pics: {
+					clicked: function(){
+
+					},
+					mouseEnter: function(){
+
+					},
+					mouseLeave: function(){
+
+					}
 				}
 			}
 		}
-*/
 	}
 };
 
