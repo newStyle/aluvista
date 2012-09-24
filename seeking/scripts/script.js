@@ -188,6 +188,7 @@ var codeStationJq = {
 			var gal = {
 				nOfImg: 23,
 				nOfPage: '',
+				acp: 0,/*active pic */
 				boxImg: [
 					"<div class='w2 left'></div>",
 					"<div class='w2 left'></div>",
@@ -206,6 +207,8 @@ var codeStationJq = {
 						this.str.tmp = '';
 					}
 					$(this.path).html(this.str.mas);
+					this.mouseEvent.pics.mouseEnter();
+					this.mouseEvent.pics.mouseLeave();
 				},
 				setImg: function () {
 					for (i = 0; i <= $(this.path + " div").length; i++)
@@ -223,14 +226,14 @@ var codeStationJq = {
 				mouseEvent: {
 					page: {
 						clicked: function (num) {
-							$(".paging a").live("click",function () {
-								ind  = $(".paging a").index(this);
-								for (i = 0;i < num;i++){
-									(function(j){
-										if (j == ind){
-											$(gal.path + " > section").css("display","none");
-											for (i=j*5;i<(j+1)*5;i++)
-												$(gal.path + " > section").eq(i).css("display","block");
+							$(".paging a").live("click", function () {
+								ind = $(".paging a").index(this);
+								for (i = 0; i < num; i++) {
+									(function (j) {
+										if (j == ind) {
+											$(gal.path + " > section").css("display", "none");
+											for (i = j * 5; i < (j + 1) * 5; i++)
+											$(gal.path + " > section").eq(i).css("display", "block");
 										}
 									})(i);
 								}
@@ -242,10 +245,28 @@ var codeStationJq = {
 
 						},
 						mouseEnter: function () {
-
+							$(gal.path + " img").css("opacity", "0.7").live("mouseenter",function () {
+								$(this).css({
+									"opacity": "1",
+									"outline": "2px solid #F0B00F"
+								});
+								$(gal.path + " img").eq(gal.acp).css({
+									"opacity": "1",
+									"outline": "2px solid #F0B00F"
+								});
+							});
 						},
 						mouseLeave: function () {
-
+							$(gal.path + " img").live("mouseleave",function () {
+								$(gal.path + " img").css({
+									"opacity": "0.7",
+									"outline":"none"
+								});
+								$(gal.path + " img").eq(gal.acp).css({
+									"opacity": "1",
+									"outline": "2px solid #F0B00F"
+								});
+							});
 						}
 					}
 				}
