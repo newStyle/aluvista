@@ -184,11 +184,11 @@ var codeStationJq = {
 				});
 			});
 		}); /* gallery page !*/
+		acp = 0;
 		$(".gallery").live("mouseenter",function () {
 			var gal = {
 				nOfImg: 23,
 				nOfPage: '',
-				acp: 0,/*active pic */
 				boxImg: [
 					"<div class='w2 left'></div>",
 					"<div class='w2 left'></div>",
@@ -209,6 +209,7 @@ var codeStationJq = {
 					$(this.path).html(this.str.mas);
 					this.mouseEvent.pics.mouseEnter();
 					this.mouseEvent.pics.mouseLeave();
+					this.mouseEvent.pics.clicked();
 				},
 				setImg: function () {
 					for (i = 0; i <= $(this.path + " div").length; i++)
@@ -242,7 +243,18 @@ var codeStationJq = {
 					},
 					pics: {
 						clicked: function () {
-
+							$(gal.path + " img").live("click",function(){
+								acp = $(gal.path + " img").index(this);
+								$("section.container .gallery > section .right .top").html("<img src='images/500/"+ (acp + 1) +".jpg'>");
+								$(gal.path + " img").css({
+									"opacity": "0.7",
+									"outline": "none"
+								});
+								$(this).css({
+									"opacity": "1",
+									"outline": "3px solid #F0B00F"
+								});
+							});
 						},
 						mouseEnter: function () {
 							$(gal.path + " img").css("opacity", "0.7").live("mouseenter",function () {
@@ -250,7 +262,7 @@ var codeStationJq = {
 									"opacity": "1",
 									"outline": "2px solid #F0B00F"
 								});
-								$(gal.path + " img").eq(gal.acp).css({
+								$(gal.path + " img").eq(acp).css({
 									"opacity": "1",
 									"outline": "2px solid #F0B00F"
 								});
@@ -262,7 +274,7 @@ var codeStationJq = {
 									"opacity": "0.7",
 									"outline":"none"
 								});
-								$(gal.path + " img").eq(gal.acp).css({
+								$(gal.path + " img").eq(acp).css({
 									"opacity": "1",
 									"outline": "2px solid #F0B00F"
 								});
