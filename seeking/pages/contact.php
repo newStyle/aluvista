@@ -62,8 +62,8 @@
 				</div>
 				<div class="w6 mt2 ">
 					<p>
-						http://example.com
-						info@example.com
+						www.aluvsista.com
+						info@aluvista.com
 					</p>
 					<div class="line"></div>
 				</div>
@@ -71,3 +71,13 @@
 		</section>
 	</section>
 </section>
+<script type="text/javascript">
+windoow
+$('#con').click(function () {
+			$(function () {
+				$('section.contact').click(function () {
+					alert("hello");
+				});
+			});
+		});
+</script>
