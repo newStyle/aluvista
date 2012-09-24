@@ -160,7 +160,7 @@ var codeStationJq = {
 		efct_banner = function ($newpos) {
 			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 		}
-		$('section.container .top nav a').live('click',function (event) {
+		$('section.container .top nav a').live('click', function (event) {
 			event.preventDefault();
 			efct_banner(pos);
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
@@ -183,58 +183,68 @@ var codeStationJq = {
 					alert("hello");
 				});
 			});
-		});
-		/* gallery page !*/
-		$(".gallery").live("mouseover", function(){
+		}); /* gallery page !*/
+		$(".gallery").live("mouseenter",function () {
 			var gal = {
-				nOfImg: 70,
+				nOfImg: 23,
 				nOfPage: '',
 				boxImg: [
 					"<div class='w2 left'></div>",
 					"<div class='w2 left'></div>",
 					"<div class='w2 ml4 right last'></div>"
 				],
-				path : "section.container .gallery > section .left > section",
+				path: "section.container .gallery > section .left > section",
 				str: {
 					tmp: '',
 					mas: ''/*master change ;) */
 				},
-				setBox: function (){
-					for (var i = 0;i < this.nOfImg;){
-						for (var j = 0; j < 3 && i < this.nOfImg;j++,i++)
-							this.str.tmp += this.boxImg[j];
-						this.str.mas += "<section class='mb5'>"+this.str.tmp+"</section>";
+				setBox: function () {
+					for (var i = 0; i < this.nOfImg;) {
+						for (var j = 0; j < 3 && i < this.nOfImg; j++, i++)
+						this.str.tmp += this.boxImg[j];
+						this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 						this.str.tmp = '';
 					}
 					$(this.path).html(this.str.mas);
 				},
-				setImg: function (){
-					for (i = 0; i <= $(this.path+" div").length;i++)
-						$(this.path+" div").eq(i).
-							html("<img src='images/75/" + (i+1) +".jpg' width='70' height='70'>");
-							//console.log($(path+" div").length);
+				setImg: function () {
+					for (i = 0; i <= $(this.path + " div").length; i++)
+						$(this.path + " div").eq(i).
+							html("<img src='images/75/" + (i + 1) + ".jpg' width='70' height='70'>");
 				},
-				setPage: function(){
-					this.nOfPage = this.nOfImg/15;
+				setPage: function () {
+					this.nOfPage = this.nOfImg / 15;
 					this.str.tmp = '';
-					for(i=0;i<=this.nOfPage;i++)
-						this.str.tmp += "<a href='#"+i+"'>["+(i+1)+"]</a>";
+					for (i = 0; i <= this.nOfPage; i++)
+						this.str.tmp += "<a href='#" + i + "'>[" + (i + 1) + "]</a>";
 					$(".paging").html(this.str.tmp);
+					this.mouseEvent.page.clicked(this.nOfPage);
 				},
 				mouseEvent: {
 					page: {
-						clicked: function(){
-
+						clicked: function (num) {
+							$(".paging a").live("click",function () {
+								ind  = $(".paging a").index(this);
+								for (i = 0;i < num;i++){
+									(function(j){
+										if (j == ind){
+											$(gal.path + " > section").css("display","none");
+											for (i=j*5;i<(j+1)*5;i++)
+												$(gal.path + " > section").eq(i).css("display","block");
+										}
+									})(i);
+								}
+							});
 						}
 					},
 					pics: {
-						clicked: function(){
+						clicked: function () {
 
 						},
-						mouseEnter: function(){
+						mouseEnter: function () {
 
 						},
-						mouseLeave: function(){
+						mouseLeave: function () {
 
 						}
 					}
@@ -247,4 +257,4 @@ var codeStationJq = {
 	}
 };
 
-$(document).ready(codeStationJq.ready);
+$(document).ready(codeStationJq.ready)
