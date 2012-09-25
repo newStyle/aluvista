@@ -86,6 +86,12 @@ var codeStationJq = {
 				case 'gallery':
 					image = "gallery";
 					menus.loadAjax ("pages/gallery-li.php",path,false);
+				setTimeout(function () {/* create gallery ! */
+					gal.setBox();
+					gal.setImg();
+					gal.setPage();
+					gal.ply_pus();
+				}, 100);
 					break;
 				case 'color':
 					image = "Color";
@@ -176,115 +182,118 @@ var codeStationJq = {
 			document.links[i].onfocus = function () {
 				this.blur();
 			};
-		}/* gallery page !*/
+		} /* gallery page !*/
 		acp = 0;
-		$(".gallery").live("mouseenter",function () {
-			var gal = {
-				nOfImg: 23,
-				nOfPage: '',
-				boxImg: [
-					"<div class='w2 left'></div>",
-					"<div class='w2 left'></div>",
-					"<div class='w2 ml4 right last'></div>"
-				],
-				path: "section.container .gallery > section .left > section",
-				str: {
-					tmp: '',
-					mas: ''/*master change ;) */
-				},
-				setBox: function () {
-					for (var i = 0; i < this.nOfImg;) {
-						for (var j = 0; j < 3 && i < this.nOfImg; j++, i++)
-						this.str.tmp += this.boxImg[j];
-						this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
-						this.str.tmp = '';
-					}
-					$(this.path).html(this.str.mas);
-					this.mouseEvent.pics.mouseEnter();
-					this.mouseEvent.pics.mouseLeave();
-					this.mouseEvent.pics.clicked();
-				},
-				chg_img: function(jmp){
-					$("section.container .gallery > section .right .top").html("<img src='images/500/" + (jmp + 1) + ".jpg'>");
-					$(this.path + " img").css({
-						"opacity": "0.7",
-						"outline": "none"
-					});
-					$(this.path + " img").eq(jmp).css({
-						"opacity": "1",
-						"outline": "3px solid #F0B00F"
-					});
-				},
-				setImg: function () {
-					for (i = 0; i <= $(this.path + " div").length; i++)
-						$(this.path + " div").eq(i).
-							html("<img src='images/75/" + (i + 1) + ".jpg' width='70' height='70'>");
-				},
-				setPage: function () {
-					this.nOfPage = this.nOfImg / 15;
+		var gal = {
+			nOfImg: 23,
+			nOfPage: '',
+			boxImg: [
+				"<div class='w2 left'></div>",
+				"<div class='w2 left'></div>",
+				"<div class='w2 ml4 right last'></div>"
+			],
+			path: "section.container .gallery > section .left > section",
+			str: {
+				tmp: '',
+				mas: '' /*master change ;) */
+			},
+			setBox: function () {
+				for (var i = 0; i < this.nOfImg;) {
+					for (var j = 0; j < 3 && i < this.nOfImg; j++, i++)
+					this.str.tmp += this.boxImg[j];
+					this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 					this.str.tmp = '';
-					for (i = 0; i <= this.nOfPage; i++)
-						this.str.tmp += "<a href='#" + i + "'>[" + (i + 1) + "]</a>";
-					$(".paging").html(this.str.tmp);
-					this.mouseEvent.page.clicked();
+				}
+				$(this.path).html(this.str.mas);
+				this.mouseEvent.pics.mouseEnter();
+				this.mouseEvent.pics.mouseLeave();
+				this.mouseEvent.pics.clicked();
+			},
+			setImg: function () {
+				for (i = 0; i <= $(this.path + " div").length; i++)
+					$(this.path + " div").eq(i).
+						html("<img src='images/75/" + (i + 1) + ".jpg' width='70' height='70'>");
+			},
+			setPage: function () {
+				this.nOfPage = this.nOfImg / 15;
+				this.str.tmp = '';
+				for (i = 0; i <= this.nOfPage; i++)
+					this.str.tmp += "<a href='#page-" + i + "'>[" + (i + 1) + "]</a>";
+				$(".paging").html(this.str.tmp);
+				this.mouseEvent.page.clicked();
+			},
+			chg_img: function (jmp) {
+				$("section.container .gallery > section .right .top").html("<img src='images/500/" + (jmp + 1) + ".jpg'>");
+				$(this.path + " img").css({
+					"opacity": "0.7",
+					"outline": "none"
+				});
+				$(this.path + " img").eq(jmp).css({
+					"opacity": "1",
+					"outline": "3px solid #F0B00F"
+				});
+			},
+			ply_pus: function () {
+				$(".gallery p span a").click(function () {
+					$(".gallery p span a").index(this) == 0 ? (It = setInterval(function () {
+						gal.chg_img(++acp);
+						acp = acp >= gal.nOfImg ? -1 : acp;
+					}, 3000)) : clearInterval(It);
+				});
+			},
+			mouseEvent: {
+				page: {
+					clicked: function () {
+						$(".paging a").live("click", function () {
+							ind = $(".paging a").index(this);
+							for (i = 0; i < gal.nOfPage; i++) {
+								(function (j) {
+									if (j == ind) {
+										$(gal.path + " > section").css("display", "none");
+										for (i = j * 5; i < (j + 1) * 5; i++)
+											$(gal.path + " > section").eq(i).css("display", "block");
+										gal.chg_img(j * 15);
+									}
+								})(i);
+							}
+						});
+					}
 				},
-				mouseEvent: {
-					page: {
-						clicked: function () {
-							$(".paging a").live("click", function () {
-								ind = $(".paging a").index(this);
-								for (i = 0; i < gal.nOfPage; i++) {
-									(function (j) {
-										if (j == ind) {
-											$(gal.path + " > section").css("display", "none");
-											for (i = j * 5; i < (j + 1) * 5; i++)
-												$(gal.path + " > section").eq(i).css("display", "block");
-										gal.chg_img(j*15);
-										}
-									})(i);
-								}
-							});
-						}
+				pics: {
+					clicked: function () {
+						$(gal.path + " img").live("click", function () {
+							acp = $(gal.path + " img").index(this);
+							gal.chg_img(acp);
+						});
 					},
-					pics: {
-						clicked: function () {
-							$(gal.path + " img").live("click",function(){
-								acp = $(gal.path + " img").index(this);
-								gal.chg_img(acp);
+					mouseEnter: function () {
+						$(gal.path + " img").css("opacity", "0.7").live("mouseenter", function () {
+							$(this).css({
+								"opacity": "1",
+								"outline": "2px solid #F0B00F"
 							});
-						},
-						mouseEnter: function () {
-							$(gal.path + " img").css("opacity", "0.7").live("mouseenter",function () {
-								$(this).css({
-									"opacity": "1",
-									"outline": "2px solid #F0B00F"
-								});
-								$(gal.path + " img").eq(acp).css({
-									"opacity": "1",
-									"outline": "2px solid #F0B00F"
-								});
+							$(gal.path + " img").eq(acp).css({
+								"opacity": "1",
+								"outline": "2px solid #F0B00F"
 							});
-						},
-						mouseLeave: function () {
-							$(gal.path + " img").live("mouseleave",function () {
-								$(gal.path + " img").css({
-									"opacity": "0.7",
-									"outline":"none"
-								});
-								$(gal.path + " img").eq(acp).css({
-									"opacity": "1",
-									"outline": "2px solid #F0B00F"
-								});
+						});
+					},
+					mouseLeave: function () {
+						$(gal.path + " img").live("mouseleave", function () {
+							$(gal.path + " img").css({
+								"opacity": "0.7",
+								"outline": "none"
 							});
-						}
+							$(gal.path + " img").eq(acp).css({
+								"opacity": "1",
+								"outline": "2px solid #F0B00F"
+							});
+						});
 					}
 				}
 			}
-			gal.setBox();
-			gal.setImg();
-			gal.setPage();
-		});
+		}
 	}
 };
 
-$(document).ready(codeStationJq.ready)
+$(document).ready(codeStationJq.ready);
