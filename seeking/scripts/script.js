@@ -185,7 +185,7 @@ var codeStationJq = {
 		} /* gallery page !*/
 		acp = 0;
 		var gal = {
-			nOfImg: 23,
+			nOfImg: 24,
 			nOfPage: '',
 			boxImg: [
 				"<div class='w2 left'></div>",
@@ -213,6 +213,7 @@ var codeStationJq = {
 				for (i = 0; i <= $(this.path + " div").length; i++)
 					$(this.path + " div").eq(i).
 						html("<img src='images/75/" + (i + 1) + ".jpg' width='70' height='70'>");
+				this.chg_img(0);
 			},
 			setPage: function () {
 				this.nOfPage = this.nOfImg / 15;
@@ -233,12 +234,26 @@ var codeStationJq = {
 					"outline": "3px solid #F0B00F"
 				});
 			},
+			autoChangePages : function (j, ind) {
+				if (j == ind) {
+					$(this.path + " > section").css("display", "none");
+					for (i = j * 5; i < (j + 1) * 5; i++)
+						$(this.path + " > section").eq(i).css("display", "block");
+					this.chg_img(j * 15);
+				}
+			},
+			chg_pge: function (ind) {
+				for (i = 0; i < this.nOfPage; i++) {
+					this.autoChangePages(i, ind);
+				}
+			},
 			ply_pus: function () {
 				$(".gallery p span a").click(function () {
 					$(".gallery p span a").index(this) == 0 ? (It = setInterval(function () {
-						gal.chg_img(++acp);
-						acp = acp >= gal.nOfImg ? -1 : acp;
-					}, 3000)) : clearInterval(It);
+						gal.chg_img(acp++);
+						acp = acp > gal.nOfImg ? 0 : acp;
+						gal.chg_pge(acp/16);
+					}, 1500)) : clearInterval(It);
 				});
 			},
 			mouseEvent: {
@@ -246,16 +261,8 @@ var codeStationJq = {
 					clicked: function () {
 						$(".paging a").live("click", function () {
 							ind = $(".paging a").index(this);
-							for (i = 0; i < gal.nOfPage; i++) {
-								(function (j) {
-									if (j == ind) {
-										$(gal.path + " > section").css("display", "none");
-										for (i = j * 5; i < (j + 1) * 5; i++)
-											$(gal.path + " > section").eq(i).css("display", "block");
-										gal.chg_img(j * 15);
-									}
-								})(i);
-							}
+							gal.chg_pge(ind);
+							acp = ind * 15;
 						});
 					}
 				},
