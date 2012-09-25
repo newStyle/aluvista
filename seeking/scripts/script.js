@@ -176,14 +176,7 @@ var codeStationJq = {
 			document.links[i].onfocus = function () {
 				this.blur();
 			};
-		}
-		$('#con').click(function () {
-			$(function () {
-				$('section.contact').click(function () {
-					alert("hello");
-				});
-			});
-		}); /* gallery page !*/
+		}/* gallery page !*/
 		acp = 0;
 		$(".gallery").live("mouseenter",function () {
 			var gal = {
@@ -211,6 +204,18 @@ var codeStationJq = {
 					this.mouseEvent.pics.mouseLeave();
 					this.mouseEvent.pics.clicked();
 				},
+				chg_img: function(jmp, $this){
+					$("section.container .gallery > section .right .top").html("<img src='images/500/"+ (jmp) +".jpg'>");
+					$(this.path + " img").css({
+						"opacity": "0.7",
+						"outline": "none"
+					});
+					console.log(!$this);
+					$this.css({
+						"opacity": "1",
+						"outline": "3px solid #F0B00F"
+					});
+				},
 				setImg: function () {
 					for (i = 0; i <= $(this.path + " div").length; i++)
 						$(this.path + " div").eq(i).
@@ -234,7 +239,7 @@ var codeStationJq = {
 										if (j == ind) {
 											$(gal.path + " > section").css("display", "none");
 											for (i = j * 5; i < (j + 1) * 5; i++)
-											$(gal.path + " > section").eq(i).css("display", "block");
+												$(gal.path + " > section").eq(i).css("display", "block");
 										}
 									})(i);
 								}
@@ -245,15 +250,7 @@ var codeStationJq = {
 						clicked: function () {
 							$(gal.path + " img").live("click",function(){
 								acp = $(gal.path + " img").index(this);
-								$("section.container .gallery > section .right .top").html("<img src='images/500/"+ (acp + 1) +".jpg'>");
-								$(gal.path + " img").css({
-									"opacity": "0.7",
-									"outline": "none"
-								});
-								$(this).css({
-									"opacity": "1",
-									"outline": "3px solid #F0B00F"
-								});
+								gal.chg_img(acp+1, $(this));
 							});
 						},
 						mouseEnter: function () {
