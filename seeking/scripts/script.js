@@ -50,6 +50,12 @@ var codeStationJq = {
 		/* ajax load*/
 		for (i = 0; i < menus.HFLinks.length; i++)
 		$(menus.HFLinks[i]).click(function (e) {
+			setTimeout(function () {/* create gallery ! */
+				gal.setBox();
+				gal.setImg();
+				gal.setPage();
+				gal.ply_pus();
+			}, 100);
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
 			changer(url);
@@ -86,12 +92,6 @@ var codeStationJq = {
 				case 'gallery':
 					image = "gallery";
 					menus.loadAjax ("pages/gallery-li.php",path,false);
-				setTimeout(function () {/* create gallery ! */
-					gal.setBox();
-					gal.setImg();
-					gal.setPage();
-					gal.ply_pus();
-				}, 100);
 					break;
 				case 'color':
 					image = "Color";
