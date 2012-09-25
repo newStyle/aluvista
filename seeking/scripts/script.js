@@ -204,14 +204,13 @@ var codeStationJq = {
 					this.mouseEvent.pics.mouseLeave();
 					this.mouseEvent.pics.clicked();
 				},
-				chg_img: function(jmp, $this){
-					$("section.container .gallery > section .right .top").html("<img src='images/500/"+ (jmp) +".jpg'>");
+				chg_img: function(jmp){
+					$("section.container .gallery > section .right .top").html("<img src='images/500/" + (jmp + 1) + ".jpg'>");
 					$(this.path + " img").css({
 						"opacity": "0.7",
 						"outline": "none"
 					});
-					console.log(!$this);
-					$this.css({
+					$(this.path + " img").eq(jmp).css({
 						"opacity": "1",
 						"outline": "3px solid #F0B00F"
 					});
@@ -227,19 +226,20 @@ var codeStationJq = {
 					for (i = 0; i <= this.nOfPage; i++)
 						this.str.tmp += "<a href='#" + i + "'>[" + (i + 1) + "]</a>";
 					$(".paging").html(this.str.tmp);
-					this.mouseEvent.page.clicked(this.nOfPage);
+					this.mouseEvent.page.clicked();
 				},
 				mouseEvent: {
 					page: {
-						clicked: function (num) {
+						clicked: function () {
 							$(".paging a").live("click", function () {
 								ind = $(".paging a").index(this);
-								for (i = 0; i < num; i++) {
+								for (i = 0; i < gal.nOfPage; i++) {
 									(function (j) {
 										if (j == ind) {
 											$(gal.path + " > section").css("display", "none");
 											for (i = j * 5; i < (j + 1) * 5; i++)
 												$(gal.path + " > section").eq(i).css("display", "block");
+										gal.chg_img(j*15);
 										}
 									})(i);
 								}
@@ -250,7 +250,7 @@ var codeStationJq = {
 						clicked: function () {
 							$(gal.path + " img").live("click",function(){
 								acp = $(gal.path + " img").index(this);
-								gal.chg_img(acp+1, $(this));
+								gal.chg_img(acp);
 							});
 						},
 						mouseEnter: function () {
