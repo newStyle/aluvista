@@ -262,7 +262,7 @@ var codeStationJq = {
 						$(".paging a").live("click", function () {
 							ind = $(".paging a").index(this);
 							gal.chg_pge(ind);
-							acp = ind * 15;
+							acp = Math.floor(ind) * 15;
 						});
 					}
 				},
