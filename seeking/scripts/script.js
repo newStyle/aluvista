@@ -55,6 +55,8 @@ var codeStationJq = {
 				gal.setImg();
 				gal.setPage();
 				gal.ply_pus();
+				clearInterval(It);
+				acp = 0;
 			}, 1000);
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
@@ -184,7 +186,8 @@ var codeStationJq = {
 			};
 		} /* gallery page !*/
 		var acp = 0,
-			nOfImg = 24;
+			nOfImg = 24,
+			It;
 		var gal = {
 			nOfPage: '',
 			boxImg: [
@@ -204,7 +207,7 @@ var codeStationJq = {
 					this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 					this.str.tmp = '';
 				}
-				$(this.path).html(this.str.mas);
+				$(this.path).html(this.str.mas) && (this.str.mas = '');
 				this.mouseEvent.pics.mouseEnter();
 				this.mouseEvent.pics.mouseLeave();
 				this.mouseEvent.pics.clicked();
@@ -220,7 +223,7 @@ var codeStationJq = {
 				this.str.tmp = '';
 				for (i = 0; i <= this.nOfPage; i++)
 					this.str.tmp += "<a href='#page-" + i + "'>[" + (i + 1) + "]</a>";
-				$(".paging").html(this.str.tmp);
+				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
