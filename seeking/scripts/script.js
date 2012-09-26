@@ -55,7 +55,7 @@ var codeStationJq = {
 				gal.setImg();
 				gal.setPage();
 				gal.ply_pus();
-			}, 100);
+			}, 1000);
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
 			changer(url);
@@ -183,9 +183,9 @@ var codeStationJq = {
 				this.blur();
 			};
 		} /* gallery page !*/
-		acp = 0;
+		var acp = 0,
+			nOfImg = 24;
 		var gal = {
-			nOfImg: 24,
 			nOfPage: '',
 			boxImg: [
 				"<div class='w2 left'></div>",
@@ -198,9 +198,9 @@ var codeStationJq = {
 				mas: '' /*master change ;) */
 			},
 			setBox: function () {
-				for (var i = 0; i < this.nOfImg;) {
-					for (var j = 0; j < 3 && i < this.nOfImg; j++, i++)
-					this.str.tmp += this.boxImg[j];
+				for (var i = 0; i < nOfImg;) {
+					for (var j = 0; j < 3 && i < nOfImg; j++, i++)
+						this.str.tmp += this.boxImg[j];
 					this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 					this.str.tmp = '';
 				}
@@ -216,7 +216,7 @@ var codeStationJq = {
 				this.chg_img(0);
 			},
 			setPage: function () {
-				this.nOfPage = this.nOfImg / 15;
+				this.nOfPage = nOfImg / 15;
 				this.str.tmp = '';
 				for (i = 0; i <= this.nOfPage; i++)
 					this.str.tmp += "<a href='#page-" + i + "'>[" + (i + 1) + "]</a>";
@@ -248,10 +248,11 @@ var codeStationJq = {
 				}
 			},
 			ply_pus: function () {
-				$(".gallery p span a").click(function () {
+				$(".gallery p span a").click(function (e) {
+					e.preventDefault();
 					$(".gallery p span a").index(this) == 0 ? (It = setInterval(function () {
 						gal.chg_img(acp++);
-						acp = acp > gal.nOfImg ? 0 : acp;
+						acp = acp > nOfImg ? 0 : acp;
 						gal.chg_pge(acp/16);
 					}, 1500)) : clearInterval(It);
 				});
@@ -259,7 +260,8 @@ var codeStationJq = {
 			mouseEvent: {
 				page: {
 					clicked: function () {
-						$(".paging a").live("click", function () {
+						$(".paging a").live("click", function (e) {
+							e.preventDefault();
 							ind = $(".paging a").index(this);
 							gal.chg_pge(ind);
 							acp = Math.floor(ind) * 15;
