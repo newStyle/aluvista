@@ -1,3 +1,7 @@
+
+$(window).load(function(){
+	$("body > .loading").css('display','none');
+});
 // jquery my code
 var codeStationJq = {
 	ready: function () {
