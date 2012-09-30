@@ -1,4 +1,4 @@
-/*
+
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-*/
+
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -257,8 +257,8 @@ section.container { > .top {
 		background: url(images/contact.png) no-repeat top center;
 		width: 830px;
 		height: 470px;.left {
-			height: 365px;
-			margin-top: 75px;
+			height: 395px;
+			margin-top: 65px;
 			table {
 				tr.h {
 					height: 15px;
@@ -269,11 +269,20 @@ section.container { > .top {
 					td {
 						input[type = text] {
 							width: 250px;
-							height: 20px;
-							border: none;
-							border-radius: 4px;
-							background-color: #CCC;
+							border:1px solid #fff;
+							border-left:1px solid #b2b2b2;
+							border-top:1px solid #b2b2b2;
+							border-radius:3px;
+							-webkit-transition:all 0.8s;
 							box-shadow: 0 0 2px white;
+							background-color:#cac5c5;
+							padding: 4px;
+							padding-left: 5px;
+							font-size: 14px;
+						}
+						input[type = text]:hover,
+						input[type = text]:focus{
+							background-color:#FFF;
 						}
 						input[type = submit] {
 							float: right;
@@ -288,14 +297,24 @@ section.container { > .top {
 						textarea {
 							width: 250px !important;
 							height: 150px;
-							background-color: #CCC;
-							border: none;
+							background-color: #cac5c5;
+							border:1px solid #fff;
+							border-left:1px solid #b2b2b2;
+							border-top:1px solid #b2b2b2;
+							border-radius:3px;
+							-webkit-transition:all 0.8s;
 							border-radius: 4px;
 							box-shadow: 1px 1px 3px white;
+							padding: 4px;
+							padding-left: 5px;
+						}
+						textarea:hover,
+						textarea:focus{
+							background-color:#FFF;
 						}
 						label {
 							color: #999;
-							font-size: 18px;
+							font-size: 17px;
 						}
 					}
 				}
