@@ -27,8 +27,7 @@ The website for the Aluvista International company
 
 ###The Team
 * [Naser Rahmani](https://github.com/naserr) Project Manager - Developer
-* [Masoud]       (https://github.com/seeking) Technical Manager - Developer
-* [Vahid Khorami]       (https://github.com/VAHID-GRF) Designer - Sponsor
+* [Masoud Salman]       (https://github.com/seeking) Technical Manager - Developer
 
 ### All rights reserved ###
 Please note that aluvista.com is a curated site and that we reserve the right to refuse any listing for any reason.
