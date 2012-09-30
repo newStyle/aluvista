@@ -1,6 +1,6 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
-		<div class="w9 ml2 left">
+		<div class="w10 ml2 left">
 			<form action="#" method="post" name="sendMail" >
 				<table>
 					<tr>
@@ -72,12 +72,12 @@
 	</section>
 </section>
 <script type="text/javascript">
-windoow
-$('#con').click(function () {
-			$(function () {
-				$('section.contact').click(function () {
-					alert("hello");
-				});
-			});
-		});
+var fil = $('input'); 
+
+$(function () {
+	fil.click(function () {
+		fil.css({'background-color':'gray'}); //for test
+	});
+});
+
 </script>

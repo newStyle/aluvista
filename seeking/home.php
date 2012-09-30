@@ -15,9 +15,9 @@
 <body>
 <header>
 <section class="mla mra">
-<div class="w10 right">
-	<div class="w10 pt1 top">
-		<div class="left w9">
+<div class="w12 right">
+	<div class="w12 pt1 top">
+		<div class="left w11">
 			<nav>
 				<ul>
 					<li><a href="#">Chat</a></li>
@@ -25,13 +25,14 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="right ml9"></div>
+		<div class="right ml11"></div>
 	</div>
-	<div class="w10 mt2 down">
+	<div class="w12 mt2 down">
 		<nav>
 			<ul>
 				<li><a href="pages/index.php">home</a></li>
 				<li><a href="pages/process.php">process</a></li>
+				<li><a href="pages/product.php">product</a></li>
 				<li><a href="pages/gallery.php">gallery</a></li>
 				<li><a href="pages/color.php">color</a></li>
 				<li class="right"><a href="pages/contact.php">contact</a></li>
@@ -126,6 +127,7 @@
 			<ul>
 				<li><a href="pages/index.php">home</a></li>
 				<li><a href="pages/process_content.php">process</a></li>
+				<li><a href="pages/product.php">product</a></li>
 				<li><a href="pages/gallery.php">gallery</a></li>
 				<li><a href="pages/color.php">color</a></li>
 				<li class="right"><a href="pages/contact.php">contact</a></li>

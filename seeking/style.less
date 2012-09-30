@@ -1,4 +1,4 @@
-
+/*
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,6 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
+*/
 
 body { > section {
 		min-height: 595px;
@@ -591,9 +592,13 @@ footer { > .top {
 					}
 				}
 				li.right {
-					float: none;
+					float: left;
 					margin-left: 251px;
-					width: 81px;
+					width: 100px;
+				}
+				li.right:last-child{
+					margin-left: 5px;
+					width: 60px;
 				}
 			}
 		}
