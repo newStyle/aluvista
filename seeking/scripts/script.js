@@ -170,7 +170,6 @@ var codeStationJq = {
 			'left': '0'
 		});
 		efct_banner = function ($newpos) {
-			//$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
 			$(".view img").animate({'opacity':'0.1','display':'none'},600,'linear',function(){
 				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block','opacity':'1'},'slow');
 			});
