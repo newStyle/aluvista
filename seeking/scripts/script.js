@@ -193,7 +193,7 @@ var codeStationJq = {
 		} /* gallery page !*/
 		var acp = 0,
 			nOfImg = 24,
-			It;
+			It = 0;
 		var gal = {
 			nOfPage: '',
 			boxImg: [
@@ -261,11 +261,12 @@ var codeStationJq = {
 			ply_pus: function () {
 				$(".gallery p span a").click(function (e) {
 					e.preventDefault();
-					$(".gallery p span a").index(this) == 0 ? (It = setInterval(function () {
+					console.log(typeof It, It);
+					$(".gallery p span a").index(this) == 0 ? (It = (It == 0) ? setInterval(function () {
 						gal.chg_img(acp++);
 						acp = acp > nOfImg ? 0 : acp;
-						gal.chg_pge(acp/16);
-					}, 1500)) : clearInterval(It);
+						gal.chg_pge(acp / 16);
+					}, 1500) : It) : (clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D"));
 				});
 			},
 			mouseEvent: {
