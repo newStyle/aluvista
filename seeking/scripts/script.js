@@ -233,7 +233,9 @@ var codeStationJq = {
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
-				$("section.container .gallery > section .right .top").html("<img src='images/500/" + (jmp + 1) + ".jpg'>");
+				$("section.container .gallery > section .right .top").animate({'opacity':'0'},200,null,function(){
+					$(this).html("<img src='images/500/" + (jmp + 1) + ".jpg'>").animate({'opacity':'1'},600,null);
+				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
 					"outline": "none"
