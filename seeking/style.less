@@ -17,12 +17,36 @@ body { > section {
 		min-height: 595px;
 		margin-top: 15px;
 	}
-	background: url(images/bg_big.jpg) no-repeat fixed;
+	background: url(images/bg.jpg) no-repeat fixed;
 	background-size: cover;
 	header {
 		height: 165px;
 	}
-	footer {}
+	footer {}.loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		z-index: 1;.load {
+			width: 141px;
+			height: 35px;
+			margin: 300px auto;
+			background-color: rgb(50, 50, 50);
+			opacity: 0.9;
+			border-radius: 7px;
+			p {
+				float: left;
+				line-height: 18px;
+				padding: 8px;
+				color: white;
+				font-family: tahoma;
+				font-size: 12px;
+			}
+		}
+
+	}
 }
 
 header {
@@ -218,7 +242,9 @@ section.container { > .top {
 					color: #FDED90;
 				} > section {
 					overflow: hidden;
-					max-height: 400px;
+					max-height: 395px;
+					margin: -2px;
+					padding: 2px;
 					section {
 						height: 70px;.left {
 							height: inherit;

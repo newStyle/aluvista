@@ -1,3 +1,7 @@
+
+$(window).load(function(){
+	$("body > .loading").css('display','none');
+});
 // jquery my code
 var codeStationJq = {
 	ready: function () {
@@ -55,7 +59,9 @@ var codeStationJq = {
 				gal.setImg();
 				gal.setPage();
 				gal.ply_pus();
-			}, 100);
+				clearInterval(It);
+				acp = 0;
+			}, 1000);
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
 			changer(url);
@@ -164,7 +170,9 @@ var codeStationJq = {
 			'left': '0'
 		});
 		efct_banner = function ($newpos) {
-			$(".view img").hide().attr("src", imgsInBanner[image].pics[$newpos]).fadeIn();
+			$(".view img").animate({'opacity':'0.1','display':'none'},600,'linear',function(){
+				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block','opacity':'1'},'slow');
+			});
 		}
 		$('section.container .top nav a').live('click', function (event) {
 			event.preventDefault();
@@ -183,9 +191,10 @@ var codeStationJq = {
 				this.blur();
 			};
 		} /* gallery page !*/
-		acp = 0;
+		var acp = 0,
+			nOfImg = 24,
+			It = 0;
 		var gal = {
-			nOfImg: 24,
 			nOfPage: '',
 			boxImg: [
 				"<div class='w2 left'></div>",
@@ -198,13 +207,13 @@ var codeStationJq = {
 				mas: '' /*master change ;) */
 			},
 			setBox: function () {
-				for (var i = 0; i < this.nOfImg;) {
-					for (var j = 0; j < 3 && i < this.nOfImg; j++, i++)
-					this.str.tmp += this.boxImg[j];
+				for (var i = 0; i < nOfImg;) {
+					for (var j = 0; j < 3 && i < nOfImg; j++, i++)
+						this.str.tmp += this.boxImg[j];
 					this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 					this.str.tmp = '';
 				}
-				$(this.path).html(this.str.mas);
+				$(this.path).html(this.str.mas) && (this.str.mas = '');
 				this.mouseEvent.pics.mouseEnter();
 				this.mouseEvent.pics.mouseLeave();
 				this.mouseEvent.pics.clicked();
@@ -216,15 +225,17 @@ var codeStationJq = {
 				this.chg_img(0);
 			},
 			setPage: function () {
-				this.nOfPage = this.nOfImg / 15;
+				this.nOfPage = nOfImg / 15;
 				this.str.tmp = '';
 				for (i = 0; i <= this.nOfPage; i++)
 					this.str.tmp += "<a href='#page-" + i + "'>[" + (i + 1) + "]</a>";
-				$(".paging").html(this.str.tmp);
+				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
-				$("section.container .gallery > section .right .top").html("<img src='images/500/" + (jmp + 1) + ".jpg'>");
+				$("section.container .gallery > section .right .top").animate({'opacity':'0'},200,null,function(){
+					$(this).html("<img src='images/500/" + (jmp + 1) + ".jpg'>").animate({'opacity':'1'},600,null);
+				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
 					"outline": "none"
@@ -248,18 +259,21 @@ var codeStationJq = {
 				}
 			},
 			ply_pus: function () {
-				$(".gallery p span a").click(function () {
-					$(".gallery p span a").index(this) == 0 ? (It = setInterval(function () {
+				$(".gallery p span a").click(function (e) {
+					e.preventDefault();
+					console.log(typeof It, It);
+					$(".gallery p span a").index(this) == 0 ? (It = (It == 0) ? setInterval(function () {
 						gal.chg_img(acp++);
-						acp = acp > gal.nOfImg ? 0 : acp;
-						gal.chg_pge(acp/16);
-					}, 1500)) : clearInterval(It);
+						acp = acp > nOfImg ? 0 : acp;
+						gal.chg_pge(acp / 16);
+					}, 1500) : It) : (clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D"));
 				});
 			},
 			mouseEvent: {
 				page: {
 					clicked: function () {
-						$(".paging a").live("click", function () {
+						$(".paging a").live("click", function (e) {
+							e.preventDefault();
 							ind = $(".paging a").index(this);
 							gal.chg_pge(ind);
 							acp = Math.floor(ind) * 15;
