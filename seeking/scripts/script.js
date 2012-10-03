@@ -326,7 +326,10 @@ var codeStationJq = {
 					}
 				}
 			}
-		}
+		}/* color page  !! */
+		$("#btn-color div").live('click', function () {
+			alert($("#btn-color div input").eq($(this).index()).val());
+		});
 	}
 };
 

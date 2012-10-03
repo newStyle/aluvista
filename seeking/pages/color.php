@@ -10,8 +10,8 @@
 				</article>
 			</div>
 			<div class="mt5 down pt1">
-				<section>
-					<div><input class="active" type="button" value="diam"/></div>
+				<section id="btn-color">
+					<div><input type="button" value="diam" class="active"/></div>
 					<div><input type="button" value="facilisis"/></div>
 					<div><input type="button" value="aenean"/></div>
 					<div><input type="button" value="integer"/></div>
@@ -34,8 +34,6 @@
 				</article>
 			</section>
 			<section class="mt5 down pt1">
-				<img class="colors" src="images/colors.png" width="500" height="343">
-				<!--
 				<section class="w12 mla mra">
 					<section class="mt6">
 						<div class="w3 left"></div>
@@ -56,7 +54,6 @@
 						<div class="w3 mla last"></div>
 					</section>
 				</section>
-				-->
 			</section>
 		</section>
 	</section>
