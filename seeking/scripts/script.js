@@ -95,6 +95,10 @@ var codeStationJq = {
 					image = "process";
 					menus.loadAjax ("pages/process-li.php",path,false);
 					break;
+				case 'product':
+					image = "product";
+					menus.loadAjax ("pages/product-li.php",path,false);
+					break;
 				case 'gallery':
 					image = "gallery";
 					menus.loadAjax ("pages/gallery-li.php",path,false);
@@ -129,6 +133,15 @@ var codeStationJq = {
 						"images/banner/b3.jpg",
 						"images/banner/b4.jpg",
 						"images/banner/b5.jpg"
+					]
+				},
+				"product": { /* for Product page! */
+					pics: [
+						"images/banner/pr1.jpg",
+						"images/banner/pr2.jpg",
+						"images/banner/pr3.jpg",
+						"images/banner/pr4.jpg",
+						"images/banner/pr5.jpg"
 					]
 				},
 				"gallery": { /* for Gallery page! */
