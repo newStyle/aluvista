@@ -11,14 +11,14 @@
 			</div>
 			<div class="mt5 down pt1">
 				<section id="btn-color">
-					<div><input type="button" value="diam" class="active"/></div>
-					<div><input type="button" value="facilisis"/></div>
-					<div><input type="button" value="aenean"/></div>
-					<div><input type="button" value="integer"/></div>
-					<div><input type="button" value="adipiscing"/></div>
-					<div><input type="button" value="augue"/></div>
-					<div><input type="button" value="aenean"/></div>
-					<div><input type="button" value="Massa"/></div>
+					<div><input type="button" value="red" class="active"/></div>
+					<div><input type="button" value="green"/></div>
+					<div><input type="button" value="blue"/></div>
+					<div><input type="button" value="magenta"/></div>
+					<div><input type="button" value="cyan"/></div>
+					<div><input type="button" value="yellow"/></div>
+					<div><input type="button" value="black"/></div>
+					<div><input type="button" value="white"/></div>
 				</section>
 			</div>
 		</section>

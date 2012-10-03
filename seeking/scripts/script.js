@@ -327,6 +327,31 @@ var codeStationJq = {
 				}
 			}
 		}/* color page  !! */
+		var clr = {
+			path: ".container .color > section .right .down > section",
+			boxImg: [
+				'<div class="w3 left"></div>',
+				'<div class="w3 left"></div>',
+				'<div class="w3 left"></div>',
+				'<div class="w3 mla last"></div>'
+			],
+			menu: [
+				'red',
+				'green',
+				'blue',
+				'magenta',
+				'cyan',
+				'yellow',
+				'black',
+				'white'
+			],
+			setbox: function () {
+
+			},
+			setImg: function () {
+
+			}
+		};
 		$("#btn-color div").live('click', function () {
 			alert($("#btn-color div input").eq($(this).index()).val());
 		});
