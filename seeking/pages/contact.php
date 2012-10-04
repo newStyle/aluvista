@@ -1,49 +1,22 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
-		<div class="w10 ml2 left">
-			<form action="#" method="post" name="sendMail" >
-				<table>
-					<tr>
-						<td><label>Name    :</label></td>
-						<td><input type="text" name="name" value=""/></td>
-					</tr>
-					<tr class="h">
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td><label>Email   :</label></td>
-						<td><input type="text" name="email" value=""/></td>
-					</tr>
-					<tr  class="h">
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td><label>Tel     :</label></td>
-						<td><input type="text" name="tel" value=""/></td>
-					</tr>
-					<tr  class="h">
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td><label>Subject :</label></td>
-						<td><input type="text" name="subject" value=""/></td>
-					</tr>
-					<tr  class="h">
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td><label>Comment :</label></td>
-						<td><textarea></textarea></td>
-					</tr>
-					<tr  class="h">
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" name="" value="submit" /></td>
-					</tr>
-				</table>
+		<section class="contact w10 ml2 left">
+			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
+				<label>Name:</label>
+				<input class="text" type="text" name="name" id="name" placeholder="" />
+				<label>Email:</label>
+				<input class="text" type="text" name="mail" id="mail" placeholder="" />
+				<label>tel:</label>
+				<input class="text" type="text" name="tel" id="tel" placeholder="" />
+				<label>Subject:</label>
+				<input class="text" type="text" name="subject" id="subject" placeholder="" />
+				<label>Message:</label>
+				<textarea class="text" name="txt" id="txt" placeholder="" ></textarea>
+				<input class="btn" type="submit" name="submit" value="Send" />
+				<input class="btn" type="reset" name="reset" id="reset" value="Reset" />
 			</form>
-		</div>
+			<iframe id='ifrm' name='ifrm' src="" frameborder="0" scrolling="no"></iframe>
+		</section>
 		<section class="w6 ml14 pt1 right">
 			<article>
 				<div class="w6 mt1">
@@ -71,13 +44,98 @@
 		</section>
 	</section>
 </section>
-<script type="text/javascript">
-var fil = $('input'); 
 
-$(function () {
-	fil.click(function () {
-		fil.css({'background-color':'gray'}); //for test
+
+
+<script type="text/javascript">
+
+function validateText(str,len){
+	return str.length >= len;
+}
+
+function validateEmail(str){
+	var emailPattern = /^[a-z0-9+_%.-]+@(?:[a-z0-9-]+\.)+[a-z]{2,6}$/i ;
+
+	return emailPattern.test(str);
+}
+
+$(function(){
+	$('#contact-form').submit(function(){
+		var target, err = false;
+
+		target = $('#name');
+		if( validateText(target.val(),3) ){
+			target.removeClass('err').addClass('ok');
+		}else{
+			target.removeClass('ok').addClass('err');
+			err = true;
+		}
+
+		target = $('#subject');
+		if( validateText(target.val(),5) ){
+			target.removeClass('err').addClass('ok');
+		}else{
+			target.removeClass('ok').addClass('err');
+			err = true;
+		}
+
+		target = $('#mail');
+		if( validateEmail(target.val()) ){
+			target.removeClass('err').addClass('ok');
+		}else{
+			target.removeClass('ok').addClass('err');
+			err = true;
+		}
+
+		target = $('#txt');
+		if( validateText(target.val(),10) ){
+			target.removeClass('err').addClass('ok');
+		}else{
+			target.removeClass('ok').addClass('err');
+			err = true;
+		}
+
+		if(!err){
+			$('#ifrm').animate({
+				height:'75px'
+			},500);
+		}
+
+		return !err;
+
+	});
+
+	$('#reset').click(function(){
+		$('#ifrm').animate({
+			height:'0px'
+		},200);
 	});
 });
-
 </script>
+
+<?php
+		error_reporting(E_ALL ^ E_NOTICE);
+
+		$admin = 'naser0rahmani@gmail.com';
+
+		$name    = $_POST['name'];
+		$email   = $_POST['mail'];
+		$tel     = $_POST['tel'];
+		$subject = $_POST['subject'];
+		$text    = $_POST['txt'];
+
+		if( strlen($name)>=3 && strlen($email)>=7 && strlen($tel)>=10 && strlen($subject)>=5 && strlen($text)>=10 ){
+			if( @mail (
+					$admin,
+					"mydomain.com contact : $subject",
+					$text,
+					"From:$name <$email" )
+			){
+				echo '<h2 class="ok">Mail sent</h2>';
+			}else{
+				echo '<h2 class="err">Error in sending mail.</h2>';
+			}
+		}else{
+			echo '<h2 class="err">Access Restricted !</h2>';
+		}
+	?>

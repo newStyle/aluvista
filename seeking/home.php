@@ -130,7 +130,7 @@
 				<li><a href="pages/product.php">product</a></li>
 				<li><a href="pages/gallery.php">gallery</a></li>
 				<li><a href="pages/color.php">color</a></li>
-				<li class="right"><a href="pages/contact.php">contact</a></li>
+				<li class="last"><a href="pages/contact.php">contact</a></li>
 			</ul>
 		</nav>
 	</div>
