@@ -234,7 +234,7 @@ var codeStationJq = {
 			setImg: function () {
 				for (i = 0; i <= $(this.path + " div").length; i++)
 					$(this.path + " div").eq(i).
-						html("<img src='images/75/" + (i + 1) + ".jpg' width='70' height='70'>");
+						html("<img src='images/gallery/75/" + (i + 1) + ".jpg' width='70' height='70'>");
 				this.chg_img(0);
 			},
 			setPage: function () {
@@ -247,7 +247,7 @@ var codeStationJq = {
 			},
 			chg_img: function (jmp) {
 				$("section.container .gallery > section .right .top").animate({'opacity':'0'},200,null,function(){
-					$(this).html("<img src='images/500/" + (jmp + 1) + ".jpg'>").animate({'opacity':'1'},600,null);
+					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({'opacity':'1'},600,null);
 				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
@@ -335,16 +335,16 @@ var codeStationJq = {
 				'<div class="w3 left"></div>',
 				'<div class="w3 mla last"></div>'
 			],
-			menu: [
-				'red',
-				'green',
-				'blue',
-				'magenta',
-				'cyan',
-				'yellow',
-				'black',
-				'white'
-			],
+			menu: {
+				'red':[],
+				'green':[],
+				'blue':[],
+				'magenta':[],
+				'cyan':[],
+				'yellow':[],
+				'black':[],
+				'white':[],
+			},
 			setbox: function () {
 
 			},
