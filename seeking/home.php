@@ -14,7 +14,7 @@
 <!--[if IE]>
 		<script type="text/javascript">
 			$(function(){
-			$("header").css({ 'background':'url(http://localhost/aluvista/seeking/images/header_bg.png) repeat top left'});
+			$("header").css({ 'background':'url(images/header_bg.png) repeat top left'});
 			});
 		</script>
 <![endif]-->
