@@ -97,7 +97,7 @@ $(function(){
 
 		if(!err){
 			$('#ifrm').animate({
-				height:'75px'
+				height:'65px'
 			},500);
 		}
 
@@ -113,29 +113,3 @@ $(function(){
 });
 </script>
 
-<?php
-		error_reporting(E_ALL ^ E_NOTICE);
-
-		$admin = 'naser0rahmani@gmail.com';
-
-		$name    = $_POST['name'];
-		$email   = $_POST['mail'];
-		$tel     = $_POST['tel'];
-		$subject = $_POST['subject'];
-		$text    = $_POST['txt'];
-
-		if( strlen($name)>=3 && strlen($email)>=7 && strlen($tel)>=10 && strlen($subject)>=5 && strlen($text)>=10 ){
-			if( @mail (
-					$admin,
-					"mydomain.com contact : $subject",
-					$text,
-					"From:$name <$email" )
-			){
-				echo '<h2 class="ok">Mail sent</h2>';
-			}else{
-				echo '<h2 class="err">Error in sending mail.</h2>';
-			}
-		}else{
-			echo '<h2 class="err">Access Restricted !</h2>';
-		}
-	?>
