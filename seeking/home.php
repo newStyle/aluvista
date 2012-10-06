@@ -11,6 +11,13 @@
 <script type="text/javascript" src="scripts/html5.js"></script>
 <script type="text/javascript" src="scripts/script.js" ></script>
 <!-- <link type="text/css" rel="stylesheet" href="font/font.css" /> -->
+<!--[if IE]>
+		<script type="text/javascript">
+			$(function(){
+			$("header").css({ 'background':'url(http://localhost/aluvista/seeking/images/header_bg.png) repeat top left'});
+			});
+		</script>
+<![endif]-->
 </head>
 <body>
 <header>
