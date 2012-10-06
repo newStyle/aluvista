@@ -110,6 +110,10 @@ $(function(){
 			height:'0px'
 		},200);
 	});
+
+	$('#ifrm').css({'height':'0px','width':'270px',});
+
 });
 </script>
+
 
