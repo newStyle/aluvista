@@ -339,8 +339,24 @@ var codeStationJq = {
 				'<div class="w3 left"></div>',
 				'<div class="w3 mla last"></div>'
 			],
-			setbox: function () {
+			chkExist: function (addr) {
+				// ref : http://stackoverflow.com/questions/905298/jquery-storing-ajax-response-into-global-variable
+				var sw = $.ajax({
+					url: './pages/chkImg.php',
+					data: 'addr=' + addr,
+					context: document.body,
+					global: false,
+					async: false,
+					success: function (data) {
+						return data;
+					}
+				}).responseText;
 
+				return sw != 0;
+			},
+			setbox: function (typ) {
+				//console.log(typ);				
+				console.log (clr.chkExist("../images/colorchart/green14.jpg"));
 			},
 			setImg: function () {
 
