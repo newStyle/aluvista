@@ -355,8 +355,8 @@ var codeStationJq = {
 				return sw != 0;
 			},
 			setbox: function (typ) {
-				//console.log(typ);				
-				console.log (clr.chkExist("../images/colorchart/green14.jpg"));
+				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".jpg"); i++);
+					alert (i-1);
 			},
 			setImg: function () {
 
