@@ -326,7 +326,11 @@ var codeStationJq = {
 					}
 				}
 			}
-		}/* color page  !! */
+		}/* scroll fix on pages ... !*/
+		setscroll = function () {
+						
+		}
+		/* color page  !! */
 		var clr = {
 			path: ".container .color > section .right .down > section",
 			boxImg: [
@@ -335,16 +339,6 @@ var codeStationJq = {
 				'<div class="w3 left"></div>',
 				'<div class="w3 mla last"></div>'
 			],
-			menu: {
-				'red':[],
-				'green':[],
-				'blue':[],
-				'magenta':[],
-				'cyan':[],
-				'yellow':[],
-				'black':[],
-				'white':[],
-			},
 			setbox: function () {
 
 			},
