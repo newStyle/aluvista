@@ -328,7 +328,7 @@ var codeStationJq = {
 			}
 		}/* scroll fix on pages ... !*/
 		setscroll = function () {
-						
+
 		}
 		/* color page  !! */
 		var clr = {
@@ -344,11 +344,15 @@ var codeStationJq = {
 			},
 			setImg: function () {
 
+			},
+			actbtn: function () {
+				$("#btn-color div").live('click', function () {
+					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
+					clr.setbox($("#btn-color div input").eq($(this).index()).val());
+				});
 			}
 		};
-		$("#btn-color div").live('click', function () {
-			alert($("#btn-color div input").eq($(this).index()).val());
-		});
+		clr.actbtn();
 	}
 };
 
