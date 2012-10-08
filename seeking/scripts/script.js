@@ -338,7 +338,7 @@ var codeStationJq = {
 				'<div class="w3 left"></div>',
 				'<div class="w3 left"></div>',
 				'<div class="w3 mla last"></div>'
-			],
+			],nOfImg: '',
 			chkExist: function (addr) {
 				// ref : http://stackoverflow.com/questions/905298/jquery-storing-ajax-response-into-global-variable
 				var sw = $.ajax({
@@ -356,8 +356,8 @@ var codeStationJq = {
 			},
 			setbox: function (typ) {
 				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".jpg"); i++);
-				var nOfImg = i - 1,
-					tmp = main = '';
+				nOfImg = i - 1,
+				tmp = main = '';
 				for (var i = 0; i < nOfImg;) {
 					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
 					tmp += this.boxImg[j];
@@ -365,9 +365,13 @@ var codeStationJq = {
 					tmp = '';
 				}
 				$(this.path).html(main) && (main = '');
+				clr.setImg(typ);
 			},
-			setImg: function () {
-
+			setImg: function (typ) {
+				$path = this.path + " > section"
+				for (var i = 0; i < nOfImg; i++)
+					$(' div', $($path)).
+						html('<img src ="./images/colorchart/' + typ + i + '.jpg" alt = "" />');
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
