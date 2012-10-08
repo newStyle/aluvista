@@ -356,7 +356,15 @@ var codeStationJq = {
 			},
 			setbox: function (typ) {
 				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".jpg"); i++);
-					alert (i-1);
+				var nOfImg = i - 1,
+					tmp = main = '';
+				for (var i = 0; i < nOfImg;) {
+					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
+					tmp += this.boxImg[j];
+					main += "<section class='mb6'>" + tmp + "</section>";
+					tmp = '';
+				}
+				$(this.path).html(main) && (main = '');
 			},
 			setImg: function () {
 
