@@ -1,4 +1,4 @@
-
+/*
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-
+*/
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -403,6 +403,7 @@ section.container { > .top {
 					width: 490px;
 					height: 240px;
 				}.down {
+					position: relative;
 					height: 450px; >img {
 						margin: 50px 0px 0px 40px;
 					} > section {
@@ -413,6 +414,29 @@ section.container { > .top {
 								height: inherit;
 							}
 						}
+					} > section + div#scrollBar {
+						width: 15px;
+						height: 300px;
+						position: absolute;
+						top: 25px;
+						outline: 2px dashed #069096;
+						right: 30px;
+						#ribbon {
+							height: inherit;
+							width: 0;
+							border: 1px dashed #DAA500;
+							margin: 0 auto;
+						}
+						#button {
+							width: 15px;
+							height: 40px;
+							margin: 0 auto;
+							background-color: #FFC200;
+							position: absolute;
+							z-index: 2;
+							top: 0;
+						}
+
 					}
 				}
 			}
