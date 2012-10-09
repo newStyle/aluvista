@@ -54,6 +54,10 @@
 						<div class="w3 mla last"></div>
 					</section>
 				</section>
+				<div id='scrollBar'>
+					<div id="button"></div>
+					<div id='ribbon'></div>
+				</div>
 			</section>
 		</section>
 	</section>

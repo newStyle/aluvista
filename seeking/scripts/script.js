@@ -327,8 +327,8 @@ var codeStationJq = {
 				}
 			}
 		}/* scroll fix on pages ... !*/
-		setscroll = function (fsb,chs) { /* fsb : first_size_box, chs : changed size, */
-			console.log (fsb, chs);
+		setscroll = function (addr,fsb,chs) {/* fsb : first_size_box, chs : changed size, */
+
 		}
 		/* color page  !! */
 		var clr = {
@@ -366,7 +366,7 @@ var codeStationJq = {
 				}
 				$(this.path).html(main) && (main = '');
 				clr.setImg(typ);
-				setscroll(354,$(this.path).height());
+				setscroll(this.path,354,$(this.path).height());
 			},
 			setImg: function (typ) {
 				$path = this.path + " > section"
