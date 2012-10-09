@@ -12,10 +12,10 @@
 			<div class="mt5 down pt1">
 				<section id="btn-color">
 					<div><input type="button" value="solid" class="active"/></div>
-					<div><input type="button" value="green"/></div>
-					<div><input type="button" value="blue"/></div>
-					<div><input type="button" value="magenta"/></div>
-					<div><input type="button" value="cyan"/></div>
+					<div><input type="button" value="natural"/></div>
+					<div><input type="button" value="metallic"/></div>
+					<div><input type="button" value="wood"/></div>
+					<div><input type="button" value="anodized"/></div>
 					<div><input type="button" value="yellow"/></div>
 					<div><input type="button" value="black"/></div>
 					<div><input type="button" value="white"/></div>
