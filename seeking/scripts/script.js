@@ -355,7 +355,7 @@ var codeStationJq = {
 				return sw != 0;
 			},
 			setbox: function (typ) {
-				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".jpg"); i++);
+				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".png"); i++);
 				nOfImg = i - 1,
 				tmp = main = '';
 				for (var i = 0; i < nOfImg;) {
@@ -372,7 +372,7 @@ var codeStationJq = {
 				$path = this.path + " > section"
 				for (var i = 1; i <= nOfImg; i++)
 					$(' div', $($path)).eq(i-1).
-						html('<img src ="./images/colorchart/' + typ + i + '.jpg" alt = "" />');
+						html('<img src ="./images/colorchart/' + typ + i + '.png" alt = "" />');
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {

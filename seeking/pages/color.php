@@ -11,7 +11,7 @@
 			</div>
 			<div class="mt5 down pt1">
 				<section id="btn-color">
-					<div><input type="button" value="red" class="active"/></div>
+					<div><input type="button" value="solid" class="active"/></div>
 					<div><input type="button" value="green"/></div>
 					<div><input type="button" value="blue"/></div>
 					<div><input type="button" value="magenta"/></div>
