@@ -327,7 +327,7 @@ var codeStationJq = {
 				}
 			}
 		}/* scroll fix on pages ... !*/
-		setscroll = function () {
+		setscroll = function (fsb,chs) { /* fsb : first_size_box, chs : changed size, */
 
 		}
 		/* color page  !! */
@@ -360,7 +360,7 @@ var codeStationJq = {
 				tmp = main = '';
 				for (var i = 0; i < nOfImg;) {
 					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
-					tmp += this.boxImg[j];
+						tmp += this.boxImg[j];
 					main += "<section class='mb6'>" + tmp + "</section>";
 					tmp = '';
 				}
@@ -369,9 +369,9 @@ var codeStationJq = {
 			},
 			setImg: function (typ) {
 				$path = this.path + " > section"
-				for (var i = 0; i < nOfImg; i++)
-					$(' div', $($path)).
-						html('<img src ="./images/colorchart/' + typ + i + '.jpg" alt = "" />');
+				for (var i = 1; i <= nOfImg; i++)
+					$(' div', $($path)).eq(i-1).
+						html('<img src ="./images/colorchart/' + typ + i + '.jpg" alt = "" />');				}
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
