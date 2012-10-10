@@ -328,7 +328,8 @@ var codeStationJq = {
 			}
 		}/* scroll fix on pages ... !*/
 		setscroll = function (addr,fsb,chs) {/* fsb : first_size_box, chs : changed size, */
-
+			with($("#scrollBar"))
+				(fsb >= chs) ? hide(200) : show(200);
 		}
 		/* color page  !! */
 		var clr = {
