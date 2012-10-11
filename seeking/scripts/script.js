@@ -328,7 +328,29 @@ var codeStationJq = {
 			}
 		}/* scroll fix on pages ... !*/
 		setscroll = function (addr,fsb,chs) {/* fsb : first_size_box, chs : changed size, */
+				with($("#scrollBar"))
+					(fsb >= chs) ? hide(200) : show(200);
+			if ( (div = chs / fsb) > 1){
+				size_of_button = fsb / div;
+				$("#button").css('height',size_of_button);
+			}
+			var drag = {
+				downMouse: function () {
+					$('#button', $("#scrollBar")).mousedown(function () {
+						console.log ($("#button").css('top'));
+					});				
+				},
+				upMouse: function () {
+					$('#button', $("#scrollBar")).mouseup(function () {
+						console.log("up !!");
+					});
+				},
+				move: function () {
 
+				}
+			}
+			drag.downMouse();
+			drag.upMouse();
 		}
 		/* color page  !! */
 		var clr = {
