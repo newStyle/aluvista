@@ -327,26 +327,39 @@ var codeStationJq = {
 				}
 			}
 		}/* scroll fix on pages ... !*/
-		setscroll = function (addr,fsb,chs) {/* fsb : first_size_box, chs : changed size, */
-				with($("#scrollBar"))
-					(fsb >= chs) ? hide(200) : show(200);
-			if ( (div = chs / fsb) > 1){
+
+		setscroll = function (addr, fsb, chs) { /* fsb : first_size_box, chs : changed size, */
+
+			var pos_scrollBar_of_top_page = 803,
+				size_of_button;
+
+			with($("#scrollBar"))
+				(fsb >= chs) ? hide(200) : show(200);
+			if ((div = chs / fsb) > 1) {
 				size_of_button = fsb / div;
-				$("#button").css('height',size_of_button);
+				$("#button").css('height', size_of_button);
 			}
 			var drag = {
 				downMouse: function () {
 					$('#button', $("#scrollBar")).mousedown(function () {
-						console.log ($("#button").css('top'));
-					});				
+						$("#scrollBar").attr("onmousedown", "return false");
+						drag.move();
+					});
 				},
 				upMouse: function () {
-					$('#button', $("#scrollBar")).mouseup(function () {
-						console.log("up !!");
+					$(window).mouseup(function () {
+						$(window).unbind('mousemove');
 					});
 				},
 				move: function () {
-
+					$(window).mousemove(function (e) {
+						var pos_top_button = Top = e.pageY - pos_scrollBar_of_top_page;
+						if (pos_top_button < 0) 
+							Top = 0;
+						if (pos_top_button > fsb - size_of_button) 
+							Top = fsb - size_of_button;
+						$("#button").css('top', Top + 'px');
+					});
 				}
 			}
 			drag.downMouse();
