@@ -329,36 +329,72 @@ var codeStationJq = {
 		}/* scroll fix on pages ... !*/
 
 		setscroll = function (addr, fsb, chs) { /* fsb : first_size_box, chs : changed size, */
-
+			/* css needed !!!*/
+			$(addr).css({
+				'height' : fsb+'px',
+				'min-height' : '',
+				'overflow': 'hidden'
+			});
+			/* tarife ye seri moteghayer haye kolli */
 			var pos_scrollBar_of_top_page = 803,
-				size_of_button;
-
+				size_of_button, div;
+			var veiw = "section.container .color > section > .right .down > section > section";
+			/* show-hidden kardane scroll */
 			with($("#scrollBar"))
-				(fsb >= chs) ? hide(200) : show(200);
-			if ((div = chs / fsb) > 1) {
-				size_of_button = fsb / div;
-				$("#button").css('height', size_of_button);
-			}
+				(fsb >= chs) ? hide(200) : show(200)
+			/* sakhtane dokmeye buttun ba tavajoh be height motaviyat !! */
+			&&
+				$("#button").css('height', (size_of_button = fsb / (div = chs / fsb)));
+			/*drag kardane *buttun dar scroll !! */
 			var drag = {
+				/*vaghi ke mousedown mishavad !! */
 				downMouse: function () {
-					$('#button', $("#scrollBar")).mousedown(function () {
-						$("#scrollBar").attr("onmousedown", "return false");
-						drag.move();
+					$('#button', $("#scrollBar")).mousedown(function (e) {
+						$("#scrollBar").attr("onmousedown", "return false");/*fixed a bug !!*/
+						drag.move(e.pageY);
 					});
 				},
+				/*vaghti ke mouseup mishavad dar har jayi az window !! ;) */
 				upMouse: function () {
 					$(window).mouseup(function () {
-						$(window).unbind('mousemove');
+						$(window).unbind('mousemove');/* fixed a bug !!*/
 					});
 				},
-				move: function () {
+				
+				move: function (index) { /*index : mokhtasate-Y noghteyi ke bara martabe aval mousedown mishavad */
+					getVal = function (posi) { /*taeen Y be sorate nesbi ! */
+						return posi - pos_scrollBar_of_top_page;
+					}
+					var mY = 0,
+						/* bara detect kardane inke mouseup mishavad ya down !! */
+						off = getVal(index - parseInt($("#button").css('top'))); /* goto index ;;)*/
+
 					$(window).mousemove(function (e) {
-						var pos_top_button = Top = e.pageY - pos_scrollBar_of_top_page;
-						if (pos_top_button < 0) 
-							Top = 0;
-						if (pos_top_button > fsb - size_of_button) 
-							Top = fsb - size_of_button;
-						$("#button").css('top', Top + 'px');
+						var tp = topButton = Math.floor(parseInt($("#button").css('top'))),
+							downButton = Math.floor(topButton + size_of_button); /*dar dast dashtane avalo akhate button !*/
+						godown = goup = function () {
+							(getVal(e.pageY - off) <= fsb - size_of_button) ? tp = (getVal(e.pageY - off) >= 0) ? getVal(e.pageY - off) : 0 : tp = fsb - size_of_button;
+							if (downButton < fsb && topButton >= 0) {
+								$("#button").css('top', tp + 'px');
+								$(veiw).css({
+									'position': 'relative',
+									'top': (-tp * div) + 'px'
+								});
+							} else if (topButton < 0) {
+								$("#button").css('top', 0);
+							}
+							if (topButton > fsb - size_of_button) 
+								$("#button").css('top', (fsb - size_of_button) + 'px');
+						} /*in tike kollan jafange vali bara in naveshtam ke begam baaale ;)) */
+						if (e.pageY < mY) {
+							goup();
+						}
+						else if (e.pageY > mY) {
+							godown();
+						} else {
+							//console.log('no thing .... ');//fixed a bug !!! #:-SS
+						}
+						mY = e.pageY;
 					});
 				}
 			}
@@ -401,7 +437,12 @@ var codeStationJq = {
 				}
 				$(this.path).html(main) && (main = '');
 				clr.setImg(typ);
-				setscroll(this.path,354,$(this.path).height());
+			$(this.path).css({
+				'height' : '',
+				'min-height' : $(this.path).height()+'px',
+				'overflow': ''
+			});
+				setscroll(this.path,355,$(this.path).height());
 			},
 			setImg: function (typ) {
 				$path = this.path + " > section"
