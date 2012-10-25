@@ -17,8 +17,7 @@ body { > section {
 		margin-top: 15px;
 	}
 	background: url(images/bg.jpg) repeat fixed;
-	background-size: cover;
-	header {
+	background-size: cover; > header {
 		height: 165px;
 	}
 	footer {}.loading {
@@ -402,9 +401,10 @@ section.container { > .top {
 					margin: 0 auto;
 					width: 490px;
 					height: 240px;
-				}.down {
+				} > .down {
 					position: relative;
-					height: 450px; >img {
+					@hgh : 450px;
+					height: @hgh; > img {
 						margin: 50px 0px 0px 40px;
 					} > section {
 						min-height: 355px;
@@ -412,9 +412,12 @@ section.container { > .top {
 							height: 110px;
 							div {
 								height: inherit;
+								img {
+									cursor: pointer;
+								}
 							}
 						}
-					} > section + div#scrollBar {
+					} > section + #scrollBar {
 						display: none;
 						width: 15px;
 						height: 355px;
@@ -427,8 +430,7 @@ section.container { > .top {
 							width: 0;
 							border: 1px dashed #DAA500;
 							margin: 0 auto;
-						}
-						#button {
+						}#button {
 							width: 15px;
 							height: 330px;
 							cursor: pointer;
@@ -438,7 +440,43 @@ section.container { > .top {
 							z-index: 2;
 							top: 5px;
 						}
-
+					} > #lightbox {
+						position: absolute;
+						width: 590px;
+						height: @hgh/2;
+						top: @hgh/4;
+						z-index: 2;
+						display: none;
+						.top {
+							height: @hgh*5/12;//(@hgh/2)*5/6;
+							background-color: #6F6C6C;
+							.left, .right {
+								margin-top: @hgh*5/24;//((@hgh/2)*5/6)/2
+								width: 30px;
+								height: 30px;
+								cursor: pointer;
+							}.left {
+								background: url(./images/prev.png) no-repeat left center;
+							}.right {
+								background: url(./images/next.png) no-repeat right center;
+							}
+						}
+						.down {
+							background-color: #2E2E2E;
+							height: (@hgh/12);//(@hgh/2)/6
+							header {
+								margin-top: 10px;
+							}
+							span {
+								a {
+									text-decoration: none;
+									font-size: 14px;
+									font-weight: bold;
+									display: block;
+									margin-top: 10px;
+								}
+							}
+						}
 					}
 				}
 			}

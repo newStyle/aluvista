@@ -1,6 +1,5 @@
-
-$(window).load(function(){
-	$("body > .loading").css('display','none');
+$(window).load(function () {
+	$("body > .loading").css('display', 'none');
 });
 // jquery my code
 var codeStationJq = {
@@ -54,7 +53,7 @@ var codeStationJq = {
 		/* ajax load*/
 		for (i = 0; i < menus.HFLinks.length; i++)
 		$(menus.HFLinks[i]).click(function (e) {
-			setTimeout(function () {/* create gallery ! */
+			setTimeout(function () { /* create gallery ! */
 				gal.setBox();
 				gal.setImg();
 				gal.setPage();
@@ -65,22 +64,15 @@ var codeStationJq = {
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
 			changer(url);
-		}); /* active links in page */
+		});
 		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).live('click', function () {
-				menus.active(menus.Links[i], $(menus.Links[i]).index(this));
-			});
-		})(i); /* mouse enter on links */
-		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).live('mouseenter', function () {
-				menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));
-			});
-		})(i);
-
-		/* mouse leave on links */
-		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).live('mouseleave', function () {
-				menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));
+			$(menus.Links[i]).live('click mouseenter mouseleave', function (e) {
+				if (e.type == 'mouseleave')
+					menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));// mouse leave on links 
+				else if (e.type == 'mouseenter')
+					menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));// mouse enter on links 
+				else
+					menus.active(menus.Links[i], $(menus.Links[i]).index(this));// active links in page 
 			});
 		})(i);
 
@@ -258,7 +250,7 @@ var codeStationJq = {
 					"outline": "3px solid #F0B00F"
 				});
 			},
-			autoChangePages : function (j, ind) {
+			autoChangePages: function (j, ind) {
 				if (j == ind) {
 					$(this.path + " > section").css("display", "none");
 					for (i = j * 5; i < (j + 1) * 5; i++)
@@ -326,7 +318,7 @@ var codeStationJq = {
 					}
 				}
 			}
-		}/* scroll fix on pages ... !*/
+		} /* scroll fix on pages ... !*/
 
 		setscroll = function (addr, fsb, chs) { /* fsb : first_size_box, chs : changed size, */
 			/* css needed !!!*/
@@ -350,17 +342,17 @@ var codeStationJq = {
 				/*vaghi ke mousedown mishavad !! */
 				downMouse: function () {
 					$('#button', $("#scrollBar")).mousedown(function (e) {
-						$("#scrollBar").attr("onmousedown", "return false");/*fixed a bug !!*/
+						$("#scrollBar").attr("onmousedown", "return false"); /*fixed a bug !!*/
 						drag.move(e.pageY);
 					});
 				},
 				/*vaghti ke mouseup mishavad dar har jayi az window !! ;) */
 				upMouse: function () {
 					$(window).mouseup(function () {
-						$(window).unbind('mousemove');/* fixed a bug !!*/
+						$(window).unbind('mousemove'); /* fixed a bug !!*/
 					});
 				},
-				
+
 				move: function (index) { /*index : mokhtasate-Y noghteyi ke bara martabe aval mousedown mishavad */
 					getVal = function (posi) { /*taeen Y be sorate nesbi ! */
 						return posi - pos_scrollBar_of_top_page;
@@ -400,8 +392,7 @@ var codeStationJq = {
 			}
 			drag.downMouse();
 			drag.upMouse();
-		}
-		/* color page  !! */
+		} /* color page  !! */
 		var clr = {
 			path: ".container .color > section .right .down > section",
 			boxImg: [
@@ -427,33 +418,82 @@ var codeStationJq = {
 			},
 			setbox: function (typ) {
 				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".png"); i++);
-				nOfImg = i - 1,
-				tmp = main = '';
+				nOfImg = i - 1, tmp = main = '';
 				for (var i = 0; i < nOfImg;) {
 					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
-						tmp += this.boxImg[j];
+					tmp += this.boxImg[j];
 					main += "<section class='mb6'>" + tmp + "</section>";
 					tmp = '';
 				}
 				$(this.path).html(main) && (main = '');
 				clr.setImg(typ);
-			$(this.path).css({
-				'height' : '',
-				'min-height' : $(this.path).height()+'px',
-				'overflow': ''
-			});
-				setscroll(this.path,355,$(this.path).height());
+				$(this.path).css({
+					'height': '',
+					'min-height': $(this.path).height() + 'px',
+					'overflow': ''
+				});
+				setscroll(this.path, 355, $(this.path).height());
 			},
 			setImg: function (typ) {
 				$path = this.path + " > section"
 				for (var i = 1; i <= nOfImg; i++)
-					$(' div', $($path)).eq(i-1).
+					$(' div', $($path)).eq(i - 1).
 						html('<img src ="./images/colorchart/' + typ + i + '.png" alt = "" />');
+			},
+			openSlide: function (typ) {
+				$(this.path + ' img').die('click').live('click', function () {
+					var npics = $(' img', $(clr.path)).length,
+						//number of image 
+						ipics = $(' img', $(clr.path)).index(this) + 1; //clicked img
+					$('#con .down .right > .down').css('visibility', 'hidden').animate({}, 100, '', function () {
+						$(clr.path).siblings('#lightbox').show(700);
+						$('#con .down .right .down #lightbox').css('visibility', 'visible');
+					});
+					$(' #veiw', $('#lightbox')).css('background-image', 'url(' + './images/colorchart/' + typ + '/' + typ + ipics + '.jpg' + ')');
+					$(' #ctrl', $('#lightbox')).text(ipics + '/' + npics);
+					clr.mthSlide(typ, npics, ipics);
+					clr.closSlide();
+				});
+			},
+			mthSlide: function (typ, n, i) {
+				//http://stackoverflow.com/questions/4659032/override-all-javascript-events-bound-to-an-element-with-a-single-new-event
+				go2pic = function (ii) {
+					$(' #veiw', $('#lightbox')).css('background-image', 'url(' + './images/colorchart/' + typ + '/' + typ + ii + '.jpg' + ')');
+					$(' #ctrl', $('#lightbox')).text(ii + '/' + n);
+				}
+				$("#lightbox #back").die('click').live('click', function () {
+					console.log("back ... ");
+					(i > 1) && go2pic(--i);
+				});
+
+				$("#lightbox #next").die('click').live('click', function () {
+					console.log("next ... ");
+					(i < n) && go2pic(++i);
+				});
+				chgImg = function () {
+
+				}
+			},
+			closSlide: function () {
+				function closed() {
+					$(clr.path).siblings('#lightbox').hide(700, function () {
+						$('#con .down .right > .down').css('visibility', 'visible');
+					});
+				}
+				$(document).keydown(function (e) {
+					((e.keyCode ? e.keyCode : e.which) == "27") && closed();
+				});
+				$('#lightbox #close').click(function (e) {
+					e.preventDefault();
+					closed();
+				});
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
+					var typ = $("#btn-color div input").eq($(this).index()).val();
 					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
-					clr.setbox($("#btn-color div input").eq($(this).index()).val());
+					clr.setbox(typ);
+					clr.openSlide(typ);
 				});
 			}
 		};

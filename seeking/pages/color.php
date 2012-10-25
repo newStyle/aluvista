@@ -34,29 +34,20 @@
 				</article>
 			</section>
 			<section class="mt5 down pt1">
-				<section class="w12 mla mra">
-					<section class="mt6">
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 mla last"></div>
-					</section>
-					<section class="mt6">
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 mla last"></div>
-					</section>
-					<section class="mt6">
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 left"></div>
-						<div class="w3 mla last"></div>
-					</section>
-				</section>
+				<section class="w12 mla mra"></section>
 				<div id='scrollBar'>
 					<div id="button"></div>
 					<div id='ribbon'></div>
+				</div>
+				<div id='lightbox'>
+					<section class="top" id="veiw">
+						<div class="left" id="back"></div>
+						<div class="right" id="next"></div>
+					</section>
+					<section class="down">
+						<header class="left ml1"><p id="ctrl">it's a title ...</p></header>
+						<span class="right mr1" id='close'><a href="#">close</a></span>
+					</section>
 				</div>
 			</section>
 		</section>
