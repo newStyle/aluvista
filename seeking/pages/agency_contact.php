@@ -2,16 +2,23 @@
 	<section class="mla mra pt1">
 		<section class="agancy w10 ml2 right">
 			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
-				<label>نام و نام خانوادگی متقاضی </label>
+				<label>نام و نام خانوادگی متقاضی </label><br />
 				<input class="text" type="text" name="name" id="name" placeholder="" />
-				<label>تلفن تماس </label>
+				<label>تلفن تماس </label><br />
 				<input class="text" type="text" name="mail" id="mail" placeholder="" />
-				<label>نمابر </label>
+				<label>نمابر </label><br />
 				<input class="text" type="text" name="tel" id="tel" placeholder="" />
-				<label>پست الکترونیک</label>
+				<label>پست الکترونیک</label><br />
 				<input class="text" type="text" name="subject" id="subject" placeholder="" />
 				<label>آدرس</label>
 				<textarea class="text" name="txt" id="txt" placeholder="" ></textarea>
+				<label>نوع مالکیت محل شرکت :</label>
+				<label>استیجاری</label>
+				<input class="text" type="radio" name="ownership" />
+				<label>شخصی</label>
+				<input class="text" type="radio" name="ownership" /><br />
+				<label>-----------------------------------------------</label>
+
 				<input class="btn" type="submit" name="submit" value="Send" />
 				<input class="btn" type="reset" name="reset" id="reset" value="Reset" />
 			</form>
