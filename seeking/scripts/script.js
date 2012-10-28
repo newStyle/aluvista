@@ -58,6 +58,7 @@ var codeStationJq = {
 				gal.setImg();
 				gal.setPage();
 				gal.ply_pus();
+				agy.scrll();
 				clearInterval(It);
 				acp = 0;
 			}, 1000);
@@ -504,10 +505,7 @@ var codeStationJq = {
 				console.log ($(this.path).height());
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
-		}
-		$('.agancy #scrollBar').live('click', function () {
-			agy.scrll();
-		});
+		};
 
 	}
 };
