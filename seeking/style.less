@@ -1,4 +1,4 @@
-/*
+ 
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-*/
+ 
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -361,6 +361,116 @@ section.container { > .top {
 						background: url(images/lines.png) no-repeat;
 					}
 				}
+			}
+		}
+	}.agancy { /*Agancy contact  page */
+	height: 495px; > section {
+		background: url(images/contact.png) no-repeat top center;
+		width: 830px;
+		height: 470px;.right {
+			height: 395px;
+			margin-top: 45px;
+			margin-right: 70px;
+		}.agancy label {
+			direction: rtl;
+			width: 200px;
+			height: 20px;
+			font-size:18px;
+			color:#6A5C6B;
+			text-shadow:0 1px 0 #fff;
+			float: right;
+			margin-top:10px;
+			outline: 1px dashed white;
+		}.agancy .text {
+			border:1px solid #fff;
+			border-left:1px solid #b2b2b2;
+			border-top:1px solid #b2b2b2;
+			border-radius:3px;
+			background-color:#d3d2d2;
+			padding:4px;
+			margin:25px 0px 0px 14px;
+			width:280px;
+			display: block;
+			-webkit-transition:all 0.8s;
+			float: right;
+		}.agancy .text:focus,
+		.agancy .text:hover {
+			background-color : #fafafa;
+		}.agancy .btn {
+			margin: 28px 10px 0px 7px ;
+			float: right;
+			padding:5px 20px;
+			color:#fff;
+			border:0 solid #eab410;
+			border-radius:5px;
+			box-shadow:1px 1px 3px #eab410;
+			background-image:url('images/btn_off.jpg');
+			width: 88px;
+			height: 27px;
+		}.agancy .btn:active{
+			box-shadow:1px 1px 7px black;
+		}.agancy .btn:hover {
+			background-image:url('imageagancys/btn_on.jpg');
+		}.agancy .err {
+			background-color: #FCDFD2 !important;
+		}.agancy .ok{
+			background-color: #D5FCD2 !important;
+		}.agancy textarea {
+			min-height : 100px;
+		}#ifrm{
+			width: 280px;
+			border: 0 none;
+			position: absolute;
+			margin: 0 auto;
+			top: 865px;
+			bottom: 0;
+			margin-left: 430px;
+		}.left {
+				float: none;
+				height: 200px;
+				margin-top: 120px;
+				text-align: center;
+				article {
+					div {
+						height: 65px;
+						p {
+							color: white;
+							padding: 5px 10px;
+							padding: 10px 0px 10px 0px;
+						}
+					}
+					div:last-child {
+						border-bottom: none;
+					}
+					.line{width: 233px;
+						height:8px;
+						background: url(images/lines.png) no-repeat;
+					}
+				}
+			}
+		}
+		#scrollBar {
+			display: block;
+			width: 15px;
+			height: 355px;
+			position: absolute;
+			top: 25px;
+			outline: 2px dashed #069096;
+			right: 30px;
+			#ribbon {
+				height: inherit;
+				width: 0;
+				border: 1px dashed #DAA500;
+				margin: 0 auto;
+			}#button {
+				width: 15px;
+				height: 330px;
+				cursor: pointer;
+				margin: 0 auto;
+				background-color: #FFC200;
+				position: absolute;
+				z-index: 2;
+				top: 5px;
 			}
 		}
 	}.color {/*.down for color page */
