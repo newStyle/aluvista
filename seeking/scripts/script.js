@@ -321,7 +321,6 @@ var codeStationJq = {
 		} /* scroll fix on pages ... !*/
 
 		setscroll = function (addr, fsb, chs, pmcxt) { /* fsb : first_size_box, chs : changed size,pmcxt : path_move_context */
-			console.log (addr);
 			/* css needed !!!*/
 			$(addr).css({
 				'height' : fsb+'px',
@@ -502,12 +501,14 @@ var codeStationJq = {
 			veiw: ".container .agancy > section .agancy form",
 			hgt: 385,
 			scrll: function () {
+				console.log ($(this.path).height());
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
 		}
-		$('#scrollBar').live ('click', function () {
-			agy.scrll()
+		$('.agancy #scrollBar').live('click', function () {
+			agy.scrll();
 		});
+
 	}
 };
 

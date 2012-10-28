@@ -364,11 +364,12 @@ section.container { > .top {
 			}
 		}
 	}.agancy { /*Agancy contact  page */
+	@htt: 370px;
 	height: 495px; > section {
 		background: url(images/contact.png) no-repeat top center;
 		width: 830px;
 		height: 470px;.right {
-			min-height: 385px;
+			min-height: @htt;
 			margin-top: 45px;
 			margin-right: 70px;
 			position: relative;
@@ -451,19 +452,19 @@ section.container { > .top {
 			}
 		}
 		#scrollBar {
+			@wit: 15px;
 			display: block;
-			width: 15px;
-			height: 355px;
+			width: @wit;
+			height: @htt;
 			position: absolute;
-			top: 25px;
 			outline: 2px dashed #069096;
 			#ribbon {
-				height: inherit;
+				height: @htt;
 				width: 0;
 				border: 1px dashed #DAA500;
 				margin: 0 auto;
 			}#button {
-				width: 15px;
+				width: @wit;
 				height: 330px;
 				cursor: pointer;
 				margin: 0 auto;
@@ -514,10 +515,11 @@ section.container { > .top {
 				} > .down {
 					position: relative;
 					@hgh : 450px;
+					@hgt : 355px;//for scrollbar + veiw 
 					height: @hgh; > img {
 						margin: 50px 0px 0px 40px;
 					} > section {
-						min-height: 355px;
+						min-height: @hgt;
 						margin-top: 20px; > section {
 							height: 110px;
 							div {
@@ -528,21 +530,22 @@ section.container { > .top {
 							}
 						}
 					} > section + #scrollBar {
+						@wh: 15px;
 						display: none;
-						width: 15px;
-						height: 355px;
+						width: @wh;
+						height: @hgt;
 						position: absolute;
 						top: 25px;
 						outline: 2px dashed #069096;
 						right: 30px;
 						#ribbon {
-							height: inherit;
+							height: @hgt;
 							width: 0;
 							border: 1px dashed #DAA500;
 							margin: 0 auto;
 						}#button {
-							width: 15px;
-							height: 330px;
+							width: @wh;
+							height: @hgt;
 							cursor: pointer;
 							margin: 0 auto;
 							background-color: #FFC200;
