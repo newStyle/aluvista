@@ -462,12 +462,10 @@ var codeStationJq = {
 					$(' #ctrl', $('#lightbox')).text(ii + '/' + n);
 				}
 				$("#lightbox #back").die('click').live('click', function () {
-					console.log("back ... ");
 					(i > 1) && go2pic(--i);
 				});
 
 				$("#lightbox #next").die('click').live('click', function () {
-					console.log("next ... ");
 					(i < n) && go2pic(++i);
 				});
 				chgImg = function () {
