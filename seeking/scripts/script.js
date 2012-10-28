@@ -320,7 +320,8 @@ var codeStationJq = {
 			}
 		} /* scroll fix on pages ... !*/
 
-		setscroll = function (addr, fsb, chs) { /* fsb : first_size_box, chs : changed size, */
+		setscroll = function (addr, fsb, chs, pmcxt) { /* fsb : first_size_box, chs : changed size,pmcxt : path_move_context */
+			console.log (addr);
 			/* css needed !!!*/
 			$(addr).css({
 				'height' : fsb+'px',
@@ -330,7 +331,7 @@ var codeStationJq = {
 			/* tarife ye seri moteghayer haye kolli */
 			var pos_scrollBar_of_top_page = 803,
 				size_of_button, div;
-			var veiw = "section.container .color > section > .right .down > section > section";
+			var veiw = pmcxt;
 			/* show-hidden kardane scroll */
 			with($("#scrollBar"))
 				(fsb >= chs) ? hide(200) : show(200)
@@ -432,7 +433,7 @@ var codeStationJq = {
 					'min-height': $(this.path).height() + 'px',
 					'overflow': ''
 				});
-				setscroll(this.path, 355, $(this.path).height());
+				setscroll(this.path, 355, $(this.path).height(), "section.container .color > section > .right .down > section > section");
 			},
 			setImg: function (typ) {
 				$path = this.path + " > section"
@@ -496,6 +497,17 @@ var codeStationJq = {
 			}
 		};
 		clr.actbtn();
+		var agy = {
+			path: ".container .agancy > section .agancy",
+			veiw: ".container .agancy > section .agancy form",
+			hgt: 385,
+			scrll: function () {
+				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
+			}
+		}
+		$('#scrollBar').live ('click', function () {
+			agy.scrll()
+		});
 	}
 };
 
