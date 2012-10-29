@@ -1,3 +1,4 @@
+/*	
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -10,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-
+*/
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -362,12 +363,13 @@ section.container { > .top {
 				}
 			}
 		}
-	}.agancy { /*Agancy contact  page */
+	}.agy_form { /*Agancy contact  page */
 	@htt: 385px;
-	height: 495px; > section {
+	height: 495px;
+	overflow: hidden;> section {
 		background: url(images/contact.png) no-repeat top center;
 		width: 830px;
-		height: 470px;.right {
+		min-height: 470px;.right {
 			min-height: @htt;
 			margin-top: 45px;
 			margin-right: 40px;
@@ -375,16 +377,17 @@ section.container { > .top {
 			padding: 2px;
 			direction: rtl;
 		}.agancy label {
-			width: 200px;
-			height: 20px;
-			font-size:18px;
+			width: 400px;
+			font-size:20px;
 			color:#6A5C6B;
 			text-shadow:0 1px 0 #fff;
 			float: right;
-			outline: 1px dashed white;
 			text-align: right;
-			margin-right: 30px;
-		}.agancy .text {
+			margin:10px 30px 0 0;
+		}.agancy .radio{
+			width: 20px;
+			margin:0 20px 0 5px;
+			}.agancy .text {
 			border:1px solid #fff;
 			border-left:1px solid #b2b2b2;
 			border-top:1px solid #b2b2b2;
@@ -399,10 +402,7 @@ section.container { > .top {
 		}.agancy .text:focus,
 		.agancy .text:hover {
 			background-color : #fafafa;
-		}.agancy .btn {
-			margin: 28px 10px 0px 7px ;
-			float: right;
-			padding:5px 20px;
+		}.agancy .agy_btn {
 			color:#fff;
 			border:0 solid #eab410;
 			border-radius:5px;
@@ -410,10 +410,13 @@ section.container { > .top {
 			background-image:url('images/btn_off.jpg');
 			width: 88px;
 			height: 27px;
-		}.agancy .btn:active{
+			float: right;
+			padding: 7px;
+			margin:7px 25px 7px 0px;
+		}.agancy .agy_btn:active{
 			box-shadow:1px 1px 7px black;
-		}.agancy .btn:hover {
-			background-image:url('imageagancys/btn_on.jpg');
+		}.agancy .agy_btn:hover {
+			background-image:url('images/btn_on.jpg');
 		}.agancy .err {
 			background-color: #FCDFD2 !important;
 		}.agancy .ok{
@@ -460,6 +463,7 @@ section.container { > .top {
 			position: absolute;
 			outline: 2px dashed #069096;
 			top:0;
+			overflow: hidden;
 			#ribbon {
 				height: @htt;
 				width: 0;
@@ -476,6 +480,7 @@ section.container { > .top {
 				top: 5px;
 			}
 		}
+
 	}.color {/*.down for color page */
 		height: 750px; > section {
 			background: url(images/Content_color.png) no-repeat top center;

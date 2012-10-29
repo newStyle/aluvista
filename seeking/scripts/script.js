@@ -496,10 +496,11 @@ var codeStationJq = {
 				});
 			}
 		};
+		/* Scroll for Agancy_form Page */
 		clr.actbtn();
 		var agy = {
-			path: ".container .agancy > section .agancy",
-			veiw: ".container .agancy > section .agancy form",
+			path: ".container .agy_form > section .agancy",
+			veiw: ".container .agy_form > section .agancy form",
 			hgt: 385,
 			scrll: function () {
 				console.log ($(this.path).height());

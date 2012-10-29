@@ -1,4 +1,4 @@
-<section class="mt12 down agancy">
+<section class="mt12 down agy_form">
 	<section class="mla mra pt1">
 		<section class="agancy w10 ml2 right">
 			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
@@ -13,15 +13,26 @@
 				<label>آدرس</label>
 				<textarea class="text" name="txt" id="txt" placeholder="" ></textarea>
 				<label>نوع مالکیت محل شرکت :</label>
-				<label>استیجاری</label>
-				<input class="text" type="radio" name="ownership" />
-				<label>شخصی</label>
-				<input class="text" type="radio" name="ownership" /><br />
-				<label>-----------------------------------------------</label>
+				<label for="lsd"><input id="lsd" class="radio" type="radio" name="ownership" />استیجاری</label>
+				<label for="pv"><input id="pv" class="radio" type="radio" name="ownership" />شخصی</label>
+				<label>تا به حال پروژه ای را با آلومنیوم کامپوزیت اجرا<br /> نموده اید؟</label>
+				<label for="yes"><input id="yes" class="radio" type="radio" name="past" />بله</label>
+				<label for="no"><input id="no" class="radio" type="radio" name="past" />خیر</label>
+				<label>در صورتی که پروژه ای را با آلومنیوم کامپوزیت<br /> اجرا نموده اید مشخصات ورق را وارد کنید :</label><br />
+				<textarea class="text" name="txt" id="prj" placeholder="" ></textarea>
+				<label>محل های بکارگیری شده :</label><br />
+				<textarea class="text" name="txt" id="loc" placeholder="" ></textarea>
+				<label>اهم فعالیتهای در دست اقدام در زمینه نمایندگی :</label><br />
+				<textarea class="text" name="txt" id="act" placeholder="" ></textarea>
+				<label>توانمندی های فنی و فروش :</label><br />
+				<textarea class="text" name="txt" id="abl" placeholder="" ></textarea>
+				<label>روش های بازاریابی و فروش :</label><br />
+				<textarea class="text" name="txt" id="ways" placeholder="" ></textarea>
 
-				<input class="btn" type="submit" name="submit" value="Send" />
-				<input class="btn" type="reset" name="reset" id="reset" value="Reset" />
-			</form>
+				<input class="agy_btn" type="submit" name="submit" value="فرستادن" />
+				<input class="agy_btn" type="reset" name="reset" id="reset" value="پاک کردن" />
+				
+			</form
 			<iframe id='ifrm' name='ifrm' src="" frameborder="0" scrolling="no"></iframe>
 			<div id='scrollBar'>
 				<div id="button"></div>
