@@ -474,17 +474,18 @@ var codeStationJq = {
 				}
 			},
 			closSlide: function () {
-				var cls = this.cls = function () {
+				this.cls = function () {
 					$(clr.path).siblings('#lightbox').hide(700, function () {
 						$('#con .down .right > .down').css('visibility', 'visible');
 					});
 				}
 				$(document).keydown(function (e) {
-					((e.keyCode ? e.keyCode : e.which) == "27") && cls();
+					((e.keyCode ? e.keyCode : e.which) == "27") && (obj = new clr.closSlide()) && obj.cls()
 				});
 				$('#lightbox #close').click(function (e) {
 					e.preventDefault();
-					cls();
+					obj = new clr.closSlide();
+					obj.cls();
 				});
 			},
 			actbtn: function () {
