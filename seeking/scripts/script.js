@@ -474,23 +474,26 @@ var codeStationJq = {
 				}
 			},
 			closSlide: function () {
-				function closed() {
+				this.cls = function () {
 					$(clr.path).siblings('#lightbox').hide(700, function () {
 						$('#con .down .right > .down').css('visibility', 'visible');
 					});
 				}
 				$(document).keydown(function (e) {
-					((e.keyCode ? e.keyCode : e.which) == "27") && closed();
+					((e.keyCode ? e.keyCode : e.which) == "27") && (obj = new clr.closSlide()) && obj.cls()
 				});
 				$('#lightbox #close').click(function (e) {
 					e.preventDefault();
-					closed();
+					obj = new clr.closSlide();
+					obj.cls();
 				});
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
 					var typ = $("#btn-color div input").eq($(this).index()).val();
 					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
+					obj = new clr.closSlide();
+					obj.cls();
 					clr.setbox(typ);
 					clr.openSlide(typ);
 				});
