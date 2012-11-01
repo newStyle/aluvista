@@ -376,15 +376,27 @@ section.container { > .top {
 			position: relative;
 			padding: 2px;
 			direction: rtl;
+		}span.req{
+			color:#EAB410;
+			margin-right:10px; 
+		}div.space{
+			width: 233px;
+			height:8px;
+			background: url(images/lines.png) no-repeat;
+			margin:430px 50px 0px 0px;
 		}.agancy label {
 			width: 400px;
 			font-size:20px;
 			color:#6A5C6B;
-			text-shadow:0 1px 0 #fff;
 			float: right;
 			text-align: right;
 			margin:10px 30px 0 0;
-		}.agancy .radio{
+		}label.tit{
+			color:white;
+			font-style:bold;
+			padding: 7px;
+			}.agancy .radio{
+			background-color : red;
 			width: 20px;
 			margin:0 20px 0 5px;
 			}.agancy .text {
@@ -399,6 +411,7 @@ section.container { > .top {
 			display: block;
 			-webkit-transition:all 0.8s;
 			float: right;
+			font-size: 15px;
 		}.agancy .text:focus,
 		.agancy .text:hover {
 			background-color : #fafafa;
@@ -412,7 +425,7 @@ section.container { > .top {
 			height: 27px;
 			float: right;
 			padding: 7px;
-			margin:7px 25px 7px 0px;
+			margin:20px 30px 400px 0px;
 		}.agancy .agy_btn:active{
 			box-shadow:1px 1px 7px black;
 		}.agancy .agy_btn:hover {
@@ -438,12 +451,22 @@ section.container { > .top {
 				text-align: center;
 				article {
 					div {
+						direction: rtl;
 						height: 65px;
 						p {
+							font-size:18px;
 							color: white;
-							padding: 5px 10px;
 							padding: 10px 0px 10px 0px;
+							color:#a895a9;
 						}
+						a{
+							color:#bca6be;
+							font-size:18px;
+							text-decoration: none;
+							font-style: bold;
+						}a:hover{
+							text-decoration: underline;
+							}
 					}
 					div:last-child {
 						border-bottom: none;
@@ -456,18 +479,17 @@ section.container { > .top {
 			}
 		}
 		#scrollBar {
-			@wit: 15px;
+			@wit: 10px;
 			display: none;
 			width: @wit;
 			height: @htt;
 			position: absolute;
-			outline: 2px dashed #069096;
 			top:0;
 			overflow: hidden;
 			#ribbon {
 				height: @htt;
 				width: 0;
-				border: 1px dashed #DAA500;
+				border: 1px solid #DAA500;
 				margin: 0 auto;
 			}#button {
 				width: @wit;
@@ -478,6 +500,9 @@ section.container { > .top {
 				position: absolute;
 				z-index: 2;
 				top: 5px;
+				border-radius:5px;
+			}#button:active{
+				background-color: #E29B0A;
 			}
 		}
 
@@ -537,18 +562,17 @@ section.container { > .top {
 							}
 						}
 					} > section + #scrollBar {
-						@wh: 15px;
+						@wh: 10px;
 						display: none;
 						width: @wh;
 						height: @hgt;
 						position: absolute;
 						top: 25px;
-						outline: 2px dashed #069096;
 						right: 30px;
 						#ribbon {
 							height: @hgt;
 							width: 0;
-							border: 1px dashed #DAA500;
+							border: 1px solid #DAA500;
 							margin: 0 auto;
 						}#button {
 							width: @wh;
@@ -559,6 +583,9 @@ section.container { > .top {
 							position: absolute;
 							z-index: 2;
 							top: 5px;
+							border-radius:5px;
+						}#button:active{
+								background-color: #E29B0A;
 						}
 					} > #lightbox {
 						position: absolute;
