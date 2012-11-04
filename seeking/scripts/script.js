@@ -60,7 +60,7 @@ var codeStationJq = {
 				gal.ply_pus();
 				agy.scrll();
 				prcss.pickImg();
-				prcss.rotat();
+				prcss.rotat(0);
 				clearInterval(It);
 				acp = 0;
 			}, 1000);
@@ -523,13 +523,16 @@ var codeStationJq = {
 					$(prcss.boxs).eq(j).css('background-image', 'url(./images/process/'+ parseInt(j+1) +'.png)');
 				});
 			},
-			rotat: function () { //attach items in disk and rotating
+			rotat: function (q) { //attach items in disk and rotating
 				this.forEach(this.boxs, function (box, i) {
-					var teta = 2 * Math.PI / prcss.boxs.length * i,
+					var teta = (2 * Math.PI / $(prcss.boxs).length * i) + q,
 						x = ((Math.cos(teta)) + 1) * prcss.radius,
 						y = ((Math.sin(teta)) + 1) * prcss.radius;
 					$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
 				});
+				setTimeout(function () {
+					prcss.rotat(q = q > 6.28 ? 0 : q + 0.009);
+				}, 10);
 			}
 		};
 	}
