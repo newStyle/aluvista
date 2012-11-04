@@ -506,11 +506,19 @@ var codeStationJq = {
 			veiw: ".container .agy_form > section .agancy form",
 			hgt: 385,
 			scrll: function () {
-				console.log ($(this.path).height());
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
 		};
+		var prcss = {
+			boxs 	: '#disk div',
+			radius 	: '',
+			forEach : function (arr, fn) {
+				return Array.prototype.forEach.call(arr, fn);
+			},
+			rotat: function () {//attach items in disk and rotating
 
+			}
+		};
 	}
 };
 
