@@ -60,9 +60,11 @@ var codeStationJq = {
 				gal.ply_pus();
 				agy.scrll();
 				prcss.pickImg();
-				prcss.rotat(0);
 				clearInterval(It);
 				acp = 0;
+				clearTimeout(prcss.Int);
+				prcss.rotat(0);
+
 			}, 1000);
 			e.preventDefault();
 			menus.loadAjax(url = $(this).attr("href"), "#con", true);
@@ -511,16 +513,16 @@ var codeStationJq = {
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
 		};
-
 		var prcss = {
 			boxs: '#disk div',
 			radius: 170,
+			Int:'',
 			forEach: function (arr, fn) {
 				return Array.prototype.forEach.call(arr, fn);
 			},
 			pickImg: function () {
-				this.forEach(this.boxs, function (box, j){
-					$(prcss.boxs).eq(j).css('background-image', 'url(./images/process/'+ parseInt(j+1) +'.png)');
+				this.forEach(this.boxs, function (box, j) {
+					$(prcss.boxs).eq(j).css('background-image', 'url(./images/process/' + parseInt(j + 1) + '.png)');
 				});
 			},
 			rotat: function (q) { //attach items in disk and rotating
@@ -530,9 +532,9 @@ var codeStationJq = {
 						y = ((Math.sin(teta)) + 1) * prcss.radius;
 					$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
 				});
-				setTimeout(function () {
-					prcss.rotat(q = q > 6.28 ? 0 : q + 0.009);
-				}, 10);
+				this.Int = setTimeout(function () {
+					prcss.rotat(q = q > 6.28 ? 0 : q = q + 0.009);
+				}, 100);
 			}
 		};
 	}
