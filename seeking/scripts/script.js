@@ -532,15 +532,26 @@ var codeStationJq = {
 				});
 			},
 			rotat: function (q) { //attach items in disk and rotating
-				this.forEach(this.boxs, function (box, i) {
-					var teta = (2 * Math.PI / $(prcss.boxs).length * i) + q,
-						x = ((Math.cos(teta)) + 1) * prcss.radius,
-						y = ((Math.sin(teta)) + 1) * prcss.radius;
-					$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
+				var rot;
+				$(this.boxs).live('click mouseenter mouseleave', function (e) {
+					if (e.type === 'mouseenter') 
+						clearTimeout(prcss.Int)
+					else if (e.type === 'mouseleave') 
+						rot()
+					else 
+						console.log($(prcss.boxs).index(this));
 				});
-				this.Int = setTimeout(function () {
-					prcss.rotat(q = q > 6.28 ? 0 : q = q + 0.009);
-				}, 100);
+				(rot = function () {
+					prcss.forEach(prcss.boxs, function (box, i) {
+						var teta = (2 * Math.PI / $(prcss.boxs).length * i) + q,
+							x = ((Math.cos(teta)) + 1) * prcss.radius,
+							y = ((Math.sin(teta)) + 1) * prcss.radius;
+						$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
+					});
+					prcss.Int = setTimeout(function () {
+						rot(q = q > 6.28 ? 0 : q = q + 0.009);
+					}, 100);
+				})();
 			}
 		};
 	}
