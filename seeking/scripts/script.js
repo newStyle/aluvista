@@ -1,9 +1,13 @@
+/*jslint browser: true*/
+/*global $, jQuery*/
 $(window).load(function () {
+	"use strict";
 	$("body > .loading").css('display', 'none');
 });
 // jquery my code
 var codeStationJq = {
 	ready: function () {
+		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
 		var pos, Int, menus = {
 			Links: [
@@ -29,20 +33,20 @@ var codeStationJq = {
 				pos = i;
 			},
 			MouseEnter: function (which, i) {
-				if (which == this.Links[0] || which == this.Links[2]) {
+				if (which === this.Links[0] || which === this.Links[2]) {
 					$(this.Links[0]).removeClass("active").eq(i).addClass("active");
 					$(this.Links[2]).removeClass("active").eq(i).addClass("active");
-				} else if (which == this.Links[1]) {
-					Int != false && clearTimeout(Int) && alert("ey baba ");
+				} else if (which === this.Links[1]) {
+					Int !== false && clearTimeout(Int);
 					Int = false;
 				}
 			},
 			MouseLeave: function (which, i) {
-				if (which == this.Links[0] || which == this.Links[2]) {
+				if (which === this.Links[0] || which === this.Links[2]) {
 					$(this.Links[0] + ", " + this.Links[2]).removeClass("active");
 					$(this.Links[0]).eq(pos).addClass("active");
 					$(this.Links[2]).eq(pos).addClass("active");
-				} else if (which == this.Links[1]) {
+				} else if (which === this.Links[1]) {
 					$(which).closest('ul').mouseleave(function () {
 						typeof Int === 'boolean' && change_image();
 					});
@@ -51,38 +55,41 @@ var codeStationJq = {
 		};
 
 		/* ajax load*/
-		for (i = 0; i < menus.HFLinks.length; i++)
-		$(menus.HFLinks[i]).click(function (e) {
-			setTimeout(function () { /* create gallery ! */
-				gal.setBox();
-				gal.setImg();
-				gal.setPage();
-				gal.ply_pus();
-				agy.scrll();
-				prcss.pickImg();
-				clearInterval(It);
-				acp = 0;
-				clearTimeout(prcss.Int);
-				prcss.rotat(0);
+		for (var i = 0; i < menus.HFLinks.length; i++) {
+			$(menus.HFLinks[i]).click(function (e) {
+				setTimeout(function () { /* create gallery ! */
+					gal.setBox();
+					gal.setImg();
+					gal.setPage();
+					gal.ply_pus();
+					agy.scrll();
+					prcss.pickImg();
+					clearInterval(It);
+					acp = 0;
+					clearTimeout(prcss.Int);
+					prcss.rotat(0);
 
-			}, 1000);
-			e.preventDefault();
-			menus.loadAjax(url = $(this).attr("href"), "#con", true);
-			changer(url);
-		});
-		for (i = 0; i <= menus.Links.length; i++)(function (i) {
-			$(menus.Links[i]).live('click mouseenter mouseleave', function (e) {
-				if (e.type == 'mouseleave')
-					menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));// mouse leave on links 
-				else if (e.type == 'mouseenter')
-					menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));// mouse enter on links 
-				else
-					menus.active(menus.Links[i], $(menus.Links[i]).index(this));// active links in page 
+				}, 1000);
+				e.preventDefault();
+				var url;
+				menus.loadAjax(url = $(this).attr("href"), "#con", true);
+				changer(url);
 			});
-		})(i);
-
+		}
+		for (i = 0; i <= menus.Links.length; i++) {
+			(function (i) {
+				$(menus.Links[i]).live('click mouseenter mouseleave', function (e) {
+					if (e.type === 'mouseleave')
+						menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));// mouse leave on links 
+					else if (e.type === 'mouseenter')
+						menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));// mouse enter on links 
+					else
+						menus.active(menus.Links[i], $(menus.Links[i]).index(this));// active links in page 
+				});
+			})(i);
+		}
 		function changer(url) {
-			path = $("section.container .slider nav ul");
+			var path = $("section.container .slider nav ul");
 			switch (url.slice(6, -4)) {
 				case 'index':
 					image = "home";
@@ -170,7 +177,8 @@ var codeStationJq = {
 				}
 			};
 		var inx_img = 0,
-			$dummy = -1;
+			$dummy = -1,
+			change_image;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
 				.html("<img width='430' height='300' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
@@ -179,10 +187,10 @@ var codeStationJq = {
 			'position': 'absolute',
 			'left': '0'
 		});
-		efct_banner = function ($newpos) {
+		var efct_banner = function ($newpos) {
 			$(".view img").animate({'opacity':'0.1','display':'none'},600,'linear',function(){
 				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block','opacity':'1'},'slow');
-			});
+			})
 		}
 		$('section.container .top nav a').live('click', function (event) {
 			event.preventDefault();
@@ -190,14 +198,14 @@ var codeStationJq = {
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
 		});
 		(change_image = function () {
-			autoPlayDelay = 3000;
+			var autoPlayDelay = 3000;
 			efct_banner(++$dummy);
 			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
 			$dummy = $dummy >= imgsInBanner[image].pics.length - 1 ? -1 : $dummy;
 			Int = setTimeout(change_image, autoPlayDelay);
 		})();
-		for (var i = 0; i < document.links.length; i++) {
-			document.links[i].onfocus = function () {
+		for (var j = 0; j < document.links.length; j++) {
+			document.links[j].onfocus = function () {
 				this.blur();
 			};
 		} /* gallery page !*/
@@ -218,8 +226,9 @@ var codeStationJq = {
 			},
 			setBox: function () {
 				for (var i = 0; i < nOfImg;) {
-					for (var j = 0; j < 3 && i < nOfImg; j++, i++)
+					for (var j = 0; j < 3 && i < nOfImg; j++, i++) {
 						this.str.tmp += this.boxImg[j];
+					}
 					this.str.mas += "<section class='mb5'>" + this.str.tmp + "</section>";
 					this.str.tmp = '';
 				}
@@ -230,8 +239,7 @@ var codeStationJq = {
 			},
 			setImg: function () {
 				for (i = 0; i <= $(this.path + " div").length; i++)
-					$(this.path + " div").eq(i).
-						html("<img src='images/gallery/75/" + (i + 1) + ".jpg' width='70' height='70'>");
+					$(this.path + " div").eq(i).html("<img src='images/gallery/75/" + (i + 1) + ".jpg' width='70' height='70'>");
 				this.chg_img(0);
 			},
 			setPage: function () {
@@ -256,7 +264,7 @@ var codeStationJq = {
 				});
 			},
 			autoChangePages: function (j, ind) {
-				if (j == ind) {
+				if (j === ind) {
 					$(this.path + " > section").css("display", "none");
 					for (i = j * 5; i < (j + 1) * 5; i++)
 						$(this.path + " > section").eq(i).css("display", "block");
@@ -272,7 +280,7 @@ var codeStationJq = {
 				$(".gallery p span a").click(function (e) {
 					e.preventDefault();
 					console.log(typeof It, It);
-					$(".gallery p span a").index(this) == 0 ? (It = (It == 0) ? setInterval(function () {
+					$(".gallery p span a").index(this) == 0 ? (It = (It === 0) ? setInterval(function () {
 						gal.chg_img(acp++);
 						acp = acp > nOfImg ? 0 : acp;
 						gal.chg_pge(acp / 16);
@@ -284,7 +292,7 @@ var codeStationJq = {
 					clicked: function () {
 						$(".paging a").live("click", function (e) {
 							e.preventDefault();
-							ind = $(".paging a").index(this);
+							var ind = $(".paging a").index(this);
 							gal.chg_pge(ind);
 							acp = Math.floor(ind) * 15;
 						});
@@ -325,7 +333,7 @@ var codeStationJq = {
 			}
 		} /* scroll fix on pages ... !*/
 
-		setscroll = function (addr, fsb, chs, pmcxt) { /* fsb : first_size_box, chs : changed size,pmcxt : path_move_context */
+		var setscroll = function (addr, fsb, chs, pmcxt) { /* fsb : first_size_box, chs : changed size,pmcxt : path_move_context */
 			/* css needed !!!*/
 			$(addr).css({
 				'height' : fsb+'px',
@@ -337,8 +345,7 @@ var codeStationJq = {
 				size_of_button, div;
 			var veiw = pmcxt;
 			/* show-hidden kardane scroll */
-			with($("#scrollBar"))
-				(fsb >= chs) ? hide(200) : show(200)
+				(fsb >= chs) ? $("#scrollBar").hide(200) : $("#scrollBar").show(200)
 			/* sakhtane dokmeye buttun ba tavajoh be height motaviyat !! */
 			&&
 				$("#button").css('height', (size_of_button = fsb / (div = chs / fsb)));
@@ -359,15 +366,16 @@ var codeStationJq = {
 				},
 
 				move: function (index) { /*index : mokhtasate-Y noghteyi ke bara martabe aval mousedown mishavad */
-					getVal = function (posi) { /*taeen Y be sorate nesbi ! */
-						return posi - pos_scrollBar_of_top_page;
+					var getVal = function (posi) { /*taeen Y be sorate nesbi ! */
+						return posi - pos_scrollBar_of_top_page
 					}
 					var mY = 0,
 						/* bara detect kardane inke mouseup mishavad ya down !! */
 						off = getVal(index - parseInt($("#button").css('top'))); /* goto index ;;)*/
 
 					$(window).mousemove(function (e) {
-						var tp = topButton = Math.floor(parseInt($("#button").css('top'))),
+						var topButton, downButton, tp, godown, goup ;
+						tp = topButton = Math.floor(parseInt($("#button").css('top')));
 							downButton = Math.floor(topButton + size_of_button); /*dar dast dashtane avalo akhate button !*/
 						godown = goup = function () {
 							(getVal(e.pageY - off) <= fsb - size_of_button) ? tp = (getVal(e.pageY - off) >= 0) ? getVal(e.pageY - off) : 0 : tp = fsb - size_of_button;
@@ -381,7 +389,7 @@ var codeStationJq = {
 								$("#button").css('top', 0);
 							}
 							if (topButton > fsb - size_of_button) 
-								$("#button").css('top', (fsb - size_of_button) + 'px');
+								$("#button").css('top', (fsb - size_of_button) + 'px')
 						} /*in tike kollan jafange vali bara in naveshtam ke begam baaale ;)) */
 						if (e.pageY < mY) {
 							goup();
@@ -396,7 +404,7 @@ var codeStationJq = {
 				}
 			}
 			drag.downMouse();
-			drag.upMouse();
+			drag.upMouse()
 		} /* color page  !! */
 		var clr = {
 			path: ".container .color > section .right .down > section",
@@ -423,7 +431,7 @@ var codeStationJq = {
 			},
 			setbox: function (typ) {
 				for (var i = 1; clr.chkExist("../images/colorchart/" + typ + i + ".png"); i++);
-				nOfImg = i - 1, tmp = main = '';
+				var nOfImg = i - 1, main = '', tmp = '';
 				for (var i = 0; i < nOfImg;) {
 					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
 					tmp += this.boxImg[j];
@@ -440,7 +448,7 @@ var codeStationJq = {
 				setscroll(this.path, 355, $(this.path).height(), "section.container .color > section > .right .down > section > section");
 			},
 			setImg: function (typ) {
-				$path = this.path + " > section"
+				var $path = this.path + " > section"
 				for (var i = 1; i <= nOfImg; i++)
 					$(' div', $($path)).eq(i - 1).
 						html('<img src ="./images/colorchart/' + typ + i + '.png" alt = "" />');
@@ -462,9 +470,9 @@ var codeStationJq = {
 			},
 			mthSlide: function (typ, n, i) {
 				//http://stackoverflow.com/questions/4659032/override-all-javascript-events-bound-to-an-element-with-a-single-new-event
-				go2pic = function (ii) {
+				var go2pic = function (ii) {
 					$(' #veiw', $('#lightbox')).css('background-image', 'url(' + './images/colorchart/' + typ + '/' + typ + ii + '.jpg' + ')');
-					$(' #ctrl', $('#lightbox')).text(ii + '/' + n);
+					$(' #ctrl', $('#lightbox')).text(ii + '/' + n)
 				}
 				$("#lightbox #back").die('click').live('click', function () {
 					(i > 1) && go2pic(--i);
@@ -473,9 +481,6 @@ var codeStationJq = {
 				$("#lightbox #next").die('click').live('click', function () {
 					(i < n) && go2pic(++i);
 				});
-				chgImg = function () {
-
-				}
 			},
 			closSlide: function () {
 				this.cls = function () {
@@ -484,11 +489,12 @@ var codeStationJq = {
 					});
 				}
 				$(document).keydown(function (e) {
-					((e.keyCode ? e.keyCode : e.which) == "27") && (obj = new clr.closSlide()) && obj.cls()
+					var obj;
+					((e.keyCode ? e.keyCode : e.which) === "27") && (obj = new clr.closSlide()) && obj.cls()
 				});
 				$('#lightbox #close').click(function (e) {
 					e.preventDefault();
-					obj = new clr.closSlide();
+					var obj = new clr.closSlide();
 					obj.cls();
 				});
 			},
@@ -496,7 +502,7 @@ var codeStationJq = {
 				$("#btn-color div").live('click', function () {
 					var typ = $("#btn-color div input").eq($(this).index()).val();
 					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
-					obj = new clr.closSlide();
+					var obj = new clr.closSlide();
 					obj.cls();
 					clr.setbox(typ);
 					clr.openSlide(typ);
