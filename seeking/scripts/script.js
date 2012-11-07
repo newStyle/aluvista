@@ -532,16 +532,18 @@ var codeStationJq = {
 				});
 			},
 			rotat: function (q) { //attach items in disk and rotating
-				var rot;
-				$(this.boxs).live('click mouseenter mouseleave', function (e) {
-					if (e.type === 'mouseenter') 
-						clearTimeout(prcss.Int)
-					else if (e.type === 'mouseleave') 
-						rot()
+				var rot, events = 'click mouseenter mouseleave';
+				$(this.boxs).die(events).live(events, function (e) {
+					if (e.type === 'mouseenter')
+						clearTimeout(prcss.Int);
+					else if (e.type === 'mouseleave'){
+						clearTimeout(prcss.Int);
+						prcss.rot();
+					}
 					else 
 						console.log($(prcss.boxs).index(this));
 				});
-				(rot = function () {
+				(this.rot = function () {
 					prcss.forEach(prcss.boxs, function (box, i) {
 						var teta = (2 * Math.PI / $(prcss.boxs).length * i) + q,
 							x = ((Math.cos(teta)) + 1) * prcss.radius,
@@ -549,7 +551,7 @@ var codeStationJq = {
 						$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
 					});
 					prcss.Int = setTimeout(function () {
-						rot(q = q > 6.28 ? 0 : q = q + 0.009);
+						prcss.rot(q = q > 6.28 ? 0 : q = q + 0.05);
 					}, 100);
 				})();
 			}
