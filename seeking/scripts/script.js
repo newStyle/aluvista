@@ -489,8 +489,10 @@ var codeStationJq = {
 					});
 				}
 				$(document).keydown(function (e) {
-					var obj;
-					((e.keyCode ? e.keyCode : e.which) === "27") && (obj = new clr.closSlide()) && obj.cls()
+					if($('#lightbox').css('display')=='block'){
+						var obj;
+						((e.keyCode ? e.keyCode : e.which) == "27") && (obj = new clr.closSlide()) && obj.cls()					
+					}
 				});
 				$('#lightbox #close').click(function (e) {
 					e.preventDefault();
