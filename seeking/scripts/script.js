@@ -552,7 +552,7 @@ var codeStationJq = {
 					});
 					prcss.Int = setTimeout(function () {
 						prcss.rot(q = q > 6.28 ? 0 : q = q + 0.05);
-					}, 100);
+					}, 70);
 				})();
 			}
 		};
