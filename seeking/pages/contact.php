@@ -1,44 +1,52 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
-		<section class="contact w10 ml2 left">
+		<section class="contact w10 mr1 right">
 			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
-				<label>Name:</label>
+				<label>نام :</label>
 				<input class="text" type="text" name="name" id="name" placeholder="" />
-				<label>Email:</label>
+				<label>ایمیل :</label>
 				<input class="text" type="text" name="mail" id="mail" placeholder="" />
-				<label>tel:</label>
+				<label>تلفن :</label>
 				<input class="text" type="text" name="tel" id="tel" placeholder="" />
-				<label>Subject:</label>
+				<label>عنوان :</label>
 				<input class="text" type="text" name="subject" id="subject" placeholder="" />
-				<label>Message:</label>
+				<label>پیام :</label>
 				<textarea class="text" name="txt" id="txt" placeholder="" ></textarea>
-				<input class="btn" type="submit" name="submit" value="Send" />
-				<input class="btn" type="reset" name="reset" id="reset" value="Reset" />
+				<input class="btn" type="reset" name="reset" id="reset" value="پاک کردن" />
+				<input class="btn" type="submit" name="submit" value="فرستادن" />
 			</form>
 			<iframe id='ifrm' name='ifrm' src="" frameborder="0" scrolling="no"></iframe>
 		</section>
-		<section class="w6 ml14 pt1 right">
+		<div class="agylink">
+			<a href="#">فرم اعطاي نمايندگي</a>
+		</div>
+		<section class="w6 ml2 pt1 left">
 			<article>
-				<div class="w6 mt1">
+				<div class="w6 mt6">
 					<p>
-						address, auctor ridiculus risus velit.
-						Cum dapibus, sagittis turpis.
+						دفتر مركزي : مشهد خيابان فلسطين -<br /> فلسطين 9 - شماره 94 
 					</p>
-					<div class="line"></div>
-				</div>
-				<div class="w6 mt2 ">
 					<p>
-						Tel : +98 222222 <br />
-						Fax	: +98222222
+						تلفن : 8400640 (511) <br />
+						فکس : 8431318 - 8431860 (511)
 					</p>
-					<div class="line"></div>
 				</div>
-				<div class="w6 mt2 ">
+					<div class="line"></div>
+				<div class="w6 fac ">
+					<p>
+						كارخانه : مشهد - شهرك صنعتي<br /> كاويان - نبش صنعت 13 
+					</p>
+					<p>
+						تلفن : 2543377 (511) <br />
+						فکس :  2543378 (511)
+					</p>
+				</div>
+					<div class="line"></div>
+				<div class="w6 mt10 adds ">
 					<p>
 						www.aluvsista.com
 						info@aluvista.com
 					</p>
-					<div class="line"></div>
 				</div>
 			</article>
 		</section>
