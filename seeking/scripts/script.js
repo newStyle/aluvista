@@ -542,8 +542,14 @@ var codeStationJq = {
 						clearTimeout(prcss.Int);
 						prcss.rot();
 					}
-					else 
+					else {
 						console.log($(prcss.boxs).index(this));
+						$('#disk').animate({
+							'right': '414px'
+						}, 800, 'linear',function () {
+							$('#disk + section').css('display','block');
+						});
+					}
 				});
 				(this.rot = function () {
 					prcss.forEach(prcss.boxs, function (box, i) {
