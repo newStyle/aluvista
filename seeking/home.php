@@ -22,9 +22,9 @@
 <body>
 <header>
 <section class="mla mra">
-<div class="w12 right">
-	<div class="w12 pt1 top">
-		<div class="left w11">
+<div class="w14 right">
+	<div class="w14 pt1 top">
+		<div class="left w12 mr2">
 			<nav>
 				<ul>
 					<li><a href="#">Chat</a></li>
@@ -32,17 +32,17 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="right ml11"></div>
+		<div class="right ml12"></div>
 	</div>
-	<div class="w12 mt2 down">
+	<div class="w14 mt2 down">
 		<nav>
 			<ul>
-				<li><a href="pages/index.php">home</a></li>
-				<li><a href="pages/process.php">process</a></li>
-				<li><a href="pages/product.php">product</a></li>
-				<li><a href="pages/gallery.php">gallery</a></li>
-				<li><a href="pages/color.php">color</a></li>
-				<li class="right"><a href="pages/contact.php">contact</a></li>
+				<li><a href="pages/index.php">صفحه اصلی</a></li>
+				<li><a href="pages/process.php">مراحل ساخت</a></li>
+				<li><a href="pages/product.php">تولیدات</a></li>
+				<li><a href="pages/gallery.php">گالری</a></li>
+				<li><a href="pages/color.php">جدول رنگ</a></li>
+				<li class="left"><a href="pages/contact.php">تماس با ما</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -132,12 +132,12 @@
 	<div class="container down">
 		<nav>
 			<ul>
-				<li><a href="pages/index.php">home</a></li>
-				<li><a href="pages/process_content.php">process</a></li>
-				<li><a href="pages/product.php">product</a></li>
-				<li><a href="pages/gallery.php">gallery</a></li>
-				<li><a href="pages/color.php">color</a></li>
-				<li class="last"><a href="pages/agency_contact.php">contact</a></li>
+				<li><a href="pages/index.php">صفحه اصلی</a></li>
+				<li><a href="pages/process.php">مراحل ساخت</a></li>
+				<li><a href="pages/product.php">تولیدات</a></li>
+				<li><a href="pages/gallery.php">گالری</a></li>
+				<li><a href="pages/color.php">جدول رنگ</a></li>
+				<li class="left"><a href="pages/contact.php">تماس با ما</a></li>
 			</ul>
 		</nav>
 	</div>

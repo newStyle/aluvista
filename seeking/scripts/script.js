@@ -523,7 +523,7 @@ var codeStationJq = {
 		};
 		var prcss = {
 			boxs: '#disk div',
-			radius: 170,
+			radius: 175,
 			Int:'',
 			forEach: function (arr, fn) {
 				return Array.prototype.forEach.call(arr, fn);
@@ -560,7 +560,7 @@ var codeStationJq = {
 					});
 					prcss.Int = setTimeout(function () {
 						prcss.rot(q = q > 6.28 ? 0 : q = q + 0.05);
-					}, 100);
+					}, 70);
 				})();
 			}
 		};
