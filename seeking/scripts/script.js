@@ -523,7 +523,7 @@ var codeStationJq = {
 		};
 		var prcss = {
 			boxs: '#disk div',
-			radius: 175,
+			radius: 167,
 			Int:'',
 			forEach: function (arr, fn) {
 				return Array.prototype.forEach.call(arr, fn);
