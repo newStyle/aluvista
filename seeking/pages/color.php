@@ -43,7 +43,7 @@
 					</section>
 					<section class="down">
 						<header class="left ml1"><p id="ctrl">it's a title ...</p></header>
-						<span class="right mr1" id='close'><a href="#">close</a></span>
+						<span class="right mr1" id='close'><a href="#">بستن</a></span>
 					</section>
 				</div>
 			</section>
