@@ -9,7 +9,7 @@
 					</p>
 				</article>
 			</div>
-			<div class="mt5 down pt1">
+			<div class="mt8 down pt1">
 				<section id="btn-color">
 					<div><input type="button" name="solid" value="رنگ های اصلی" class="active"/></div>
 					<div><input type="button" name="natural" value="طرح طبیعت"/></div>
@@ -30,7 +30,7 @@
 					</p>
 				</article>
 			</section>
-			<section class="mt5 down pt1">
+			<section class="mt12 down pt1">
 				<section class="w12-1 ml1-1 mra"></section>
 				<div id='scrollBar'>
 					<div id="button"></div>
