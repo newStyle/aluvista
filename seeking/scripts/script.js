@@ -405,14 +405,14 @@ var codeStationJq = {
 			}
 			drag.downMouse();
 			drag.upMouse()
-		} /* color page  !! */
+		} /* colorchart page  !! */
 		var clr = {
 			path: ".container .color > section .right .down > section",
 			boxImg: [
-				'<div class="w3 left"></div>',
-				'<div class="w3 left"></div>',
-				'<div class="w3 left"></div>',
-				'<div class="w3 mla last"></div>'
+				'<div class="w3-1 left"></div>',
+				'<div class="w3-1 left"></div>',
+				'<div class="w3-1 left"></div>',
+				'<div class="w3-1 mla last"></div>'
 			],nOfImg: '',
 			chkExist: function (addr) {
 				// ref : http://stackoverflow.com/questions/905298/jquery-storing-ajax-response-into-global-variable
@@ -435,7 +435,7 @@ var codeStationJq = {
 				for (var i = 0; i < nOfImg;) {
 					for (var j = 0; j < 4 && i < nOfImg; j++, i++)
 					tmp += this.boxImg[j];
-					main += "<section class='mb6'>" + tmp + "</section>";
+					main += "<section class='mb4'>" + tmp + "</section>";
 					tmp = '';
 				}
 				$(this.path).html(main) && (main = '');
@@ -445,7 +445,7 @@ var codeStationJq = {
 					'min-height': $(this.path).height() + 'px',
 					'overflow': ''
 				});
-				setscroll(this.path, 355, $(this.path).height(), "section.container .color > section > .right .down > section > section");
+				setscroll(this.path, 385, $(this.path).height(), "section.container .color > section > .right .down > section > section");
 			},
 			setImg: function (typ) {
 				var $path = this.path + " > section"
@@ -502,7 +502,7 @@ var codeStationJq = {
 			},
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
-					var typ = $("#btn-color div input").eq($(this).index()).val();
+					var typ = $("#btn-color div input").eq($(this).index()).attr("name");
 					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
 					var obj = new clr.closSlide();
 					obj.cls();

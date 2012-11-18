@@ -3,38 +3,35 @@
 		<section class="w6 left">
 			<div class="top">
 				<article>
-					<h4>Order Color </h4>
-					<p>Diam aliquam enim et mus,
-						amet, tincidunt velit.
+					<h4>سفارش رنگ</h4>
+					<p>
+						در این قسمت رنگ مورد نظرتان را سفارش دهید .
 					</p>
 				</article>
 			</div>
 			<div class="mt5 down pt1">
 				<section id="btn-color">
-					<div><input type="button" value="solid" class="active"/></div>
-					<div><input type="button" value="natural"/></div>
-					<div><input type="button" value="metallic"/></div>
-					<div><input type="button" value="wood"/></div>
-					<div><input type="button" value="anodized"/></div>
-					<div><input type="button" value="yellow"/></div>
-					<div><input type="button" value="black"/></div>
-					<div><input type="button" value="white"/></div>
+					<div><input type="button" name="solid" value="رنگ های اصلی" class="active"/></div>
+					<div><input type="button" name="natural" value="طرح طبیعت"/></div>
+					<div><input type="button" name="metallic" value="رنگ های متالیک"/></div>
+					<div><input type="button" name="wood" value="طرح چوب"/></div>
+					<div><input type="button" name="anodized" value="طرح آنودیز"/></div>
+					<div><input type="button" name="yellow" value="رنگ دیگر 1"/></div>
+					<div><input type="button" name="black" value="رنگ دیگر 2"/></div>
+					<div><input type="button" name="white" value="رنگ دیگر 3"/></div>
 				</section>
 			</div>
 		</section>
 		<section class="right">
 			<section class="top">
 				<article>
-					<h4>Ultricies purus! Arcu a.</h4>
-					<p>Massa aenean porttitor a turpis augue massa ut enim egestas platea et dis! Porta diam.
-						Amet, urna porta vut auctor augue? Diam ac? Dictumst et dis velit amet sit.
-						Risus, tortor scelerisque in porta diam et placerat enim a rhoncus, purus integer adipiscing.
-						Nascetur adipiscing enim pulvinar sit! Rhoncus lorem porttitor elit. Et, enim quis odio natoque.
+					<h4>اطلاعات مربوط به صفحه جدول رنگ</h4>
+					<p>شركت توليدي ويستا صنعت پارت در سال 1382 با هدف فعالیت در زمينه تامين، طراحي و اجراي ورق هاي آلومنيوم كامپوزيت در سراسر كشور آغاز نموده است . اكنون پس از سال ها كسب تجربه اين شركت با همكاري شركت Gencell International Corp. انگلستان و با اهداف رسيدن به خودكفايي ، استقلال صنعتي ، ايجاد اشتغال ، فراهم نمودن موجبات توسعه پيشبرد امور صنفي و استفاده ي بهينه از 
 					</p>
 				</article>
 			</section>
 			<section class="mt5 down pt1">
-				<section class="w12 mla mra"></section>
+				<section class="w12-1 ml1-1 mra"></section>
 				<div id='scrollBar'>
 					<div id="button"></div>
 					<div id='ribbon'></div>
