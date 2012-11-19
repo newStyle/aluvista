@@ -551,12 +551,30 @@ var codeStationJq = {
 						});
 					}
 				});
+				var detectBrowser = function () {
+					var testCSS = new Function("prop", "return prop in document.documentElement.style"), br, browser;
+					for (br in browser = {
+						o: !! (window.opera && window.opera.version),
+						// Opera 8.0+
+						s: Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0,
+						// At least Safari 3+: "[object HTMLElementConstructor]"
+						moz: testCSS('MozBoxSizing'),
+						// FF 0.8+
+						webkit: testCSS('WebkitTransform'),
+						// Chrome 1+
+						ms: /*@cc_on!@*/
+						false || testCSS('msTransform') // At least IE6
+					})
+						if (browser[br])
+							return br
+				}
+				var dtct = detectBrowser();
 				(this.rot = function () {
 					prcss.forEach(prcss.boxs, function (box, i) {
 						var teta = (2 * Math.PI / $(prcss.boxs).length * i) + q,
 							x = ((Math.cos(teta)) + 1) * prcss.radius,
 							y = ((Math.sin(teta)) + 1) * prcss.radius;
-						$(prcss.boxs).eq(i).css("-webkit-transform", "translate(" + x + "px, " + y + "px)");
+						$(prcss.boxs).eq(i).css("-"+dtct+"-"+"transform", "translate(" + x + "px, " + y + "px)");
 					});
 					prcss.Int = setTimeout(function () {
 						prcss.rot(q = q > 6.28 ? 0 : q = q + 0.05);
