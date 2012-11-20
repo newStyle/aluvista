@@ -239,7 +239,8 @@ section.container { > .top {
 				height: 485px;
 				div.paging{
 					margin: 10px 0 0 0 ;
-				}p{
+				}
+				p{
 					font-size: 20px;
 					padding-bottom: 20px;
 					color: #FDED90;
@@ -281,7 +282,11 @@ section.container { > .top {
 				width: 550px;
 				height: 630px;
 				outline: 1px dashed #9B7617;
-				p {}.top {
+				p.right {
+					width: 200px;
+					height: 30px;
+					outline: 1px dotted red;
+					}.top {
 					height: 500px;
 					margin-left: 20px;
 					outline: 1px dotted #976700;
@@ -637,32 +642,30 @@ section.container { > .top {
 							}
 						}
 					} > section + #scrollBar {
-						@wh:39px;
+						@wh: 10px;
 						display: none;
 						width: @wh;
 						height: @hgt;
 						position: absolute;
-						top: 25px;
-						right: 25px;
+						top: 23px;
+						right: 30px;
 						#ribbon {
 							height: @hgt;
-							width: 40px;
-							background: url(images/sc1.png) no-repeat;
+							width: 0;
+							border: 1px solid #DAA500;
 							margin: 0 auto;
-						}#ribbon:hover{
-							background: url(images/sc2.png) no-repeat;
-							}#button {
-							width: 27px;
+						}#button {
+							width: @wh;
 							height: @hgt;
 							cursor: pointer;
-							left:5px;
+							margin: 0 auto;
+							background-color: #FFC200;
 							position: absolute;
 							z-index: 2;
-							top: 25px;
-							border-radius:35px;
-							background-color: #1a1a1a;
+							top: 5px;
+							border-radius:100px;
 						}#button:active{
-							background-color: #E29B0A;
+								background-color: #E29B0A;
 						}
 					} > #lightbox {
 						position: absolute;

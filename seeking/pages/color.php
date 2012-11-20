@@ -31,10 +31,9 @@
 				</article>
 			</section>
 			<section class="mt12 down pt1">
-				<section class="w12-1 mra"></section>
+				<section class="w12-1 ml1-1 mra"></section>
 				<div id='scrollBar'>
-					<!-- <div id="button"></div> -->
-					<img id="button" src="images/scbtn1.png"> 
+					<div id="button"></div>
 					<div id='ribbon'></div>
 				</div>
 				<div id='lightbox'>
