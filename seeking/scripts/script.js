@@ -521,6 +521,23 @@ var codeStationJq = {
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
 		};
+		var contact = {
+			sendmail: function () {
+				$("form").live('submit', function (event) {
+					event.preventDefault();
+					var dataString = 'name=' + $("form #name").val() + '&mail=' + $("form #mail").val() + '&phone=' + $("form #tel").val() + '&subject=' + $("form #subject").val() + '&txt=' + $("form #txt").val();
+					$.ajax({
+						type: "POST",
+						url: "pages/send.php",
+						data: dataString,
+						success: function (data) {
+							$('.contact .contact p').html(data);
+						}
+					});
+				});
+			}
+		};
+		contact.sendmail();
 		var prcss = {
 			boxs: '#disk div',
 			radius: 167,

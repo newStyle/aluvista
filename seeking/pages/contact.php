@@ -1,7 +1,8 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
 		<section class="contact w10 mr1 right">
-			<form id="contact-form" action="sendmail.php" method="post">
+			<p></p>
+			<form id="contact-form">
 				<label for="name">نام :</label>
 				<input class='text' type="text" name="name" id="name" tabindex="10" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required/>
 				<label for="email">ایمیل :</label>
