@@ -1,17 +1,17 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
 		<section class="contact w10 mr1 right">
-			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
+			<form id="contact-form" action="sendmail.php" method="post">
 				<label for="name">نام :</label>
 				<input class='text' type="text" name="name" id="name" tabindex="10" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required/>
 				<label for="email">ایمیل :</label>
 				<input class='text' type="email" name="mail" tabindex="20" id="mail" />
 				<label for="phone">تلفن :</label>
-				<input class='text' type="tel" name="phone" tabindex="30" id="tel" pattern="[0-9]{1,20}$"/>
+				<input class='text' type="tel" name="phone" tabindex="30" id="tel" pattern="[0-9]{7,16}$" required/>
 				<label for="subject">عنوان :</label>
 				<input class='text' type="text" name="subject" tabindex="40" id="subject"/>
 				<label for="txt">پیام :</label>
-				<textarea class="text" name="txt" tabindex="50" id="txt"></textarea>
+				<textarea class="text" name="txt" tabindex="50" id="txt" required ></textarea>
 				<input class="btn" type="submit" name="submit" tabindex="60" value="فرستادن" />
 				<input class="btn" type="reset" name="reset" tabindex="70" id="reset" value="پاک کردن" />
 			</form>

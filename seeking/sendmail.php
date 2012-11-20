@@ -12,11 +12,11 @@
 
     $name    = $_POST['name'];
     $email   = $_POST['mail'];
-    $tel     = $_POST['tel'];
+    $tel     = $_POST['phone'];
     $subject = $_POST['subject'];
     $text    = $_POST['txt'];
 
-    if( strlen($name)>=3 && strlen($email)>=7 && strlen($subject)>=5 && strlen($text)>=10 ){
+  if ( isset($name) && isset($email) && isset($subject) && isset($text)){
       if( @mail (
           $admin,
           "aluvista.com contact : $subject",
