@@ -8,7 +8,7 @@
   <?php
     error_reporting(E_ALL ^ E_NOTICE);
 
-    $admin = 'naser0rahmani@gmail.com';
+    $admin = 'goldgoldy276@yahoo.com';
 
     $name    = $_POST['name'];
     $email   = $_POST['mail'];
