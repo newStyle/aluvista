@@ -1,4 +1,4 @@
-/*
+
 	div, section {
 		outline: 1px dotted red;
 	}
@@ -11,7 +11,7 @@
 	body > .container, header, footer {
 		outline: 3px dashed magenta;
 	}
-*/
+
 body { > section {
 		min-height: 595px;
 		margin-top: 15px;
@@ -237,11 +237,22 @@ section.container { > .top {
 			background: url(images/gallery.png) no-repeat top center;
 			height: 700px; > .left {
 				height: 485px;
-				p {
-					font-size: 30px;
+				div.paging{
+					margin: 10px 0 0 0 ;
+				}p{
+					font-size: 20px;
 					padding-bottom: 20px;
 					color: #FDED90;
-				} > section {
+					text-align: center;
+				}a{
+					border: 1px solid white;
+					padding: 7px;
+					text-decoration: none;
+					color:black;
+					background:gray;
+					}a:hover{
+						background: #eab410;
+						} > section {
 					overflow: hidden;
 					max-height: 395px;
 					margin: -2px;
@@ -574,7 +585,7 @@ section.container { > .top {
 					section {
 						width: 115px;
 						height: 300px;
-						margin: 0px 0 0 35px;
+						margin: 0 0 0 35px;
 						div {
 							width: 150px;
 							height: 42px;
@@ -626,30 +637,32 @@ section.container { > .top {
 							}
 						}
 					} > section + #scrollBar {
-						@wh: 10px;
+						@wh:39px;
 						display: none;
 						width: @wh;
 						height: @hgt;
 						position: absolute;
 						top: 25px;
-						right: 30px;
+						right: 25px;
 						#ribbon {
 							height: @hgt;
-							width: 0;
-							border: 1px solid #DAA500;
+							width: 40px;
+							background: url(images/sc1.png) no-repeat;
 							margin: 0 auto;
-						}#button {
-							width: @wh;
+						}#ribbon:hover{
+							background: url(images/sc2.png) no-repeat;
+							}#button {
+							width: 27px;
 							height: @hgt;
 							cursor: pointer;
-							margin: 0 auto;
-							background-color: #FFC200;
+							left:5px;
 							position: absolute;
 							z-index: 2;
-							top: 5px;
-							border-radius:5px;
+							top: 25px;
+							border-radius:35px;
+							background-color: #1a1a1a;
 						}#button:active{
-								background-color: #E29B0A;
+							background-color: #E29B0A;
 						}
 					} > #lightbox {
 						position: absolute;
