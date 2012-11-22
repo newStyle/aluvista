@@ -11,7 +11,7 @@
 			</div>
 			<div class="mt8 down pt1">
 				<section id="btn-color">
-					<div><input type="button" name="solid" value="رنگ های اصلی" class="active"/></div>
+					<div><input type="button" name="solid" value="رنگ های اصلی"/></div>
 					<div><input type="button" name="natural" value="طرح طبیعت"/></div>
 					<div><input type="button" name="metallic" value="رنگ های متالیک"/></div>
 					<div><input type="button" name="wood" value="طرح چوب"/></div>

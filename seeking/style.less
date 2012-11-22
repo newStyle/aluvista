@@ -205,7 +205,7 @@ section.container {
 			}
 		}
 	}
-	.index { /* .down for index page  */
+	.index { /*.down for index page  */
 		width: inherit;
 		height: 190px;
 		> .left {
@@ -449,7 +449,189 @@ section.container {
 				}
 			}
 		}
-	}.agy_form { /*Agancy contact  page */
+	}
+	.color { /*.down for colorchart page */
+		height: 750px;
+		> section {
+			background: url(images/bg_color.png) no-repeat top center;
+			width: 865px;
+			height: 740px;
+			.rubric () {/* it's for '.left article' and '.right article'*/
+				h4 {
+					padding-top: 70px;
+					text-indent: 20px;
+					color:  #FDED90;
+				}
+				p {
+					padding: 8px 10px;
+					text-indent: 15px;
+					line-height: 25px;
+					color:  #FDED90;
+				}
+			}
+			> .left {
+				height: inherit; 
+				> .top {
+					width: 140px;
+					margin: 0 auto;
+					margin-top: 30px;
+					height: 240px;
+					direction: rtl;
+					text-align: center;
+					article {
+						.rubric ();
+					}
+				}
+				.down {
+					height: 450px;
+					section {
+						width: 115px;
+						height: 300px;
+						margin: 0 0 0 35px;
+						div {
+							width: 150px;
+							height: 42px;
+							margin-top: 7px;
+							input {
+								width: inherit;
+								height: inherit;
+								background: url(images/color_btnoff.png) top center;
+								border: none;
+								color: white;
+							}
+							input:hover,
+							.active {
+								background: url(images/color_btnon.png) top center;
+							}
+						}
+					}
+				}
+			} 
+			> .right {
+				width: 590px;
+				height: inherit;
+				> .top {
+					margin: 0 auto;
+					width: 490px;
+					height: 240px;
+					direction: rtl;
+					text-align: right;
+					article {
+						.rubric ();
+					}
+				}
+				> .down {
+					position: relative;
+					@hgh: 450px;
+					@hgt: 385px; //for scrollbar + veiw 
+					height: @hgh;
+					> section {
+						min-height: @hgt;
+						margin-top: 20px;
+						> section {
+							height: 120px;
+							div {
+								height: inherit;
+								text-align: center;
+								img {
+									border-radius: 30px;
+									cursor: pointer;
+									box-shadow: 1px 2px 7px black;
+									margin-top: 5px;
+								}
+								img:hover {
+									box-shadow: 1px 1px 7px black;
+								}
+							}
+						}
+					}
+					> section +  #scrollBar {
+						@wh: 10px;
+						display: none;
+						width: @wh;
+						height: @hgt;
+						position: absolute;
+						top: 23px;
+						right: 30px;
+						#ribbon {
+							height: @hgt;
+							width: 0;
+							border: 1px solid #DAA500;
+							margin: 0 auto;
+						}
+						#button {
+							width: @wh;
+							height: @hgt;
+							cursor: pointer;
+							margin: 0 auto;
+							background-color:  #FFC200;
+							position: absolute;
+							z-index: 2;
+							top: 5px;
+							border-radius: 100px;
+						}
+						#button:active {
+							background-color:  #E29B0A;
+						}
+					} 
+					>  #lightbox {
+						position: absolute;
+						width: 590px;
+						height: @hgh/2;
+						top: @hgh/4;
+						z-index: 2;
+						display: none;
+						box-shadow: 1px 2px 12px black;
+						right: 12px;
+						.top {
+							height: @hgh*5/12; //(@hgh/2)*5/6;
+							background-color:  #6F6C6C;
+							.rubric (@path, @dir){
+								margin-top: @hgh*4/24;//((@hgh/2)*5/6)/2
+								width: 55px;
+								height: 59px;
+								cursor: pointer;
+								background: @path no-repeat @dir center;
+							}
+							.left{
+								.rubric(url(./images/back_b.png), left);
+							}
+							.right {
+								.rubric(url(./images/next_b.png), right);
+							}
+							.left:active{
+								background: url(./images/back_w.png) no-repeat left center;
+							}
+							.right:active{
+								background: url(./images/next_w.png) no-repeat right center;
+							}
+						}
+						.down {
+							background-color:  #211F1E;
+							height: (@hgh/12); //(@hgh/2)/6
+							header {
+								margin-top: 10px;
+								p {
+									color: white;
+								}
+							}
+							span {
+								a {
+									text-decoration: none;
+									font-size: 16px;
+									color: white;
+									font-weight: bold;
+									display: block;
+									margin-top: 10px;
+								}
+							}
+						}//.down ...
+					}//#lightbox
+				}//.down 
+			}
+		}
+	}
+	.agy_form { /*Agancy contact  page */
 	@htt: 385px;
 	height: 495px;
 	overflow: hidden; > section {
@@ -594,165 +776,8 @@ section.container {
 		}
 	}
 
-}.color { /*.down for colorchart page */
-	height: 750px; > section {
-		background: url(images/bg_color.png) no-repeat top center;
-		width: 865px;
-		height: 740px; > .left {
-			height: inherit; > .top {
-				width: 140px;
-				margin: 0 auto;
-				margin-top: 30px;
-				height: 240px;
-				direction: rtl;
-				text-align: center;
-			}.down {
-				height: 450px;
-				section {
-					width: 115px;
-					height: 300px;
-					margin: 0 0 0 35px;
-					div {
-						width: 150px;
-						height: 42px;
-						margin-top: 7px;
-						input {
-							width: inherit;
-							height: inherit;
-							background: url(images/color_btnoff.png) top center;
-							border: none;
-							color: white;
-						}
-						input:hover,
-						.active {
-							background: url(images/color_btnon.png) top center;
-						}
-					}
-				}
-			}
-		} > .right {
-			width: 590px;
-			height: inherit; > .top {
-				margin: 0 auto;
-				width: 490px;
-				height: 240px;
-				direction: rtl;
-				text-align: right;
-			} > .down {
-				position: relative;
-				@hgh: 450px;
-				@hgt: 385px; //for scrollbar + veiw 
-				height: @hgh; > img {
-					margin: 50px 0px 0px 40px;
-				} > section {
-					min-height: @hgt;
-					margin-top: 20px; > section {
-						height: 120px;
-						div {
-							height: inherit;
-							text-align: center;
-
-							img {
-								border-radius: 30px;
-								cursor: pointer;
-								box-shadow: 1px 2px 7px black;
-								margin-top: 5px;
-							}
-							img:hover {
-								box-shadow: 1px 1px 7px black;
-							}
-						}
-					}
-				} > section +  #scrollBar {
-					@wh: 10px;
-					display: none;
-					width: @wh;
-					height: @hgt;
-					position: absolute;
-					top: 23px;
-					right: 30px; #ribbon {
-						height: @hgt;
-						width: 0;
-						border: 1px solid #DAA500;
-						margin: 0 auto;
-					}#button {
-						width: @wh;
-						height: @hgt;
-						cursor: pointer;
-						margin: 0 auto;
-						background-color:  #FFC200;
-						position: absolute;
-						z-index: 2;
-						top: 5px;
-						border-radius: 100px;
-					}#button:active {
-						background-color:  #E29B0A;
-					}
-				} >  #lightbox {
-					position: absolute;
-					width: 590px;
-					height: @hgh/2;
-					top: @hgh/4;
-					z-index: 2;
-					display: none;
-					box-shadow: 1px 2px 12px black;
-					right: 12px;.top {
-						height: @hgh*5/12; //(@hgh/2)*5/6;
-						background-color:  #6F6C6C;
-							.left, .right {
-								margin-top: @hgh*4/24;//((@hgh/2)*5/6)/2
-								width: 55px;
-								height: 59px;
-								cursor: pointer;
-							}.left {
-								background: url(./images/back_b.png) no-repeat left center;
-							}.left:active{
-								background: url(./images/back_w.png) no-repeat left center;
-							}.right {
-								background: url(./images/next_b.png) no-repeat right center;
-							}.right:active{
-								background: url(./images/next_w.png) no-repeat right center;
-								}
-						}
-						.down {
-							background-color:  #211F1E;
-						height: (@hgh/12); //(@hgh/2)/6
-						header {
-							margin-top: 10px;
-							p {
-								color: white;
-							}
-						}
-						span {
-							a {
-								text-decoration: none;
-								font-size: 16px;
-								color: white;
-								font-weight: bold;
-								display: block;
-								margin-top: 10px;
-							}
-						}
-					}
-				}
-			}
-		}
-		article {
-			h4 {
-				padding-top: 70px;
-				text-indent: 20px;
-				color:  #FDED90;
-			}
-			p {
-				padding: 8px 10px;
-				text-indent: 15px;
-				line-height: 25px;
-				color:  #FDED90;
-			}
-		}
-	}
-
-}.pdt { /*.down for Product page */
+}
+.pdt { /*.down for Product page */
 	height: 750px; > section {
 		background: url(images/bg_color.png) no-repeat top center;
 		width: 865px;
