@@ -132,11 +132,14 @@ header {
 		}
 	}
 }
-section.container { > .top {
+section.container { 
+	> .top { /* css top for banner page ... */
 		width: inherit;
-		height: 300px; > section {
+		height: 300px;
+		 > section {
 			position: relative;
-			height: inherit;.left {
+			height: inherit;
+			.left {/* menu banner */
 				position: absolute;
 				z-index: 1;
 				left: 30px;
@@ -157,9 +160,11 @@ section.container { > .top {
 								font-size: 15px;
 								text-indent: 20px;
 								font-weight: bold;
-							}:hover {
+							}
+							:hover {
 								//color: #EAB42C;
-							}.active {
+							}
+							.active {
 								background: url(images/slider_nav.png) no-repeat right center;
 								//color: #eab410;
 							}
@@ -169,15 +174,18 @@ section.container { > .top {
 						}
 					}
 				}
-			}.right {
+			}
+			.right {/* new in right banner */
 				background: url(images/textbox.jpg) no-repeat center center;
 				width: 220px;
 				margin-right: 20px;
-				height: inherit;.top {
+				height: inherit;
+				.top {
 					width: inherit;
 					height: 150px;
 					background: url(images/divider_textbox.jpg) no-repeat center bottom;
-				}.down {
+				}
+				.down {
 					width: inherit;
 					height: 150px;
 				}
@@ -190,45 +198,48 @@ section.container { > .top {
 						text-decoration: none;
 					}
 				}
-			}.middle {
+			}
+			.middle {/*slider in banner page */
 				height: inherit;
 				margin-right: 240px;
 			}
 		}
-	}.index { /* .down for index page  */
+	}
+	.index { /* .down for index page  */
 		width: inherit;
-		height: 190px; > .left {
+		height: 190px;
+		> .left {
 			height: 145px;
 			margin-top: 10px;
 			background: url(images/recentwork.png) no-repeat top center;
-		} > .right {
+		}
+		> .right {
 			height: inherit;
 			margin-left: 260px;
 			float: none; > section {
-				height: inherit;.left {
+				height: inherit;
+				.csscontain (@path){
 					height: inherit;
-					width: 200px;.top {
-						background-image: url(images/smal_pic1.jpg);
+					width: 200px;
+					.top {
+						background-image: @path;
 						width: inherit;
 						height: 140px;
 					}
-				}.right {
-					height: inherit;
-					width: 200px;.top {
-						background-image: url(images/smal_pic2.jpg);
-						width: inherit;
-						height: 140px;
+					:hover { 
+						outline: 3px solid #EAB410;
 					}
-				}.middle {
-					height: inherit;
-					width: 200px;.top {
-						background-image: url(images/smal_pic3.jpg);
-						width: inherit;
-						height: 140px;
-					}
-				}.top:hover {
-					outline: 3px solid #EAB410;
-				}.down {
+				}
+				.left {
+					.csscontain(url(images/smal_pic1.jpg));
+				}
+				.right {
+					.csscontain(url(images/smal_pic2.jpg));
+				}
+				.middle {
+					.csscontain(url(images/smal_pic3.jpg));
+				}
+				.down {
 					p {
 						margin: 10px 0px 0px 0px;
 						width: inherit;
@@ -238,6 +249,7 @@ section.container { > .top {
 				}
 			}
 		}
+	}
 	}.gallery { /*.down for gallery page */
 		min-height: 748px; > section {
 			background: url(images/gallery.png) no-repeat top center;
