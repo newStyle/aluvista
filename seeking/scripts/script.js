@@ -62,7 +62,6 @@ var codeStationJq = {
 					gal.setImg();
 					gal.setPage();
 					gal.ply_pus();
-					agy.scrll();
 					prcss.pickImg();
 					clearInterval(It);
 					acp = 0;
@@ -525,7 +524,21 @@ var codeStationJq = {
 			changeform: function () {
 				$('.agylink a').live('click', function (e) {
 					e.preventDefault();
-					alert('hello !!');
+					$('.contact').hide();
+					$('.agy_form').show();
+					setTimeout(function () { 
+					$(agy.path).css({
+						'height' : '',
+						'min-height' : agy.hgt+'px',
+						'overflow': 'visible'
+					});
+					agy.scrll();
+					}, 100);
+				});
+				$('.contlink a').live('click', function (e) {
+					e.preventDefault();
+					$('.contact').show();
+					$('.agy_form').hide();
 				});
 			},
 			sendmail: function () {
