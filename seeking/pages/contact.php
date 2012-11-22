@@ -27,14 +27,14 @@
 						فکس : 8431318 - 8431860 (511) </p>
 				</div>
 				<div class="line"></div>
-				<div class="w6 fac ">
+				<div class="w6">
 					<p> كارخانه : مشهد - شهرك صنعتي<br />
 						كاويان - نبش صنعت 13 </p>
 					<p> تلفن : 2543377 (511) <br />
 						فکس :  2543378 (511) </p>
 				</div>
 				<div class="line"></div>
-				<div class="w6 mt10 adds ">
+				<div class="w6 mt10">
 					<p> www.aluvsista.com
 						info@aluvista.com </p>
 				</div>

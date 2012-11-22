@@ -325,143 +325,131 @@ section.container {
 				}
 			}
 		}
-	}.contact { /*.down for contact  page */
-	height: 495px; > section {
-		background: url(images/bg_contact.png) no-repeat top center;
-		width: 865px;
-		height: 488px;.right {
-			height: 395px;
-			margin-top: 45px;
-			direction: rtl;
-			p {
-				color:  #FFD600;
-				margin: 0 auto;
-				width: 155px;
-			}
-		}.contact label {
-			width: 50px;
-			height: 20px;
-			font-size: 18px;
-			color:  #6A5C6B;
-			text-shadow: 0 1px 0  #fff;
-			float: right;
-			margin-top: 30px;
-			text-align: right;
-		}.contact .text {
-			border: 1px solid #fff;
-			border-left: 1px solid #b2b2b2;
-			border-top: 1px solid #b2b2b2;
-			border-radius: 3px;
-			background-color:  #d3d2d2;
-			padding: 4px;
-			margin: 25px 0px 0px 14px;
-			width: 280px;
-			display: block;
-			float: left;
-			border-radius: 3px;
-		}.contact .text:focus,
-		.contact .text:hover {
-			-webkit-transition: all 0.8s;
-			background-color:  #fafafa;
-		}.contact .btn {
-			margin: 28px 0px 0px 14px;
-			float: left;
-			padding: 5px 20px;
-			color: #fff;
-			border: 0 solid #eab410;
-			border-radius: 7px;
-			background-image: url('images/btn_off.jpg');
-			width: 88px;
-			height: 27px;
-			background-color: black;
-			box-shadow: 1px 1px 7px black;
-		}.contact .btn:active {
-			box-shadow: 1px 1px 5px 2px black inset;
-			color:  #eaeaea;
-		}.contact .btn:hover {
-			background-image: url('images/btn_on.jpg');
-		}.contact .err {
-			background-color:  #FCDFD2 !important;
-		}.contact .ok {
-			background-color:  #D5FCD2 !important;
-		}.contact textarea {
-			min-height: 100px;
-		}#ifrm {
-			width: 280px;
-			border: 0 none;
-			position: absolute;
-			margin: 0 auto;
-			top: 865px;
-			bottom: 0;
-			margin-left: 430px;
-		}
-		div.agylink {
-			border: 0 solid #eab410;
-			border-radius: 7px;
-			background: url('images/btn_off2.jpg') no-repeat;
-			background-color: black;
-			box-shadow: 1px 1px 7px black;
-			position: absolute;
-			text-align: center;
-			margin: 67px 0px 0px 110px;
-			a {
-				display: block;
-				padding: 10px 18px;
-				color:  #fff;
-				font-size: 14px;
-				text-decoration: none;
-			}
-		}
-		div.agylink:active {
-			box-shadow: 2px 2px 20px 2px black inset;
-			a {
-				color:  #eaeaea;
-			}
-		}
-		div.agylink:hover {
-			background-image: url('images/btn_on2.jpg');
-		}.left {
-			float: none;
-			min-height: 200px;
-			margin-top: 120px;
-			text-align: center;
-			direction: rtl;
-			article {
-				div {
-					height: 85px;
-					p {
-						color: white;
-						padding: 2px 0px 3px 0px;
-					}
-				}
-				div.fac {
-					height: 85px;
-					margin-top: 10px;
-					p {
-						color: white;
-						padding: 2px 0px 2px 0px;
-					}
-				}
-				div.adds {
-					height: 35px;
-					margin-top: 10px;
-					p {
-						color: white;
-						padding: 2px 0px 2px 0px;
-					}
-				}
-				div:last-child {
-					border-bottom: none;
-				}.line {
-					width: 233px;
-					height: 8px;
-					background: url(images/lines.png) no-repeat;
-					margin: 10px;
-				}
-			}
-		}
 	}
-}.agy_form { /*Agancy contact  page */
+	.contact { /*.down for contact  page */
+		height: 495px;
+		> section {
+			background: url(images/bg_contact.png) no-repeat top center;
+			width: 865px;
+			height: 488px;
+			> .contact{/*.right=.contact in contact page ... */
+				height: 395px;
+				margin-top: 45px;
+				direction: rtl;
+				p {
+					color:  #FFD600;
+					margin: 0 auto;
+					width: 155px;
+				}
+				textarea {
+					min-height: 100px;
+				}
+				label {
+					width: 50px;
+					height: 20px;
+					font-size: 18px;
+					color:  #6A5C6B;
+					text-shadow: 0 1px 0  #fff;
+					float: right;
+					margin-top: 30px;
+					text-align: right;
+				}
+				.transition(){
+					-webkit-transition: all 0.8s;
+					-moz-transition: all 0.8s;
+					-ms-transition: all 0.8s;
+					-o-transition: all 0.8s;
+				}
+				.text {
+					border: 1px solid #fff;
+					border-left: 1px solid #b2b2b2;
+					border-top: 1px solid #b2b2b2;
+					border-radius: 3px;
+					background-color: #d3d2d2;
+					padding: 4px;
+					margin: 25px 0px 0px 14px;
+					width: 280px;
+					display: block;
+					float: left;
+					border-radius: 3px;
+				}
+				.text:focus,
+				.text:hover {
+					.transition();
+					background-color:  #fafafa;
+				}
+				.btn {
+					margin: 28px 0px 0px 14px;
+					float: left;
+					padding: 5px 20px;
+					color: #fff;
+					border: 0 solid #eab410;
+					border-radius: 7px;
+					background-image: url('images/btn_off.jpg');
+					width: 88px;
+					height: 27px;
+					background-color: black;
+					box-shadow: 1px 1px 7px black;
+				}
+				.btn:active {
+					box-shadow: 1px 1px 5px 2px black inset;
+					color:  #eaeaea;
+				}
+				.btn:hover {
+					background-image: url('images/btn_on.jpg');
+				}
+			}
+			div.agylink {
+				border: 0 solid #eab410;
+				border-radius: 7px;
+				background: url('images/btn_off2.jpg') no-repeat;
+				background-color: black;
+				box-shadow: 1px 1px 7px black;
+				position: absolute;
+				text-align: center;
+				margin: 67px 0px 0px 110px;
+				a {
+					display: block;
+					padding: 10px 18px;
+					color:  #fff;
+					font-size: 14px;
+					text-decoration: none;
+				}
+			}
+			div.agylink:active {
+				box-shadow: 2px 2px 20px 2px black inset;
+				a {
+					color:  #eaeaea;
+				}
+			}
+			div.agylink:hover {
+				background-image: url('images/btn_on2.jpg');
+			}
+			> .left {
+				float: none;
+				min-height: 200px;
+				margin-top: 120px;
+				text-align: center;
+				direction: rtl;
+				article {
+					div {
+						height: 85px;
+						margin-top: 10px;
+						p {
+							color: white;
+							padding: 2px 0px 3px 0px;
+						}
+					}
+					div.line {
+						width: 233px;
+						height: 8px;
+						background: url(images/lines.png) no-repeat;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}.agy_form { /*Agancy contact  page */
 	@htt: 385px;
 	height: 495px;
 	overflow: hidden; > section {
