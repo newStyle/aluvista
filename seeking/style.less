@@ -250,52 +250,59 @@ section.container {
 			}
 		}
 	}
-	}.gallery { /*.down for gallery page */
-		min-height: 748px; > section {
+	.gallery { /*.down for gallery page */
+		min-height: 748px;
+		> section {
 			background: url(images/gallery.png) no-repeat top center;
-			height: 700px; > .left {
+			height: 700px;
+			> .left {
 				height: 485px;
-				div.paging {
-					margin: 10px 0 0 0;
-				}
-				p {
+				> p {
 					font-size: 20px;
 					padding-bottom: 20px;
 					color:  #FDED90;
 					text-align: center;
 				}
-				a {
-					border: 1px solid white;
-					padding: 7px;
-					text-decoration: none;
-					color: black;
-					background: gray;
-				}
-				a:hover {
-					background:  #eab410;
-				} > section {
+				> section {
 					overflow: hidden;
 					max-height: 395px;
 					margin: -2px;
 					padding: 2px;
 					section {
-						height: 70px;.left {
+						height: 70px;
+						.rubric(){
 							height: inherit;
 							background-color: white;
-						}.right {
-							height: inherit;
-							background-color: white;
+						}
+						.left {
+							.rubric();
+						}
+						.right {
+							.rubric();
 							float: none;
 						}
 						img {
 							opacity: 0.7;
 						}
 					}
-				} > div {
+				}
+				> div.paging {
+					margin: 10px 0 0 0;
 					height: 20px;
 					margin-left: 5px;
+					a {
+						border: 1px solid white;
+						padding: 7px;
+						text-decoration: none;
+						color: black;
+						background: gray;
+					}
+					:hover {
+						background:  #eab410;
+					}
 				}
-			} > .right {
+			}
+			> .right {
 				float: none;
 				margin-left: 312px;
 				margin-top: 50px;
@@ -306,17 +313,19 @@ section.container {
 					width: 200px;
 					height: 30px;
 					outline: 1px dotted red;
-					}.top {
+				}
+				.top {
 					height: 500px;
 					margin-left: 20px;
 					outline: 1px dotted  #976700;
-			}.down {
-				height: 65px;
-				margin-left: 5px;
+				}
+				.down {
+					height: 65px;
+					margin-left: 5px;
+				}
 			}
 		}
-	}
-}.contact { /*.down for contact  page */
+	}.contact { /*.down for contact  page */
 	height: 495px; > section {
 		background: url(images/bg_contact.png) no-repeat top center;
 		width: 865px;
