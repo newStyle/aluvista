@@ -580,11 +580,14 @@ var codeStationJq = {
 						prcss.rot();
 					}
 					else {
-						console.log($(prcss.boxs).index(this));
+						//var margin = parseInt($('.wheel').css('margin-left'))-414;//-32px
+						$('.wheel').animate({
+							'margin-left': '-17px'
+						}, 800,'linear');
 						$('#disk').animate({
-							'right': '414px'
+							'right': '400px'
 						}, 800, 'linear',function () {
-							$('#disk + section').css('display','block');
+							$('.wheel + section').css('display','block');
 						});
 					}
 				});

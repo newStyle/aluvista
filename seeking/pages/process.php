@@ -11,7 +11,7 @@
 				<div><p class="prc">پرچ کردن</p></div>
 				<div><p class="prc">پیچ کردن</p></div>
 			</div>
-			<!-- <div class="wheel"></div> -->
+			<div class="wheel"></div>
 			<section></section>
 		</section> 
 	</section>
