@@ -518,9 +518,9 @@ var codeStationJq = {
 					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
 					$(prd.path).load('pages/product-content.php');
 					setTimeout(function () {
-						$('section', prd.path).hide(100);
-						$('#' + getname, prd.path).show(10);
-					}, 10)
+						$('section', prd.path).hide();
+						$('#' + getname, prd.path).stop().show();
+					}, 100)
 				});
 			}
 		}
