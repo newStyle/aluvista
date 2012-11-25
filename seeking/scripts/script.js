@@ -510,6 +510,21 @@ var codeStationJq = {
 				});
 			}
 		};
+		var prd = {
+			path: ".container .products > section .right .down > section",
+			loading: function () {
+				$("#btn-pdt div").live('click', function () {
+					$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
+					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
+					$(prd.path).load('pages/product-content.php');
+					setTimeout(function () {
+						$('section', prd.path).hide(100);
+						$('#' + getname, prd.path).show(10);
+					}, 10)
+				});
+			}
+		}
+		prd.loading();
 		/* Scroll for Agancy_form Page */
 		clr.actbtn();
 		var agy = {
