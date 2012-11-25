@@ -20,7 +20,6 @@
 				<label>
 					<input id="own" class="radio" type="radio" name="own" />
 				شخصی</label>
-				<div class="space"></div>
 				<p class="tit">اشخاص حقوقی</p>
 				<label for="name_title">نام شرکت / نمایشگاه / فروشگاه</label>
 					<input class="text" type="text" name="name_title" id="name_title" />
@@ -32,7 +31,6 @@
 					<input class="text" type="number" name="workers" id="workers" min="0" max="20"  />
 				<label>میزان تحصیلات مدیران</label>
 					<input class="text" type="text" name="deg" id="deg" />
-				<div class="space"></div>
 				<p class="tit">اطلاعات تخصصی</p>
 				<label>نمایندگی هستم :</label>
 					<input class="text" type="text" name="agy_name" id="agy_name" />
@@ -71,7 +69,6 @@
 				<div id='ribbon'></div>
 			</div>
 		</section>
-		<div class="agylink"> <a href="#">فرم اعطاي نمايندگي</a> </div>
 		<section class="w6 mra ml2 pt1 left">
 			<article>
 				<div class="w6 mt1">

@@ -639,9 +639,9 @@ section.container {
 		height: 495px;
 		overflow: hidden;
 		> section {
-			background: url(images/contact.png) no-repeat top center;
-			width: 830px;
-			min-height: 470px;
+			background: url(images/bg_contact.png) no-repeat top center;
+			width: 865px;
+			height: 488px;
 			.right {
 				min-height: @htt;
 				margin-top: 45px;
@@ -653,14 +653,13 @@ section.container {
 			span.req {
 				color:  #EAB410;
 				margin-right: 10px;
-			}
-			div.space {
+			}div.space{
 				width: 233px;
 				height: 8px;
 				background: url(images/lines.png) no-repeat;
-				margin: 430px 50px 0px 0px;
-			}
-			.agancy label,
+				margin: 470px 50px 0px 0px;
+				outline: 2px dashed red;
+			}.agancy label,
 			.agancy p {
 				width: 400px;
 				font-size: 20px;
@@ -697,18 +696,20 @@ section.container {
 				background-color:  #fafafa;
 			}
 			.agancy .agy_btn {
-				color:  #fff;
+				margin: 28px 27px 0px 0px;
+				float: right;
+				padding: 5px 20px;
+				color: #fff;
 				border: 0 solid #eab410;
-				border-radius: 5px;
-				box-shadow: 1px 1px 3px #eab410;
+				border-radius: 7px;
 				background-image: url('images/btn_off.jpg');
 				width: 88px;
 				height: 27px;
-				float: right;
-				padding: 7px;
-				margin: 20px 30px 40px 0px;
-			}.agancy .agy_btn:active {
+				background-color: black;
 				box-shadow: 1px 1px 7px black;
+			}.agancy .agy_btn:active {
+				box-shadow: 1px 1px 5px 2px black inset;
+				color:  #eaeaea;
 			}.agancy .agy_btn:hover {
 				background-image: url('images/btn_on.jpg');
 			}.agancy .err {
@@ -752,10 +753,6 @@ section.container {
 					}
 					div:last-child {
 						border-bottom: none;
-					}.line {
-						width: 233px;
-						height: 8px;
-						background: url(images/lines.png) no-repeat;
 					}
 				}
 			}
