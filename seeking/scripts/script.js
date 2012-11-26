@@ -599,7 +599,7 @@ var codeStationJq = {
 							'margin-left': '-17px'
 						}, 800,'linear');
 						$('#disk').animate({
-							'right': '400px'
+							'right': '420px'
 						}, 800, 'linear',function () {
 							$('.wheel + section').css('display','block');
 						});

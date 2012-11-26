@@ -1,4 +1,4 @@
-/*
+
 div, section {
 	outline: 1px dotted red;
 }
@@ -11,7 +11,7 @@ body.left, body.right {
 body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
-*/
+
 body { 
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
@@ -531,12 +531,11 @@ section.container {
 				label {
 					width: 50px;
 					height: 20px;
-					font-size: 18px;
-					color:  #6A5C6B;
-					text-shadow: 0 1px 0  #fff;
+					font-size: 19px;
+					color:  #A7B3A9;
 					float: right;
 					margin-top: 30px;
-					text-align: right;
+					text-align: left;
 				}
 				.transition(){
 					-webkit-transition: all 0.8s;
@@ -591,12 +590,12 @@ section.container {
 				box-shadow: 1px 1px 7px black;
 				position: absolute;
 				text-align: center;
-				margin: 67px 0px 0px 110px;
+				margin: 67px 0px 0px 115px;
 				a {
 					display: block;
-					padding: 10px 18px;
-					color:  #fff;
-					font-size: 14px;
+					padding: 10px 14px;
+					color:  #A7B3A9;
+					font-size: 16px;
 					text-decoration: none;
 				}
 			}
@@ -608,6 +607,9 @@ section.container {
 			}
 			div.agylink:hover {
 				background-image: url('images/btn_on2.jpg');
+				a {
+					color:  #eaeaea;
+				}
 			}
 			> .left {
 				float: none;
@@ -620,7 +622,7 @@ section.container {
 						height: 85px;
 						margin-top: 10px;
 						p {
-							color: white;
+							color: #A7B3A9;
 							padding: 2px 0px 3px 0px;
 						}
 					}
@@ -653,17 +655,11 @@ section.container {
 			span.req {
 				color:  #EAB410;
 				margin-right: 10px;
-			}div.space{
-				width: 233px;
-				height: 8px;
-				background: url(images/lines.png) no-repeat;
-				margin: 470px 50px 0px 0px;
-				outline: 2px dashed red;
 			}.agancy label,
 			.agancy p {
 				width: 400px;
-				font-size: 20px;
-				color:  #6A5C6B;
+				font-size: 19px;
+				color:  #A7B3A9;
 				float: right;
 				text-align: right;
 				margin: 10px 30px 0 0;
@@ -726,7 +722,35 @@ section.container {
 				top: 865px;
 				bottom: 0;
 				margin-left: 430px;
-			}.left {
+			}div.contlink {
+				border: 0 solid #eab410;
+				border-radius: 7px;
+				background: url('images/btn_off2.jpg') no-repeat;
+				background-color: black;
+				box-shadow: 1px 1px 7px black;
+				position: absolute;
+				text-align: center;
+				margin: 77px 0px 0px 140px;
+				a {
+					display: block;
+					padding: 10px 14px;
+					color:  #A7B3A9;
+					font-size: 16px;
+					text-decoration: none;
+				}
+			}
+			div.contlink:active {
+				box-shadow: 2px 2px 20px 2px black inset;
+				a {
+					color:  #eaeaea;
+				}
+			}
+			div.contlink:hover {
+				background-image: url('images/btn_on2.jpg');
+				a {
+					color:  #eaeaea;
+				}
+			}> .left {
 				float: none;
 				height: 200px;
 				margin-top: 120px;
@@ -736,14 +760,14 @@ section.container {
 						direction: rtl;
 						height: 65px;
 						p {
-							font-size: 18px;
+							font-size: 17px;
 							color: white;
-							padding: 10px 0px 10px 0px;
-							color:  #a895a9;
+							padding: 30px 0px 10px 0px;
+							color:  #A7B3A9;
 						}
 						a {
 							color:  #bca6be;
-							font-size: 18px;
+							font-size: 17px;
 							text-decoration: none;
 							font-style: bold;
 						}
@@ -944,7 +968,7 @@ section.container {
 			width: 865px;
 			height: 595px;
 			.content {
-				@width-cont: 818px;
+				@width-cont: 864px;
 				@height-cont: 560px;
 				width: @width-cont;
 				height: @height-cont;
@@ -969,7 +993,6 @@ section.container {
 					}
 					div:hover {
 						opacity: 1;
-						border: 1px solid yellow;
 					}
 					p.prc {
 						color: yellow;
@@ -984,7 +1007,7 @@ section.container {
 					height: 30px;
 					margin-top: (@height-cont)/2-5;
 					margin-left: (@width-cont)/2-27;
-					position: absolute;
+					/* position: absolute; agar bashe charkh miad roye kar vali az ye tarafi nabashe ham panele rast kharab mishe ! */
 				}
 				section {
 					display: none;
