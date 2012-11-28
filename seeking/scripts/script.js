@@ -517,9 +517,15 @@ var codeStationJq = {
 					$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
 					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
 					$(prd.path).load('pages/product-content.php');
+					$(prd.path).css({
+						'height': '',
+						'min-height': $(prd.path).height() + 'px',
+						'overflow': ''
+					});
 					setTimeout(function (){
 						$('section', prd.path).filter('#'+getname).fadeIn('normal')
-					},100)
+						setscroll(prd.path, 385, $(prd.path).height(),'.container .products > section .right .down > section section');
+					},100);
 				});
 			}
 		}
