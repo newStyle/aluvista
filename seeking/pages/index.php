@@ -1,26 +1,23 @@
 	<section class="mt12 down index">
 		<div class="recent w6 left"></div>
-		<section class="right">
-			<section class="w16 mra ">
+		<section class="ml7 right">
+			<section class="w16-1 mra ">
 				<div class="left">
-					<div class="top"></div>
+					<a href="pages/process.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Nunc elementum adipiscing.
-							Urna, Ridiculus. </p>
+						<p>اطلاعات فنی و روش تولید ورق های کامپوزیت آلوویستا در کارخانه</p>
 					</div>
 				</div>
 				<div class="right">
-					<div class="top"></div>
+					<a href="pages/colorchart.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Nec quis integer tincidunt.
-							Pulvinar scelerisque dis.</p>
+						<p>رنگ بندی و طرح های جدید</p>
 					</div>
 				</div>
 				<div class="mla mra middle">
-					<div class="top"></div>
+					<a href="pages/product.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Natoque, aenean tortor mattis tortor.
-							Platea a cursus nec.</p>
+						<p>آموزش نصب ورق کامپوزیت آلوویستا به همراه تصاویر</p>
 					</div>
 				</div>
 			</section>
