@@ -347,7 +347,10 @@ var codeStationJq = {
 				(fsb >= chs) ? $("#scrollBar").hide(200) : $("#scrollBar").show(200)
 			/* sakhtane dokmeye buttun ba tavajoh be height motaviyat !! */
 			&&
-				$("#button").css('height', (size_of_button = fsb / (div = chs / fsb)));
+				$("#button").css({
+					'height': (size_of_button = fsb / (div = chs / fsb)),
+					'top' : 0
+				})
 			/*drag kardane *buttun dar scroll !! */
 			var drag = {
 				/*vaghi ke mousedown mishavad !! */
@@ -517,9 +520,15 @@ var codeStationJq = {
 					$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
 					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
 					$(prd.path).load('pages/product-content.php');
+					$(prd.path).css({
+						'height': '',
+						'min-height': $(prd.path).height() + 'px',
+						'overflow': ''
+					});
 					setTimeout(function (){
 						$('section', prd.path).filter('#'+getname).fadeIn('normal')
-					},100)
+						setscroll(prd.path, 385, $(prd.path).height(),prd.path + ' section');
+					},100);
 				});
 			}
 		}
