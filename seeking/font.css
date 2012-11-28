@@ -2,6 +2,18 @@
 /* CSS Document */
 
 @font-face {
+	font-family: 'BKoodak';
+	src: url('font/BKoodakBold.eot');
+	src: url('font/BKoodakBold.eot?#iefix') format('eot'),
+		 url('font/BKoodakBold.woff') format('woff'),
+		 url('font/BKoodakBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*
+@font-face {
   font-family: new;
   src:
 	local('NewBskvll B'),
@@ -14,3 +26,4 @@
   font-weight: normal;
 	font-style:normal;
 }
+*/

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>..: Aluvista :..</title>
+<link type="text/css" rel="stylesheet" href="font.css" />
 <link rel="stylesheet/less" type="text/css" href="reset.css" />
 <link rel="stylesheet/less" type="text/css" href="1styles.css" />
 <link rel="stylesheet/less" type="text/css" href="style.less" />
@@ -10,7 +11,6 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/html5.js"></script>
 <script type="text/javascript" src="scripts/script.js" ></script>
-<!-- <link type="text/css" rel="stylesheet" href="font/font.css" /> -->
 <!--[if IE]>
 		<script type="text/javascript">
 			$(function(){
