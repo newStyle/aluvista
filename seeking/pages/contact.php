@@ -13,15 +13,15 @@
 				<input class='text' type="text" name="subject" tabindex="40" id="subject"/>
 				<label for="txt">پیام :</label>
 				<textarea class="text" name="txt" tabindex="50" id="txt" required ></textarea>
-				<input class="btn" type="submit" name="submit" tabindex="60" value="فرستادن" />
 				<input class="btn" type="reset" name="reset" tabindex="70" id="reset" value="پاک کردن" />
+				<input class="btn" type="submit" name="submit" tabindex="60" value="فرستادن" />
 			</form>
 		</section>
 		<div class="agylink"> <a href="#">فرم اعطاي نمايندگي</a> </div>
 		<section class="w6 ml2 pt1 left">
 			<article>
 				<div class="w6 mt6">
-					<p> دفتر مركزي : مشهد خيابان فلسطين -<br />
+					<p> دفتر مركزي : مشهد خيابان فلسطين <br />
 						فلسطين 9 - شماره 94 </p>
 					<p> تلفن : 8400640 (511) <br />
 						فکس : 8431318 - 8431860 (511) </p>

@@ -118,7 +118,7 @@
 	<div class="top">
 		<div class="dirt container mla mra ">
 			<div class="right w1 rss"></div>
-			<div class="right w7">
+			<div class="right w5">
 				<nav>
 					<ul>
 						<li><a href="#">Twitter</a></li>
