@@ -67,16 +67,14 @@
 			</section>
 			<section class="right last">
 				<div class="top">
-					<p> Amet ac placerat platea dolor.
-						Et platea tincidunt scelerisque.
-						Egestas, et, ridiculus, purus <br />
-						<a href="#">more...</a> </p>
+					<h2>جدیدترین اخبار</h2>
+					<p id="line">-----------------------</p>
+					<p> صفحه فیسبوک ما باز شد... شما می توانید هم اکنون شروع به لایک کردن آن کنید<br />
+						<a href="#">... ادامه مطلب </a> </p>
 				</div>
 				<div class="down">
-					<p> Turpis sed dignissim a sed.
-						Phasellus quis sed massa.
-						Porta! Sagittis a sagittis <br />
-						<a href="#">more...</a> </p>
+					<p>افتتاح وب سایت جدید شرکت آلوویستا افتتاح وب سایت جدید شرکت آلوویستا<br />
+						<a href="#">... ادامه مطلب </a> </p>
 				</div>
 			</section>
 			<section class="w11 middle mla mra"></section>
