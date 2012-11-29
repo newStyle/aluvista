@@ -12,7 +12,7 @@
 				<div><p class="prc">پیچ کردن</p></div>
 			</div>
 			<div class="wheel"></div>
-			<section></section>
+			<section id='veiw'></section>
 		</section> 
 	</section>
 </section>

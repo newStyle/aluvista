@@ -1,8 +1,8 @@
-<section></section><!-- boresh -->
-<section></section><!-- panch kardan-->
-<section></section><!-- boresh conector-->
-<section></section><!-- kham kardan -->
-<section></section><!-- kham rol-->
-<section></section><!-- ta kardan varagh -->
-<section></section><!-- parch kardan -->
-<section></section><!-- pich kardan-->
+<section>boresh kari </section><!-- boresh -->
+<section>panck kardan </section><!-- panch kardan-->
+<section>boresh conector </section><!-- boresh conector-->
+<section>kham kardan </section><!-- kham kardan -->
+<section>kham rol </section><!-- kham rol-->
+<section>ta kardan varagh </section><!-- ta kardan varagh -->
+<section>parch kardan </section><!-- parch kardan -->
+<section>pich kardan </section><!-- pich kardan-->

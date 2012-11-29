@@ -972,6 +972,7 @@ section.container {
 				width: @width-cont;
 				height: @height-cont;
 				overflow: hidden;
+				position: relative;
 				.right {
 					@width-rght: 446px;
 					@height-rght: 452px;
@@ -979,7 +980,7 @@ section.container {
 					height: @height-rght;
 					margin: (@height-cont - @height-rght)/2 (@width-cont - @width-rght)/2;
 					background: url(images/disk.png) no-repeat;
-					position: relative;
+					position: absolute;
 					padding-left: 25px;
 					padding-top: 20px;
 					div {
@@ -1000,20 +1001,25 @@ section.container {
 						text-shadow: 0 1px 0 #fff;
 					}
 				}
-				div.wheel {
-					background: url(images/wheel.gif);
-					width: 30px;
-					height: 30px;
-					margin-top: (@height-cont)/2-5;
-					margin-left: (@width-cont)/2-27;
-					/* position: absolute; agar bashe charkh miad roye kar vali az ye tarafi nabashe ham panele rast kharab mishe ! */
-				}
-				section {
+				> section#veiw {
 					display: none;
 					width: 500px;
 					height: 500px;
 					background-color:  #ca0;
-					margin: 30px 10px 0px 230px;
+					left: 280px;
+					top: 50px;
+					position: absolute;
+					section {
+						display: none;
+					}
+				}
+				div.wheel {
+					background: url(images/wheel.gif);
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					top: (@height-cont)/2-5;
+					left: (@width-cont)/2-2;
 				}
 			}
 		}

@@ -519,7 +519,7 @@ var codeStationJq = {
 				$("#btn-pdt div").live('click',function () {
 					$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
 					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
-					$(prd.path).load('pages/product-content.php');
+					$(prd.path).load('pages/product_content.php');
 					$(prd.path).css({
 						'height': '',
 						'min-height': $(prd.path).height() + 'px',
@@ -605,7 +605,7 @@ var codeStationJq = {
 					else {
 						//var margin = parseInt($('.wheel').css('margin-left'))-414;//-32px
 						$('.wheel').animate({
-							'margin-left': '-17px'
+							'left': '-17px'
 						}, 800,'linear');
 						$('#disk').animate({
 							'right': '420px'
@@ -613,7 +613,10 @@ var codeStationJq = {
 							$('.wheel + section').css('display','block');
 						});
 						var nth = $(prcss.boxs).index(this);
-						console.log(nth);
+						$('.wheel + section').load('pages/process_content.php');
+						setTimeout(function () { 
+							$('section', '#veiw ').eq(nth).fadeIn('normal');
+						}, 100);
 					}
 				});
 				var detectBrowser = function () {
