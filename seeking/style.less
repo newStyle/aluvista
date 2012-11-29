@@ -12,9 +12,6 @@ body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
 */
-a, p, label, input{
-	font-family: "BKoodak", Tahoma, Arial, "Times New Roman", Times, serif;
-}
 body { 
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
@@ -79,9 +76,10 @@ header {
 									text-decoration: none;
 									display: block;
 									padding: 10px 15px;
-									font-size: 16px;
+									font-size: 14px;
 									color: white;
 									font-weight: bold;
+									font-family: tahoma;
 								}
 								a:hover {
 									color:  #EAB410;
@@ -109,10 +107,11 @@ header {
 							a {
 								text-decoration: none;
 								display: block;
-								padding: 20px 15px;
+								padding: 15px 15px;
 								font-size: 17px;
 								color: white;
 								font-weight: bold;
+								font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 							}
 							a:hover,
 							.active {
@@ -148,28 +147,36 @@ section.container {
 				left: 30px;
 				height: inherit;
 				nav {
-					background: url(images/slider_menu.jpg) no-repeat left center;
+					background: url(images/slider_menu1.jpg) no-repeat left center;
 					height: inherit;
 					ul {
 						list-style-type: none;
 						height: inherit;
 						li {
-							background: url(images/line-menu.jpg) no-repeat bottom left;
+							
 							a {
 								text-decoration: none;
 								display: block;
-								padding: 17px 7px;
+								padding: 17px 40px;
 								color: white;
 								font-size: 15px;
 								text-indent: 20px;
 								font-weight: bold;
+								color: #eaeaea;
+								text-align: justify;
+								font-family: "Bkoodak", Arial, "Times New Roman", Times, serif;
+								-webkit-transition: all 0.6s;
+								-moz-transition: all 0.6s;
+								-ms-transition: all 0.6s;
+								-o-transition: all 0.6s;
 							}
 							:hover {
-								//color: #EAB42C;
+								color: white;
 							}
 							.active {
-								background: url(images/slider_nav.png) no-repeat right center;
-								//color: #eab410;
+								background: url(images/slider_nav1.png) no-repeat right center;
+								color: white;
+								text-indent: 40px;
 							}
 						}
 						li:last-child {
@@ -185,20 +192,35 @@ section.container {
 				height: inherit;
 				.top {
 					width: inherit;
-					height: 150px;
-					background: url(images/divider_textbox.jpg) no-repeat center bottom;
+					height: 165px;
 				}
 				.down {
 					width: inherit;
 					height: 150px;
 				}
-				p {
-					text-indent: 16px;
-					font-size: 16px;
+				p#line{
+					color:#483c0c;
+					position: absolute;
+					top:135px;
+					right: 32px;
+				}
+				h2{
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+					text-align: center;
+					font-size: 22px;
+					padding-top: 10px;
+				}p {
+					text-indent: 40px;
+					font-size: 15px;
 					line-height: 20px;
-					padding: 40px 10px;
+					padding: 20px 15px;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+					text-align: right;
+					color: #1c1b17;
+					margin-right: 10px;
 					a {
 						text-decoration: none;
+						color: #483c0c;
 					}
 				}
 			}
@@ -214,6 +236,7 @@ section.container {
 		> .left {
 			height: 145px;
 			margin-top: 10px;
+			margin-left: -20px;
 			background: url(images/recentwork.png) no-repeat top center;
 		}
 		> .right {
@@ -228,8 +251,9 @@ section.container {
 						background-image: @path;
 						width: inherit;
 						height: 140px;
+						cursor: pointer;
 					}
-					:hover { 
+					.top:hover { 
 						outline: 3px solid #EAB410;
 					}
 				}
@@ -248,13 +272,15 @@ section.container {
 						width: inherit;
 						height: 50px;
 						color:  #FDED90;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+						text-align: right;
 					}
 				}
 			}
 		}
 	}
 	.gallery { /*.down for gallery page */
-		min-height: 748px;
+		min-height: 702px;
 		> section {
 			background: url(images/gallery.png) no-repeat top center;
 			height: 700px;
@@ -265,6 +291,7 @@ section.container {
 					padding-bottom: 20px;
 					color:  #FDED90;
 					text-align: center;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 				> section {
 					overflow: hidden;
@@ -336,16 +363,18 @@ section.container {
 			width: 865px;
 			height: 740px;
 			.rubric () {/* it's for '.left article' and '.right article'*/
-				h4 {
+				h3 {
 					padding-top: 70px;
 					text-indent: 20px;
-					color:  #FDED90;
+					color:  #dbab3b;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 				p {
 					padding: 8px 10px;
 					text-indent: 15px;
 					line-height: 25px;
 					color:  #FDED90;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 			}
 			> .left {
@@ -376,10 +405,14 @@ section.container {
 								height: inherit;
 								background: url(images/color_btnoff.png) top center;
 								border: none;
-								color: white;
+								font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+								font-size: 16px;
+								color:  #A7B3A9;
+								font-weight:bold;
 							}
 							input:hover,
 							.active {
+								color: #eaeaea;
 								background: url(images/color_btnon.png) top center;
 							}
 						}
@@ -405,7 +438,6 @@ section.container {
 					@hgt: 385px; //for scrollbar + veiw 
 					height: @hgh;
 					> section {
-						background-color: #EAB410;
 						border-radius: 40px;
 						min-height: @hgt;
 						margin-top: 20px;
@@ -503,6 +535,7 @@ section.container {
 									font-weight: bold;
 									display: block;
 									margin-top: 10px;
+									font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 								}
 							}
 						}//.down ...
@@ -532,11 +565,12 @@ section.container {
 				label {
 					width: 50px;
 					height: 20px;
-					font-size: 19px;
+					font-size: 17px;
 					color:  #A7B3A9;
 					float: right;
 					margin-top: 30px;
 					text-align: left;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 				.transition(){
 					-webkit-transition: all 0.8s;
@@ -565,7 +599,7 @@ section.container {
 				.btn {
 					margin: 28px 0px 0px 14px;
 					float: left;
-					padding: 5px 20px;
+					padding: 1px 20px;
 					color: #fff;
 					border: 0 solid #eab410;
 					border-radius: 7px;
@@ -574,6 +608,9 @@ section.container {
 					height: 27px;
 					background-color: black;
 					box-shadow: 1px 1px 7px black;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+					color:  #A7B3A9;
+					font-size: 14px;
 				}
 				.btn:active {
 					box-shadow: 1px 1px 5px 2px black inset;
@@ -581,6 +618,7 @@ section.container {
 				}
 				.btn:hover {
 					background-image: url('images/btn_on.jpg');
+					color:  #eaeaea;
 				}
 			}
 			div.agylink {
@@ -591,13 +629,14 @@ section.container {
 				box-shadow: 1px 1px 7px black;
 				position: absolute;
 				text-align: center;
-				margin: 67px 0px 0px 115px;
+				margin: 67px 0px 0px 120px;
 				a {
 					display: block;
-					padding: 10px 14px;
+					padding: 5px 8px;
 					color:  #A7B3A9;
 					font-size: 16px;
 					text-decoration: none;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 			}
 			div.agylink:active {
@@ -624,14 +663,15 @@ section.container {
 						margin-top: 10px;
 						p {
 							color: #A7B3A9;
-							padding: 2px 0px 3px 0px;
+							font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+							font-size: 16px;
 						}
 					}
 					div.line {
 						width: 233px;
 						height: 8px;
 						background: url(images/lines.png) no-repeat;
-						margin-bottom: 10px;
+						margin: 25px 7px 10px 0;
 					}
 				}
 			}
@@ -664,6 +704,8 @@ section.container {
 				float: right;
 				text-align: right;
 				margin: 10px 30px 0 0;
+				font-size: 17px;
+				font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 			}.tit {
 				color: white;
 				font-style: bold;
@@ -695,8 +737,8 @@ section.container {
 			.agancy .agy_btn {
 				margin: 28px 27px 0px 0px;
 				float: right;
-				padding: 5px 20px;
-				color: #fff;
+				padding: 1px 20px;
+				color:  #A7B3A9;
 				border: 0 solid #eab410;
 				border-radius: 7px;
 				background-image: url('images/btn_off.jpg');
@@ -704,11 +746,14 @@ section.container {
 				height: 27px;
 				background-color: black;
 				box-shadow: 1px 1px 7px black;
+				font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+				font-size: 14px;
 			}.agancy .agy_btn:active {
 				box-shadow: 1px 1px 5px 2px black inset;
 				color:  #eaeaea;
 			}.agancy .agy_btn:hover {
 				background-image: url('images/btn_on.jpg');
+				color:  #eaeaea;
 			}.agancy .err {
 				background-color:  #FCDFD2 !important;
 			}.agancy .ok {
@@ -734,10 +779,11 @@ section.container {
 				margin: 77px 0px 0px 140px;
 				a {
 					display: block;
-					padding: 10px 14px;
+					padding: 5px 10px;
 					color:  #A7B3A9;
 					font-size: 16px;
 					text-decoration: none;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				}
 			}
 			div.contlink:active {
@@ -763,14 +809,16 @@ section.container {
 						p {
 							font-size: 17px;
 							color: white;
-							padding: 30px 0px 10px 0px;
+							padding: 20px 0px 10px 0px;
 							color:  #A7B3A9;
+							font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 						}
 						a {
 							color:  #bca6be;
 							font-size: 17px;
 							text-decoration: none;
 							font-style: bold;
+							font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 						}
 						a:hover {
 							text-decoration: underline;
@@ -842,11 +890,16 @@ section.container {
 								height: inherit;
 								background: url(images/color_btnoff.png) top center;
 								border: none;
-								color: white;
+								font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+								font-size: 15px;
+								color:  #A7B3A9;
+								font-weight:bold;
+
 							}
 							input:hover,
 							.active {
 								background: url(images/color_btnon.png) top center;
+								color:  #fff;
 							}
 						}
 					}
@@ -867,33 +920,14 @@ section.container {
 					@hgh: 450px;
 					@hgt: 385px; //for scrollbar + veiw 
 					height: @hgh;
-					> img {
-						margin: 50px 0px 0px 40px;
-					}
 					> section {
 						text-align: right;
 						direction: rtl;
-						border-radius: 40px;
 						min-height: @hgt;
 						margin-top: 20px;
 						color: #FDED90;
-						> section {
-							min-height: 20px;
-							div {
-								height: inherit;
-								text-align: center;
-
-								img {
-									border-radius: 30px;
-									cursor: pointer;
-									box-shadow: 1px 2px 7px black;
-									margin-top: 5px;
-								}
-								img:hover {
-									box-shadow: 1px 1px 7px black;
-								}
-							}
-						}
+						font-size: 16px;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					}
 					> section +  #scrollBar {
 						@wh: 10px;
@@ -946,22 +980,24 @@ section.container {
 				}//end .down 
 			}//end .right
 			article {
-				h4 {
+				h3 {
 					padding-top: 70px;
 					text-indent: 20px;
-					color:  #FDED90;
+					color:  #dbab3b;
+					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					}
 					p {
 						padding: 8px 10px;
 						text-indent: 15px;
 						line-height: 25px;
 						color:  #FDED90;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					}
 				}
 			}
 	}
 	.process { /*.down for process page */
-		height: 620px;
+		height: 580px;
 		> section {
 			background: url(images/bg_process.png) no-repeat top center;
 			width: 865px;
@@ -990,6 +1026,8 @@ section.container {
 						color: white;
 						text-align: center;
 						opacity: 0.7;
+						cursor: pointer;
+
 					}
 					div:hover {
 						opacity: 1;
@@ -999,6 +1037,9 @@ section.container {
 						margin-top: -15px;
 						font-size: 18px;
 						text-shadow: 0 1px 0 #fff;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+						cursor: pointer;
+
 					}
 				}
 				> section#veiw {
@@ -1050,8 +1091,9 @@ footer {
 								display: block;
 								padding: 10px 15px;
 								color:  #150600;
-								font-size: 17px;
+								font-size: 15px;
 								font-weight: bold;
+								font-family: tahoma;
 							}
 						}
 					}
@@ -1072,10 +1114,12 @@ footer {
 					a {
 						text-decoration: none;
 						display: block;
-						padding: 20px 9px;
 						color: white;
-						font-size: 16px;
 						font-weight: bold;
+						padding: 15px 10px;
+						font-size: 17px;
+						color: white;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					}
 					a:hover,
 					a.active {

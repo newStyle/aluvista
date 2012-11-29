@@ -57,26 +57,24 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">ساختمان بهاران</a></li>
+						<li><a href="#">ساختمان پروما</a></li>
+						<li><a href="#">مسکن و شهرسازی</a></li>
+						<li><a href="#">ساختمان مسکونی</a></li>
+						<li><a href="#">بانک تجارت</a></li>
 					</ul>
 				</nav>
 			</section>
 			<section class="right last">
 				<div class="top">
-					<p> Amet ac placerat platea dolor.
-						Et platea tincidunt scelerisque.
-						Egestas, et, ridiculus, purus <br />
-						<a href="#">more...</a> </p>
+					<h2>جدیدترین اخبار</h2>
+					<p id="line">-----------------------</p>
+					<p> صفحه فیسبوک ما باز شد... شما می توانید هم اکنون شروع به لایک کردن آن کنید<br />
+						<a href="#">... ادامه مطلب </a> </p>
 				</div>
 				<div class="down">
-					<p> Turpis sed dignissim a sed.
-						Phasellus quis sed massa.
-						Porta! Sagittis a sagittis <br />
-						<a href="#">more...</a> </p>
+					<p>افتتاح وب سایت جدید شرکت آلوویستا افتتاح وب سایت جدید شرکت آلوویستا<br />
+						<a href="#">... ادامه مطلب </a> </p>
 				</div>
 			</section>
 			<section class="w11 middle mla mra"></section>
@@ -86,26 +84,23 @@
 	<section class="mt12 down index">
 		<div class="recent w6 left"></div>
 		<section class="ml7 right">
-			<section class="w16 mra ">
+			<section class="w16-1 mra ">
 				<div class="left">
-					<div class="top"></div>
+					<a href="pages/process.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Nunc elementum adipiscing.
-							Urna, Ridiculus. </p>
+						<p>اطلاعات فنی و روش تولید ورق های کامپوزیت آلوویستا در کارخانه</p>
 					</div>
 				</div>
 				<div class="right">
-					<div class="top"></div>
+					<a href="pages/colorchart.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Nec quis integer tincidunt.
-							Pulvinar scelerisque dis.</p>
+						<p>رنگ بندی و طرح های جدید</p>
 					</div>
 				</div>
 				<div class="mla mra middle">
-					<div class="top"></div>
+					<a href="pages/product.php"><div class="top"></div></a>
 					<div class="down">
-						<p>Natoque, aenean tortor mattis tortor.
-							Platea a cursus nec.</p>
+						<p>آموزش نصب ورق کامپوزیت آلوویستا به همراه تصاویر</p>
 					</div>
 				</div>
 			</section>
@@ -121,8 +116,8 @@
 			<div class="right w7">
 				<nav>
 					<ul>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
+						<li><a href="http://twitter.com">Twitter</a></li>
+						<li><a href="http://facebook.com">Facebook</a></li>
 					</ul>
 				</nav>
 			</div>

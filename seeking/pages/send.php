@@ -12,11 +12,11 @@
   if ( isset($name) && isset($email) && isset($tel) && isset($subject) && isset($text)){
       if(@mail ($admin,"aluvista.com contact : $subject",$text,"From:$name => $tel <$email")
       ){
-        echo 'sent mail ';
+        echo 'پیام ارسال شد';
       }else{
-        echo 'error in sending mail';
+        echo 'خطا در ارسال پیام';
       }
     }else{
-      echo 'access Restricted !';
+      echo 'دسترسی مقدور نمی باشد !';
     }
 ?>
