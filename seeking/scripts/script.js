@@ -187,8 +187,8 @@ var codeStationJq = {
 			'left': '0'
 		});
 		var efct_banner = function ($newpos) {
-			$(".view img").animate({'opacity':'0.1','display':'none'},600,'linear',function(){
-				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block','opacity':'1'},'slow');
+			$(".view img").animate({'display':'none'},600,'linear',function(){
+				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block'},'slow');
 			})
 		}
 		$('section.container .top nav a').live('click', function (event) {
@@ -250,8 +250,8 @@ var codeStationJq = {
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
-				$("section.container .gallery > section .right .top").animate({'opacity':'0'},200,null,function(){
-					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({'opacity':'1'},600,null);
+				$("section.container .gallery > section .right .top").animate({},300,null,function(){
+					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({},300,null);
 				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
@@ -619,10 +619,12 @@ var codeStationJq = {
 						}, 100);
 					}
 				});
+				/*
 				$(document).keydown(function (e) {
 					if ($('#veiw').css('display')==='block')
 						((e.keyCode ? e.keyCode : e.which) == "27") && alert ('not actived ... ');
 				});
+				*/
 				var detectBrowser = function () {
 					var testCSS = new Function("prop", "return prop in document.documentElement.style"), br, browser;
 					for (br in browser = {
