@@ -1,5 +1,17 @@
-
-
+/*
+div, section {
+	outline: 1px dotted red;
+}
+li {
+	outline: 2px dashed #f0f;
+}
+body.left, body.right {
+	outline: 2px dotted cyan;
+}
+body > .container, header, footer {
+	outline: 3px dashed magenta;
+}
+*/
 body { 
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
@@ -65,9 +77,10 @@ header {
 									text-decoration: none;
 									display: block;
 									padding: 10px 15px;
-									font-size: 16px;
+									font-size: 14px;
 									color: white;
 									font-weight: bold;
+									font-family: tahoma;
 								}
 								a:hover {
 									color:  #EAB410;
@@ -205,6 +218,7 @@ section.container {
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					text-align: right;
 					color: #1c1b17;
+					margin-right: 10px;
 					a {
 						text-decoration: none;
 						color: #483c0c;
@@ -1072,8 +1086,9 @@ footer {
 								display: block;
 								padding: 10px 15px;
 								color:  #150600;
-								font-size: 17px;
+								font-size: 15px;
 								font-weight: bold;
+								font-family: tahoma;
 							}
 						}
 					}

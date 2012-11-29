@@ -113,11 +113,11 @@
 	<div class="top">
 		<div class="dirt container mla mra ">
 			<div class="right w1 rss"></div>
-			<div class="right w5">
+			<div class="right w7">
 				<nav>
 					<ul>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
+						<li><a href="http://twitter.com">Twitter</a></li>
+						<li><a href="http://facebook.com">Facebook</a></li>
 					</ul>
 				</nav>
 			</div>
