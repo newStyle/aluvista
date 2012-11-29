@@ -612,6 +612,8 @@ var codeStationJq = {
 						}, 800, 'linear',function () {
 							$('.wheel + section').css('display','block');
 						});
+						var nth = $(prcss.boxs).index(this);
+						console.log(nth);
 					}
 				});
 				var detectBrowser = function () {
