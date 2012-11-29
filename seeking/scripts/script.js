@@ -68,7 +68,7 @@ var codeStationJq = {
 					clearTimeout(prcss.Int);
 					prcss.rotat(0);
 
-				}, 1000);
+				}, 500);
 				e.preventDefault();
 				var url;
 				menus.loadAjax(url = $(this).attr("href"), "#con", true);
@@ -614,10 +614,14 @@ var codeStationJq = {
 						});
 						var nth = $(prcss.boxs).index(this);
 						$('.wheel + section').load('pages/process_content.php');
-						setTimeout(function () { 
+						setTimeout(function () {
 							$('section', '#veiw ').eq(nth).fadeIn('normal');
 						}, 100);
 					}
+				});
+				$(document).keydown(function (e) {
+					if ($('#veiw').css('display')==='block')
+						((e.keyCode ? e.keyCode : e.which) == "27") && alert ('not actived ... ');
 				});
 				var detectBrowser = function () {
 					var testCSS = new Function("prop", "return prop in document.documentElement.style"), br, browser;
