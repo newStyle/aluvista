@@ -1,17 +1,4 @@
-/*
-div, section {
-	outline: 1px dotted red;
-}
-li {
-	outline: 2px dashed #f0f;
-}
-body.left, body.right {
-	outline: 2px dotted cyan;
-}
-body > .container, header, footer {
-	outline: 3px dashed magenta;
-}
-*/
+
 
 body { 
 	background: url(images/bg.jpg) repeat fixed;
@@ -148,28 +135,36 @@ section.container {
 				left: 30px;
 				height: inherit;
 				nav {
-					background: url(images/slider_menu.jpg) no-repeat left center;
+					background: url(images/slider_menu1.jpg) no-repeat left center;
 					height: inherit;
 					ul {
 						list-style-type: none;
 						height: inherit;
 						li {
-							background: url(images/line-menu.jpg) no-repeat bottom left;
+							
 							a {
 								text-decoration: none;
 								display: block;
-								padding: 21px 25px;
+								padding: 17px 40px;
 								color: white;
 								font-size: 15px;
 								text-indent: 20px;
 								font-weight: bold;
+								color: #eaeaea;
+								text-align: justify;
+								font-family: "Bkoodak", Arial, "Times New Roman", Times, serif;
+								-webkit-transition: all 0.6s;
+								-moz-transition: all 0.6s;
+								-ms-transition: all 0.6s;
+								-o-transition: all 0.6s;
 							}
 							:hover {
-								//color: #EAB42C;
+								color: white;
 							}
 							.active {
-								background: url(images/slider_nav.png) no-repeat right center;
-								//color: #eab410;
+								background: url(images/slider_nav1.png) no-repeat right center;
+								color: white;
+								text-indent: 40px;
 							}
 						}
 						li:last-child {

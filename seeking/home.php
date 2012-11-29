@@ -57,11 +57,11 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
-						<li><a href="#">home - Lpsum Dolar</a></li>
+						<li><a href="#">ساختمان بهاران</a></li>
+						<li><a href="#">ساختمان پروما</a></li>
+						<li><a href="#">مسکن و شهرسازی</a></li>
+						<li><a href="#">ساختمان مسکونی</a></li>
+						<li><a href="#">بانک تجارت</a></li>
 					</ul>
 				</nav>
 			</section>
