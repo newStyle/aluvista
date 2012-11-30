@@ -1,4 +1,4 @@
-/*
+
 div, section {
 	outline: 1px dotted red;
 }
@@ -11,7 +11,7 @@ body.left, body.right {
 body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
-*/
+
 body { 
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
@@ -286,9 +286,30 @@ section.container {
 			height: 700px;
 			> .left {
 				height: 485px;
+				div.next{
+						width: 52px;
+						height: 52px;
+						background: url(images/nextg.png);
+						cursor: pointer;
+						margin: 15px 10px 0 0;
+					}
+					div.next:active{
+						background: url(images/nextg.png) 52px 52px;
+					}
+					div.prev{
+						width: 52px;
+						height: 52px;
+						background: url(images/backg.png);
+						cursor: pointer;
+						margin: 15px 0 0 0;
+					}
+					div.prev:active{
+						background: url(images/backg.png) 52px 52px;
+					}
 				> p {
 					font-size: 20px;
 					padding-bottom: 20px;
+					margin-top: 20px;
 					color:  #FDED90;
 					text-align: center;
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
@@ -317,28 +338,93 @@ section.container {
 					}
 				}
 				> div.paging {
-					margin: 10px 0 0 0;
-					height: 20px;
-					margin-left: 5px;
+					height: 42px;
+					margin: 20px 0 0 0;
+					div.num{
+						width: 40px;
+						height: 40px;
+						background: url(images/numbers.png) 40px 40px;
+						float: left;
+					}
+					div.num:active{
+						background: url(images/numbers.png) ;
+					}
 					a {
-						border: 1px solid white;
-						padding: 7px;
 						text-decoration: none;
-						color: black;
-						background: gray;
+						color: white;
+						display: block;
+						width: 42px;
+						height: 42px;
+						font:18px 'Bkoodak' bold;
+						padding: 5px 0px 0px 17px;
 					}
 					:hover {
-						background:  #eab410;
+					}
+					:active {
 					}
 				}
 			}
 			> .right {
 				float: none;
 				margin-left: 312px;
-				margin-top: 50px;
+				margin-top: 52px;
 				width: 550px;
-				height: 630px;
+				height: 610px;
 				outline: 1px dashed  #9B7617;
+				text-align: center;
+				div#gbtn{
+					width: 200px;
+					min-height: 30px;
+					margin: 0 190px 0 0;
+					padding:10px 0 10px 0;
+					a{
+						display: block;
+						width: 40px;
+						height: 40px;
+					}
+					div{
+						margin-left: 10px;
+					}
+				}
+				div.play{
+					width: 40px;
+					height: 40px;
+					background: url(images/media-buttons.png);
+					cursor: pointer;
+
+				}
+				div.play:active{
+					background: url(images/media-buttons.png) 320px 40px ;
+				}
+				div.puase{
+					width: 40px;
+					height: 40px;
+					background: url(images/media-buttons.png) 240px 0px;
+					cursor: pointer;
+				}
+				div.puase:active{
+					background: url(images/media-buttons.png) 240px 40px;
+				}
+				div.next{
+					width: 40px;
+					height: 40px;
+					background: url(images/media-buttons.png) 40px 80px;
+					cursor: pointer;
+
+				}
+				div.next:active{
+					background: url(images/media-buttons.png) 40px 40px ;
+				}
+				div.prev{
+					width: 40px;
+					height: 40px;
+					background: url(images/media-buttons.png) 80px 80px;
+					cursor: pointer;
+
+				}
+				div.prev:active{
+					background: url(images/media-buttons.png) 80px 40px ;
+				}
 				p.right {
 					width: 200px;
 					height: 30px;
