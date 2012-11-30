@@ -445,7 +445,8 @@ var codeStationJq = {
 				$(this.path).css({
 					'height': '',
 					'min-height': $(this.path).height() + 'px',
-					'overflow': ''
+					'overflow': '',
+					'top': 0
 				});
 				setscroll(this.path, 385, $(this.path).height(), "section.container .color > section > .right .down > section > section");
 			},
@@ -523,7 +524,8 @@ var codeStationJq = {
 					$(prd.path).css({
 						'height': '',
 						'min-height': $(prd.path).height() + 'px',
-						'overflow': ''
+						'overflow': '',
+						'top': 0
 					});
 					setTimeout(function (){
 						$('section', prd.path).filter('#'+getname).fadeIn('normal')
@@ -540,6 +542,9 @@ var codeStationJq = {
 			veiw: ".container .agy_form > section .agancy form",
 			hgt: 385,
 			scrll: function () {
+				$(agy.veiw).css({
+					'top': 0
+				});
 				setscroll(this.path, this.hgt, $(this.path).height(),this.veiw);
 			}
 		};
