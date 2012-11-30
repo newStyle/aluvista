@@ -1,90 +1,218 @@
 <section>
-<p>boresh kari 
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra libero sed nisl ullamcorper adipiscing. Praesent nec mauris justo. Nam eu diam nunc. Duis ut neque dolor. Duis pellentesque vulputate justo, et fringilla ligula sodales sed. Vestibulum auctor erat a dolor hendrerit imperdiet. Quisque sit amet lectus metus. In posuere scelerisque viverra. Sed faucibus sem ut diam suscipit facilisis. Donec rutrum venenatis turpis, quis tempor dui volutpat nec. Donec lobortis blandit enim id vestibulum. Suspendisse ac mauris odio, consectetur mollis mauris. Donec sem est, hendrerit placerat hendrerit blandit, accumsan non enim. Donec arcu nisl, interdum in ornare vitae, auctor et justo.
+ALUVISTA ® را می توان با پانل عمودی دیدم قطع، مدور و یا جست و خیز کردن دیدم.
 
-	Nulla ligula augue, ornare quis imperdiet sit amet, tincidunt eget neque. Mauris dolor quam, feugiat sed imperdiet quis, ultricies sit amet metus. Maecenas dapibus tortor vel dolor iaculis tempus in scelerisque ipsum. Donec vehicula ante tristique massa pretium blandit. Nam pellentesque, felis eget aliquam rutrum, tellus tellus tincidunt est, at interdum mauris erat eu lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor imperdiet leo, non faucibus nisi vehicula vitae. Phasellus sapien diam, faucibus vitae aliquam ac, varius non est. Duis bibendum scelerisque odio, non hendrerit erat aliquam nec. Proin lacus orci, eleifend id egestas nec, faucibus nec justo. Fusce erat tortor, gravida a posuere in, pretium in nisi. In sed metus ante. Phasellus auctor ornare bibendum.
+کاربید نوک (CT) را دیدم پره
 
-	Sed id leo non est consequat blandit nec quis dui. Ut dictum lacus nec neque convallis sed aliquet augue posuere. Nunc feugiat elit vel nisi scelerisque commodo. Sed ligula urna, venenatis eget auctor vel, tincidunt eu neque. Maecenas a cursus massa. In facilisis quam vitae nibh rutrum faucibus. Aliquam convallis varius justo in imperdiet. Mauris in tortor orci. Vestibulum vel sagittis erat. Morbi lacus purus, vestibulum vel blandit nec, imperdiet eget eros. Vivamus egestas augue vitae nibh mollis et mattis eros elementum. Ut in erat a nisl tristique aliquet. In hac habitasse platea dictumst. Integer nulla augue, tristique in molestie eu, volutpat eu lectus.
+ 
 
-	Duis non nunc lectus. Phasellus vitae ante felis. Mauris et elit libero. Suspendisse potenti. In eleifend ante erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc imperdiet ante sed lorem tincidunt accumsan. Mauris quis est tellus, vitae luctus enim. Maecenas eget justo ac nulla blandit volutpat. Morbi pretium aliquet purus eu tincidunt.
+هندسه تیغه
+دندان ضخامت تقریبا. 2 - 4 میلی متر، مخروطی به داخل برای جلوگیری از پارازیت
+هندسه دندان
+دندان ذوزنقه / دندان صاف
+پیچ T
+10 - 12 میلی متر
+ترخیص زاویه α
+15 درجه
+زاویه شن کش γ
+10 درجه مثبت
+حداکثر سرعت برش V
+5000 متر / دقیقه
+حداکثر خوراک ها
+30 متر / در دقیقه
+ 
 
-	In nibh turpis, tempus et accumsan vitae, gravida nec eros. Sed accumsan, ante nec fringilla rutrum, turpis turpis sagittis nunc, nec condimentum felis tortor at nisi. Donec nec auctor felis. Aliquam erat volutpat. Maecenas aliquet, tellus non imperdiet elementum, lacus nibh tincidunt eros, sit amet condimentum risus tortor id lacus. Pellentesque ac mi felis. Praesent suscipit ipsum quis neque facilisis suscipit. Phasellus tincidunt tristique auctor. Quisque imperdiet elit a mauris scelerisque ut dignissim purus molestie. Maecenas vitae aliquam dui. Vestibulum dolor libero, blandit lacinia porttitor volutpat, congue elementum turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin orci eros, volutpat id lacinia eu, posuere ac felis.
+کاربید نوک (CT) را دیدم پره برای HOLZ او و Striebig اره پانل.
 
-	Mauris eu blandit orci. Praesent turpis tortor, aliquet a fermentum in, tincidunt ac nulla. Etiam eu tellus tellus, sed aliquam neque. Aenean ipsum arcu, interdum in volutpat sit amet, aliquam at dolor. Nam venenatis tellus nec magna vulputate ornare. Curabitur aliquet dapibus adipiscing. Vivamus lacinia nisi vitae enim laoreet scelerisque. Pellentesque vitae tortor ut ligula tincidunt volutpat id ut dui. In non quam sed lectus ultricies aliquam nec quis justo.
+ذوزنقه / تخت دندان تیغ اره، دندان های تخت 45 درجه chamfered برای لبه های آزاد با مته سوراخ کردن.
 
-	Praesent fringilla, tellus sed varius vulputate, augue leo tincidunt augue, quis scelerisque ligula justo sed metus. In at leo auctor mauris suscipit porttitor id nec enim. Phasellus ultrices scelerisque imperdiet. Aliquam ac tellus eu nunc molestie aliquet. Mauris fermentum laoreet eros nec sodales. Donec cursus sapien sed mauris malesuada faucibus. Morbi tincidunt euismod vestibulum. Vivamus tempor varius pulvinar. Proin id nibh nec elit euismod ultricies commodo ac metus.
-</p>
+
+تیغ اره Ø
+D = 300 میلی متر (برای پانل Striebig عمودی دیدم استاندارد II)
+تعداد دندان
+t = 72 (برای کاهش حداکثر تا 5 پانل)
+LEUCO کد شماره 181،724
+T = 96 (برای کاهش تنها و بدون burrs)
+LEUCO کد شماره 181،725
+تیغ اره Ø
+D = 250 میلی متر
+(برای Holz پانل عمودی او را دیدم 1255 ALUVISTA ®)
+تعداد دندان
+T = 60 (برای کاهش حداکثر تا 5 پانل)
+LEUCO کد شماره 181،726
+T = 80 (برای کاهش تنها و بدون burrs)
+LEUCO کد شماره 181،727
+با مته سوراخ ø
+D = 30 میلی متر
+ضخامت دندان
+3.2 میلی متر
+ترخیص زاویه α
+15 درجه
+زاویه شن کش γ
+10 درجه مثبت 
+<img src="images/cutting.jpg" />
 </section><!-- boresh -->
-<section>
-<p>panck kardan 
-	gnis rhoncus cum, platea proin? Egestas. Ridiculus dapibus elementum parturient, a, auctor massa penatibus aliquet tortor tortor, montes lacus porta porta, enim amet adipiscing cursus ac. Tortor.
+<section>ALUVISTA ® پانل از هر ضخامت را می توان با استفاده از متعارف ورق فلز ماشین آلات پانچ پانچ شده است. برای کاهش تمیز با حداقل برش ترخیص کالا از گمرک (0.1 میلی متر) استفاده از ابزار تیز و می میرد. بوکس انحراف کمی از لبه برش در کنار تاثیر شود.
 
-	Tincidunt ultrices adipiscing placerat ridiculus ridiculus sit rhoncus diam auctor vut! Urna parturient. Urna! Ut auctor eu? Eu! Auctor velit nec augue hac? Diam? Aliquam dolor, a est, nunc? Dolor augue ultricies magna nisi adipiscing egestas tincidunt! Sociis lacus rhoncus nec? Aenean? Sociis turpis scelerisque augue aliquet, ut enim eros mid, natoque mauris aenean? Etiam tempor porttitor tincidunt scelerisque! Nisi arcu! Lacus, mattis cum? Auctor, vel habitasse risus tristique in penatibus amet vut scelerisque hac. Mauris in? Elementum tristique, est in? Turpis, turpis, porttitor aliquet placerat nascetur mauris ut, porta eu cras dolor arcu. Amet, enim tincidunt ac urna cras velit, quis cum, nec porttitor, lundium hac, proin pulvinar velit pid nisi etiam, in amet lectus lundium pellentesque pid.
+سوراخ به قطر حداقل 4 میلی متر می تواند پانچ شود.حداقل عرض وب سایت بین لبه های سوراخ نیز 4 میلیمتر است.
 
-	Mid amet. Lacus, porttitor scelerisque et habitasse quis mid vel parturient, lorem phasellus proin amet magna. Montes enim tristique penatibus turpis aliquam facilisis? Auctor adipiscing dolor sociis enim diam lundium nec ac nec cras mauris dictumst adipiscing enim, ut lundium montes porta turpis placerat, dolor. Tristique purus, ac mid! Sed? Magna, cum nascetur arcu scelerisque lorem? Arcu nisi scelerisque! Egestas tempor. Aenean magna diam mattis. Enim, cras in parturient enim? Et, sed odio in, turpis vel scelerisque, mus lacus porta et tristique, enim aliquam pulvinar eros egestas? Mattis odio! Augue lectus augue dolor aliquet augue, dis. Nec porta nec tempor lectus turpis turpis porta, etiam risus porttitor mus, in, porttitor massa enim tortor velit tempor nisi risus turpis? Proin.
-
-	Mauris mattis, lundium scelerisque aliquet vut nunc nascetur magnis aliquam parturient eros, porta sit! Amet pid purus, est pellentesque ridiculus mid tortor. Porta nisi dictumst magna, hac porta massa! Purus hac enim montes, tristique aenean, sociis, magnis lundium et nisi a dignissim porta aliquam natoque mauris auctor ac dignissim, mauris hac eu porta! Habitasse turpis, facilisis et? Est velit! Purus augue lundium proin odio penatibus platea turpis, mus enim, dictumst! Mus, turpis rhoncus? Ultricies est, porttitor tortor purus quis parturient arcu lorem? Habitasse pid augue ultricies ac? Pid aenean, egestas eros scelerisque cum eros porttitor? Integer et tempor. Nascetur porta ac in nascetur, in. Est dapibus porta, cursus dis ac? A proin aenean, arcu enim pulvinar purus urna habitasse.
-
-	Urna porttitor turpis. Sagittis sed dapibus auctor, rhoncus porta, urna amet magnis mattis aliquet tempor placerat? Duis mid sed, amet sed est enim. Elit magna amet porta duis magnis. Odio aliquam phasellus ac eu elit et rhoncus, integer parturient, magna integer habitasse in tincidunt, placerat nascetur, enim scelerisque? Odio ac cras porta? Habitasse natoque nunc sit amet ultricies velit augue placerat ac facilisis aenean ac augue aenean ut ultrices sed penatibus! Nisi tristique, platea sagittis tincidunt pellentesque, ac lundium in porta. Arcu dapibus, cum integer sit urna arcu arcu sed platea! Natoque turpis elit mauris vut vel dis nunc dolor ac, in dolor integer quis magnis et augue elementum ultrices nascetur, porttitor habitasse, elit nisi! Mus ac mid amet.
-
-	Amet, nisi, pulvinar vut cras, et cum vel in augue porttitor purus pe
-</p>
+لطفا برای کسب اطلاعات بیشتر در سوراخ ALUVISTA ®
 </section><!-- panch kardan-->
-<section>
-<p>boresh conector
-	Tortor habitasse turpis urna penatibus, adipiscing cum, dignissim nunc mid, magna habitasse rhoncus elit, nec penatibus, turpis mattis sed ut mus pellentesque, mid urna. Placerat? Urna mus. Elit! Risus odio nec platea eu facilisis elementum urna eu dignissim cum! Porttitor habitasse diam! Aliquam augue, dignissim etiam turpis nisi, ultrices et. Ridiculus porta nascetur amet in. Risus. Lundium, tincidunt sit etiam. Vel amet, arcu turpis mattis. Ut? Auctor turpis, turpis, elementum! Facilisis mauris amet placerat et? Non urna pulvinar lorem. Aenean enim nascetur nisi nec nisi, scelerisque tincidunt tincidunt, est scelerisque, lacus, lacus, massa, magnis rhoncus cum, platea proin? Egestas. Ridiculus dapibus elementum parturient, a, auctor massa penatibus aliquet tortor tortor, montes lacus porta porta, enim amet adipiscing cursus ac. Tortor.
+<section>ALUVISTA را می توان برش برای شکل دادن با استفاده از جست و خیز کردن اره، مراکز ماشینکاری CNC و ماشین آلات برش جت آب. استفاده از تیغه های اره چوب و مواد پلاستیکی که با استفاده از اره جست و خیز کردن. برش abrasively در هنگام استفاده از یک جت آب دستگاه برش. قبل از حفاری از پانل لازم است در هنگام شروع برش در وسط پانل آن را به عنوان ممکن نیست از طریق تمرین با جت آب. برای برش کانتور در CNC مرکز ماشینکاری با استفاده از برش یک لبه.
 
-	Tincidunt ultrices adipiscing placerat ridiculus ridiculus sit rhoncus diam auctor vut! Urna parturient. Urna! Ut auctor eu? Eu! Auctor velit nec augue hac? Diam? Aliquam dolor, a est, nunc? Dolor augue ultricies magna nisi adipiscing egestas tincidunt! Sociis lacus rhoncus nec? Aenean? Sociis turpis scelerisque augue aliquet, ut enim eros mid, natoque mauris aenean? Etiam tempor porttitor tincidunt scelerisque! Nisi arcu! Lacus, mattis cum? Auctor, vel habitasse risus tristique in penatibus amet vut scelerisque hac. Mauris in? Elementum tristique, est in? Turpis, turpis, porttitor aliquet placerat nascetur mauris ut, porta eu cras dolor arcu. Amet, enim tincidunt ac urna cras velit, quis cum, nec porttitor, lundium hac, proin pulvinar velit pid nisi etiam, in amet lectus lundium pellentesque pid.
-
-	Mid amet. Lacus, porttitor scelerisque et habitasse quis mid vel parturient, lorem phasellus proin amet magna. Montes enim tristique penatibus turpis aliquam facilisis? Auctor adipiscing dolor sociis enim diam lundium nec ac nec cras mauris dictumst adipiscing enim, ut lundium montes porta turpis placerat, dolor. Tristique purus, ac mid! Sed? Magna, cum nascetur arcu scelerisque lorem? Arcu nisi scelerisque! Egestas tempor. Aenean magna diam mattis. Enim, cras in parturient enim? Et, sed odio in, turpis vel scelerisque, mus lacus porta et tristique, enim aliquam pulvinar eros egestas? Mattis odio! Augue lectus augue dolor aliquet augue, dis. Nec porta nec tempor lectus turpis turpis porta, etiam risus porttitor mus, in, porttitor massa enim tortor velit tempor nisi risus turpis? Proin.
-
-	Mauris mattis, lundium scelerisque aliquet vut nunc nascetur magnis aliquam parturient eros, porta sit! Amet pid purus, est pellentesque ridiculus mid tortor. Porta nisi dictumst magna, hac porta massa! Purus hac enim montes, tristique aenean, sociis, magnis lundium et nisi a dignissim porta aliquam natoque mauris auctor ac dignissim, mauris hac eu porta! Habitasse turpis, facilisis et? Est velit! Purus augue lundium proin odio penatibus platea turpis, mus enim, dictumst! Mus, turpis rhoncus? Ultricies est, porttitor tortor purus quis parturient arcu lorem? Habitasse pid augue ultricies ac? Pid aenean, egestas eros scelerisque cum eros porttitor? Integer et tempor. Nascetur porta ac in nascetur, in. Est dapibus porta, cursus dis ac? A proin aenean, arcu enim pulvinar purus urna habitasse.
-
-	Urna porttitor turpis. Sagittis sed dapibus auctor, rhoncus porta, urna amet magnis mattis aliquet tempor placerat? Duis mid sed, amet sed est enim. Elit magna amet porta duis magnis. Odio aliquam phasellus ac eu elit et rhoncus, integer parturient, magna integer habitasse in tincidunt, placerat nascetur, enim scelerisque? Odio ac cras porta? Habitasse natoque nunc sit amet ultricies velit augue placerat ac facilisis aenean ac augue aenean ut ultrices sed penatibus! Nisi tristique, platea sagittis tincidunt pellentesque, ac lundium in porta. Arcu dapibus, cum integer sit urna arcu arcu sed platea! Natoque turpis elit mauris vut vel dis nunc dolor ac, in dolor integer quis magnis et augue elementum ultrices nascetur, porttitor habitasse, elit nisi! Mus ac mid amet.
-
-	Amet, nisi, pulvinar vut cras, et cum vel in augue porttitor purus penatibus integer, arcu? Montes turpis! Mid sit adipiscing cursus porta dignissim! Etiam? Magnis lorem? Montes, purus dignissim, ut in penatibus nunc rhoncus eu duis sagittis facilisis, habitasse mus turpis scelerisque augue penatibus tortor integer adipiscing! Augue aliquet et, elit, adipiscing odio montes vel nunc nunc vut scelerisque, in nascetur integer elit pulvinar, cum, scelerisque duis platea turpis quis cras, tortor cras dis sit est velit turpis, vel! Elementum scelerisque in sed! Vut, sed nec. Facilisis, porttitor diam magna tortor, platea hac enim elementum integer turpis sit velit augue, etiam. Vut cum enim, dolor proin, pulvinar. Ultrices proin vut nec tortor ridiculus tempor vel est nascetur enim mus.
-
-	Adipiscing in nec. Tincidunt lectus sed augue? Sed! Mattis. Sit! Adipiscing, rhoncus tincidunt velit purus diam tincidunt, aenean sed non ut amet mauris! Montes sed in integer aenean porta, urna nascetur, tempor et scelerisque tincidunt, eu augue pid porttitor eros? Dignissim pid in ridiculus, lundium odio pellentesque, enim et velit, mid platea sit nisi hac, dis ridiculus duis placerat! Et porttitor adipiscing ac? Rhoncus, aenean integer urna cras placerat pulvinar, penatibus! Ac augue integer sed, proin augue placerat proin porta augue elementum odio ac nisi, proin et vel in turpis turpis? Vut turpis mus velit! In ultrices mauris? Ac! Adipiscing, eros integer porttitor, facilisis augue mid augue? Auctor duis, penatibus aliquet, dapibus sociis, dis enim phasellus, sit risus rhoncus.
-
-	Amet scelerisque mus scelerisque, magna, in duis turpis, in, nunc placerat! Arcu augue scelerisque sagittis ultricies, tristique integer aliquam hac scelerisque, mus turpis? Tempor, amet turpis pulvinar, egestas in scelerisque parturient mattis augue dolor. Diam lacus dapibus scelerisque. Lorem! Nunc cursus, dapibus scelerisque. Penatibus et sit in! Ut ac, ac aliquet, pid dolor. Sagittis, aenean, cum odio ut hac, arcu vel hac risus. Duis ultricies amet lacus mauris tempor turpis adipiscing, turpis augue dictumst scelerisque montes. Aliquet urna velit, tortor nec ac ultricies? Cursus! Rhoncus, aliquet urna porta pulvinar! Urna lacus? Vel nec scelerisque lorem, tempor lundium. Etiam, tristique sociis enim placerat ut platea enim ac, auctor augue in aliquam purus mauris duis porta nec, dictumst integer habitasse et.
-
-	Mauris natoque, est non et eu risus? Placerat elementum dolor nunc! Ac, amet, pulvinar est hac lorem scelerisque lundium sed a duis pulvinar, mattis rhoncus in. Tincidunt arcu porttitor, montes elit! Magnis aliquam eu auctor habitasse tincidunt dignissim? Diam integer augue mauris facilisis, augue lacus? Aenean a! Ut cum urna? Proin mus montes. Magna odio egestas vut habitasse nunc, natoque dignissim eu, dictumst! Etiam. Aliquam augue elementum ridiculus. Lundium. In ultricies, ut parturient aliquam. Augue, amet tempor augue ultricies tortor ultrices ut! Lectus magnis, sit mattis arcu, nec pid. Et vut lorem rhoncus pid natoque, dolor etiam, integer sociis massa sit augue ac? Turpis hac, integer eu dignissim mus, proin parturient rhoncus mid adipiscing rhoncus, vel dignissim vut cras.
-</p>
 </section><!-- boresh conector-->
-<section>
-<p>kham kardan 
-	g placerat ridiculus ridiculus sit rhoncus diam auctor vut! Urna parturient. Urna! Ut auctor eu? Eu! Auctor velit nec augue hac? Diam? Aliquam dolor, a est, nunc? Dolor augue ultricies magna nisi adipiscing egestas tincidunt! Sociis lacus rhoncus nec? Aenean? Sociis turpis scelerisque augue aliquet, ut enim eros mid, natoque mauris aenean? Etiam tempor porttitor tincidunt scelerisque! Nisi arcu! Lacus, mattis cum? Auctor, vel habitasse risus tristique in penatibus amet vut scelerisque hac. Mauris in? Elementum tristique, est in? Turpis, turpis, porttitor aliquet placerat nascetur mauris ut, porta eu cras dolor arcu. Amet, enim tincidunt ac urna cras velit, quis cum, nec porttitor, lundium hac, proin pulvinar velit pid nisi etiam, in amet lectus lundium pellentesque pid.
+<section>خم شدن ALUVISTA ® ممکن است با پرس خم.
 
-	Mid amet. Lacus, porttitor scelerisque et habitasse quis mid vel parturient, lorem phasellus proin amet magna. Montes enim tristique penatibus turpis aliquam facilisis? Auctor adipiscing dolor sociis enim diam lundium nec ac nec cras mauris dictumst adipiscing enim, ut lundium montes porta turpis placerat, dolor. Tristique purus, ac mid! Sed? Magna, cum nascetur arcu scelerisque lorem? Arcu nisi scelerisque! Egestas tempor. Aenean magna diam mattis. Enim, cras in parturient enim? Et, sed odio in, turpis vel scelerisque, mus lacus porta et tristique, enim aliquam pulvinar eros egestas? Mattis odio! Augue lectus augue dolor aliquet augue, dis. Nec porta nec tempor lectus turpis turpis porta, etiam risus porttitor mus, in, porttitor massa enim tortor velit tempor nisi risus turpis? Proin.
+حداقل لازم است شعاع r = 10 XT (t = ضخامت پانل)
+اثر بهار پشت ALUVISTA ® بزرگتر از آن است که از یک ورق آلومینیوم جامد
+لبه جان باید گرد و صاف
+برای جلوگیری از خسارات ناشی از به سطح پانل، فویل محافظ باید در طول خم نمی شود حذف شده
+علاوه بر این، سطح قابل مشاهده را می توان با استفاده از پد های پلاستیکی از 1 محافظت - ضخامت 2 میلیمتر
+عرض می میرند ایده آل: 2 XT + 2 X ضخامت فویل محافظ + قطر پانچ + 15 میلی متر
+برای تولید سریال، آزمایش بر روی پانل های نمونه
 
-	Mauris mattis, lundium scelerisque aliquet vut nunc nascetur magnis aliquam parturient eros, porta sit! Amet pid purus, est pellentesque ridiculus mid tortor. Porta nisi dictumst magna, hac porta massa! Purus hac enim montes, tristique aenean, sociis, magnis lundium et nisi a dignissim porta aliquam natoque mauris auctor ac dignissim, mauris hac eu porta! Habitasse turpis, facilisis et? Est velit! Purus augue lundium proin odio penatibus platea turpis, mus enim, dictumst! Mus, turpis rhoncus? Ultricies est, porttitor tortor purus quis parturient arcu lorem? Habitasse pid augue ultricies ac? Pid aenean, egestas eros scelerisque cum eros porttitor? Integer et tempor. Nascetur porta ac in nascetur, in. Est dapibus porta, cursus dis ac? A proin aenean, arcu enim pulvinar purus urna habitasse.
+نکته مهم: هنگام خم شدن ALUVISTA ® با سطح anodised، منطقه خم روشن تر است.
 
-	Urna porttitor turpis. Sagittis sed dapibus auctor, rhoncus porta, urna amet magnis mattis aliquet tempor placerat? Duis mid sed, amet sed est enim. Elit magna amet porta duis magnis. Odio aliquam phasellus ac eu elit et rhoncus, integer parturient, magna integer habita
-</p>
+<br />
+
+A =
+
+punch
+
+B =
+
+protective foil
+
+C =
+
+die
+
+D =
+
+die width
+r =
+
+radius
+
+<img src="images/bending.gif" />
 </section><!-- kham kardan -->
 <section>
-<p>kham rol 
-	porta, urna amet magnis mattis aliquet tempor placerat? Duis mid sed, amet sed est enim. Elit magna amet porta duis magnis. Odio aliquam phasellus ac eu elit et rhoncus, integer parturient, magna integer habitasse in tincidunt, placerat nascetur, enim scelerisque? Odio ac cras porta? Habitasse natoque nunc sit amet ultricies velit augue placerat ac facilisis aenean ac augue aenean ut ultrices sed penatibus! Nisi tristique, platea sagittis tincidunt pellentesque, ac lundium in porta. Arcu dapibus, cum integer sit urna arcu arcu sed platea! Natoque turpis elit mauris vut vel dis nunc dolor ac, in dolor integer quis magnis et augue elementum ultrices nascetur, porttitor habitasse, elit nisi! Mus ac mid amet.
+<img src="images/routing-and-folding.gif" />
+	ALUVISTA ® می تواند خم شود با استفاده از یک دستگاه رول خم (3 یا 4 غلطک). اطمینان حاصل کنید که فیدر فشار بیش از حد اعمال کند. غلطک خم آنها نیز خم شدن فلزات دیگر استفاده می شود را باید به طور کامل از تراشه قبل از پردازش ALUVISTA ® تمیز می شود. اطمینان حاصل کنید که به استفاده از تنها غلطک های جلا آزاد از فرورفتگی ها و نقص های دیگر.
 
-	Amet, nisi, pulvinar vut cras, et cum vel in augue porttitor purus penatibus integer, arcu? Montes turpis! Mid sit adipiscing cursus porta dignissim! Etiam? Magnis lorem? Montes, purus dignissim, ut in penatibus nunc rhoncus eu duis sagittis facilisis, habitasse mus turpis scelerisque augue penatibus tortor integer adipiscing! Augue aliquet et, elit, adipiscing odio montes vel nunc nunc vut scelerisque, in nascetur integer elit pulvinar, cum, scelerisque duis platea turpis quis cras, tortor cras dis sit est velit turpis, vel! Elementum scelerisque in sed! Vut, sed nec. Facilisis, porttitor diam magna tortor, platea hac enim elementum integer turpis sit velit augue, etiam. Vut cum enim, dolor proin, pulvinar. Ultrices proin vut nec tortor ridiculus tempor vel est nascetur enim mus.
+برای جلوگیری از خسارات ناشی از به سطح پانل، فویل محافظ پوست کردن باید در طول خم نمی شود حذف شده است. 2 میلیمتر ضخامت - علاوه بر این، سطح قابل مشاهده است می توان با استفاده از پد های پلاستیکی از 1 ها محافظت می شود.
 
-	Adipiscing in nec. Tincidunt lectus sed augue? Sed! Mattis. Sit! Adipiscing, rhoncus tincidunt velit purus diam tincidunt, aenean sed non ut amet mauris! Montes sed in integer aenean porta, urna nascetur, tempor et scelerisque tincidunt, eu augue pid porttitor eros? Dignissim pid in ridiculus, lundium odio pellentesque, enim et velit, mid platea sit nisi hac, dis ridiculus duis placerat! Et porttitor adipiscing ac? Rhoncus, aenean integer urna cras placerat pulvinar, penatibus! Ac augue integer sed, proin augue placerat proin porta augue elementum odio ac nisi, proin et vel in turpis turpis? Vut turpis mus velit! In ultrices mauris? Ac! Adipiscing, eros integer porttitor, facilisis augue mid augue? Auctor duis, penatibus aliquet, dapibus sociis, dis enim phasellus, sit risus rhoncus.
+برای تولید سریال، لطفا آزمایش بر روی پانل های نمونه.
 
-	Amet scelerisque mus scelerisque, magna, in duis turpis, in, nunc placerat! Arcu augue scelerisque sagittis ultricies, tristique integer aliquam hac scelerisque, mus turpis? Tempor, amet turpis pulvinar, egestas in scelerisque parturient mattis augue dolor. Diam lacus dapibus scelerisque. Lorem! Nunc cursus, dapibus scelerisque. Penatibus et sit in! Ut ac, ac aliquet, pid dolor. Sagittis, aenean, cum odio ut hac, arcu vel hac risus. Duis ultricies amet lacus mauris tempor turpis adipiscing, turpis augue dictumst scelerisque montes. Aliquet urna velit, tortor nec ac ultricies? Cursus! Rhoncus, aliquet urna porta pulvinar! Urna lacus? Vel nec scelerisque lorem, tempor lundium. Etiam, tristique sociis enim placerat ut platea enim ac, auctor augue in aliquam purus mauris duis porta nec, dictumst integer habitasse et.
-</p>
+
+نکته مهم: هنگام خم شدن ALUVISTA ® با سطح anodised، منطقه خم روشن تر است.
 </section><!-- kham rol-->
-<section><p>ta kardan varagh</p></section><!-- ta kardan varagh -->
-<section>
-<p>parch kardan
-	c nascetur magnis aliquam parturient eros, porta sit! Amet pid purus, est pellentesque ridiculus mid tortor. Porta nisi dictumst magna, hac porta massa! Purus hac enim montes, tristique aenean, sociis, magnis lundium et nisi a dignissim porta aliquam natoque mauris auctor ac dignissim, mauris hac eu porta! Habitasse turpis, facilisis et? Est velit! Purus augue lundium proin odio penatibus platea turpis, mus enim, dictumst! Mus, turpis rhoncus? Ultricies est, porttitor tortor puru
-</p>
+<section>ALUVISTA ® پانل کامپوزیت ها را می توان با استفاده از یک روش بسیار ساده پردازش شکل گرفته است.
+
+این روش، به نام مسیریابی و روش های تاشو، را قادر می سازد جعل برای تولید اشکال از انواع و اندازه های مختلف.
+
+یک شیار V شکل یا مستطیل شکل است که در سمت معکوس ALUVISTA ® پانل کامپوزیت با استفاده از یک دیسک و یا پایان برش فرز روت شده است. یک لایه نازک از مواد هسته باید در پایه از شیار سمت چپ، یعنی در داخل ورق پوشش بیرونی. جدول دست نخورده پوشش بیرونی در حال حاضر می تواند خم به صورت دستی، از دادن یک خط دقیق و تمیز تاشو است که به شرح زیر شیار روت شده است. شعاع بیرونی از لبه تا خورده بستگی به شکل شیار و عمق آن است.
+
+ما توصیه می کنیم که مسیریابی تواند انجام شود با استفاده از پانل عمودی دیدم مجهز به ALUVISTA ® لوازم جانبی برش، مرکز ماشینکاری CNC، دستگاه فرز ورق های قابل حمل و یا یک روتر دست. مسیریابی و روش های تاشو می توان برای ALUVISTA ® پانل های کامپوزیت با همه در دسترس است پس از اتمام سطح استاندارد مورد استفاده قرار گیرد.
+
+ 
+
+
+
+نکته مهم: وقتی تاشو ALUVISTA ® با سطح anodised، لبه تاشو روشن
+
+ 
+
+مزایای استفاده
+
+قانع کننده از مزایای این روش منحصر به فرد عبارتند از:
+
+
+هزینه های سرمایه گذاری پایین
+روش ساخت ساده
+تاشو را می توان در سایت انجام می شود، صرفه جویی در هزینه های حمل و نقل
+کم هزینه ساخت از اجزای شکل مورد استفاده در فاسیا و روکش فلزی دیوار، سقف های مرزی، روکش فلزی ستون، flashings، و غیره
+انعطاف پذیری در ایجاد اشکال
+نظر اقتصادی بسیار مقرون به صرفه است
+اشکال ظرفیت دستگاه محدود نمی شود
+
+
+
+مزایای
+
+ساخت از اجزای شکل با استفاده از ALUVISTA ® تنها نیاز به یک حداقل مبلغ سرمایه گذاری سرمایه گذاری است.
+روتر دست و دستگاه فرز ورق ارزان است و می تواند یا در کارگاه و یا در سایت استفاده می شود.
+ساخت اشکال در مقادیر بزرگتر به خصوص مقرون به صرفه با استفاده از اره پانل عمودی مجهز به ALUVISTA ® جروفنج لوازم جانبی.
+ 
+
+90 ° V-شیار برای برابر تا 90 درجه
+
+ 
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+135 درجه V-شیار برای برابر تا 135 درجه
+
+ 
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+شیار مستطیل برابر تا 150 درجه، بسته به ضخامت پانل است.
+مناسب برای ALUVISTA ® A2.
+</section><!-- ta kardan varagh -->
+<section>پرچین ممکن است با استفاده از پرچ جامد یا کور با ابزار متعارف پرچین. برنامه های کاربردی خارجی برای انبساط حرارتی اجازه می دهد و با استفاده از میخ پرچ محکم کردن ضمیمه جست و خیز کردن، در صورت لزوم.
+
+ALUVISTA پانل ® را می توان به یکدیگر متصل شده و یا ملحق به سایر مواد با استفاده از پرچ به ساختارهای آلومینیوم مشترک. برای استفاده در فضای باز و برای استفاده در مناطق با رطوبت بالا، مطمئن شوید که برای استفاده از پرچ آلومینیوم کور با mandrils از جنس استنلس استیل برای جلوگیری از زشت لبه خورنده. هنگامی که با استفاده از پرچ آلومینیوم کور با mandrils فولاد، مرغک باید رها کردن پس از پرچین (نسخه قابل جدا شدن).
+
+پرچ Countersunk مناسب برای استفاده در محیط داخلی فقط.
+
+ 
+
+برای استفاده در فضای باز توجه فرمایید:
+
+استفاده از پرچ آلومینیوم کور است که برای ساخت و ساز با قطر شفت 5 میلیمتر و سر دلبستگی قطر 11 یا 14 میلیمتر تایید شده اند.
+لطفا انبساط حرارتی پانل به حساب (2.4 mm/m/100 ° C). برای جلوگیری از پارازیت، سوراخ در پانل باید به اندازه کافی بزرگ برای توسعه اجازه می دهد.
+با تنه میخ پرچ محکم کردن اتصالات نزدیک به لبه سوراخ، سر دلبستگی باید بیش از 1 میلی متر از مناطق اطراف سوراخ را پوشش میدهد.
+مته های چند مرحله ای یا آستین داشتن قطر متناظر برای centrically حفاری سوراخ را به پانل و زیر سازی و برای centrically اتصالات پرچ استفاده می شود.
+ججس پرچ دلبستگی برای اتصالات پرچ کور و بدون پارازیت اجازه می دهد برای تحمل به میزان 0.3 میلی متر استفاده می شود. اطمینان حاصل کنید که ججس و پرچ میخ پرچ محکم کردن پیوست به استفاده از تولید کننده، به عنوان ارتفاع از سر دلبستگی بر اساس DIN 7337 ممکن است متفاوت باشد.
+بستن نتایج ضخامت از ضخامت مواد پرچ شده به علاوه ارزش اضافی از 2 میلی متر تا اطمینان حاصل شود که سر بسته شدن کاملا تشکیل شده است. مطابق با این ضخامت بستن طول شفت مربوطه در جداول ارائه شده توسط تولید کنندگان میخ پرچ محکم کردن تعیین می شود. (lmin = 14 میلی متر).
+
+
+
+مهم:
+
+از آنجا که در طول پرچین عوامل بسیاری ممکن است نفوذ در تحمل دقیق از پرچ 0.3 میلی متر (تحمل سر پرچ به عنوان مثال) را داشته باشند، توصیه می کنیم که شما می توانید یک آزمایش بر روی پانل فاسیا است. لطفا فویل محافظ همیشه در منطقه قبل از پرچین پرچین حذف کنید. 
+<img src="images/riveting.gif" />
 </section><!-- parch kardan -->
-<section>
-<p>pich kardan 
-	Elementum scelerisque in sed! Vut, sed nec. Facilisis, porttitor diam magna tortor, platea hac enim elementum integer turpis sit velit augue, etiam. Vut cum enim, dolor proin, pulvinar. Ultrices proin vut nec tortor ridiculus tempor vel est nascetur enim mus.
+<section>امتیاز موضوع: اتصال دهنده برای استفاده در فضای باز
 
-	Adipiscing in nec. Tincidunt lectus sed augue? Sed! Mattis. Sit! Adipiscing, rhoncus tincidunt velit purus diam tincidunt, aenean sed non ut amet mauris! Montes sed in integer aenean porta, urna nascetur, tempor et scelerisque tincidunt, eu augue pid porttitor eros? Dignissim pid in ridiculus, lundium odio pellentesque, enim et velit, mid platea sit nisi hac, dis ridiculus duis placerat! Et porttitor adipiscing ac? Rhoncus, aenean integer urna cras placerat pulvinar, penatibus! Ac augue integer sed, proin augue placerat proin porta augue elementum odio ac nisi, proin et vel in turpis turpis? Vut turpis mus velit! In ultrices mauris? Ac! Adipiscing, eros integer porttitor, facilisis augue mid augue? Auctor duis, penatibus aliquet, dapibus sociis, dis enim phasellus, sit risus rhoncus.
+برای استفاده در فضای باز مطمئن شوید که به انبساط حرارتی پانل را به حساب. برای جلوگیری از پارازیت، قطر سوراخ در پانل باید برای گسترش استفاده می شود.
 
-	Amet scelerisque mus scelerisque, magna, in duis turpis, in, nunc placerat! Arcu augue scelerisque sagittis ultricies, tristique integer aliquam hac scelerisque, mus turpis? Tempor, amet turpis pulvinar, egestas in scelerisque parturient mattis augue dolor. Diam lacus dapibus scelerisque. Lorem! Nunc cursus, dapibus scelerisque. Penatibus et sit in! Ut ac, ac aliquet, pid dolor. Sagittis, aenean, cum odio ut hac, arcu vel hac risus. Duis ultricies amet lacus mauris tempor turpis adipiscing, turpis augue dictumst scelerisque montes. Aliquet urna velit, tortor nec ac ultricies? Cursus! Rhoncus, aliquet urna porta pulvinar! Urna lacus? Vel nec scelerisque lorem, tempor lundium. Etiam, tristique sociis enim placerat ut platea enim ac, auctor augue in aliquam purus mauris duis porta nec, dictumst integer habitasse et.
-</p>
+چفت و بست بدون پارازیت ممکن است با استفاده از پیچ فاسیا ساخته شده از فولاد ضد زنگ با واشر آب بندی (شکل 1) که برای ساخت و ساز تایید شده است.پیچ ها باید مناسب برای زیر سازی مربوطه (لطفا توجه داشته باشید که اطلاعات داده شده توسط سازنده).پیچ ها باید با آچار گشتاور تنگ تر و یا پیچ گوشتی به طوری که واشر آب بندی بر روی پنل برای درزگیری سوراخ با مته سوراخ را بدون اعمال فشار به پنل قرار داده شده است.
+
+مته های چند مرحله ای یا آستین داشتن قطر متناظر برای centrically حفاری سوراخ را به پانل و زیر سازی و برای centrically اتصالات پرچ استفاده می شود.
+
+مهم: اطمینان حاصل کنید که برای حذف فویل محافظ در منطقه screwing قبل از screwing.
+
+ 
+
+امتیاز موضوع: اتصال دهنده برای استفاده در محیط داخلی
+
+پیچ ها برای ورق فلز و چوب سر مختلف با اشکال مناسب برای استفاده در محیط داخلی (شکل 2). آنها برای گسترش هر پانل به طور معمول نمی اجازه می دهد. پیچ Countersunk را می توان با استفاده از روش معمول countersinking یا افسرده سطح آلومینیوم را به پانل قرار داده شده است. هنگامی که افسرده سطح آلومینیومی، قطر سوراخ در پنل باید بزرگتر از قطر پیچ است.
+<img src="images/screwing.jpg" />
 </section><!-- pich kardan-->
