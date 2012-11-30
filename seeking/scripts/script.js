@@ -528,9 +528,9 @@ var codeStationJq = {
 						'top': 0
 					});
 					setTimeout(function (){
-						$('section', prd.path).filter('#'+getname).fadeIn('normal')
+						$('section', prd.path).fadeOut('fast').filter('#'+getname).fadeIn('normal')
 						setscroll(prd.path, 385, $(prd.path).height(),prd.path + ' section');
-					},100);
+					},300);
 				});
 			}
 		}

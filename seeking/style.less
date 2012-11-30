@@ -920,6 +920,7 @@ section.container {
 					@hgh: 450px;
 					@hgt: 385px; //for scrollbar + veiw 
 					height: @hgh;
+					overflow: hidden;
 					> section {
 						text-align: right;
 						direction: rtl;
@@ -928,6 +929,9 @@ section.container {
 						color: #FDED90;
 						font-size: 16px;
 						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+						section {
+							display: none;
+						}
 					}
 					> section +  #scrollBar {
 						@wh: 10px;
