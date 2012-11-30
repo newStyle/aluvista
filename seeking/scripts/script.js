@@ -614,8 +614,14 @@ var codeStationJq = {
 						});
 						var nth = $(prcss.boxs).index(this);
 						$('.wheel + section').load('pages/process_content.php');
+						$('#veiw').css({
+							'height': '',
+							'min-height': $('#veiw').height() + 'px',
+							'overflow': ''
+						});
 						setTimeout(function () {
 							$('section', '#veiw ').eq(nth).fadeIn('normal');
+							setscroll('#veiw', 500, $('#veiw').height(),'#veiw  > section');
 						}, 100);
 					}
 				});

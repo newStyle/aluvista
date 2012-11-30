@@ -13,6 +13,10 @@
 			</div>
 			<div class="wheel"></div>
 			<section id='veiw'></section>
+			<div id="scrollBar">
+				<div id="button"></div>
+				<div id="ribbon"></div>
+			</div>
 		</section> 
 	</section>
 </section>

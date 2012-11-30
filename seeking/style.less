@@ -1045,15 +1045,44 @@ section.container {
 				> section#veiw {
 					display: none;
 					width: 500px;
-					height: 500px;
+					min-height: 500px;
 					background-color:  #ca0;
 					left: 280px;
-					top: 50px;
+					top: 23px;
 					position: absolute;
 					section {
 						display: none;
 					}
 				}
+				> section#veiw +  #scrollBar {
+					@hgt: 500px; //for scrollbar + veiw 
+					@wh: 10px;
+					display: none;
+					width: @wh;
+					height: @hgt;
+					position: absolute;
+					top: 23px;
+					right: 30px;
+					#ribbon {
+						height: @hgt;
+						width: 0;
+						border: 1px solid #DAA500;
+						margin: 0 auto;
+					}
+					#button {
+						width: @wh;
+						height: @hgt;
+						cursor: pointer;
+						margin: 0 auto;
+						background-color:  #FFC200;
+						position: absolute;
+						z-index: 2;
+						border-radius: 100px;
+					}
+					#button:active {
+						background-color:  #E29B0A;
+					}
+				} 
 				div.wheel {
 					background: url(images/wheel.gif);
 					width: 30px;
