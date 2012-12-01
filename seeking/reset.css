@@ -39,7 +39,7 @@ fieldset, img {
 }
 
 /* Clear borders/outline for links when you click */
-a:active, a:focus, input[type="image"] {
+a, a:active, a:focus, input[type="image"] {
  border: 0;
  outline: 0;
 }
