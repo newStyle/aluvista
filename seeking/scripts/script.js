@@ -187,9 +187,10 @@ var codeStationJq = {
 			'left': '0'
 		});
 		var efct_banner = function ($newpos) {
-			$(".view img").animate({'display':'none'},600,'linear',function(){
-				$(this).attr("src", imgsInBanner[image].pics[$newpos]).animate({'display':'block'},'slow');
-			})
+			$(".view img").hide(300,function () {
+				$(this).attr("src", imgsInBanner[image].pics[$newpos]).show(300);
+			});
+			return $newpos
 		}
 		$('section.container .top nav a').live('click', function (event) {
 			event.preventDefault();
@@ -198,16 +199,11 @@ var codeStationJq = {
 		});
 		(change_image = function () {
 			var autoPlayDelay = 3000;
-			efct_banner(++$dummy);
-			$("section.container .top nav a").removeClass("active").eq($dummy).addClass("active");
+			$("section.container .top nav a").removeClass("active").eq(efct_banner(++$dummy)).addClass("active");
 			$dummy = $dummy >= imgsInBanner[image].pics.length - 1 ? -1 : $dummy;
 			Int = setTimeout(change_image, autoPlayDelay);
 		})();
-		for (var j = 0; j < document.links.length; j++) {
-			document.links[j].onfocus = function () {
-				this.blur();
-			};
-		} /* gallery page !*/
+		 /* gallery page !*/
 		var acp = 0,
 			nOfImg = 24,
 			It = 0;

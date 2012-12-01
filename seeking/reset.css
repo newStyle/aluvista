@@ -39,9 +39,9 @@ fieldset, img {
 }
 
 /* Clear borders/outline for links when you click */
-a:active, a:href {
- border:0 none;
- outline:0 none;
+a:active, a:focus, input[type="image"] {
+ border: 0;
+ outline: 0;
 }
 }
  @media print {
