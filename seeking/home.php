@@ -112,8 +112,7 @@
 <footer>
 	<div class="top">
 		<div class="dirt container mla mra ">
-			<div class="right w1 rss"></div>
-			<div class="right w7">
+			<div class="left">
 				<nav>
 					<ul>
 						<li><a href="http://twitter.com">Twitter</a></li>
@@ -121,6 +120,7 @@
 					</ul>
 				</nav>
 			</div>
+			<div class="last mla mr18 w1 rss"></div>
 		</div>
 	</div>
 	<!-- End top-footer -->

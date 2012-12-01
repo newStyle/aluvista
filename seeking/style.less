@@ -1,5 +1,5 @@
 
-div, section {
+/*div, section {
 	outline: 1px dotted red;
 }
 li {
@@ -10,7 +10,7 @@ body.left, body.right {
 }
 body > .container, header, footer {
 	outline: 3px dashed magenta;
-}
+}*/
 
 body { 
 	background: url(images/bg.jpg) repeat fixed;
@@ -202,7 +202,10 @@ section.container {
 					color:#483c0c;
 					position: absolute;
 					top:135px;
-					right: 32px;
+					right: 26px;
+					font-size: 16px;
+					font-variant: bold;
+					text-shadow:2px 2px 10px black
 				}
 				h2{
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
@@ -252,6 +255,7 @@ section.container {
 						width: inherit;
 						height: 140px;
 						cursor: pointer;
+						box-shadow: 5px 5px 6px black;
 					}
 					.top:hover { 
 						outline: 3px solid #EAB410;
@@ -280,36 +284,16 @@ section.container {
 		}
 	}
 	.gallery { /*.down for gallery page */
-		min-height: 702px;
+		min-height: 620px;
 		> section {
-			background: url(images/gallery.png) no-repeat top center;
-			height: 700px;
+			background: url(images/bg_gallery.png) no-repeat top center;
+			min-height: 620px;
 			> .left {
 				height: 485px;
-				div.next{
-						width: 52px;
-						height: 52px;
-						background: url(images/nextg.png);
-						cursor: pointer;
-						margin: 15px 10px 0 0;
-					}
-					div.next:active{
-						background: url(images/nextg.png) 52px 52px;
-					}
-					div.prev{
-						width: 52px;
-						height: 52px;
-						background: url(images/backg.png);
-						cursor: pointer;
-						margin: 15px 0 0 0;
-					}
-					div.prev:active{
-						background: url(images/backg.png) 52px 52px;
-					}
 				> p {
 					font-size: 20px;
 					padding-bottom: 20px;
-					margin-top: 20px;
+					margin: 20px 30px 0 0;
 					color:  #FDED90;
 					text-align: center;
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
@@ -334,14 +318,19 @@ section.container {
 						}
 						img {
 							opacity: 0.7;
+							-webkit-transition: all 0.6s;
+							-moz-transition: all 0.6s;
+							-ms-transition: all 0.6s;
+							-o-transition: all 0.6s;
+							cursor: pointer;
 						}
 					}
 				}
 				> div.paging {
 					height: 42px;
-					margin: 20px 0 0 0;
+					margin-left:2px;
 					div.num{
-						width: 40px;
+						width: 35px;
 						height: 40px;
 						background: url(images/numbers.png) 40px 40px;
 						float: left;
@@ -356,27 +345,46 @@ section.container {
 						width: 42px;
 						height: 42px;
 						font:18px 'Bkoodak' bold;
-						padding: 5px 0px 0px 17px;
-					}
-					:hover {
-					}
-					:active {
+						padding: 5px 0px 0px 15px;
 					}
 				}
+				div.next{
+						width: 36px;
+						height: 36px;
+						background: url(images/nextg.png) 36px 36px;
+						cursor: pointer;
+						margin-right: 40px;
+						float: none;
+					}
+					div.next:active{
+						background: url(images/nextg.png) ;
+					}
+					div.prev{
+						width: 36px;
+						height: 36px;
+						background: url(images/backg.png) 36px 36px;
+						cursor: pointer;
+					}
+					div.prev:active{
+						background: url(images/backg.png) ;
+					}
 			}
 			> .right {
 				float: none;
-				margin-left: 312px;
-				margin-top: 52px;
+				margin-left: 295px;
+				margin-top: 32px;
 				width: 550px;
-				height: 610px;
-				outline: 1px dashed  #9B7617;
+				min-height: 565px;
 				text-align: center;
+				box-shadow:1px 2px 7px 1px black;
 				div#gbtn{
-					width: 200px;
-					min-height: 30px;
-					margin: 0 190px 0 0;
-					padding:10px 0 10px 0;
+					float: right;
+					width: 211px;
+					height: 50px;
+					margin: 10px 180px 0 0;
+					box-shadow:1px 1px 4px 1px black;
+					border-radius:20px; 
+					padding-top: 7px;
 					a{
 						display: block;
 						width: 40px;
@@ -386,12 +394,16 @@ section.container {
 						margin-left: 10px;
 					}
 				}
+				div.chld{
+					width: 200px;
+					min-height: 25px;
+					clear: both;
+				}
 				div.play{
 					width: 40px;
 					height: 40px;
 					background: url(images/media-buttons.png);
 					cursor: pointer;
-
 				}
 				div.play:active{
 					background: url(images/media-buttons.png) 320px 40px ;
@@ -428,16 +440,31 @@ section.container {
 				p.right {
 					width: 200px;
 					height: 30px;
-					outline: 1px dotted red;
 				}
 				.top {
-					height: 500px;
+					min-height: 45px;
 					margin-left: 20px;
-					outline: 1px dotted  #976700;
+					margin-top:80px; 
+					padding-bottom: 10px;
+					img{
+						box-shadow:1px 1px 4px 2px black;
+					}
 				}
 				.down {
-					height: 65px;
-					margin-left: 5px;
+					width:505px;
+					height: 100px;
+					margin-left:22px;
+					box-shadow:1px 1px 8px 1px black;
+					div.content{
+						margin-right: 7px;
+						p{
+						direction: rtl;
+						text-align: right;
+						color:  #A7B3A9;
+						padding: 7px;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+						}
+					}
 				}
 			}
 		}
@@ -675,7 +702,6 @@ section.container {
 					width: 280px;
 					display: block;
 					float: left;
-					border-radius: 3px;
 				}
 				.text:focus,
 				.text:hover {
@@ -697,6 +723,7 @@ section.container {
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					color:  #A7B3A9;
 					font-size: 14px;
+					cursor: pointer;
 				}
 				.btn:active {
 					box-shadow: 1px 1px 5px 2px black inset;
@@ -834,6 +861,7 @@ section.container {
 				box-shadow: 1px 1px 7px black;
 				font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 				font-size: 14px;
+				cursor: pointer;
 			}.agancy .agy_btn:active {
 				box-shadow: 1px 1px 5px 2px black inset;
 				color:  #eaeaea;
@@ -1200,9 +1228,9 @@ footer {
 			.rss {
 				background: url(images/rss_black.png) no-repeat center center;
 			}
-			.right {
+			.left {
+				width: 200px;
 				background:  #eab410;
-				float: left;
 				nav {
 					ul {
 						height: inherit;
