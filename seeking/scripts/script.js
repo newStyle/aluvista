@@ -205,7 +205,7 @@ var codeStationJq = {
 		})();
 		 /* gallery page !*/
 		var acp = 0,
-			nOfImg = 24,
+			nOfImg = 53,
 			It = 0;
 		var gal = {
 			nOfPage: '',
@@ -288,6 +288,7 @@ var codeStationJq = {
 						$(".paging a").live("click", function (e) {
 							e.preventDefault();
 							var ind = $(".paging a").index(this);
+							$(".paging a").removeClass("active").eq(ind).addClass('active');
 							gal.chg_pge(ind);
 							acp = Math.floor(ind) * 15;
 						});
@@ -502,7 +503,7 @@ var codeStationJq = {
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
 					var typ = $("#btn-color div input").eq($(this).index()).attr("name");
-					$("#btn-color div input").removeClass("active").eq($(this).index()).addClass('active');
+					$("#btn-color div input").eq($(this).index()).addClass('active');
 					var obj = new clr.closSlide();
 					obj.cls();
 					clr.setbox(typ);
