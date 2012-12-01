@@ -1,5 +1,4 @@
 
-/*
 div, section {
 	outline: 1px dotted red;
 }
@@ -12,7 +11,6 @@ body.left, body.right {
 body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
-*/
 
 body { 
 	background: url(images/bg.jpg) repeat fixed;
@@ -66,31 +64,60 @@ header {
 				.left {
 					height: inherit;
 					float: right;
-					nav {
-						ul {
-							list-style-type: none;
-							height: inherit;
-							float: right;
-							li {
-								float: left;
-								height: inherit;
-								a {
-									text-decoration: none;
-									display: block;
-									padding: 10px 15px;
-									font-size: 14px;
-									color: white;
-									font-weight: bold;
-									font-family: tahoma;
-								}
-								a:hover {
-									color:  #EAB410;
-								}
-							}
-						}
+					#searchBox {
+						padding: 3px 53px 3px 4px;
+						float: right;
+						-moz-border-radius: 5px;
+						border-radius: 5px;
+						background-color: rgba(0,0,0,0.2);
+						position: relative;
+						-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+						-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+						box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+					}
+					#searchBox input.search {
+						border: 1px solid #eab410;
+						-moz-border-radius: 15px;
+						border-radius: 15px;
+						height: 23px;
+						width: 200px;
+						color: #999;
+						font-weight: normal;
+						font-size: 14px;
+						margin-top: 10px;
+						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+						direction: rtl;
+						padding: 0 15px 0 0;
+					}	
+					#searchBox input.search:focus {
+						border: 1px solid #eab410;
+					}
+					#searchBox input.submit {
+						display: block;
+						border: none;
+						width: 43px;
+						height: 39px;
+						line-height: 14px;
+						background: url(images/zoom.png) no-repeat;	
+						text-shadow: 0 1px 1px rgba(0,0,0,.3);
+						-webkit-border-radius: 5px;
+						-moz-border-radius: 5px;
+						border-radius: 5px;
+						position: absolute;
+						right: 1px;
+						top: 12px;
+						cursor: pointer;
+					}
+					#searchBox input.submit:hover {
+						background: url(images/zoomon.png) no-repeat;
+					}
+					#searchBox input.submit:focus,
+					#searchBox input.submit:active {
+						background: url(images/zoompush.png) no-repeat;
 					}
 				}
 				.right {
+					width: 25px;
 					height: 25px;
 					margin-top: 10px;
 					float: none;

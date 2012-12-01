@@ -23,16 +23,16 @@
 <header>
 <section class="mla mra">
 <div class="w14 right">
-	<div class="w14 pt1 top">
+	<div class="w15 pt1 top">
 		<div class="left w12 mr2">
-			<nav>
-				<ul>
-					<li><a href="#">Chat</a></li>
-					<li><a href="#">Call</a></li>
-				</ul>
-			</nav>
+			<div id="searchBox">
+				<form action="" method="get">
+		        	<input type="search" class="search" placeholder="بـــــــــــــــــــــگرد">
+		            <input type="submit" class="submit" value="">
+		       	</form> 
+		    </div>
 		</div>
-		<div class="right ml12"></div>
+		<div class="right ml13"></div>
 	</div>
 	<div class="w14 mt2 down">
 		<nav>
