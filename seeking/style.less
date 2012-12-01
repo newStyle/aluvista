@@ -1,5 +1,6 @@
 
-/*div, section {
+/*
+div, section {
 	outline: 1px dotted red;
 }
 li {
@@ -10,7 +11,8 @@ body.left, body.right {
 }
 body > .container, header, footer {
 	outline: 3px dashed magenta;
-}*/
+}
+*/
 
 body { 
 	background: url(images/bg.jpg) repeat fixed;
@@ -190,23 +192,27 @@ section.container {
 				width: 220px;
 				margin-right: 20px;
 				height: inherit;
+				a {
+						text-decoration: none;
+						color: #483c0c;
+						margin-top: 10px;
+						float: right;
+						text-align: right;
+					}
 				.top {
 					width: inherit;
 					height: 165px;
+				}
+				div.linee{
+					width: 233px;
+					height: 14px;
+					background: url(images/lines.png);
 				}
 				.down {
 					width: inherit;
 					height: 150px;
 				}
-				p#line{
-					color:#483c0c;
-					position: absolute;
-					top:135px;
-					right: 26px;
-					font-size: 16px;
-					font-variant: bold;
-					text-shadow:2px 2px 10px black
-				}
+				
 				h2{
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					text-align: center;
@@ -221,10 +227,6 @@ section.container {
 					text-align: right;
 					color: #1c1b17;
 					margin-right: 10px;
-					a {
-						text-decoration: none;
-						color: #483c0c;
-					}
 				}
 			}
 			.middle {/*slider in banner page */
@@ -460,7 +462,7 @@ section.container {
 						direction: rtl;
 						text-align: right;
 						color:  #A7B3A9;
-						padding: 7px;
+						padding: 4px;
 						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 						}
 					}
