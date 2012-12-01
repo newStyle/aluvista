@@ -33,7 +33,7 @@ html, body {
 .w1  {width: 30px;}		.w2  {width: 70px; }	.w3  {width: 110px;}	.w4  {width: 150px;}	.w5  {width: 190px;}	.w6  {width: 230px;}	.w3-1  {width: 130px;}
 .w7  {width: 270px;}	.w8  {width: 310px;}	.w9  {width: 350px;}	.w10 {width: 390px;}	.w11 {width: 430px;}	.w12 {width: 470px;}	.w12-1 {width: 520px;}
 .w13 {width: 510px;}	.w14 {width: 550px;}	.w15 {width: 590px;}	.w16 {width: 630px;}	.w17 {width: 670px;}	.w18 {width: 710px;}	.w16-1 {width: 650px;}
-.w19 {width: 750px;}	.w20 {width: 790px;}	.w21 {width: 830px;}	.w22 {width: 870px;}	.w23 {width: 910px;}	.w24 {width: 950px;}
+.w19 {width: 750px;}	.w20 {width: 790px;}	.w21 {width: 830px;}	.w22 {width: 870px;}	.w23 {width: 910px;}	.w24 {width: 950px;}	.w2-1  {min-width: 100px; }
 
 .f1  { font-size: 0.625em;	/* 10px */}
 .f2  { font-size: 0.75em;	/* 12px */}

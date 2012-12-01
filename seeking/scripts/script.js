@@ -245,7 +245,7 @@ var codeStationJq = {
 				this.nOfPage = nOfImg / 15;
 				this.str.tmp = '';
 				for (i = 0; i <= this.nOfPage; i++)
-					this.str.tmp += " <a href='#page-" + i + "'>" + (i + 1) + "</a>";
+					this.str.tmp += "<div class='num'><a href='#page-" + i + "'>" + (i + 1) + "</a></div>";
 				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
 			},
@@ -276,14 +276,14 @@ var codeStationJq = {
 				}
 			},
 			ply_pus: function () {
-				$(".gallery p span a").click(function (e) {
+				$(".gallery div#gbtn div a").click(function (e) {
 					e.preventDefault();
 					console.log(typeof It, It);
-					$(".gallery p span a").index(this) == 0 ? (It = (It === 0) ? setInterval(function () {
+					$(".gallery div#gbtn div a").index(this) == 0 ? (It = (It === 0) ? setInterval(function () {
 						gal.chg_img(acp++);
 						acp = acp > nOfImg ? 0 : acp;
 						gal.chg_pge(acp / 16);
-					}, 1500) : It) : (clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D"));
+					}, 4500) : It) : (clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D =>> Beban nishete :@"));
 				});
 			},
 			mouseEvent: {
