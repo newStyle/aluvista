@@ -278,8 +278,8 @@ var codeStationJq = {
 						gal.chg_img(++acp);
 						acp = acp >= nOfImg ? 0 : acp;
 						console.log (acp);
-						gal.chg_pge(acp / 16);
-					}, 4500) : It);
+						gal.chg_pge(acp / 15);
+					}, 3500) : It);
 				});
 				$(".gallery div#gbtn .puase a").click(function (e) {
 					e.preventDefault();
@@ -294,7 +294,7 @@ var codeStationJq = {
 							var ind = $(".paging a").index(this);
 							$(".paging a").removeClass("active").eq(ind).addClass('active');
 							gal.chg_pge(ind);
-							acp = Math.floor(ind) * 15;
+							acp = ind  * 15;
 						});
 					}
 				},
