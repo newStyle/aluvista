@@ -277,8 +277,9 @@ var codeStationJq = {
 					(It = (It === 0) ? setInterval(function () {
 						gal.chg_img(++acp);
 						acp = acp >= nOfImg ? 0 : acp;
-						console.log (acp);
-						gal.chg_pge(acp / 15);
+						var ind = acp / 15;
+						$(".paging a").removeClass("active").eq(ind).addClass('active');
+						gal.chg_pge(ind);
 					}, 3500) : It);
 				});
 				$(".gallery div#gbtn .puase a").click(function (e) {
