@@ -246,8 +246,8 @@ var codeStationJq = {
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
-				$("section.container .gallery > section .right .top").animate({},300,null,function(){
-					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({},300,null);
+				$("section.container .gallery > section .right .top").animate({},30,null,function(){
+					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({},30,null);
 				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
@@ -272,14 +272,18 @@ var codeStationJq = {
 				}
 			},
 			ply_pus: function () {
-				$(".gallery div#gbtn div a").click(function (e) {
+				$(".gallery div#gbtn .play a").click(function (e) {
 					e.preventDefault();
-					console.log(typeof It, It);
-					$(".gallery div#gbtn div a").index(this) == 0 ? (It = (It === 0) ? setInterval(function () {
-						gal.chg_img(acp++);
-						acp = acp > nOfImg ? 0 : acp;
+					(It = (It === 0) ? setInterval(function () {
+						gal.chg_img(++acp);
+						acp = acp >= nOfImg ? 0 : acp;
+						console.log (acp);
 						gal.chg_pge(acp / 16);
-					}, 4500) : It) : (clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D =>> Beban nishete :@"));
+					}, 4500) : It);
+				});
+				$(".gallery div#gbtn .puase a").click(function (e) {
+					e.preventDefault();
+					clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D =>> Beban nishete :@");
 				});
 			},
 			mouseEvent: {
@@ -297,8 +301,7 @@ var codeStationJq = {
 				pics: {
 					clicked: function () {
 						$(gal.path + " img").live("click", function () {
-							acp = $(gal.path + " img").index(this);
-							gal.chg_img(acp);
+							gal.chg_img(acp = $(gal.path + " img").index(this));
 						});
 					},
 					mouseEnter: function () {
