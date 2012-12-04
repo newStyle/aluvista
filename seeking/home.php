@@ -24,12 +24,23 @@
 <section class="mla mra">
 <div class="w14 right">
 	<div class="w15 pt1 top">
-		<div class="left w12 mr2">
+		<div class="left w12 ">
 			<div id="searchBox">
-				<form action="" method="get">
-		        	<input type="search" class="search" placeholder="بـــــــــــــــــــــگرد">
-		            <input type="submit" class="submit" value="">
-		       	</form> 
+				<form method="get" name="searchform" action="http://www.google.com/search" target="_blank" >
+					<input type="hidden" name="sitesearch" value="www.aluvista.com" />
+		        	<input type="search" id="schh" class="search" placeholder="بـــــــــــــــــــــگرد" />
+		            <input type="submit" id="smt" class="submit" value="" />
+		            <script type="text/javascript">
+		            	var smt = $("input#smt");
+		            	var schh = $("input#schh");
+		            	smt.mouseover(function(){
+		            		schh.css({
+		            			'opacity':'1',
+		            			'width':'180px',
+		            		});
+		            	});
+		            </script>
+		       	</form>
 		    </div>
 		</div>
 		<div class="right ml13"></div>

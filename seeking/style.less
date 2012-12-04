@@ -64,33 +64,31 @@ header {
 				.left {
 					height: inherit;
 					float: right;
+					margin-right: 60px;
 					#searchBox {
-						padding: 3px 53px 3px 4px;
+						padding: 3px 13px 3px 4px;
 						float: right;
-						-moz-border-radius: 5px;
-						border-radius: 5px;
-						background-color: rgba(0,0,0,0.2);
 						position: relative;
-						-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-						-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-						box-shadow: 0 1px 2px rgba(0,0,0,.2); 
 					}
 					#searchBox input.search {
+						float: right;
 						border: 1px solid #eab410;
 						-moz-border-radius: 15px;
 						border-radius: 15px;
-						height: 23px;
-						width: 200px;
+						opacity: 0;
+						height: 25px;
+						width: 0px;
 						color: #999;
 						font-weight: normal;
 						font-size: 14px;
-						margin-top: 10px;
+						margin-top: 8px;
 						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 						direction: rtl;
-						padding: 0 15px 0 0;
-					}	
-					#searchBox input.search:focus {
-						border: 1px solid #eab410;
+						padding: 0 35px 0 0;
+						transition:width 0.6s;
+						-moz-transition:width 2s; /* Firefox 4 */
+						-webkit-transition:width 0.6s; /* Safari and Chrome */
+						-o-transition:width 2s; /* Opera */
 					}
 					#searchBox input.submit {
 						display: block;
