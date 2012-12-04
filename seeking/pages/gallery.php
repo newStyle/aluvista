@@ -1,11 +1,11 @@
 <section class="mt10 mb11 down gallery">
 	<section class="w22 mt8 mla mra pt1">
-		<section class="w7 mt12 ml1 left">
+		<section class="w6 mt12 ml1 left">
 			<p>مجموعه پروژه های مسکونی</p>
 			<section></section><!-- small pic -->
 			<div class="left mt8 prev"><a href="#"></a></div>
 			<div class="left w2-1 mt8  paging"></div>
-			<div class="last mt8 mla next"><a href="#"></a></div>
+			<div class="right last mt8 mla next"><a href="#"></a></div>
 		</section>
 		<section class="right pt1">
 			<div id="gbtn">
