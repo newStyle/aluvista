@@ -274,6 +274,7 @@ var codeStationJq = {
 					(It = (It === 0) ? setInterval(function () {
 						gal.chg_img(++acp);
 						acp = acp >= nOfImg ? 0 : acp;
+						acp == 0 && clearInterval(It) && alert('slide done !! ');
 						var ind = acp / 15;
 						$(".paging a").removeClass("active").eq(ind).addClass('active');
 						gal.chg_pge(ind);
