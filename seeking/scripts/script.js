@@ -233,7 +233,7 @@ var codeStationJq = {
 				this.mouseEvent.pics.clicked();
 			},
 			setImg: function () {
-				for (i = 0; i <= $(this.path + " div").length; i++)
+				for (var i = 0; i <= $(this.path + " div").length; i++)
 					$(this.path + " div").eq(i).html("<img src='images/gallery/75/" + (i + 1) + ".jpg' width='70' height='70'>");
 				this.chg_img(0);
 			},
@@ -285,17 +285,17 @@ var codeStationJq = {
 				});
 				$(".gallery div#gbtn .next a").click(function (e) {
 					e.preventDefault();
-					acp = acp >= nOfImg ? 0 : acp + 1;
-					gal.chg_img(acp);
+					acp = acp >= nOfImg-1 ? 0 : acp + 1;
 					var ind = Math.floor(acp / 15);
-					if (acp == ind * 15) {
+					if (acp >= ind * 15) {
 						gal.chg_pge(ind);
 						$(".paging a").removeClass("active").eq(ind).addClass('active');
 					}
+					gal.chg_img(acp);
 				});
 				$(".gallery div#gbtn .prev a").click(function (e) {
 					e.preventDefault();
-					acp = acp <= 0 ? nOfImg : acp-1;
+					acp = acp <= 0 ? nOfImg-1 : acp-1;
 					var ind = Math.floor(acp / 15);
 					console.log(acp , ind * 15);
 					if (acp < ((ind+1) * 15) || nOfImg === acp) {
