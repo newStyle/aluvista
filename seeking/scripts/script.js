@@ -283,6 +283,27 @@ var codeStationJq = {
 					e.preventDefault();
 					clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D =>> Beban nishete :@");
 				});
+				$(".gallery div#gbtn .next a").click(function (e) {
+					e.preventDefault();
+					acp = acp >= nOfImg ? 0 : acp + 1;
+					gal.chg_img(acp);
+					var ind = Math.floor(acp / 15);
+					if (acp == ind * 15) {
+						gal.chg_pge(ind);
+						$(".paging a").removeClass("active").eq(ind).addClass('active');
+					}
+				});
+				$(".gallery div#gbtn .prev a").click(function (e) {
+					e.preventDefault();
+					acp = acp <= 0 ? nOfImg : acp-1;
+					var ind = Math.floor(acp / 15);
+					console.log(acp , ind * 15);
+					if (acp < ((ind+1) * 15) || nOfImg === acp) {
+						gal.chg_pge(ind);
+						$(".paging a").removeClass("active").eq(ind).addClass('active');
+					}
+					gal.chg_img(acp);
+				});
 			},
 			mouseEvent: {
 				page: {
