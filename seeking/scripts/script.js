@@ -187,8 +187,8 @@ var codeStationJq = {
 			'left': '0'
 		});
 		var efct_banner = function ($newpos) {
-			$(".view img").hide(300,function () {
-				$(this).attr("src", imgsInBanner[image].pics[$newpos]).show(300);
+			$(".view img").animate({'opacity':'0'},300,'linear',function () {
+				$(this).hide().attr("src", imgsInBanner[image].pics[$newpos]).show().animate({'opacity':'1'},300);
 			});
 			return $newpos
 		}
