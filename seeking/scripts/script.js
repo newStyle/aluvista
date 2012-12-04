@@ -61,7 +61,7 @@ var codeStationJq = {
 					gal.setBox();
 					gal.setImg();
 					gal.setPage();
-					gal.ply_pus();
+					gal.ctr_btn();
 					prcss.pickImg();
 					clearInterval(It);
 					acp = 0;
@@ -205,7 +205,7 @@ var codeStationJq = {
 		})();
 		 /* gallery page !*/
 		var acp = 0,
-			nOfImg = 56,
+			nOfImg = 53,
 			It = 0;
 		var gal = {
 			nOfPage: '',
@@ -258,20 +258,17 @@ var codeStationJq = {
 					"outline": "3px solid #F0B00F"
 				});
 			},
-			autoChangePages: function (j, ind) {
-				if (j === ind) {
-					$(this.path + " > section").css("display", "none");
-					for (i = j * 5; i < (j + 1) * 5; i++)
-						$(this.path + " > section").eq(i).css("display", "block");
-					this.chg_img(j * 15);
-				}
-			},
 			chg_pge: function (ind) {
-				for (i = 0; i < this.nOfPage; i++) {
-					this.autoChangePages(i, ind);
+				for (var p = 0; p < this.nOfPage; p++) {
+					if (p === ind) {
+						$(this.path + " > section").css("display", "none");
+						for (i = ind * 5; i < (ind + 1) * 5; i++)
+							$(this.path + " > section").eq(i).css("display", "block");
+						this.chg_img(ind * 15);
+					}
 				}
 			},
-			ply_pus: function () {
+			ctr_btn: function () { /* control button !!! */
 				$(".gallery div#gbtn .play a").click(function (e) {
 					e.preventDefault();
 					(It = (It === 0) ? setInterval(function () {
@@ -307,7 +304,7 @@ var codeStationJq = {
 							gal.chg_pge(ind);
 							$(".paging a").removeClass("active").eq(ind).addClass('active');
 						});
-						$('.prev').die('click').live("click", function (e) {
+						$('.left .prev').die('click').live("click", function (e) {
 							e.preventDefault();
 							if (acp-15 >= 0)
 								acp = acp <= 0 ? nOfImg : acp-15;
