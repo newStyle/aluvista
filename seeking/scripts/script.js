@@ -240,7 +240,7 @@ var codeStationJq = {
 			setPage: function () {
 				this.nOfPage = nOfImg / 15;
 				this.str.tmp = '';
-				for (i = 0; i <= this.nOfPage; i++)
+				for (i = 0; i < this.nOfPage; i++)
 					this.str.tmp += "<div class='num'><a href='#page-" + i + "'>" + (i + 1) + "</a></div>";
 				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
