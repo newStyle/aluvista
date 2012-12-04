@@ -205,7 +205,7 @@ var codeStationJq = {
 		})();
 		 /* gallery page !*/
 		var acp = 0,
-			nOfImg = 53,
+			nOfImg = 56,
 			It = 0;
 		var gal = {
 			nOfPage: '',
@@ -296,6 +296,26 @@ var codeStationJq = {
 							$(".paging a").removeClass("active").eq(ind).addClass('active');
 							gal.chg_pge(ind);
 							acp = ind  * 15;
+						});
+						$(".paging ~ .next").die('click').live("click", function (e) {
+							e.preventDefault();
+							if (nOfImg-acp >= 15)
+								acp = acp >= nOfImg ? 0 : acp+15;
+							else
+								acp = 0;
+							var ind = Math.floor(acp/15);
+							gal.chg_pge(ind);
+							$(".paging a").removeClass("active").eq(ind).addClass('active');
+						});
+						$('.prev').die('click').live("click", function (e) {
+							e.preventDefault();
+							if (acp-15 >= 0)
+								acp = acp <= 0 ? nOfImg : acp-15;
+							else
+								acp = nOfImg;
+							var ind = Math.floor(acp/15);
+							gal.chg_pge(ind);
+							$(".paging a").removeClass("active").eq(ind).addClass('active');
 						});
 					}
 				},
