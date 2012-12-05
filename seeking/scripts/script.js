@@ -61,7 +61,7 @@ var codeStationJq = {
 					gal.setBox();
 					gal.setImg();
 					gal.setPage();
-					gal.ply_pus();
+					gal.ctr_btn();
 					prcss.pickImg();
 					clearInterval(It);
 					acp = 0;
@@ -250,14 +250,14 @@ var codeStationJq = {
 				this.mouseEvent.pics.clicked();
 			},
 			setImg: function () {
-				for (i = 0; i <= $(this.path + " div").length; i++)
+				for (var i = 0; i <= $(this.path + " div").length; i++)
 					$(this.path + " div").eq(i).html("<img src='images/gallery/75/" + (i + 1) + ".jpg' width='70' height='70'>");
 				this.chg_img(0);
 			},
 			setPage: function () {
 				this.nOfPage = nOfImg / 15;
 				this.str.tmp = '';
-				for (i = 0; i <= this.nOfPage; i++)
+				for (i = 0; i < this.nOfPage; i++)
 					this.str.tmp += "<div class='num'><a href='#page-" + i + "'>" + (i + 1) + "</a></div>";
 				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
@@ -275,25 +275,26 @@ var codeStationJq = {
 					"outline": "3px solid #F0B00F"
 				});
 			},
-			autoChangePages: function (j, ind) {
-				if (j === ind) {
-					$(this.path + " > section").css("display", "none");
-					for (i = j * 5; i < (j + 1) * 5; i++)
-						$(this.path + " > section").eq(i).css("display", "block");
-					this.chg_img(j * 15);
-				}
-			},
 			chg_pge: function (ind) {
-				for (i = 0; i < this.nOfPage; i++) {
-					this.autoChangePages(i, ind);
+				for (var p = 0; p < this.nOfPage; p++) {
+					if (p === ind) {
+						$(this.path + " > section").css("display", "none");
+						for (i = ind * 5; i < (ind + 1) * 5; i++)
+							$(this.path + " > section").eq(i).css("display", "block");
+						this.chg_img(ind * 15);
+					}
 				}
 			},
-			ply_pus: function () {
+			ctr_btn: function () { /* control button !!! */
 				$(".gallery div#gbtn .play a").click(function (e) {
 					e.preventDefault();
 					(It = (It === 0) ? setInterval(function () {
 						gal.chg_img(++acp);
 						acp = acp >= nOfImg ? 0 : acp;
+						if (!acp){
+							clearInterval(It);
+							It = 0;
+						}
 						var ind = acp / 15;
 						$(".paging a").removeClass("active").eq(ind).addClass('active');
 						gal.chg_pge(ind);
@@ -302,6 +303,27 @@ var codeStationJq = {
 				$(".gallery div#gbtn .puase a").click(function (e) {
 					e.preventDefault();
 					clearInterval(It) == undefined ? It = 0 : alert("ha ha :D :D =>> Beban nishete :@");
+				});
+				$(".gallery div#gbtn .next a").click(function (e) {
+					e.preventDefault();
+					acp = acp >= nOfImg-1 ? 0 : acp + 1;
+					var ind = Math.floor(acp / 15);
+					if (acp >= ind * 15) {
+						gal.chg_pge(ind);
+						$(".paging a").removeClass("active").eq(ind).addClass('active');
+					}
+					gal.chg_img(acp);
+				});
+				$(".gallery div#gbtn .prev a").click(function (e) {
+					e.preventDefault();
+					acp = acp <= 0 ? nOfImg-1 : acp-1;
+					var ind = Math.floor(acp / 15);
+					console.log(acp , ind * 15);
+					if (acp < ((ind+1) * 15) || nOfImg === acp) {
+						gal.chg_pge(ind);
+						$(".paging a").removeClass("active").eq(ind).addClass('active');
+					}
+					gal.chg_img(acp);
 				});
 			},
 			mouseEvent: {
@@ -313,6 +335,26 @@ var codeStationJq = {
 							$(".paging a").removeClass("active").eq(ind).addClass('active');
 							gal.chg_pge(ind);
 							acp = ind  * 15;
+						});
+						$(".paging ~ .next").die('click').live("click", function (e) {
+							e.preventDefault();
+							if (nOfImg-acp >= 15)
+								acp = acp >= nOfImg ? 0 : acp+15;
+							else
+								acp = 0;
+							var ind = Math.floor(acp/15);
+							gal.chg_pge(ind);
+							$(".paging a").removeClass("active").eq(ind).addClass('active');
+						});
+						$('.left .prev').die('click').live("click", function (e) {
+							e.preventDefault();
+							if (acp-15 >= 0)
+								acp = acp <= 0 ? nOfImg : acp-15;
+							else
+								acp = nOfImg;
+							var ind = Math.floor(acp/15);
+							gal.chg_pge(ind);
+							$(".paging a").removeClass("active").eq(ind).addClass('active');
 						});
 					}
 				},
@@ -588,7 +630,7 @@ var codeStationJq = {
 				});
 			},
 			sendmail: function () {
-				$("form#agancy-form").live('submit', function (event) {
+				$("form").live('submit', function (event) {
 					event.preventDefault();
 					var dataString = 'name=' + $("form #name").val() + '&mail=' + $("form #mail").val() + '&phone=' + $("form #tel").val() + '&subject=' + $("form #subject").val() + '&txt=' + $("form #txt").val();
 					$.ajax({
@@ -687,8 +729,7 @@ var codeStationJq = {
 				})();
 			}
 		};
-	}	
+	}
 };
 
 $(document).ready(codeStationJq.ready);
-
