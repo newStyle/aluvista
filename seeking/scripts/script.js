@@ -638,7 +638,7 @@ var codeStationJq = {
 				});
 			},
 			sendmail: function () {
-				$("form").live('submit', function (event) {
+				$("form#agancy-form").live('submit', function (event) {
 					event.preventDefault();
 					var dataString = 'name=' + $("form #name").val() + '&mail=' + $("form #mail").val() + '&phone=' + $("form #tel").val() + '&subject=' + $("form #subject").val() + '&txt=' + $("form #txt").val();
 					$.ajax({
