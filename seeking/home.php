@@ -28,8 +28,8 @@
 			<div id="searchBox">
 				<form method="get" name="searchform" action="http://www.google.com/search" target="_blank" >
 					<input type="hidden" name="sitesearch" value="www.aluvista.com" />
-		        	<input type="search" id="schh" class="search" placeholder="بـــــــــــــــــــــگرد" />
-		            <input type="submit" id="smt" class="submit" value="" />
+		        	<input type="search" id="schh"  name="q" class="search" placeholder="بـــــــــــــــــــــگرد" />
+		            <input type="submit" id="smt"  name="q" class="submit" value="" />
 		       	</form>
 		    </div>
 		</div>
