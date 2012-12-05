@@ -155,10 +155,19 @@ header {
 			}
 		} 
 		> .left {
-			height: 120px;
-			margin-top: 30px;
-			background: url(images/logo.png) no-repeat center center;
-		}
+			}a#logo{
+				height: 120px;
+				margin-top: 30px;
+				background: url(images/logo.png) no-repeat center center;
+				cursor: pointer;
+				opacity: .8;
+				transition:opacity 0.6s;
+				-moz-transition:opacity 0.6s; /* Firefox 4 */
+				-webkit-transition:opacity 0.6s; /* Safari and Chrome */
+				-o-transition:opacity 0.6s; /* Opera */
+			}a#logo:hover{
+				opacity: 1;
+			}
 	}
 }
 section.container {

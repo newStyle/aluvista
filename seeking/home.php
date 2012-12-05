@@ -48,7 +48,7 @@
 		</nav>
 	</div>
 </div>
-<div class="w4 ml1 left"></div>
+<a id="logo" class="w4 ml1 left" href="pages/index.php"></a>
 </section>
 </header>
 <!-- End header -->
