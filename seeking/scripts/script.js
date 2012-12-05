@@ -117,7 +117,24 @@ var codeStationJq = {
 				default:
 					break;
 			}
-		} /*Slider basic work ;)*/
+		} //animation in search box
+    	var smt = $("input#smt");
+    	var schh = $("input#schh");
+    	smt.mouseover(function(){
+    		schh.css({
+    			'opacity':'1',
+    			'width':'180px',
+    		});
+    	});
+    	schh.blur(function(){
+    		schh.css({'width':'0px','opacity':'0',});
+    	});
+    	schh.click(function(){
+    		if (this.value == this.defaultValue){
+					this.value = ' ';
+				}
+    	});
+    	/*Slider basic work ;)*/
 		var image = "home",
 			imgsInBanner = {
 				"home": { /* for home page ! */

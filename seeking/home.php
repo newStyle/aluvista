@@ -30,16 +30,6 @@
 					<input type="hidden" name="sitesearch" value="www.aluvista.com" />
 		        	<input type="search" id="schh" class="search" placeholder="بـــــــــــــــــــــگرد" />
 		            <input type="submit" id="smt" class="submit" value="" />
-		            <script type="text/javascript">
-		            	var smt = $("input#smt");
-		            	var schh = $("input#schh");
-		            	smt.mouseover(function(){
-		            		schh.css({
-		            			'opacity':'1',
-		            			'width':'180px',
-		            		});
-		            	});
-		            </script>
 		       	</form>
 		    </div>
 		</div>
