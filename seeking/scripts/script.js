@@ -82,8 +82,15 @@ var codeStationJq = {
 						menus.MouseLeave(menus.Links[i], $(menus.Links[i]).index(this));// mouse leave on links 
 					else if (e.type === 'mouseenter')
 						menus.MouseEnter(menus.Links[i], $(menus.Links[i]).index(this));// mouse enter on links 
-					else
+					else{
 						menus.active(menus.Links[i], $(menus.Links[i]).index(this));// active links in page 
+						if (i==1){
+							$('.li-gallery').die('click').live('click', function(){
+								console.log($('.li-gallery').index(this));
+							});
+
+						}
+					}
 				});
 			})(i);
 		}
@@ -566,7 +573,7 @@ var codeStationJq = {
 			actbtn: function () {
 				$("#btn-color div").live('click', function () {
 					var typ = $("#btn-color div input").eq($(this).index()).attr("name");
-					$("#btn-color div input").eq($(this).index()).addClass('active');
+					$("#btn-color div input").removeClass('active').eq($(this).index()).addClass('active');
 					var obj = new clr.closSlide();
 					obj.cls();
 					clr.setbox(typ);
