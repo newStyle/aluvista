@@ -125,21 +125,40 @@ var codeStationJq = {
 					break;
 			}
 		} //animation in search box
-    	var smt = $("input#smt");
-    	var schh = $("input#schh");
-    	smt.mouseover(function(){
+    	var smt = $("input#smt"), schh = $("input#schh");
+
+    	$('#searchBox').mouseover(function(){
     		schh.css({
     			'opacity':'1',
     			'width':'180px',
     		});
     	});
-    	schh.blur(function(){
-    		schh.css({'width':'0px','opacity':'0',});
+    	$('#searchBox').mouseleave(function(){
+    		schh.animate({'width':'0px',},700,'linear',function(){
+    			schh.css({
+					'opacity':'0'
+				});	
+    		});
     	});
-    	schh.click(function(){
+    	$('#searchBox').click(function(){
     		if (this.value == this.defaultValue){
-					this.value = ' ';
+					this.value = '';
 				}
+    	});
+    	schh.keyup(function() {
+			var dataString = schh.val();
+			$.ajax({
+				type: "GET",
+				url: "./pages/find.php",
+				data: 'srch=' + dataString,
+				success: function (data) {
+					$('aside').html(data);
+				}
+			});
+    	});
+    	$('#srchPanel a').live('click',function(e) {
+			e.preventDefault();
+    		console.log($('#srchPanel a').eq($('#srchPanel a').index(this)).attr('href'));
     	});
     	/*Slider basic work ;)*/
 		var image = "home",

@@ -26,11 +26,8 @@
 	<div class="w15 pt1 top">
 		<div class="left w12 ">
 			<div id="searchBox">
-				<form method="get" name="searchform" action="http://www.google.com/search" target="_blank" >
-					<input type="hidden" name="sitesearch" value="www.aluvista.com" />
-		        	<input type="search" id="schh"  name="q" class="search" placeholder="بـــــــــــــــــــــگرد" />
-		            <input type="submit" id="smt"  name="q" class="submit" value="" />
-		       	</form>
+				<input type="search" id="schh"  name="search" class="search" placeholder="بـــــــــــــــــــــگرد" />
+				<input type="submit" id="smt"  name="submit" class="submit" value=''/>
 		    </div>
 		</div>
 		<div class="right ml13"></div>
@@ -51,6 +48,7 @@
 <a id="logo" class="w4 ml1 left" href="pages/index.php"></a>
 </section>
 </header>
+<aside id='srchPanel'></aside>
 <!-- End header -->
 <section class="container mla mra mt9">
 	<section class="slider top">
