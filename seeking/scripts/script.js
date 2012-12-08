@@ -156,6 +156,10 @@ var codeStationJq = {
 				}
 			});
     	});
+    	$('#srchPanel a').live('click',function(e) {
+			e.preventDefault();
+    		console.log($('#srchPanel a').eq($('#srchPanel a').index(this)).attr('href'));
+    	});
     	/*Slider basic work ;)*/
 		var image = "home",
 			imgsInBanner = {
