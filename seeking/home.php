@@ -141,7 +141,7 @@
 <!-- End footer -->
 <div class="loading">
 	<div class="load">
-		<p>لطفا منتظر باشید</p>
+		<p>لطفا منتظر بمانید</p>
 		<img src="images/loading.gif" alt="">
 	</div>
 </div>
