@@ -53,7 +53,6 @@ var codeStationJq = {
 				}
 			}
 		};
-
 		/* ajax load*/
 		for (var i = 0; i < menus.HFLinks.length; i++) {
 			$(menus.HFLinks[i]).click(function (e) {
@@ -67,7 +66,6 @@ var codeStationJq = {
 					acp = 0;
 					clearTimeout(prcss.Int);
 					prcss.rotat(0);
-
 				}, 500);
 				e.preventDefault();
 				var url;
@@ -755,6 +753,17 @@ var codeStationJq = {
 				})();
 			}
 		};
+		$(window).load(function () {
+			gal.setBox();
+			gal.setImg();
+			gal.setPage();
+			gal.ctr_btn();
+			prcss.pickImg();
+			clearInterval(It);
+			acp = 0;
+			clearTimeout(prcss.Int);
+			prcss.rotat(0);
+		});
 	}
 };
 

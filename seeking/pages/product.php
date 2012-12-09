@@ -11,7 +11,7 @@
 			</div>
 			<div class="mt8 down pt1">
 				<section id="btn-pdt">
-					<div><input type="button" name="pt1" value="آماده سازی قاب" class="active" /></div>
+					<div><input type="button" name="pt1" value="آماده سازی قاب"/></div>
 					<div><input type="button" name="pt2" value="آماده سازی کامپوزیت"/></div>
 					<div><input type="button" name="pt3" value="برش کنج ها"/></div>
 					<div><input type="button" name="pt4" value="جعبه سازی و تا زدن"/></div>
