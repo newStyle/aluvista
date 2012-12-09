@@ -154,8 +154,7 @@ var codeStationJq = {
 				}
 			});
     	});
-    	$('#srchPanel a').live('click',function(e) {
-			e.preventDefault();
+    	$('#srchPanel a').live('click',function() {
     		console.log($('#srchPanel a').eq($('#srchPanel a').index(this)).attr('href'));
     	});
     	/*Slider basic work ;)*/
