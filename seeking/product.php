@@ -6,7 +6,7 @@
 			<section class="w6 left">
 				<nav>
 					<ul>
-						<?php include('./pages/index-li.php');?>
+						<?php include('./pages/product-li.php');?>
 					</ul>
 				</nav>
 			</section>
@@ -26,7 +26,7 @@
 		</section>
 	</section>
 	<!-- End Slider -->
-	<?php include('./pages/index.php');?>
+	<?php include('./pages/product.php');?>
 	<!-- End Content --> 
 </section>
 <!-- End Container -->
