@@ -1,8 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html  lang="fa_IR">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>..: Aluvista :..</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link type="text/css" rel="stylesheet" href="font.css" />
 <link rel="stylesheet/less" type="text/css" href="reset.css" />
 <link rel="stylesheet/less" type="text/css" href="1styles.css" />

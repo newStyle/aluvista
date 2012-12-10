@@ -20,7 +20,26 @@ var codeStationJq = {
 				"footer .down nav a"
 			],
 			loadAjax: function (url, box, sw) {
-				$(box).hide().load(url).fadeIn("normal");
+				$(box).hide(function () {
+					$('body > .loading').show();
+					setTimeout(function () {
+						$.post(url, function(data) {
+							$(box).html(data);
+							$('body > .loading').hide();
+						});
+						$(box).fadeIn('normal', function (){
+						gal.setBox();
+						gal.setImg();
+						gal.setPage();
+						gal.ctr_btn();
+						prcss.pickImg();
+						clearInterval(It);
+						acp = 0;
+						clearTimeout(prcss.Int);
+						prcss.rotat(0);
+						});
+					}, 1000);
+				});
 				if (sw === true) {
 					window.history.pushState(url, "", url.substring(6));
 					window.onpopstate = function (e) {
@@ -56,17 +75,6 @@ var codeStationJq = {
 		/* ajax load*/
 		for (var i = 0; i < menus.HFLinks.length; i++) {
 			$(menus.HFLinks[i]).click(function (e) {
-				setTimeout(function () { /* create gallery ! */
-					gal.setBox();
-					gal.setImg();
-					gal.setPage();
-					gal.ctr_btn();
-					prcss.pickImg();
-					clearInterval(It);
-					acp = 0;
-					clearTimeout(prcss.Int);
-					prcss.rotat(0);
-				}, 500);
 				e.preventDefault();
 				var url;
 				menus.loadAjax(url = $(this).attr("href"), "#con", true);
