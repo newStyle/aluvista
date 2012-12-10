@@ -41,6 +41,7 @@ var codeStationJq = {
 					}, 1000);
 				});
 				if (sw === true) {
+					url = 'pages/'+url;
 					window.history.pushState(url, "", url.substring(6));
 					window.onpopstate = function (e) {
 						e.state && $("#con").hide().load(e.state).fadeIn("normal");
