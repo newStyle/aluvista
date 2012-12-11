@@ -4,12 +4,12 @@
 			<div class="left">
 				<nav>
 					<ul>
-						<li><a href="http://twitter.com">Twitter</a></li>
-						<li><a href="http://facebook.com">Facebook</a></li>
+						<li><a id="tw" href="http://twitter.com"></a></li>
+						<li><a id="fb" href="http://facebook.com"></a></li>
 					</ul>
 				</nav>
 			</div>
-			<div class="last mla mr18 w1 rss"></div>
+			<div class="last mla mr20 w1 rss"></div>
 		</div>
 	</div>
 	<!-- End top-footer -->

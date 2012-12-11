@@ -1292,7 +1292,7 @@ footer {
 			}
 			.left {
 				width: 200px;
-				background:  #eab410;
+				background:  none;
 				nav {
 					ul {
 						height: inherit;
@@ -1300,14 +1300,23 @@ footer {
 						li {
 							height: inherit;
 							float: left;
+							padding-right:10px; 
+							margin-top: 3px;
 							a {
 								text-decoration: none;
 								display: block;
-								padding: 10px 15px;
-								color:  #150600;
 								font-size: 15px;
-								font-weight: bold;
-								font-family: tahoma;
+								width: 40px;
+								height: 40px;
+								border-radius: 10px;
+							}a#tw{
+								background: url(images/social-icons.png) -40px 0px no-repeat;
+							}a#tw:hover{
+								background: url(images/social-icons.png) -40px -40px no-repeat;
+							}a#fb{
+								background: url(images/social-icons.png) no-repeat;
+							}a#fb:hover{
+								background: url(images/social-icons.png) 0 -40px no-repeat;
 							}
 						}
 					}
