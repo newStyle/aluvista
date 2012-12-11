@@ -2,7 +2,7 @@
 <!-- End header -->
 <section class="container mla mra mt9">
 	<section class="slider top">
-		<section class=" w23 mla mr1">
+		<section class=" w23 mla mra">
 
 			<section class="right last">
 				<div class="top">

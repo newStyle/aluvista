@@ -26,18 +26,18 @@
 </head>
 <body>
 <header>
-<section class="mla mra">
-<div class="w14 right">
-	<div class="w15 pt1 top">
-		<div class="left w12 ">
+<section class="w24 mla mra">
+<div class="w12 right">
+	<div class="w12 pt1 top">
+		<div class="right"></div>
+		<div class="last w12 ">
 			<div id="searchBox">
 				<input type="search" id="schh"  name="search" class="search" placeholder="بـــــــــــــــــــــگرد" />
 				<input type="submit" id="smt"  name="submit" class="submit" value=''/>
 		    </div>
 		</div>
-		<div class="right ml13"></div>
 	</div>
-	<div class="w14 mt2 down">
+	<div class="w19 mt2 down"> <!-- ADD NEW li With change W -->
 		<nav>
 			<ul>
 				<li><a href="index.php">صفحه اصلی</a></li>
@@ -45,12 +45,13 @@
 				<li><a href="product.php">روش اجرا</a></li>
 				<li><a href="gallery.php">گالری</a></li>
 				<li><a href="color.php">جدول رنگ</a></li>
+				<li><a href="agancy.php">فرم نمایندگی</a></li>
 				<li class="left"><a href="contact.php">تماس با ما</a></li>
 			</ul>
 		</nav>
 	</div>
 </div>
-<a id="logo" class="w4 ml1 left" href="index.php"></a>
+<a id="logo" class="w4 left" href="index.php"></a>
 </section>
 </header>
 <aside class="w4 mt9 mr1 mla right" id='srchPanel'></aside>
