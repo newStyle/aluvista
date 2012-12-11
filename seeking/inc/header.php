@@ -42,7 +42,7 @@
 			<ul>
 				<li><a href="index.php">صفحه اصلی</a></li>
 				<li><a href="process.php">مراحل ساخت</a></li>
-				<li><a href="product.php">تولیدات</a></li>
+				<li><a href="product.php">روش اجرا</a></li>
 				<li><a href="gallery.php">گالری</a></li>
 				<li><a href="color.php">جدول رنگ</a></li>
 				<li class="left"><a href="contact.php">تماس با ما</a></li>
@@ -53,4 +53,4 @@
 <a id="logo" class="w4 ml1 left" href="index.php"></a>
 </section>
 </header>
-<aside id='srchPanel'></aside>
+<aside class="w4 mt9 mr1 mla right" id='srchPanel'></aside>

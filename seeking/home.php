@@ -2,14 +2,8 @@
 <!-- End header -->
 <section class="container mla mra mt9">
 	<section class="slider top">
-		<section class=" w23 mla mra">
-			<section class="w6 left">
-				<nav>
-					<ul>
-						<?php include('./pages/index-li.php');?>
-					</ul>
-				</nav>
-			</section>
+		<section class=" w23 mla mr1">
+
 			<section class="right last">
 				<div class="top">
 					<h2>جدیدترین اخبار</h2>
@@ -22,7 +16,8 @@
 						<a href="#">... ادامه مطلب </a> </p>
 				</div>
 			</section>
-			<section class="w11 middle mla mra"></section>
+		
+			<section class="w17 middle mla mra"></section>
 		</section>
 	</section>
 	<!-- End Slider -->

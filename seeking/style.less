@@ -16,13 +16,22 @@ body {
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
 	aside {
-		position: absolute;
-		right: 46px;
-		width: 120px;
 		padding: 14px;
+		text-align: right;
 		a{
+			-webkit-transition: all 0.6s;
+			-moz-transition: all 0.6s;
+			-ms-transition: all 0.6s;
+			-o-transition: all 0.6s;
 			text-decoration: none;
 			color: #FDED90;
+			font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
+		}a:hover{
+			padding-right:15px;
+			color: #eaeeee; 		
+		}
+		p{
+			color: white;
 		}
 	}
 	> section {
@@ -234,7 +243,7 @@ section.container {
 				}
 			}
 			.right {/* new in right banner */
-				background: url(images/textbox.jpg) no-repeat center center;
+				background: url(images/textbox.png) no-repeat center center;
 				width: 220px;
 				margin-right: 20px;
 				height: inherit;
@@ -277,7 +286,9 @@ section.container {
 			}
 			.middle {/*slider in banner page */
 				height: inherit;
-				margin-right: 240px;
+				width: 940px;
+				z-index: -1;
+				outline: 1px solid red;
 			}
 		}
 	}
@@ -285,25 +296,17 @@ section.container {
 		width: inherit;
 		height: 190px;
 		> .left {
-			height: 145px;
-			margin-top: 10px;
-			margin-left: -20px;
-			background: url(images/recentwork.png) no-repeat top center;
-		}
-		> .right {
 			height: inherit;
-			margin-left: 260px;
-			float: none; > section {
+			width: 950px; > section {
 				height: inherit;
 				.csscontain (@path){
 					height: inherit;
-					width: 200px;
 					.top {
 						background-image: @path;
-						width: inherit;
 						height: 140px;
 						cursor: pointer;
 						box-shadow: 5px 5px 6px black;
+						outline: 1px solid #eaeeee;
 					}
 					.top:hover {
 						box-shadow: 0 0 0 black; 
@@ -313,16 +316,16 @@ section.container {
 				.left {
 					.csscontain(url(images/smal_pic1.jpg));
 				}
-				.right {
-					.csscontain(url(images/smal_pic2.jpg));
-				}
 				.middle {
 					.csscontain(url(images/smal_pic3.jpg));
+				}
+				.last {
+					.csscontain(url(images/smal_pic2.jpg));
 				}
 				.down {
 					p {
 						margin: 10px 0px 0px 0px;
-						width: inherit;
+						width: 250px;
 						height: 50px;
 						color:  #FDED90;
 						font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
@@ -890,6 +893,9 @@ section.container {
 				width: 280px;
 				display: block;
 				-webkit-transition: all 0.8s;
+				-moz-transition: all 0.8s;
+				-ms-transition: all 0.8s;
+				-o-transition: all 0.8s;
 				float: right;
 				font-size: 15px;
 			}
@@ -1226,7 +1232,7 @@ section.container {
 						}
 						img{
 							border: 1px dashed red;
-							background: url(images/textbox.jpg);
+							background: url(images/textbox.png);
 							padding: 10px;
 							margin-top: 30px;
 						}
