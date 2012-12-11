@@ -140,8 +140,8 @@ var codeStationJq = {
     			'width':'180px',
     		});
     	});
-    	$('#searchBox').mouseleave(function(){
-    		schh.animate({'width':'0px',},700,'linear',function(){
+    	schh.blur(function(){
+    		schh.animate({'width':'0px',},500,'linear',function(){
     			schh.css({
 					'opacity':'0'
 				});	
