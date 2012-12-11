@@ -229,7 +229,7 @@ var codeStationJq = {
 			change_image;
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='890' height='300' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
+				.html("<img width='950' height='500' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
@@ -247,7 +247,7 @@ var codeStationJq = {
 			$dummy = pos === imgsInBanner[image].pics.length - 1 ? -1 : pos;
 		});
 		(change_image = function () {
-			var autoPlayDelay = 3000;
+			var autoPlayDelay = 9000;
 			$("section.container .top nav a").removeClass("active").eq(efct_banner(++$dummy)).addClass("active");
 			$dummy = $dummy >= imgsInBanner[image].pics.length - 1 ? -1 : $dummy;
 			Int = setTimeout(change_image, autoPlayDelay);

@@ -1,6 +1,6 @@
 <section class="mt2 mb11 down process">
-	<section class="mla mra mt11">
-		<section class="content mla mra"> 
+	<section class="w24 mla mra mt11">
+		<section class="content w24  mra"> 
 			<div class="w12 right" id="disk">
 				<div><p class="prc">برش</p></div>
 				<div><p class="prc">پانچ کردن</p></div>

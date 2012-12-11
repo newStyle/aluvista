@@ -28,7 +28,7 @@ body {
 			font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 			background: url(images/news-bg.png);
 			display: block;
-			width: 150px;
+			width: 100px;
 		}a:hover{
 			padding-right:25px;
 			color: #eaeeee;
@@ -195,63 +195,24 @@ section.container {
 	> .top { /* css top for banner page ... */
 		width: inherit;
 		height: 300px;
+		overflow: hidden;
+		outline: 1px solid #eab410;
 		 > section {
 			position: relative;
 			height: inherit;
-			/* .left {/* menu banner */
-			/*	position: absolute;
-				z-index: 1;
-				left: 30px;
-				height: inherit;
-				nav {
-					background: url(images/slider_menu1.jpg) no-repeat left center;
-					height: inherit;
-					ul {
-						list-style-type: none;
-						height: inherit;
-						overflow: hidden;
-						li {
-							
-							a {
-								text-decoration: none;
-								display: block;
-								padding: 17px 40px;
-								color: white;
-								font-size: 15px;
-								text-indent: 20px;
-								font-weight: bold;
-								color: #eaeaea;
-								text-align: justify;
-								font-family: "Bkoodak", Arial, "Times New Roman", Times, serif;
-								-webkit-transition: all 0.6s;
-								-moz-transition: all 0.6s;
-								-ms-transition: all 0.6s;
-								-o-transition: all 0.6s;
-							}
-							:hover {
-								color: white;
-							}
-							.active {
-								background: url(images/slider_nav1.png) no-repeat right center;
-								color: white;
-								text-indent: 40px;
-							}
-						}
-						li:last-child {
-							background: none;
-						}
-					}
-				}
-			}
-			*/
 			.right {/* new in right banner */
-				background: url(images/textbox.png) no-repeat center center;
+				background: url(images/news-bg.png);
 				width: 220px;
 				margin-right: 20px;
 				height: inherit;
+				-webkit-transition: all 0.6s;
+				-moz-transition: all 0.6s;
+				-ms-transition: all 0.6s;
+				-o-transition: all 0.6s;
+				cursor: pointer;
 				a {
 						text-decoration: none;
-						color: #483c0c;
+						color: #eab410;
 						margin-top: 10px;
 						float: right;
 						text-align: right;
@@ -275,22 +236,23 @@ section.container {
 					text-align: center;
 					font-size: 22px;
 					padding-top: 10px;
+					color: #eaeeee;
 				}p {
-					text-indent: 40px;
-					font-size: 15px;
+					font-size: 14px;
 					line-height: 20px;
 					padding: 20px 15px;
 					font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 					text-align: right;
-					color: #1c1b17;
+					color: #eaeeee;
 					margin-right: 10px;
 				}
 			}
+			.right:hover {
+					
+				}
 			.middle {/*slider in banner page */
 				height: inherit;
-				width: 940px;
-				z-index: -1;
-				outline: 1px solid red;
+				width: 950px;
 			}
 		}
 	}
@@ -339,7 +301,7 @@ section.container {
 	.gallery { /*.down for gallery page */
 		min-height: 620px;
 		> section {
-			background: url(images/bg_gallery.png) no-repeat top center;
+			background: url(images/bg_con.png) 0 -1450px no-repeat;
 			min-height: 620px;
 			> .left {
 				height: 485px;
@@ -381,7 +343,7 @@ section.container {
 				}
 				> div.paging {
 					height: 42px;
-					margin-left:-5px;
+					margin-left:-7px;
 					div.num{
 						width: 42px;
 						height: 40px;
@@ -525,8 +487,8 @@ section.container {
 	.color { /*.down for colorchart page */
 		height: 750px;
 		> section {
-			background: url(images/bg_color.png) no-repeat top center;
-			width: 865px;
+			background: url(images/bg_con.png) 0 -655px no-repeat;
+			width: 950px;
 			height: 740px;
 			.rubric () {/* it's for '.left article' and '.right article'*/
 				h3 {
@@ -714,8 +676,8 @@ section.container {
 	.contact { /*.down for contact  page */
 		height: 495px;
 		> section {
-			background: url(images/bg_contact.png) no-repeat top center;
-			width: 865px;
+			background: url(images/bg_con.png) 0 -2320px no-repeat;
+			width: 950px;
 			height: 488px;
 			> .contact{/*.right=.contact in contact page ... */
 				height: 395px;
@@ -849,8 +811,8 @@ section.container {
 		height: 495px;
 		overflow: hidden;
 		> section {
-			background: url(images/bg_contact.png) no-repeat top center;
-			width: 865px;
+			background: url(images/bg_con.png) 0 -2320px no-repeat;
+			width: 950px;
 			height: 488px;
 			.right {
 				min-height: @htt;
@@ -936,7 +898,7 @@ section.container {
 				border: 0 none;
 				position: absolute;
 				margin: 0 auto;
-				top: 865px;
+				top: 950px;
 				bottom: 0;
 				margin-left: 430px;
 			}div.contlink {
@@ -1033,8 +995,8 @@ section.container {
 	.products { /*.down for Product page */
 		height: 750px;
 		> section {
-			background: url(images/bg_color.png) no-repeat top center;
-			width: 865px;
+			background: url(images/bg_con.png) 0 -655px no-repeat;
+			width: 950px;
 			height: 740px;
 			> .left {
 				height: inherit;
@@ -1174,8 +1136,8 @@ section.container {
 	.process { /*.down for process page */
 		height: 580px;
 		> section {
-			background: url(images/bg_process.png) no-repeat top center;
-			width: 865px;
+			background: url(images/bg_con.png) no-repeat top center;
+			width: 950px;
 			height: 595px;
 			.content {
 				@width-cont: 864px;

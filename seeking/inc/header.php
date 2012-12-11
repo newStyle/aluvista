@@ -37,7 +37,7 @@
 		    </div>
 		</div>
 	</div>
-	<div class="w19 mt2 down"> <!-- ADD NEW li With change W -->
+	<div class="w19 mt6 down"> <!-- ADD NEW li With change W -->
 		<nav>
 			<ul>
 				<li><a href="index.php">صفحه اصلی</a></li>
@@ -54,4 +54,4 @@
 <a id="logo" class="w4 left" href="index.php"></a>
 </section>
 </header>
-<aside class="w4 mt9 mr1 mla right" id='srchPanel'></aside>
+<aside class="w4 mt9 mra mla right" id='srchPanel'></aside>

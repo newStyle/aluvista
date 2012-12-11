@@ -1,15 +1,8 @@
 <?php include('./inc/header.php');?>
 <!-- End header -->
-<section class="container mla mra mt9">
+<section class="container w24 mla mra mt9">
 	<section class="slider top">
-		<section class=" w23 mla mra">
-			<section class="w6 left">
-				<nav>
-					<ul>
-						<?php include('./pages/process-li.php');?>
-					</ul>
-				</nav>
-			</section>
+		<section class=" w24 mla mra">
 			<section class="right last">
 				<div class="top">
 					<h2>جدیدترین اخبار</h2>

@@ -1,5 +1,5 @@
 <section class="mt10 mb11 down gallery">
-	<section class="w22 mt8 mla mra pt1">
+	<section class="w24 mt8 mla mra pt1">
 		<section class="w6 mt12 ml1 left">
 			<p>مجموعه پروژه های مسکونی</p>
 			<section></section><!-- small pic -->
