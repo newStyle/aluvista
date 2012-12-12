@@ -38,6 +38,13 @@ var codeStationJq = {
 						acp = 0;
 						clearTimeout(prcss.Int);
 						prcss.rotat(0);
+						$(agy.path).css({
+							'height' : '',
+							'min-height' : agy.hgt+'px',
+							'overflow': 'visible'
+						});
+						agy.scrll();
+
 						});
 						$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 					}, 1000);
