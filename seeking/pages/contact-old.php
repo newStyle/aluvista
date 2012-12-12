@@ -1,7 +1,7 @@
 <section class="mt12 down contact">
 	<section class="mla mra pt1">
 		<section class="contact w10 mr1 right">
-			<form id="contact-form" action="sendmail.php" method="post" target='ifrm'>
+			<form id="contact-form" action="../module/sendmail.php" method="post" target='ifrm'>
 				<label>نام :</label>
 				<input class="text" type="text" name="name" id="name" placeholder="" />
 				<label>ایمیل :</label>

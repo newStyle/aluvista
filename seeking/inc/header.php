@@ -45,7 +45,7 @@
 				<li><a href="product.php">روش اجرا</a></li>
 				<li><a href="gallery.php">گالری</a></li>
 				<li><a href="color.php">جدول رنگ</a></li>
-				<li><a href="agancy.php">فرم نمایندگی</a></li>
+				<li><a href="agency.php">فرم نمایندگی</a></li>
 				<li class="left"><a href="contact.php">تماس با ما</a></li>
 			</ul>
 		</nav>

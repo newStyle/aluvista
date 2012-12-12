@@ -158,7 +158,7 @@ var codeStationJq = {
 			var dataString = schh.val();
 			$.ajax({
 				type: "GET",
-				url: "./pages/find.php",
+				url: "../module/find.php",
 				data: 'srch=' + dataString,
 				success: function (data) {
 					$('aside').html(data);
@@ -520,7 +520,7 @@ var codeStationJq = {
 			chkExist: function (addr) {
 				// ref : http://stackoverflow.com/questions/905298/jquery-storing-ajax-response-into-global-variable
 				var sw = $.ajax({
-					url: './pages/chkImg.php',
+					url: './module/chkImg.php',
 					data: 'addr=' + addr,
 					context: document.body,
 					global: false,
@@ -636,11 +636,11 @@ var codeStationJq = {
 			}
 		}
 		prd.loading();
-		/* Scroll for Agancy_form Page */
+		/* Scroll for agency_form Page */
 		clr.actbtn();
 		var agy = {
-			path: ".container .agy_form > section .agancy",
-			veiw: ".container .agy_form > section .agancy form",
+			path: ".container .agy_form > section .agency",
+			veiw: ".container .agy_form > section .agency form",
 			hgt: 385,
 			scrll: function () {
 				$(agy.veiw).css({
@@ -671,12 +671,12 @@ var codeStationJq = {
 				});
 			},
 			sendmail: function () {
-				$("form#agancy-form").live('submit', function (event) {
+				$("form#agency-form").live('submit', function (event) {
 					event.preventDefault();
 					var dataString = 'name=' + $("form #name").val() + '&mail=' + $("form #mail").val() + '&phone=' + $("form #tel").val() + '&subject=' + $("form #subject").val() + '&txt=' + $("form #txt").val();
 					$.ajax({
 						type: "POST",
-						url: "pages/send.php",
+						url: "../module/send.php",
 						data: dataString,
 						success: function (data) {
 							$('.contact .contact p').html(data);
