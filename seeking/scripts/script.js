@@ -165,7 +165,7 @@ var codeStationJq = {
 			var dataString = schh.val();
 			$.ajax({
 				type: "GET",
-				url: "../module/find.php",
+				url: "module/find.php",
 				data: 'srch=' + dataString,
 				success: function (data) {
 					$('aside').html(data);

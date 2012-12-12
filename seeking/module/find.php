@@ -1,6 +1,6 @@
 <?php
 	$srchStr = $_GET['srch'];
-	$currDir = '.';
+	$currDir = '../pages';
 	$dh = opendir($currDir);
 	$fileName = '';
 
@@ -21,7 +21,7 @@
 			$contents = file_get_contents("$currDir/$fileName");
 			if (@strstr($contents, $srchStr)) {
 				$fname = ($str = strstr($fileName, "_", true)) ? $str.'.php' : $fileName;
-				print "<a href='$currDir/$fname'>".$keyVals[$fileName].'</a><br />';
+				print "<a href='$fname'>".$keyVals[$fileName].'</a><br />';
 			}
 		}
 	}
