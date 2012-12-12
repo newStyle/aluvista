@@ -166,6 +166,15 @@ var codeStationJq = {
     	$('#srchPanel a').live('click',function() {
     		console.log($('#srchPanel a').eq($('#srchPanel a').index(this)).attr('href'));
     	});
+    	/*News on Slider */
+		var topic = $('.topic'), news = $('#news'), slider = $('.slider') ;
+		topic.click(function(){
+			news.animate({'top':'0px'},100,'linear');
+		});
+		slider.mouseleave(function(){
+			news.animate({'top':'-300px'},200,'linear');
+		});
+
     	/*Slider basic work ;)*/
 		var image = "home",
 			imgsInBanner = {
@@ -174,8 +183,6 @@ var codeStationJq = {
 						"images/banner/sliderpic1.jpg",
 						"images/banner/sliderpic2.jpg",
 						"images/banner/sliderpic3.jpg",
-						"images/banner/sliderpic4.jpg",
-						"images/banner/sliderpic5.jpg"
 					]
 				},
 				"process": { /* for Process page! */

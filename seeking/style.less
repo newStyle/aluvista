@@ -1,4 +1,4 @@
-
+/*
 div, section {
 	outline: 1px dotted red;
 }
@@ -11,12 +11,13 @@ body.left, body.right {
 body > .container, header, footer {
 	outline: 3px dashed magenta;
 }
-
+*/
 body { 
 	background: url(images/bg.jpg) repeat fixed;
 	background-size: cover;
 	aside {
 		text-align: right;
+		position: absolute;
 		a{
 			padding:0 10px 0 0 ; 
 			-webkit-transition: all 0.6s;
@@ -28,7 +29,7 @@ body {
 			font-family: "BKoodak", Arial, "Times New Roman", Times, serif;
 			background: url(images/news-bg.png);
 			display: block;
-			width: 100px;
+			width: 120px;
 		}a:hover{
 			padding-right:25px;
 			color: #eaeeee;
@@ -205,11 +206,14 @@ section.container {
 				width: 220px;
 				margin-right: 20px;
 				height: inherit;
-				-webkit-transition: all 0.6s;
-				-moz-transition: all 0.6s;
-				-ms-transition: all 0.6s;
-				-o-transition: all 0.6s;
-				cursor: pointer;
+				-webkit-transition: top 0.6s;
+				-moz-transition: top 0.6s;
+				-ms-transition: top 0.6s;
+				-o-transition: top 0.6s;
+				position: absolute;
+				left: 700px;
+				z-index: 1;
+				top: -300px;
 				a {
 						text-decoration: none;
 						color: #eab410;
@@ -228,7 +232,7 @@ section.container {
 				}
 				.down {
 					width: inherit;
-					height: 150px;
+					height: 110px;
 				}
 				
 				h2{
@@ -246,10 +250,18 @@ section.container {
 					color: #eaeeee;
 					margin-right: 10px;
 				}
-			}
-			.right:hover {
-					
+				.topic{
+					width: inherit;
+					cursor: pointer;
+					p{
+						width: 190px;
+						font-size: 18px;
+						text-align: center;
+						background: url(images/news-bg.png);
+						height: 5px;
+					}
 				}
+			}
 			.middle {/*slider in banner page */
 				height: inherit;
 				width: 950px;
@@ -258,7 +270,7 @@ section.container {
 	}
 	.index { /*.down for index page  */
 		width: inherit;
-		height: 190px;
+		height: 200px;
 		> .left {
 			height: inherit; > section {
 				height: inherit;
@@ -270,10 +282,16 @@ section.container {
 						cursor: pointer;
 						box-shadow: 5px 5px 6px black;
 						outline: 1px solid #eaeeee;
+						opacity: .7;
+						-webkit-transition: opacity 0.9s;
+						-moz-transition: opacity 0.9s;
+						-ms-transition: opacity 0.9s;
+						-o-transition: opacity 0.9s;
 					}
 					.top:hover {
 						box-shadow: 0 0 0 black; 
 						outline: 3px solid #EAB410;
+						opacity: 1;
 					}
 				}
 				.left {

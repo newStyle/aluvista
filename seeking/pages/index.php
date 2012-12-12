@@ -1,6 +1,6 @@
 	<section class="mt12 down index">
 		<section class="left">
-			<section class="w24  ">
+			<section class="w24 mla mra ">
 				<div class="w7 left">
 					<a href="process.php"><div class="top"></div></a>
 					<div class="down">

@@ -1,9 +1,9 @@
 <?php include('./inc/header.php');?>
 <!-- End header -->
 <section class="container mla mra mt9">
-	<section class="slider last top">
+	<section class="slider top">
 		<section class=" w24 mla mra">
-			<section class="right ">
+			<section id="news" class="right ">
 				<div class="top">
 					<h2>جدیدترین اخبار</h2>
 					<p> صفحه فیسبوک ما باز شد... شما می توانید هم اکنون شروع به لایک کردن آن کنید<br />
@@ -13,6 +13,9 @@
 				<div class="down">
 					<p>افتتاح وب سایت جدید شرکت آلوویستا افتتاح وب سایت جدید شرکت آلوویستا<br />
 						<a href="#">... ادامه مطلب </a> </p>
+				</div>
+				<div class="topic">
+					<p>خبرها</p>
 				</div>
 			</section>
 		
