@@ -22,11 +22,11 @@ var codeStationJq = {
 			],
 			loadAjax: function (url, box, sw) {
 				$(box).hide(function () {
-					$('body > .loading').show();
+					$('body .loading').show();
 					setTimeout(function () {
 						$.post(url, function(data) {
 							$(box).html(data);
-							$('body > .loading').hide();
+							$('body .loading').hide();
 						});
 						$(box).fadeIn('normal', function (){
 						gal.setBox();
@@ -39,6 +39,7 @@ var codeStationJq = {
 						clearTimeout(prcss.Int);
 						prcss.rotat(0);
 						});
+						$('body,html').animate({ scrollTop: 550 }, 700);
 					}, 1000);
 				});
 				if (sw === true) {
