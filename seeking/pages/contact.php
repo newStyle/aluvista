@@ -45,9 +45,9 @@
 
 <section class="mt12 down agy_form" style='display:none'>
 	<section class="mla mra pt1">
-		<section class="agancy w10 ml2 right">
+		<section class="agency w10 ml2 right">
 			<P></P>
-			<form id="agancy-form">
+			<form id="agency-form">
 				<label>نام و نام خانوادگی متقاضی <span class="req">*</span></label>
 					<input class="text" type="text" name="name" id="name" tabindex="10" required/>
 				<label>تلفن تماس <span class="req">*</span></label>
