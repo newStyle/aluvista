@@ -39,7 +39,7 @@ var codeStationJq = {
 						clearTimeout(prcss.Int);
 						prcss.rotat(0);
 						});
-						$('body,html').animate({ scrollTop: 550 }, 700);
+						$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 					}, 1000);
 				});
 				if (sw === true) {
