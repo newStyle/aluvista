@@ -27,11 +27,5 @@
 	</div>
 </footer>
 <!-- End footer -->
-<div class="loading">
-	<div class="load">
-		<p>لطفا منتظر باشید</p>
-		<img src="images/loading.gif" alt="">
-	</div>
-</div>
 </body>
 </html>

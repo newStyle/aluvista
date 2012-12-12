@@ -18,7 +18,6 @@
 					<p>خبرها</p>
 				</div>
 			</section>
-		
 			<section class="w17 middle mla mra"></section>
 		</section>
 	</section>

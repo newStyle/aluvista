@@ -9,6 +9,7 @@ var codeStationJq = {
 	ready: function () {
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
+		$('#con').after('<div class="loading"><div class="load"><p>لطفا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
 		var pos, Int, menus = {
 			Links: [
 				"header .right .down nav a",
