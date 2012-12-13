@@ -71,7 +71,6 @@
 				<div id='ribbon'></div>
 			</div>
 		</section>
-		<div class="contlink"> <a href="#">فرم تماس با ما</a> </div>
 		<section class="w6 mra ml2 pt1 left">
 			<article>
 				<div class="w6 mt1">

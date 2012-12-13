@@ -1,4 +1,4 @@
-<section class="mt12 down contact" style='display: block'>
+<section class="mt12 down contact">
 	<section class="mla mra pt1">
 		<section class="contact w10 mr1 right">
 			<p></p>
@@ -17,7 +17,6 @@
 				<input class="btn" type="submit" name="submit" tabindex="60" value="فرستادن" />
 			</form>
 		</section>
-		<div class="agylink"> <a href="#">فرم اعطاي نمايندگي</a> </div>
 		<section class="w6 ml2 pt1 left">
 			<article>
 				<div class="w6 mt6">
