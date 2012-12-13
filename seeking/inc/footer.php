@@ -29,5 +29,8 @@
 	</div>
 </footer>
 <!-- End footer -->
+<script type='text/javascript'>
+	QueryLoader.init();
+</script>
 </body>
 </html>
