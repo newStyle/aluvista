@@ -317,8 +317,8 @@ var codeStationJq = {
 				this.mouseEvent.page.clicked();
 			},
 			chg_img: function (jmp) {
-				$("section.container .gallery > section .right .top").animate({},30,null,function(){
-					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").animate({},30,null);
+				$("section.container .gallery > section .right .top ").stop().fadeTo(400, '0.2', function() {
+					$(this).html("<img src='images/gallery/500/" + (jmp + 1) + ".jpg'>").stop().fadeTo(400,'1');
 				});
 				$(this.path + " img").css({
 					"opacity": "0.7",
