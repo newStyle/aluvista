@@ -21,14 +21,22 @@ var codeStationJq = {
 				"footer .down nav a"
 			],
 			loadAjax: function (url, box, sw) {
-				$(box).hide(function () {
-					$('body .loading').show();
+				$(box).fadeTo(1000, '0', function () {
+					$(this).hide();
+					$('body .loading').fadeTo(1000,'1', function () {
+						$(this).show();
+					})
 					setTimeout(function () {
 						$.post(url, function(data) {
 							$(box).html(data);
-							$('body .loading').hide();
+							$('body .loading').fadeTo('slow','0', function (){
+								$(this).hide();
+							});
 						});
-						$(box).fadeIn('normal', function (){
+						$(box).fadeTo(1000,'1', function (){
+							$(this).show(function () {
+								$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
+							});
 							gal.setBox();
 							gal.setImg();
 							gal.setPage();
@@ -45,8 +53,7 @@ var codeStationJq = {
 							});
 							agy.scrll();
 						});
-						$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
-					}, 1000);
+					}, 3000);
 				});
 				if (sw === true) {
 					url = 'pages/'+url;
@@ -793,7 +800,7 @@ var codeStationJq = {
 				'overflow': 'visible'
 			});
 			agy.scrll();
-
+			$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 		});
 	}
 };
