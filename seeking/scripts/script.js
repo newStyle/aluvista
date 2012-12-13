@@ -29,22 +29,21 @@ var codeStationJq = {
 							$('body .loading').hide();
 						});
 						$(box).fadeIn('normal', function (){
-						gal.setBox();
-						gal.setImg();
-						gal.setPage();
-						gal.ctr_btn();
-						prcss.pickImg();
-						clearInterval(It);
-						acp = 0;
-						clearTimeout(prcss.Int);
-						prcss.rotat(0);
-						$(agy.path).css({
-							'height' : '',
-							'min-height' : agy.hgt+'px',
-							'overflow': 'visible'
-						});
-						agy.scrll();
-
+							gal.setBox();
+							gal.setImg();
+							gal.setPage();
+							gal.ctr_btn();
+							prcss.pickImg();
+							clearInterval(It);
+							acp = 0;
+							clearTimeout(prcss.Int);
+							prcss.rotat(0);
+							$(agy.path).css({
+								'height' : '',
+								'min-height' : agy.hgt+'px',
+								'overflow': 'visible'
+							});
+							agy.scrll();
 						});
 						$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 					}, 1000);
@@ -392,6 +391,7 @@ var codeStationJq = {
 								acp = 0;
 							var ind = Math.floor(acp/15);
 							gal.chg_pge(ind);
+							console.log('hi');
 							$(".paging a").removeClass("active").eq(ind).addClass('active');
 						});
 						$('.left .prev').die('click').live("click", function (e) {
@@ -787,8 +787,20 @@ var codeStationJq = {
 			acp = 0;
 			clearTimeout(prcss.Int);
 			prcss.rotat(0);
+			$(agy.path).css({
+				'height' : '',
+				'min-height' : agy.hgt+'px',
+				'overflow': 'visible'
+			});
+			agy.scrll();
+
 		});
 	}
 };
 
 $(document).ready(codeStationJq.ready);
+
+
+
+
+/*test jslint browser: true, 98% progress*/
