@@ -61,10 +61,10 @@ var QueryLoader = {
 			var url = "";
 			
 			if ($(this).css("background-image") != "none") {
-				var url = $(this).css("background-image");
-			} 
+				url = $(this).css("background-image");
+			}
 			else if (typeof($(this).attr("src")) != "undefined" && $(this).attr("tagName").toLowerCase() == "img") {
-				var url = $(this).attr("src");
+				url = $(this).attr("src");
 			}
 			
 			url = url.replace("url(\"", "");
@@ -73,7 +73,10 @@ var QueryLoader = {
 			url = url.replace(")", "");
 			
 			if (url.length > 0) {
-				QueryLoader.items.push(url);
+				var regex = 'http.+[^)]'; 
+				url = url.split(',');
+					for (var i in url)
+						QueryLoader.items.push(url[i].match(regex));
 			}
 		});
 	},
