@@ -9,6 +9,7 @@
 		 url('font/BKoodakBold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+		-webkit-font-smoothing	: antialiased;
 }
 
 
