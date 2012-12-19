@@ -4,7 +4,8 @@
 			<p></p>
 			<form id="contact-form">
 				<label for="name">نام :</label>
-				<input class='text' type="text" name="name" id="name" tabindex="10" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required/>
+				<input class='text' type="text" name="name" id="name" tabindex="10" pattern="[^-!”#$%&'()*+,./:;<=>?
+@[\\\]^_`{|}~0-9]{3,20}" required/>
 				<label for="email">ایمیل :</label>
 				<input class='text' type="email" name="mail" tabindex="20" id="mail" />
 				<label for="phone">تلفن :</label>
