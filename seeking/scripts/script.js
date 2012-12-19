@@ -75,8 +75,9 @@ var QueryLoader = {
 			if (url.length > 0) {
 				var regex = 'http.+[^)]'; 
 				url = url.split(',');
-					for (var i in url)
-						QueryLoader.items.push(url[i].match(regex));
+					for (i in url){
+						QueryLoader.items.push(url[i].match(regex)[0]);
+					}
 			}
 		});
 	},
