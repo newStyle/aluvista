@@ -477,6 +477,7 @@ var codeStationJq = {
 					this.str.tmp += "<div class='num'><a href='#page-" + i + "'>" + (i + 1) + "</a></div>";
 				$(".paging").html(this.str.tmp) && (this.str.tmp = '');
 				this.mouseEvent.page.clicked();
+				$(".paging a").removeClass("active").eq(0).addClass('active');
 			},
 			chg_img: function (jmp) {
 				$("section.container .gallery > section .right .top ").stop().fadeTo(400, '0.2', function() {
