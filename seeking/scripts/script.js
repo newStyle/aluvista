@@ -256,7 +256,7 @@ var codeStationJq = {
 				e.preventDefault();
 				var url;
 				menus.loadAjax(url = $(this).attr("href"), "#con", true);
-				changer(url);
+				image = url.match('.+[^.php]')[0] ==='index'  ? 'home' : url.match('.+[^.php]')[0];
 			});
 		}
 		for (i = 0; i <= menus.Links.length; i++) {
@@ -277,37 +277,6 @@ var codeStationJq = {
 					}
 				});
 			})(i);
-		}
-		function changer(url) {
-			var path = $("section.container .slider nav ul");
-			switch (url.slice(6, -4)) {
-				case 'index':
-					image = "home";
-					menus.loadAjax ("pages/index-li.php",path,false);
-					break;
-				case 'process':
-					image = "process";
-					menus.loadAjax ("pages/process-li.php",path,false);
-					break;
-				case 'product':
-					image = "product";
-					menus.loadAjax ("pages/product-li.php",path,false);
-					break;
-				case 'gallery':
-					image = "gallery";
-					menus.loadAjax ("pages/gallery-li.php",path,false);
-					break;
-				case 'color':
-					image = "Color";
-					menus.loadAjax ("pages/color-li.php",path,false);
-					break;
-				case 'contact':
-					image = "contact";
-					menus.loadAjax ("pages/contact-li.php",path,false);
-					break;
-				default:
-					break;
-			}
 		} //animation in search box
     	var smt = $("input#smt"), schh = $("input#schh");
 
@@ -365,9 +334,7 @@ var codeStationJq = {
 				},
 				"process": { /* for Process page! */
 					pics: [
-						"images/banner/b1.jpg",
 						"images/banner/b2.jpg",
-						"images/banner/b3.jpg",
 						"images/banner/b4.jpg",
 						"images/banner/b5.jpg"
 					]
@@ -375,36 +342,35 @@ var codeStationJq = {
 				"product": { /* for Product page! */
 					pics: [
 						"images/banner/pr1.jpg",
-						"images/banner/pr2.jpg",
 						"images/banner/pr3.jpg",
 						"images/banner/pr4.jpg",
-						"images/banner/pr5.jpg"
 					]
 				},
 				"gallery": { /* for Gallery page! */
 					pics: [
-						"images/banner/gov1.jpg",
 						"images/banner/gov2.jpg",
 						"images/banner/gov3.jpg",
 						"images/banner/gov4.jpg",
 						"images/banner/gov5.jpg"
 					]
 				},
-				"Color": { /* for Color page! */
+				"color": { /* for Color page! */
 					pics: [
-						"images/banner/res1.jpg",
-						"images/banner/res2.jpg",
 						"images/banner/res3.jpg",
 						"images/banner/res4.jpg",
-						"images/banner/res5.jpg"
+					]
+				},
+				"agency": { /* for agency page! */
+					pics: [
+						"images/banner/sh1.jpg",
+						"images/banner/sh2.jpg",
+						"images/banner/sh5.jpg"
 					]
 				},
 				"contact": { /* for Contact page! */
 					pics: [
 						"images/banner/sh1.jpg",
 						"images/banner/sh2.jpg",
-						"images/banner/sh3.jpg",
-						"images/banner/sh4.jpg",
 						"images/banner/sh5.jpg"
 					]
 				}
