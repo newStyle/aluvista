@@ -67,11 +67,6 @@ var QueryLoader = {
 				url = $(this).attr("src");
 			}
 			
-			url = url.replace("url(\"", "");
-			url = url.replace("url(", "");
-			url = url.replace("\")", "");
-			url = url.replace(")", "");
-			
 			if (url.length > 0) {
 				var regex = 'http.+[^)]'; 
 				url = url.split(',');
