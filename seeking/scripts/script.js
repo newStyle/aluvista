@@ -1,9 +1,6 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
-$(window).load(function () {
-	"use strict";
-	$("body > .loading").css('display', 'none');
-});
+
 /*Loading ... */
 var QueryLoader = {
 	/*
