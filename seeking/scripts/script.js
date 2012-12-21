@@ -54,7 +54,7 @@ var QueryLoader = {
 	},
 	
 	getImages: function(selector) {
-		var everything = $(selector).find("*:not(script)").each(function() {
+		var everything = $(selector).parent().find("*:not(script)").each(function() {
 			var url = "";
 			
 			if ($(this).css("background-image") != "none") {
