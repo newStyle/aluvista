@@ -6,6 +6,7 @@ var QueryLoader = {
 	/*
 		* QueryLoader		Preload your site before displaying it!
 		* URL:				http://www.gayadesign.com
+		* Changes made by dear seeking ! -- Masoud -- 
 	*/
 	overlay: "",
 	loadBar: "",
