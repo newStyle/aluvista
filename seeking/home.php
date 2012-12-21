@@ -3,7 +3,7 @@
 <section class="container mla mra mt9">
 	<section class="slider top">
 		<section class=" w24 mla mra">
-			<section id="news" class="right ">
+			<section class="right ">
 				<div class="top">
 					<h2>جدیدترین اخبار</h2>
 					<p> صفحه فیسبوک ما باز شد... شما می توانید هم اکنون شروع به لایک کردن آن کنید<br />

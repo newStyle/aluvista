@@ -21,6 +21,9 @@
 					<p>افتتاح وب سایت جدید شرکت آلوویستا افتتاح وب سایت جدید شرکت آلوویستا<br />
 						<a href="#">... ادامه مطلب </a> </p>
 				</div>
+				<div class="topic">
+					<p>خبرها</p>
+				</div>
 			</section>
 			<section class="w11 middle mla mra"></section>
 		</section>

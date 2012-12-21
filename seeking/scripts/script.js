@@ -344,12 +344,13 @@ var codeStationJq = {
     		console.log($('#srchPanel a').eq($('#srchPanel a').index(this)).attr('href'));
     	});
     	/*News on Slider */
-		var topic = $('.topic'), news = $('#news'), slider = $('.slider') ;
-		topic.click(function(){
-			news.animate({'top':'0px'},100,'linear');
+		var khodesh = $('.topic'),
+		babash = khodesh.parent();//<!-- ha :D -->
+		khodesh.click(function(){
+			babash.animate({'top':'0px'},200,'linear');
 		});
-		slider.mouseleave(function(){
-			news.animate({'top':'-300px'},200,'linear');
+		babash.mouseleave(function(){
+			babash.animate({'top':'-300px'},300,'linear');
 		});
 
     	/*Slider basic work ;)*/
