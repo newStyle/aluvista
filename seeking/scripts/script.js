@@ -62,7 +62,7 @@ var QueryLoader = {
 				url = $(this).css("background-image");
 			}
 			else if (typeof($(this).attr("src")) != "undefined") {
-				url = $(this).attr("src");
+				url = "http://localhost/aluvista/seeking/" + $(this).attr("src");
 			}
 			
 			if (url.length > 0) {
@@ -169,7 +169,9 @@ var QueryLoader = {
 // jquery my code
 var codeStationJq = {
 	ready: function () {
-		QueryLoader.init();
+		setTimeout(function (){
+			QueryLoader.init()
+		},2);
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
 		$('#con').after('<div class="loading"><div class="load"><p>لطفا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
