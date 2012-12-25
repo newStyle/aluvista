@@ -173,7 +173,7 @@ var codeStationJq = {
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
 		$('#con').after('<div class="loading"><div class="load"><p>لطفا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
-		var pos, Int, menus = {
+		var preload, pos, Int, menus = {
 			Links: [
 				"header .right .down nav a",
 				"section.container .top nav a",
@@ -200,21 +200,7 @@ var codeStationJq = {
 							$(this).show(function () {
 								$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 							});
-							gal.setBox();
-							gal.setImg();
-							gal.setPage();
-							gal.ctr_btn();
-							prcss.pickImg();
-							clearInterval(It);
-							acp = 0;
-							clearTimeout(prcss.Int);
-							prcss.rotat(0);
-							$(agy.path).css({
-								'height' : '',
-								'min-height' : agy.hgt+'px',
-								'overflow': 'visible'
-							});
-							agy.scrll();
+							preload();
 						});
 					}, 3000);
 				});
@@ -915,7 +901,7 @@ var codeStationJq = {
 				})();
 			}
 		};
-		$(window).load(function () {
+		(preload = function () {
 			gal.setBox();
 			gal.setImg();
 			gal.setPage();
@@ -932,7 +918,7 @@ var codeStationJq = {
 			});
 			agy.scrll();
 			$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
-		});
+		})();
 	}
 };
 
