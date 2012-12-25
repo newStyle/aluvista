@@ -61,7 +61,7 @@ var QueryLoader = {
 			if ($(this).css("background-image") != "none") {
 				url = $(this).css("background-image");
 			}
-			else if (typeof($(this).attr("src")) != "undefined" && $(this).attr("tagName").toLowerCase() == "img") {
+			else if (typeof($(this).attr("src")) != "undefined") {
 				url = $(this).attr("src");
 			}
 			
