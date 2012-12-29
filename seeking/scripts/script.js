@@ -818,6 +818,7 @@ var codeStationJq = {
 			boxs: '#disk div',
 			radius: 167,
 			Int:'',
+			nth: '',
 			forEach: function (arr, fn) {
 				return Array.prototype.forEach.call(arr, fn);
 			},
@@ -837,7 +838,7 @@ var codeStationJq = {
 					}
 					else {
 						//var margin = parseInt($('.wheel').css('margin-left'))-414;//-32px
-						if ($('.wheel + section' || '#veiw').css('display')==='none'){
+						if ($('.wheel + section' || '#veiw').css('display')==='none') {
 							$('.wheel').animate({
 								'left': '-17px'
 							}, 800,'linear');
@@ -847,21 +848,21 @@ var codeStationJq = {
 								$('.wheel + section').css('display','block');
 							});
 						}
+						prcss.nth = $(prcss.boxs).index(this);
 						$.ajax({
 							url: 'pages/process_content.php',
 							success: function (data) {
 								$('.wheel + section').html(data);
+								$('#veiw').css({
+									'height': '',
+									'min-height': $('#veiw').height() + 'px',
+									'overflow': ''
+								});
 							}
 						});
-						$('#veiw').css({
-							'height': '',
-							'min-height': $('#veiw').height() + 'px',
-							'overflow': ''
-						});
-						var nth = $(prcss.boxs).index(this);
 						setTimeout(function () {
-							$('#veiw > section').fadeOut('fast').eq(nth).fadeIn('fast');
-							setscroll('#veiw', 500, $('#veiw').height(),'#veiw  > section:nth('+nth+')');
+							$('#veiw > section').fadeOut('fast').eq(prcss.nth).fadeIn('fast');
+							setscroll('#veiw', 500, $('#veiw').height(),'#veiw  > section:nth('+prcss.nth+')');
 						}, 400);
 					}
 				});
