@@ -68,9 +68,9 @@ var QueryLoader = {
 			if (url.length > 0) {
 				var regex = 'http.+[^)]'; 
 				url = url.split(',');
-					for (i in url){
-						QueryLoader.items.push(url[i].match(regex)[0]);
-					}
+				for (i in url){
+					QueryLoader.items.push(url[i].match(regex)[0]);
+				}
 			}
 		});
 	},
@@ -169,9 +169,9 @@ var QueryLoader = {
 // jquery my code
 var codeStationJq = {
 	ready: function () {
-		setTimeout(function (){
-			QueryLoader.init()
-		},2);
+		$(document).ready(function () {
+			QueryLoader.init();
+		});
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
 		$('#con').after('<div class="loading"><div class="load"><p>لطفا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
