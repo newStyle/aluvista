@@ -11,7 +11,7 @@ var QueryLoader = {
 	overlay: "",
 	loadBar: "",
 	preloader: "",
-	items: new Array(),
+	items: [],
 	doneStatus: 0,
 	doneNow: 0,
 	selectorPreload: "",
@@ -23,9 +23,9 @@ var QueryLoader = {
 			//break if IE6			
 			return false;
 		}
-		QueryLoader.doneStatus = 0;
-		QueryLoader.doneNow    = 0;					
-
+		QueryLoader.items 		= new Array();
+		QueryLoader.doneStatus	= 0;
+		QueryLoader.doneNow		= 0;
 		this.selectorPreload = selector;
 		if (QueryLoader.selectorPreload == "body") {
 			QueryLoader.spawnLoader();
@@ -54,7 +54,7 @@ var QueryLoader = {
 	},
 	
 	imgCallback: function() {
-		QueryLoader.doneNow ++;
+		QueryLoader.doneNow++;
 		QueryLoader.animateLoader();
 	},
 	
@@ -89,12 +89,11 @@ var QueryLoader = {
 		
 		var length = QueryLoader.items.length; 
 		QueryLoader.doneStatus = length;
-		
 		for (var i = 0; i < length; i++) {
 			var imgLoad = $("<img></img>");
 			$(imgLoad).attr("src", QueryLoader.items[i]);
-			$(imgLoad).die("load");
-			$(imgLoad).live("load", function() {
+			$(imgLoad).unbind("load");
+			$(imgLoad).bind("load", function() {
 				QueryLoader.imgCallback();
 			});
 			$(imgLoad).appendTo($(QueryLoader.preloader));
