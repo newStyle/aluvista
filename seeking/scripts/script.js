@@ -23,6 +23,9 @@ var QueryLoader = {
 			//break if IE6			
 			return false;
 		}
+		QueryLoader.doneStatus = 0;
+		QueryLoader.doneNow    = 0;					
+
 		this.selectorPreload = selector;
 		if (QueryLoader.selectorPreload == "body") {
 			QueryLoader.spawnLoader();
@@ -56,7 +59,7 @@ var QueryLoader = {
 	},
 	
 	getImages: function(selector) {
-		var everything = $(selector).parent().find("*:not(script)").each(function() {
+		var everything = $(selector).find("*:not(script)").each(function() {
 			var url = "";
 			
 			if ($(this).css("background-image") != "none") {
@@ -90,8 +93,8 @@ var QueryLoader = {
 		for (var i = 0; i < length; i++) {
 			var imgLoad = $("<img></img>");
 			$(imgLoad).attr("src", QueryLoader.items[i]);
-			$(imgLoad).unbind("load");
-			$(imgLoad).bind("load", function() {
+			$(imgLoad).die("load");
+			$(imgLoad).live("load", function() {
 				QueryLoader.imgCallback();
 			});
 			$(imgLoad).appendTo($(QueryLoader.preloader));
@@ -188,9 +191,12 @@ var codeStationJq = {
 			],
 			loadAjax: function (url, box, sw) {
 				url = 'pages/'+url;
-				$(box).hide().load(url).show();
+				$(box).css('visibility','hidden').load(url);
+
 				setTimeout(function () {
 					preload();
+					QueryLoader.init(box);
+					$(box).css('visibility', 'visible');
 				},100);
 				if (sw === true) {
 					window.history.pushState(url, "", url.substring(6));
@@ -904,7 +910,7 @@ var codeStationJq = {
 				'overflow': 'visible'
 			});
 			agy.scrll();
-			$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
+			//$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 		})();
 	}
 };
