@@ -777,26 +777,6 @@ var codeStationJq = {
 			}
 		};
 		var contact = {
-			changeform: function () {
-				$('.agylink a').live('click', function (e) {
-					e.preventDefault();
-					$('.contact').hide();
-					$('.agy_form').show();
-					setTimeout(function () { 
-					$(agy.path).css({
-						'height' : '',
-						'min-height' : agy.hgt+'px',
-						'overflow': 'visible'
-					});
-					agy.scrll();
-					}, 100);
-				});
-				$('.contlink a').live('click', function (e) {
-					e.preventDefault();
-					$('.contact').show();
-					$('.agy_form').hide();
-				});
-			},
 			sendmail: function () {
 				$("form#agency-form").live('submit', function (event) {
 					event.preventDefault();
@@ -813,7 +793,6 @@ var codeStationJq = {
 			}
 		};
 		contact.sendmail();
-		contact.changeform();
 		var prcss = {
 			boxs: '#disk div',
 			radius: 167,
