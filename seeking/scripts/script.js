@@ -190,12 +190,14 @@ var codeStationJq = {
 			],
 			loadAjax: function (url, box, sw) {
 				url = 'pages/'+url;
-				$(box).load(url);
-
-				setTimeout(function () {
-					preload();
-					QueryLoader.init(box);
-				},100);
+				$.ajax({
+					url: url,
+					success: function (data) {
+						$(box).html(data);
+						preload();
+						QueryLoader.init(box);
+					} 
+				});
 				if (sw === true) {
 					window.history.pushState(url, "", url.substring(6));
 					window.onpopstate = function (e) {
