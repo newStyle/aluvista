@@ -173,7 +173,7 @@ var QueryLoader = {
 var codeStationJq = {
 	ready: function () {
 		$(document).ready(function () {
-			//QueryLoader.init('body');
+			QueryLoader.init('body');
 		});
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
@@ -190,12 +190,11 @@ var codeStationJq = {
 			],
 			loadAjax: function (url, box, sw) {
 				url = 'pages/'+url;
-				$(box).css('visibility','hidden').load(url);
+				$(box).load(url);
 
 				setTimeout(function () {
 					preload();
 					QueryLoader.init(box);
-					$(box).css('visibility', 'visible');
 				},100);
 				if (sw === true) {
 					window.history.pushState(url, "", url.substring(6));
@@ -909,7 +908,7 @@ var codeStationJq = {
 				'overflow': 'visible'
 			});
 			agy.scrll();
-			//$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
+			$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
 		})();
 	}
 };
