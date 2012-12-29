@@ -14,15 +14,16 @@ var QueryLoader = {
 	items: new Array(),
 	doneStatus: 0,
 	doneNow: 0,
-	selectorPreload: "body",
+	selectorPreload: "",
 	ieLoadFixTime: 2000,
 	ieTimeout: "",
 		
-	init: function() {
+	init: function(selector) {
 		if (navigator.userAgent.match(/MSIE (\d+(?:\.\d+)+(?:b\d*)?)/) == "MSIE 6.0,6.0") {
 			//break if IE6			
 			return false;
 		}
+		this.selectorPreload = selector;
 		if (QueryLoader.selectorPreload == "body") {
 			QueryLoader.spawnLoader();
 			QueryLoader.getImages(QueryLoader.selectorPreload);
@@ -170,7 +171,7 @@ var QueryLoader = {
 var codeStationJq = {
 	ready: function () {
 		$(document).ready(function () {
-			QueryLoader.init();
+			//QueryLoader.init('body');
 		});
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
@@ -186,28 +187,12 @@ var codeStationJq = {
 				"footer .down nav a"
 			],
 			loadAjax: function (url, box, sw) {
-				$(box).fadeTo(1000, '0', function () {
-					$(this).hide();
-					$('body .loading').fadeTo(1000,'1', function () {
-						$(this).show();
-					})
-					setTimeout(function () {
-						$.post(url, function(data) {
-							$(box).html(data);
-							$('body .loading').fadeTo('slow','0', function (){
-								$(this).hide();
-							});
-						});
-						$(box).fadeTo(1000,'1', function (){
-							$(this).show(function () {
-								$('body,html').animate({ scrollTop: 550 }, 1500, 'linear');
-							});
-							preload();
-						});
-					}, 3000);
-				});
+				url = 'pages/'+url;
+				$(box).hide().load(url).show();
+				setTimeout(function () {
+					preload();
+				},100);
 				if (sw === true) {
-					url = 'pages/'+url;
 					window.history.pushState(url, "", url.substring(6));
 					window.onpopstate = function (e) {
 						e.state && $("#con").hide().load(e.state).fadeIn("normal");
