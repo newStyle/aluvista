@@ -20,7 +20,7 @@
 		if (is_file("$currDir/$fileName") && array_key_exists($fileName, $keyVals)) {
 			$contents = file_get_contents("$currDir/$fileName");
 			if (@strstr($contents, $srchStr)) {
-				$fname = ($str = strstr($fileName, "_", true)) ? $str.'.php' : $fileName;
+				$fname = ($str = @strstr($fileName, "_", true)) ? $str.'.php' : $fileName;
 				print "<a href='$fname'>".$keyVals[$fileName].'</a><br />';
 			}
 		}
