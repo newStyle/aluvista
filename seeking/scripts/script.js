@@ -112,7 +112,7 @@ var QueryLoader = {
 		}
 		var left = $(QueryLoader.selectorPreload).offset()['left'];
 		var top = $(QueryLoader.selectorPreload).offset()['top'];
-		
+		$(document).find('.QOverlay', '.QLoader').remove();		
 		QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
 		$(QueryLoader.overlay).addClass("QOverlay");
 		$(QueryLoader.overlay).css({
