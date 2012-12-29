@@ -680,6 +680,7 @@ var codeStationJq = {
 				for (var i = 1; i <= nOfImg; i++)
 					$(' div', $($path)).eq(i - 1).
 						html('<img src ="./images/colorchart/' + typ + i + '.png" alt = "" />');
+						QueryLoader.init('.color');
 			},
 			openSlide: function (typ) {
 				$(this.path + ' img').die('click').live('click', function () {
