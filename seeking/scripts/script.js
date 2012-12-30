@@ -80,7 +80,7 @@ var QueryLoader = {
 	},
 	
 	createPreloading: function() {
-		QueryLoader.preloader = $("<div></div>").appendTo(QueryLoader.selectorPreload);
+		QueryLoader.preloader = $("<div id='boxImages'></div>").appendTo(QueryLoader.selectorPreload);
 		$(QueryLoader.preloader).css({
 			height: 	"0px",
 			width:		"0px",
@@ -112,7 +112,7 @@ var QueryLoader = {
 		}
 		var left = $(QueryLoader.selectorPreload).offset()['left'];
 		var top = $(QueryLoader.selectorPreload).offset()['top'];
-		$(document).find('.QOverlay', '.QLoader').remove();		
+		//$(document).find('.QOverlay', '.QLoader').remove();	
 		QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
 		$(QueryLoader.overlay).addClass("QOverlay");
 		$(QueryLoader.overlay).css({
@@ -147,9 +147,77 @@ var QueryLoader = {
 			}, 500, "linear", function() { });
 		}
 	},
-	
+	cached: function (selector) {
+		config = {
+			base64ImageEncoderPath: 'base64_encode.php?id=',
+			canvasEncoder: true // Experimental :D
+		};
+
+		// Check for canvas support
+		config.canvasEncoder = typeof HTMLCanvasElement != undefined ? config.canvasEncoder : false;
+		var getBase64Image = function (img) {
+			try {
+				var canvas = document.createElement('canvas');
+				canvas.width = img.width;
+				canvas.height = img.height;
+
+				var ctx = canvas.getContext('2d');
+				ctx.drawImage(img, 0, 0);
+
+				var imgType = img.src.match(/\.(jpg|jpeg|png)$/i);
+				if (imgType && imgType.length) {
+					imgType = imgType[1].toLowerCase() == 'jpg' ? 'jpeg' : imgType[1].toLowerCase();
+				}
+				else {
+					throw 'Invalid image type for canvas encoder: ' + img.src;
+				}
+				return canvas.toDataURL('image/' + imgType);
+			}
+			catch (e) {
+				console && console.log(e);
+				return 'error';
+			}
+		}
+		$(selector +' img').each(function () {
+			var url = "";
+			if (typeof($(this).attr("src")) != "undefined") {
+				url = $(this).attr("src");
+			}
+			if (url.length > 0) {
+				var $img = $(this);
+				var src = url;
+				if (localStorage) {
+					var localSrc = localStorage[src];
+					if (localSrc && /^data:image/.test(localSrc)) {
+						$img.attr('src', localSrc);
+					}
+					else {
+						$img.attr('src', src);
+						if (localStorage[src] !== 'pending') {
+							localStorage[src] = 'pending';
+							if (config.canvasEncoder) {
+								localStorage[src] = getBase64Image(this);
+							}
+							else {
+								$.ajax({
+									url: self.config.base64ImageEncoderPath + src,
+									success: function (data) {
+										localStorage[src] = data;
+									},
+									error: function () {
+										localStorage[src] = 'error';
+									}
+								});
+							}
+						}
+					}
+				}
+			}
+		});
+	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
+		//QueryLoader.cached(QueryLoader.selectorPreload+' #boxImages')
 		clearTimeout(QueryLoader.ieTimeout);
 		
 		//determine the height of the preloader for the effect
@@ -165,7 +233,8 @@ var QueryLoader = {
 			top: 0
 		}, 500, "linear", function() {
 			$(QueryLoader.overlay).fadeOut(800);
-			$(QueryLoader.preloader).remove();
+			//$(QueryLoader.preloader).remove();
+			$('html').find('.QOverlay', '.QLoader').remove();
 		});
 	}
 }
@@ -177,7 +246,7 @@ var codeStationJq = {
 		});
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
-		$('#con').after('<div class="loading"><div class="load"><p>لطفا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
+		$('#con').after('<div class="loading"><div class="load"><p>لط�?ا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
 		var preload, pos, Int, menus = {
 			Links: [
 				"header .right .down nav a",
