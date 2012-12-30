@@ -879,7 +879,14 @@ var codeStationJq = {
 			},
 			pickImg: function () {
 				this.forEach(this.boxs, function (box, j) {
-					$(prcss.boxs).eq(j).css('background', 'url(./images/process/' + parseInt(j + 1) + '.png) no-repeat center center');
+					var self = document.URL,
+					lastSlash = self.lastIndexOf('/'),
+					tmp = 'images/process/' + parseInt(j + 1) + '.png',
+					self = self.substring(0, lastSlash),
+					url = self + '/' + tmp;
+					if (localStorage[url])
+						url = localStorage[url];
+					$(prcss.boxs).eq(j).css('background', 'url('+url+') no-repeat center center');
 				});
 			},
 			rotat: function (q) { //attach items in disk and rotating
