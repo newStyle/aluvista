@@ -182,7 +182,7 @@ var QueryLoader = {
 				return 'error';
 			}
 		}
-		$(selector +' img').each(function () {
+		$(selector).each(function () {
 			var url = "";
 			if (typeof($(this).attr("src")) != "undefined") {
 				url = $(this).attr("src");
@@ -221,7 +221,9 @@ var QueryLoader = {
 	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
-		//QueryLoader.cached(QueryLoader.selectorPreload+' #boxImages')
+		$(QueryLoader.selectorPreload+' #boxImages img').attr('onLoad', function () {
+			QueryLoader.cached(this);
+		});
 		clearTimeout(QueryLoader.ieTimeout);
 		
 		//determine the height of the preloader for the effect
