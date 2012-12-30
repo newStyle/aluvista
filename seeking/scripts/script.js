@@ -69,7 +69,7 @@ var QueryLoader = {
 				url = "http://localhost/aluvista/seeking/" + $(this).attr("src");
 			}
 			
-			if (url.length > 0) {
+			if (url.length > 0 && !/data:image/.test(url)) {//or: url.toLowerCase().indexOf("data:image") == -1;
 				var regex = 'http.+[^)]'; 
 				url = url.split(',');
 				for (i in url){
