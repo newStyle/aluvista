@@ -66,7 +66,11 @@ var QueryLoader = {
 				url = $(this).css("background-image");
 			}
 			else if (typeof($(this).attr("src")) != "undefined") {
-				url = "http://localhost/aluvista/seeking/" + $(this).attr("src");
+				var self = this.baseURI,
+				lastSlash = self.lastIndexOf('/'),
+				tmp = $(this).attr("src");
+				self = self.substring(0, lastSlash),
+				url = tmp.indexOf(self) > -1 ? tmp : self + '/' + tmp;
 			}
 			
 			if (url.length > 0 && !/data:image/.test(url)) {//or: url.toLowerCase().indexOf("data:image") == -1;
@@ -164,7 +168,7 @@ var QueryLoader = {
 				var ctx = canvas.getContext('2d');
 				ctx.drawImage(img, 0, 0);
 
-				var imgType = img.src.match(/\.(jpg|jpeg|png)$/i);
+				var imgType = img.src.match(/\.(jpg|jpeg|png|gif)$/i);
 				if (imgType && imgType.length) {
 					imgType = imgType[1].toLowerCase() == 'jpg' ? 'jpeg' : imgType[1].toLowerCase();
 				}
@@ -748,7 +752,7 @@ var codeStationJq = {
 				var $path = this.path + " > section"
 				for (var i = 1; i <= nOfImg; i++)
 					$(' div', $($path)).eq(i - 1).
-						html('<img src ="./images/colorchart/' + typ + i + '.png" alt = "" />');
+						html('<img src ="images/colorchart/' + typ + i + '.png" alt = "" />');
 						QueryLoader.init('.color');
 			},
 			openSlide: function (typ) {
