@@ -183,7 +183,7 @@ var QueryLoader = {
 			if (typeof($(this).attr("src")) != "undefined") {
 				url = $(this).attr("src");
 			}
-			if (url.length > 0) {
+			if (url.length > 0 && url.toLowerCase().indexOf("data:image") == -1) {
 				var $img = $(this);
 				var src = url;
 				if (localStorage) {
