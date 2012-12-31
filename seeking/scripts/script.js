@@ -433,17 +433,33 @@ var codeStationJq = {
 		var inx_img = 0,
 			$dummy = -1,
 			change_image;
+			var self = document.URL,
+			lastSlash = self.lastIndexOf('/'),
+			tmp = 'images/banner/sliderpic1.jpg',
+			self = self.substring(0, lastSlash),
+			url = self + '/' + tmp;
+			if (localStorage[url])
+				url = localStorage[url];
+
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='950' height='500' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
+				.html("<img width='950' height='500' src='"+url+"' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
 			'left': '0'
 		});
 		var efct_banner = function ($newpos) {
+			var self = document.URL,
+			lastSlash = self.lastIndexOf('/'),
+			tmp = imgsInBanner[image].pics[$newpos],
+			self = self.substring(0, lastSlash),
+			url = self + '/' + tmp;
+			if (localStorage[url])
+				url = localStorage[url];
+			console.log(url);
 			$(".view img").animate({'opacity':'0'},300,'linear',function () {
-				$(this).hide().attr("src", imgsInBanner[image].pics[$newpos]).show().animate({'opacity':'1'},300);
+				$(this).hide().attr("src", url).show().animate({'opacity':'1'},300);
 			});
 			return $newpos
 		}
