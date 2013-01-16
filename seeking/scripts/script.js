@@ -94,15 +94,18 @@ var QueryLoader = {
 		
 		var length = QueryLoader.items.length; 
 		QueryLoader.doneStatus = length;
-		for (var i = 0; i < length; i++) {
-			var imgLoad = $("<img></img>");
-			$(imgLoad).unbind("load");
-			$(imgLoad).attr("src", QueryLoader.items[i]);
-			$(imgLoad).bind("load", function() {
-				QueryLoader.imgCallback();
-			});
-			$(imgLoad).appendTo($(QueryLoader.preloader));
-		}
+
+		(function loadImg(index) {
+			if (index >= length) return; // no more image to load
+			$(QueryLoader.preloader).append($('<img />').
+				attr('src', QueryLoader.items[index]).
+				load(function () {
+					console.log(QueryLoader.items[index]);
+					QueryLoader.imgCallback();
+					// invoke this function again
+					loadImg(index + 1);
+				}));
+		})(0); // initiate loading sequence with first image index
 	},
 
 	spawnLoader: function() {
@@ -170,6 +173,8 @@ var QueryLoader = {
 		}
 	},
 	cached: function (selector) {
+	console.log(selector);
+	/*
 		config = {
 			base64ImageEncoderPath: 'base64_encode.php?id=',
 			canvasEncoder: true // Experimental :D
@@ -236,6 +241,7 @@ var QueryLoader = {
 				}
 			}
 		});
+	*/
 	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
@@ -470,7 +476,6 @@ var codeStationJq = {
 			url = self + '/' + tmp;
 			if (localStorage[url])
 				url = localStorage[url];
-			console.log(url);
 			$(".view img").animate({'opacity':'0'},300,'linear',function () {
 				$(this).hide().attr("src", url).show().animate({'opacity':'1'},300);
 			});
