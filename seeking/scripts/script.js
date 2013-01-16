@@ -107,14 +107,20 @@ var QueryLoader = {
 	spawnLoader: function() {
 		var cssLoadPage = {
 			QOverlay: {
-				top:'',
-				left:'',
+				top: $(QueryLoader.selectorPreload).offset()['top'],
+				left: $(QueryLoader.selectorPreload).offset()['left'],
 				height:'',
 				width: '',
-				position: ''
+				position: '',
+				backgroundColor: '#000',
+				zIndex: '99'
 			},
 			QLoader :{
-				top:''
+				top: $(QueryLoader.selectorPreload).height()/2,
+				position: 'relative',
+				width: '0%',
+				backgroundColor: '#fff',
+				height: 1
 			}
 		}
 		if (QueryLoader.selectorPreload == "body") {
@@ -126,25 +132,25 @@ var QueryLoader = {
 			cssLoadPage.QOverlay.width = $(QueryLoader.selectorPreload).innerWidth();
 			cssLoadPage.QOverlay.position = "absolute";
 		}
-		cssLoadPage.QOverlay.left = $(QueryLoader.selectorPreload).offset()['left'];
-		cssLoadPage.QOverlay.top = $(QueryLoader.selectorPreload).offset()['top'];
 		QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
-		$(QueryLoader.overlay).addClass("QOverlay");
 		$(QueryLoader.overlay).css({
 			top: cssLoadPage.QOverlay.top,
 			left: cssLoadPage.QOverlay.left,
-			position: cssLoadPage.QOverlay.position,
 			width: cssLoadPage.QOverlay.width + "px",
-			height: cssLoadPage.QOverlay.height + "px"
+			height: cssLoadPage.QOverlay.height + "px",
+			backgroundColor: cssLoadPage.QOverlay.backgroundColor,
+			position: cssLoadPage.QOverlay.position,
+			zIndex: cssLoadPage.QOverlay.zIndex,
 		});
 		
 		QueryLoader.loadBar = $("<div></div>").appendTo($(QueryLoader.overlay));
-		$(QueryLoader.loadBar).addClass("QLoader");
 		cssLoadPage.QLoader.top = $(QueryLoader.selectorPreload).height()/2;
 		$(QueryLoader.loadBar).css({
-			position: "relative",
+			position: cssLoadPage.QLoader.position,
 			top: cssLoadPage.QLoader.top,
-			width: "0%"
+			width: cssLoadPage.QLoader.width,
+			backgroundColor: cssLoadPage.QLoader.backgroundColor,
+			height: cssLoadPage.QLoader.height + "px"
 		});
 	},
 	
