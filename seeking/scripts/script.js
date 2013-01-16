@@ -85,7 +85,7 @@ var QueryLoader = {
 	},
 	
 	createPreloading: function() {
-		QueryLoader.preloader = $("<div id='boxImages'></div>").appendTo(QueryLoader.selectorPreload);
+		QueryLoader.preloader = $("<div class='boxImages'></div>").appendTo(QueryLoader.selectorPreload);
 		$(QueryLoader.preloader).css({
 			height: 	"0px",
 			width:		"0px",
@@ -96,8 +96,8 @@ var QueryLoader = {
 		QueryLoader.doneStatus = length;
 		for (var i = 0; i < length; i++) {
 			var imgLoad = $("<img></img>");
-			$(imgLoad).attr("src", QueryLoader.items[i]);
 			$(imgLoad).unbind("load");
+			$(imgLoad).attr("src", QueryLoader.items[i]);
 			$(imgLoad).bind("load", function() {
 				QueryLoader.imgCallback();
 			});
@@ -239,7 +239,7 @@ var QueryLoader = {
 	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
-		$(QueryLoader.selectorPreload+' #boxImages img').attr('onLoad', function () {
+		$(QueryLoader.selectorPreload+' .boxImages img').attr('onLoad', function () {
 			QueryLoader.cached(this);
 		});
 		clearTimeout(QueryLoader.ieTimeout);
