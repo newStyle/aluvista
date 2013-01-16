@@ -117,7 +117,7 @@ var QueryLoader = {
 				zIndex: '99'
 			},
 			QLoader :{
-				top: $(QueryLoader.selectorPreload).height()/2,
+				top: '',
 				position: 'relative',
 				width: '0%',
 				backgroundColor: '#fff',
@@ -133,7 +133,7 @@ var QueryLoader = {
 			cssLoadPage.QOverlay.width = $(QueryLoader.selectorPreload).innerWidth();
 			cssLoadPage.QOverlay.position = "absolute";
 		}
-		QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
+		QueryLoader.overlay = $("<div class='QOverlay'></div>").appendTo($(QueryLoader.selectorPreload));
 		$(QueryLoader.overlay).css({
 			top: cssLoadPage.QOverlay.top,
 			left: cssLoadPage.QOverlay.left,
@@ -144,8 +144,8 @@ var QueryLoader = {
 			zIndex: cssLoadPage.QOverlay.zIndex,
 		});
 		
-		QueryLoader.loadBar = $("<div></div>").appendTo($(QueryLoader.overlay));
-		cssLoadPage.QLoader.top = $(QueryLoader.selectorPreload).height()/2;
+		QueryLoader.loadBar = $("<div class='QLoader'></div>").appendTo($(QueryLoader.overlay));
+		cssLoadPage.QLoader.top = cssLoadPage.QOverlay.height/2;
 		$(QueryLoader.loadBar).css({
 			position: cssLoadPage.QLoader.position,
 			top: cssLoadPage.QLoader.top,
@@ -157,16 +157,16 @@ var QueryLoader = {
 	
 	animateLoader: function() {
 		var perc = (100 / QueryLoader.doneStatus) * QueryLoader.doneNow;
-		if (perc > 99) {
+		if (perc < 99){
 			$(QueryLoader.loadBar).stop().animate({
 				width: perc + "%"
+			}, 500, "linear");
+		}else {
+			$(QueryLoader.loadBar).stop().animate({
+				width: "100%"
 			}, 500, "linear", function() { 
 				QueryLoader.doneLoad();
 			});
-		} else {
-			$(QueryLoader.loadBar).stop().animate({
-				width: perc + "%"
-			}, 500, "linear", function() { });
 		}
 	},
 	cached: function (selector) {
@@ -239,16 +239,13 @@ var QueryLoader = {
 	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
-		$(QueryLoader.selectorPreload+' .boxImages img').attr('onLoad', function () {
-			QueryLoader.cached(this);
-		});
 		clearTimeout(QueryLoader.ieTimeout);
 		
 		//determine the height of the preloader for the effect
 		if (QueryLoader.selectorPreload == "body") {
 			var height = $(window).height();
 		} else {
-			var height = $(QueryLoader.selectorPreload).outerHeight();
+			var height = $(QueryLoader.selectorPreload).innerHeight();
 		}
 		
 		//The end animation, adjust to your likings
@@ -257,7 +254,6 @@ var QueryLoader = {
 			top: 0
 		}, 500, "linear", function() {
 			$(QueryLoader.overlay).fadeOut(800);
-			//$(QueryLoader.preloader).remove();
 			$('html').find('.QOverlay', '.QLoader').remove();
 		});
 	}
@@ -851,28 +847,28 @@ var codeStationJq = {
 		};
 		var prd = {
 			path: ".container .products > section .right .down > section",
-			loading: function () {
-				$("#btn-pdt div").live('click',function () {
-					$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
-					var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
-					$.ajax({
-						url: 'pages/product_content.php',
-						success: function (data) {
-							$(prd.path).html(data);
-							$(prd.path).css({
-								'height': '',
-								'min-height': $(prd.path).height() + 'px',
-								'overflow': '',
-								'top': 0
-							});
-							$('section', prd.path).fadeOut('fast').filter('#'+getname).fadeIn('normal')
-							setscroll(prd.path, 385, $(prd.path).height(),prd.path + ' section');
-						}
-					});
+			showPage: function () {
+				$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
+				var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
+				$.ajax({
+					url: 'pages/product_content.php',
+					success: function (data) {
+						$(prd.path).html(data);
+						$(prd.path).css({
+							'height': '',
+							'min-height': $(prd.path).height() + 'px',
+							'overflow': '',
+							'top': 0
+						});
+						$('section', prd.path).fadeOut('fast').filter('#'+getname).fadeIn('normal')
+						setscroll(prd.path, 385, $(prd.path).height(),prd.path + ' section');
+					}
 				});
 			}
 		}
-		prd.loading();
+		$("#btn-pdt div").live('click',function () {
+			prd.showPage();
+		});
 		/* Scroll for agency_form Page */
 		clr.actbtn();
 		var agy = {
