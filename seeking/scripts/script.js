@@ -69,7 +69,7 @@ var QueryLoader = {
 			else if (typeof($(this).attr("src")) != "undefined") {
 				var self = this.baseURI,
 				lastSlash = self.lastIndexOf('/'),
-				var tmp = $(this).attr("src");
+				tmp = $(this).attr("src");
 				self = self.substring(0, lastSlash),
 				url = tmp.indexOf(self) > -1 ? tmp : self + '/' + tmp;
 			}
