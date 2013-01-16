@@ -105,34 +105,45 @@ var QueryLoader = {
 	},
 
 	spawnLoader: function() {
-		if (QueryLoader.selectorPreload == "body") {
-			var height = $(window).height();
-			var width = $(window).width();
-			var position = "fixed";
-		} else {
-			var height = $(QueryLoader.selectorPreload).outerHeight();
-			var width = $(QueryLoader.selectorPreload).outerWidth();
-			var position = "absolute";
+		var cssLoadPage = {
+			QOverlay: {
+				top:'',
+				left:'',
+				height:'',
+				width: '',
+				position: ''
+			},
+			QLoader :{
+				top:''
+			}
 		}
-		var left = $(QueryLoader.selectorPreload).offset()['left'];
-		var top = $(QueryLoader.selectorPreload).offset()['top'];
-		//$(document).find('.QOverlay', '.QLoader').remove();	
+		if (QueryLoader.selectorPreload == "body") {
+			cssLoadPage.QOverlay.height = $(window).height();
+			cssLoadPage.QOverlay.width = $(window).width();
+			cssLoadPage.QOverlay.position = "fixed";
+		} else {
+			cssLoadPage.QOverlay.height = $(QueryLoader.selectorPreload).innerHeight();
+			cssLoadPage.QOverlay.width = $(QueryLoader.selectorPreload).innerWidth();
+			cssLoadPage.QOverlay.position = "absolute";
+		}
+		cssLoadPage.QOverlay.left = $(QueryLoader.selectorPreload).offset()['left'];
+		cssLoadPage.QOverlay.top = $(QueryLoader.selectorPreload).offset()['top'];
 		QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
 		$(QueryLoader.overlay).addClass("QOverlay");
 		$(QueryLoader.overlay).css({
-			position: position,
-			top: top,
-			left: left,
-			width: width + "px",
-			height: height + "px"
+			top: cssLoadPage.QOverlay.top,
+			left: cssLoadPage.QOverlay.left,
+			position: cssLoadPage.QOverlay.position,
+			width: cssLoadPage.QOverlay.width + "px",
+			height: cssLoadPage.QOverlay.height + "px"
 		});
 		
 		QueryLoader.loadBar = $("<div></div>").appendTo($(QueryLoader.overlay));
 		$(QueryLoader.loadBar).addClass("QLoader");
-		
+		cssLoadPage.QLoader.top = $(QueryLoader.selectorPreload).height()/2;
 		$(QueryLoader.loadBar).css({
 			position: "relative",
-			top: "50%",
+			top: cssLoadPage.QLoader.top,
 			width: "0%"
 		});
 	},
