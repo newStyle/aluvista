@@ -266,7 +266,6 @@ var codeStationJq = {
 		});
 		"use strict";
 		$("section.container > .down").wrapAll("<section id='con'></section>");
-		$('#con').after('<div class="loading"><div class="load"><p>لط�?ا منتظر باشید</p><img src="images/loading.gif" alt=""></div></div>');
 		var preload, pos, Int, menus = {
 			Links: [
 				"header .right .down nav a",
@@ -847,9 +846,9 @@ var codeStationJq = {
 		};
 		var prd = {
 			path: ".container .products > section .right .down > section",
-			showPage: function () {
-				$("#btn-pdt div input").removeClass("active").eq($(this).index()).addClass('active');
-				var getname = $("#btn-pdt div input").eq($(this).index()).attr('name');
+			showPage: function (that) {
+				$("#btn-pdt div input").removeClass("active").eq($(that).index()).addClass('active');
+				var getname = $("#btn-pdt div input").eq($(that).index()).attr('name');
 				$.ajax({
 					url: 'pages/product_content.php',
 					success: function (data) {
@@ -867,7 +866,7 @@ var codeStationJq = {
 			}
 		}
 		$("#btn-pdt div").live('click',function () {
-			prd.showPage();
+			prd.showPage(this);
 		});
 		/* Scroll for agency_form Page */
 		clr.actbtn();
