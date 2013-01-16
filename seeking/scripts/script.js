@@ -59,7 +59,8 @@ var QueryLoader = {
 	},
 	
 	getImages: function(selector) {
-		var everything = $(selector).find("*:not(script)").each(function() {
+		//selector is QueryLoader.selectorPreload
+		var everything = $(selector).find("*:not(script)").each(function() {// entekhab hame tage ha bejoz tage script
 			var url = "";
 			
 			if ($(this).css("background-image") != "none") {
@@ -68,7 +69,7 @@ var QueryLoader = {
 			else if (typeof($(this).attr("src")) != "undefined") {
 				var self = this.baseURI,
 				lastSlash = self.lastIndexOf('/'),
-				tmp = $(this).attr("src");
+				var tmp = $(this).attr("src");
 				self = self.substring(0, lastSlash),
 				url = tmp.indexOf(self) > -1 ? tmp : self + '/' + tmp;
 			}
