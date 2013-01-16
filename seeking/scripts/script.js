@@ -100,7 +100,6 @@ var QueryLoader = {
 			$(QueryLoader.preloader).append($('<img />').
 				attr('src', QueryLoader.items[index]).
 				load(function () {
-					console.log(QueryLoader.items[index]);
 					QueryLoader.imgCallback();
 					// invoke this function again
 					loadImg(index + 1);
@@ -171,77 +170,6 @@ var QueryLoader = {
 				QueryLoader.doneLoad();
 			});
 		}
-	},
-	cached: function (selector) {
-	console.log(selector);
-	/*
-		config = {
-			base64ImageEncoderPath: 'base64_encode.php?id=',
-			canvasEncoder: true // Experimental :D
-		};
-
-		// Check for canvas support
-		config.canvasEncoder = typeof HTMLCanvasElement != undefined ? config.canvasEncoder : false;
-		var getBase64Image = function (img) {
-			try {
-				var canvas = document.createElement('canvas');
-				canvas.width = img.width;
-				canvas.height = img.height;
-
-				var ctx = canvas.getContext('2d');
-				ctx.drawImage(img, 0, 0);
-
-				var imgType = img.src.match(/\.(jpg|jpeg|png|gif)$/i);
-				if (imgType && imgType.length) {
-					imgType = imgType[1].toLowerCase() == 'jpg' ? 'jpeg' : imgType[1].toLowerCase();
-				}
-				else {
-					throw 'Invalid image type for canvas encoder: ' + img.src;
-				}
-				return canvas.toDataURL('image/' + imgType);
-			}
-			catch (e) {
-				console && console.log(e);
-				return 'error';
-			}
-		}
-		$(selector).each(function () {
-			var url = "";
-			if (typeof($(this).attr("src")) != "undefined") {
-				url = $(this).attr("src");
-			}
-			if (url.length > 0 && url.toLowerCase().indexOf("data:image") == -1) {
-				var $img = $(this);
-				var src = url;
-				if (localStorage) {
-					var localSrc = localStorage[src];
-					if (localSrc && /^data:image/.test(localSrc)) {
-						$img.attr('src', localSrc);
-					}
-					else {
-						$img.attr('src', src);
-						if (localStorage[src] !== 'pending') {
-							localStorage[src] = 'pending';
-							if (config.canvasEncoder) {
-								localStorage[src] = getBase64Image(this);
-							}
-							else {
-								$.ajax({
-									url: self.config.base64ImageEncoderPath + src,
-									success: function (data) {
-										localStorage[src] = data;
-									},
-									error: function () {
-										localStorage[src] = 'error';
-									}
-								});
-							}
-						}
-					}
-				}
-			}
-		});
-	*/
 	},
 	doneLoad: function() {
 		//prevent IE from calling the fix
@@ -452,32 +380,17 @@ var codeStationJq = {
 		var inx_img = 0,
 			$dummy = -1,
 			change_image;
-			var self = document.URL,
-			lastSlash = self.lastIndexOf('/'),
-			tmp = 'images/banner/sliderpic1.jpg',
-			self = self.substring(0, lastSlash),
-			url = self + '/' + tmp;
-			if (localStorage[url])
-				url = localStorage[url];
-
 		$(".container .slider section > .middle").css('position', 'relative')
 			.addClass("view")
-				.html("<img width='950' height='500' src='"+url+"' alt='image pic slider' >");
+				.html("<img width='950' height='500' src='images/banner/sliderpic1.jpg' alt='image pic slider' >");
 		$(".view img").css({
 			'z-index': '-1',
 			'position': 'absolute',
 			'left': '0'
 		});
 		var efct_banner = function ($newpos) {
-			var self = document.URL,
-			lastSlash = self.lastIndexOf('/'),
-			tmp = imgsInBanner[image].pics[$newpos],
-			self = self.substring(0, lastSlash),
-			url = self + '/' + tmp;
-			if (localStorage[url])
-				url = localStorage[url];
 			$(".view img").animate({'opacity':'0'},300,'linear',function () {
-				$(this).hide().attr("src", url).show().animate({'opacity':'1'},300);
+				$(this).hide().attr("src", imgsInBanner[image].pics[$newpos]).show().animate({'opacity':'1'},300);
 			});
 			return $newpos
 		}
@@ -913,14 +826,7 @@ var codeStationJq = {
 			},
 			pickImg: function () {
 				this.forEach(this.boxs, function (box, j) {
-					var self = document.URL,
-					lastSlash = self.lastIndexOf('/'),
-					tmp = 'images/process/' + parseInt(j + 1) + '.png',
-					self = self.substring(0, lastSlash),
-					url = self + '/' + tmp;
-					if (localStorage[url])
-						url = localStorage[url];
-					$(prcss.boxs).eq(j).css('background', 'url('+url+') no-repeat center center');
+					$(prcss.boxs).eq(j).css('background', 'url(images/process/' + parseInt(j + 1) + '.png) no-repeat center center');
 				});
 			},
 			rotat: function (q) { //attach items in disk and rotating
