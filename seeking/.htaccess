@@ -53,7 +53,7 @@ AddType application/x-font-woff .woff
 # ----------------------------------------------------------------------
 
 <ifModule mod_deflate.c>
-  <filesMatch "\.(css|js|x?html?|php)$">
+  <filesMatch "\.(css|js|x?html?|php|less)$">
     SetOutputFilter DEFLATE
   </filesMatch>
 </ifModule>
