@@ -47,3 +47,114 @@ AddType application/x-font-woff .woff
   #AddOutputFilterByType INCLUDES text/css
   SetOutputFilter INCLUDES
 </FilesMatch>
+
+# ----------------------------------------------------------------------
+# Compress text files
+# ----------------------------------------------------------------------
+
+<ifModule mod_deflate.c>
+  <filesMatch "\.(css|js|x?html?|php)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</ifModule>
+
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+
+# These are pretty far-future expires headers.
+# They assume you control versioning with filename-based cache busting
+# Additionally, consider that outdated proxies may miscache
+#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# If you don't use filenames to version, lower the CSS and JS to something like
+# "access plus 1 week".
+
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# Perhaps better to whitelist expires rules? Perhaps.
+  ExpiresDefault              "access plus 1 month"
+
+# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+  ExpiresByType text/cache-manifest   "access plus 0 seconds"
+
+# Your document html
+  ExpiresByType text/html         "access plus 1 hour"
+
+# Data
+  ExpiresByType text/xml          "access plus 0 seconds"
+  ExpiresByType application/xml     "access plus 0 seconds"
+  ExpiresByType application/json      "access plus 0 seconds"
+
+# Feed
+  ExpiresByType application/rss+xml   "access plus 1 hour"
+  ExpiresByType application/atom+xml    "access plus 1 hour"
+
+# Favicon (cannot be renamed)
+  ExpiresByType image/x-icon        "access plus 1 week"
+
+# Media: images, video, audio
+  ExpiresByType image/gif         "access plus 1 month"
+  ExpiresByType image/png         "access plus 1 month"
+  ExpiresByType image/jpeg        "access plus 1 month"
+  ExpiresByType video/ogg         "access plus 1 month"
+  ExpiresByType audio/ogg         "access plus 1 month"
+  ExpiresByType video/mp4         "access plus 1 month"
+  ExpiresByType video/webm        "access plus 1 month"
+
+# HTC files (css3pie)
+  ExpiresByType text/x-component      "access plus 1 month"
+
+# Webfonts
+  ExpiresByType application/x-font-ttf  "access plus 1 month"
+  ExpiresByType font/opentype       "access plus 1 month"
+  ExpiresByType application/x-font-woff "access plus 1 month"
+  ExpiresByType image/svg+xml       "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+
+# CSS and JavaScript
+  ExpiresByType text/css          "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Cache-Control Headers
+# ----------------------------------------------------------------------
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "max-age=600, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+
+# ----------------------------------------------------------------------
+# ETag removal
+# ----------------------------------------------------------------------
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+
+# Since we're sending far-future expires, we don't need ETags for
+# static content.
+#   developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+# ----------------------------------------------------------------------
+# Remove Last-Modified Header
+# ----------------------------------------------------------------------
+<ifModule mod_headers.c>
+  Header unset Last-Modified
+</ifModule>
