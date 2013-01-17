@@ -12,10 +12,7 @@
 <link rel="stylesheet/less" type="text/css" href="reset.css" />
 <link rel="stylesheet/less" type="text/css" href="1styles.css" />
 <link rel="stylesheet/less" type="text/css" href="style.less" />
-<script type="text/javascript" src="scripts/less.js"></script>
-<script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/html5.js"></script>
-<script type="text/javascript" src="scripts/script.js" ></script>
+<script type="text/javascript" src="script.combined.js"></script>
 <!--[if IE]>
 		<script type="text/javascript">
 			$(function(){
@@ -40,12 +37,12 @@
 	<div class="w19 mt6 down"> <!-- ADD NEW li With change W -->
 		<nav>
 			<ul>
-				<li><a href="index.php">صفحه اصلی</a></li>
+				<li><a href="index.php">ص�?حه اصلی</a></li>
 				<li><a href="process.php">مراحل ساخت</a></li>
 				<li><a href="product.php">روش اجرا</a></li>
 				<li><a href="gallery.php">گالری</a></li>
 				<li><a href="color.php">جدول رنگ</a></li>
-				<li><a href="agency.php">فرم نمایندگی</a></li>
+				<li><a href="agency.php">�?رم نمایندگی</a></li>
 				<li class="left"><a href="contact.php">تماس با ما</a></li>
 			</ul>
 		</nav>
