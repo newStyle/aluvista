@@ -8,9 +8,7 @@
 <meta name="author" content="">
 <!-- Mobile viewport optimized: j.mp/bplateviewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link type="text/css" rel="stylesheet" href="font.css" />
-<link rel="stylesheet/less" type="text/css" href="reset.css" />
-<link rel="stylesheet/less" type="text/css" href="1styles.css" />
+<link type="text/css" rel="stylesheet" href="style.combined.css" />
 <link rel="stylesheet/less" type="text/css" href="style.less" />
 <script type="text/javascript" src="script.combined.js"></script>
 <!--[if IE]>

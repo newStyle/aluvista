@@ -13,9 +13,16 @@ AddType font/ttf .ttf
 AddType font/otf .otf
 AddType application/x-font-woff .woff
 
-# <!-- combined javascript file-->
+# <!-- combined javascript files-->
 <FilesMatch "\.combined\.js$">
   Options +Includes
   #AddOutputFilterByType INCLUDES application/javascript application/json
+  SetOutputFilter INCLUDES
+</FilesMatch>
+
+# <!-- combined css files -->
+<FilesMatch "\.combined\.css$">
+  Options +Includes
+  #AddOutputFilterByType INCLUDES text/css
   SetOutputFilter INCLUDES
 </FilesMatch>
