@@ -258,7 +258,7 @@ var codeStationJq = {
 				e.preventDefault();
 				var url;
 				menus.loadAjax(url = $(this).attr("href"), "#con", true);
-				image = url.match('.+[^.php]')[0] ==='index'  ? 'home' : url.match('.+[^.php]')[0];
+				image = url.match('.+[^.php]')[0] ==='index'  ? 'index' : url.match('.+[^.php]')[0];
 			});
 		}
 		for (i = 0; i <= menus.Links.length; i++) {
@@ -325,9 +325,9 @@ var codeStationJq = {
 		});
 
     	/*Slider basic work ;)*/
-		var image = "home",
+		var image = "index",
 			imgsInBanner = {
-				"home": { /* for home page ! */
+				"index": { /* for index page ! */
 					pics: [
 						"images/banner/sliderpic1.jpg",
 						"images/banner/sliderpic2.jpg",
